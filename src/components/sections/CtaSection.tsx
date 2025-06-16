@@ -18,7 +18,7 @@ export default function CtaSection() {
           <Card className="shadow-xl bg-card/80 backdrop-blur-md">
             <CardHeader className="items-center text-center">
               <ShieldCheck className="h-12 w-12 text-primary mb-3" />
-              <CardTitle className="font-headline text-2xl text-primary">Sua Satisfação Garantida!</CardTitle>
+              <CardTitle className="font-headline text-2xl text-darkPurple">Sua Satisfação Garantida!</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-foreground/80">
@@ -30,7 +30,7 @@ export default function CtaSection() {
           <Card className="shadow-xl bg-card/80 backdrop-blur-md lg:col-span-2">
             <CardHeader className="items-center text-center">
               <Star className="h-12 w-12 text-accent mb-3" />
-              <CardTitle className="font-headline text-2xl text-accent">E Ainda Tem Mais! Bônus Exclusivos:</CardTitle>
+              <CardTitle className="font-headline text-2xl text-darkPurple">E Ainda Tem Mais! Bônus Exclusivos:</CardTitle>
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-center sm:text-left">

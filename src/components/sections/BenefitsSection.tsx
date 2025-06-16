@@ -34,12 +34,12 @@ const deliverables = [
   },
 ];
 
-export default function WhatYouGetSection() {
+export default function BenefitsSection() {
   return (
     <section id="oque-voce-recebe" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
+          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-darkPurple">
             O Que Você Recebe ao Adquirir o Kit?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
@@ -53,7 +53,7 @@ export default function WhatYouGetSection() {
                 <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block">
                   {item.icon}
                 </div>
-                <CardTitle className="font-headline text-xl text-primary">{item.title}</CardTitle>
+                <CardTitle className="font-headline text-xl text-darkPurple">{item.title}</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow">
                 <p className="text-foreground/70">{item.description}</p>
