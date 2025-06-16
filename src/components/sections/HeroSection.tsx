@@ -21,7 +21,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <h1 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-primary animate-fade-in-medium">
+        <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-primary animate-fade-in-medium">
           Atividades Educativas Que Estimulam o Foco, a Linguagem e o Comportamento de Crianças com Dificuldade de Aprendizagem!
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-foreground/80 animate-fade-in-slow">
