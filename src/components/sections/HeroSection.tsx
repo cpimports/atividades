@@ -69,11 +69,6 @@ export default function HeroSection() {
               Quero Acessar o Kit Agora <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
-          <Button size="lg" variant="outline" asChild className="shadow-lg hover:shadow-xl transition-shadow text-gray-200 border-gray-500 hover:bg-white/10 hover:text-white">
-            <Link href="#about">
-              Saiba Mais Sobre o Kit
-            </Link>
-          </Button>
         </div>
       </div>
     </section>
