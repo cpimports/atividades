@@ -10,7 +10,7 @@ const steps = [
     description: 'Receba Imediatamente em seu e-mail.',
   },
   {
-    icon: <Printer className="h-10 w-10 text-accent" />,
+    icon: <Printer className="h-10 w-10 text-accent-foreground" />,
     title: 'ACESSE E IMPRIMA QUANDO QUISER',
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
