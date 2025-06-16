@@ -22,7 +22,7 @@ export default function AboutSection() {
                 "Já tentou de tudo, mas sente que falta algo mais interativo?",
               ].map((item, index) => (
                 <li key={index}>
-                  <div className="bg-muted/20 p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start text-foreground/90">
+                  <div className="bg-card p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start text-card-foreground">
                     <CheckCircle className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
                     <span>{item}</span>
                   </div>
