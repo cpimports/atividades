@@ -12,6 +12,7 @@ export default function AboutSection() {
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             CHEGA DE PERDER TEMPO!
           </h2>
+          <p className="mt-4 text-lg text-foreground/80">Lembre-se: Seu tempo é precioso...</p>
         </div>
         <div className="flex justify-center"> {/* Centering the remaining card */}
           <div className="space-y-6 max-w-xl"> {/* Constraining width if needed */}
