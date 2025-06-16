@@ -3,7 +3,8 @@ import { BookMarked } from 'lucide-react';
 
 export default function KitDescriptionSection() {
   return (
-    <section id="kit-description" className="py-16 md:py-24 bg-secondary/20">
+    <section id="kit-description" className="py-16 md:py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-secondary/25 via-secondary/15 to-background -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <BookMarked className="h-16 w-16 text-primary mx-auto mb-4" />
@@ -23,4 +24,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
