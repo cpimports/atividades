@@ -36,7 +36,7 @@ export default function ActivityShowcaseSection() {
     <section id="material" className="py-16 md:py-24 bg-background">
       {/* Full-width image container */}
       <div className="w-full mb-12">
-        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+        <div className="relative w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[700px]">
           <Image
             src="https://i.imgur.com/0NaA6hf.png"
             alt="Ilustração do conteúdo do Kit Gêniozinho em Ação em grande destaque"
