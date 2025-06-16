@@ -11,7 +11,7 @@ export default function AboutSection() {
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             CHEGA DE PERDER TEMPO!
           </h2>
-          <p className="mt-4 text-lg text-foreground/80">Lembre-se: Seu tempo é precioso...</p>
+          <p className="mt-4 text-lg text-foreground/80 font-semibold">Lembre-se: Seu tempo é precioso...</p>
         </div>
         <div className="flex justify-center">
           <div className="space-y-6 max-w-xl">
@@ -25,12 +25,12 @@ export default function AboutSection() {
                 <li key={index}>
                   <div className="bg-card p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start text-card-foreground">
                     <CheckCircle className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                    <span>{item}</span>
+                    <span className="font-semibold">{item}</span>
                   </div>
                 </li>
               ))}
             </ul>
-            <p className="text-lg text-foreground/80 text-center">
+            <p className="text-lg text-foreground/80 text-center font-semibold">
               Você não está só — pais, educadores e terapeutas enfrentam os mesmos desafios todos os dias.
             </p>
           </div>
