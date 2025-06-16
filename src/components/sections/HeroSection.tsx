@@ -12,11 +12,11 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-6 animate-fade-in-fast flex justify-center">
           <Image
-            src="https://i.imgur.com/1ia5AVO.jpeg"
-            alt="Spectrum Sprouts Emblem"
-            data-ai-hint="logo sprout"
-            width={80}
-            height={80}
+            src="https://i.imgur.com/sb4rEa0.png"
+            alt="Spectrum Sprouts Logo"
+            data-ai-hint="logo abstract"
+            width={120}
+            height={120}
             className="rounded-lg"
             priority
           />
