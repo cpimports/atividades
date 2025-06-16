@@ -17,8 +17,8 @@ export default function HomePage() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
-        <KitDescriptionSection />
         <HowToReceiveSection />
+        <KitDescriptionSection />
         <ActivityShowcaseSection />
         <BenefitsSection />
         <TestimonialsSection />
