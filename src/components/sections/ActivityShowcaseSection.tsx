@@ -34,18 +34,23 @@ const materialItems = [
 export default function ActivityShowcaseSection() {
   return (
     <section id="material" className="py-16 md:py-24 bg-background">
+      {/* Full-width image container */}
+      <div className="w-full mb-12">
+        <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px]">
+          <Image
+            src="https://i.imgur.com/0NaA6hf.png"
+            alt="Ilustração do conteúdo do Kit Gêniozinho em Ação em grande destaque"
+            data-ai-hint="educational kit activities"
+            layout="fill"
+            objectFit="cover"
+            className="rounded-lg" 
+          />
+        </div>
+      </div>
+
+      {/* Constrained content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="flex justify-center mb-6">
-            <Image
-              src="https://i.imgur.com/0NaA6hf.png"
-              alt="Ilustração do conteúdo do Kit Gêniozinho em Ação"
-              data-ai-hint="educational kit activities"
-              width={2048}
-              height={2048}
-              className="rounded-lg"
-            />
-          </div>
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             O Que Tem no Kit Gêniozinho em Ação?
           </h2>
