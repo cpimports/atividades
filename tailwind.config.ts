@@ -65,6 +65,7 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
+        darkPurple: 'hsl(var(--dark-purple))', // Added custom dark purple
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -104,4 +105,3 @@ export default {
   },
   plugins: [require('tailwindcss-animate')],
 } satisfies Config;
-
