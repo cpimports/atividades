@@ -104,7 +104,11 @@ export default {
           '25%': { transform: 'translateX(15px) translateY(6px)' },
           '50%': { transform: 'translateX(-15px) translateY(-9px)' },
           '75%': { transform: 'translateX(9px) translateY(-6px)' },
-        }
+        },
+        twinkle: {
+          '0%, 100%': { opacity: '0.2' },
+          '50%': { opacity: '0.8' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -114,6 +118,7 @@ export default {
         'fade-in-fast': 'fadeIn 0.5s ease-out',
         'cloud-drift-slow': 'cloud-drift-slow 35s ease-in-out infinite',
         'cloud-drift-medium': 'cloud-drift-medium 25s ease-in-out infinite',
+        twinkle: 'twinkle 4s ease-in-out infinite',
       },
     },
   },
