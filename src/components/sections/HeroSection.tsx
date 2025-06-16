@@ -22,7 +22,7 @@ export default function HeroSection() {
           />
         </div>
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-primary animate-fade-in-medium">
-          Atividades Educativas Que Estimulam o Foco, a Linguagem e o Comportamento de Crianças com Dificuldade de Aprendizagem!
+          Descubra o Kit de Atividades que Está Facilitando o Ensino e Aprendizado em Casa e na Escola
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-foreground/80 animate-fade-in-slow">
           Material completo e pronto para aplicar em casa ou na escola — ideal para crianças com estilos únicos de aprendizado e atenção.
