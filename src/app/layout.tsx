@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Spectrum Sprouts - Atividades para Crianças com Autismo',
-  description: 'Atividades envolventes e de desenvolvimento personalizadas para crianças com autismo. Nutrindo o crescimento e a alegria.',
+  title: 'Gêniozinho em Ação - Atividades Educativas para Crianças',
+  description: 'Kit completo de atividades educativas e interativas, prontas para aplicar em casa ou na escola, e transformar a rotina de aprendizado de crianças com estilos únicos de aprendizagem e atenção.',
 };
 
 export default function RootLayout({

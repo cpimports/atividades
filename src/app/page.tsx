@@ -4,6 +4,7 @@ import HeroSection from '@/components/sections/HeroSection';
 import AboutSection from '@/components/sections/AboutSection';
 import ActivityShowcaseSection from '@/components/sections/ActivityShowcaseSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
+import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 
 export default function HomePage() {
@@ -15,6 +16,7 @@ export default function HomePage() {
         <AboutSection />
         <ActivityShowcaseSection />
         <BenefitsSection />
+        <TestimonialsSection />
         <CtaSection />
       </main>
       <Footer />
