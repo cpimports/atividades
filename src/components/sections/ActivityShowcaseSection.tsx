@@ -33,7 +33,7 @@ const materialItems = [
 
 export default function ActivityShowcaseSection() {
   return (
-    <section id="material" className="py-16 md:py-24 bg-background">
+    <section id="material" className="pt-0 pb-16 md:pb-24 bg-background">
       {/* Full-width image container */}
       <div className="w-full mb-12">
         <div className="relative w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[700px]">
@@ -44,6 +44,7 @@ export default function ActivityShowcaseSection() {
             layout="fill"
             objectFit="cover"
             className="rounded-lg" 
+            priority
           />
         </div>
       </div>
