@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
+    <section className="py-16 md:py-24 lg:py-32 bg-background relative overflow-hidden">
       <div className="absolute inset-0 opacity-60 dark:opacity-30 filter blur-3xl pointer-events-none">
         {/* Cloud Elements */}
         <div className="absolute top-[-15%] left-[-20%] w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,_white_0%,transparent_70%)] rounded-full animate-cloud-drift-slow"></div>
