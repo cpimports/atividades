@@ -50,7 +50,7 @@ export default function HeroSection() {
           Transforme o Dia a Dia da Sua Criança com Atividades Divertidas e Inclusivas Criadas Especialmente para o Desenvolvimento Delas!
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300 animate-fade-in-slow">
-          Conteúdo completo, lúdico e estruturado para envolver crianças com estilos únicos de aprendizado e atenção
+          Mais conexão, menos estresse e mais evolução: um material completo com atividades lúdicas e terapêuticas que estimulam o aprendizado, a linguagem, o foco e o comportamento da criança
         </p>
         <div className="mt-12 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
           <Image 
