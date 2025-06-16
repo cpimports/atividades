@@ -19,7 +19,7 @@
     --border: 210 20% 80%;
     --input: 210 20% 88%; /* Lighter input background */
 
-    --primary: 210 50% 60%; /* #6699CC */
+    --primary: 243 55% 42%; /* New: Dark Indigo (derived from indigo-800 #3730a3) */
     --primary-foreground: 0 0% 100%; /* White text on primary */
 
     --secondary: 210 40% 85%; /* Lighter muted blue */
@@ -31,7 +31,7 @@
     --destructive: 0 72% 51%; /* Adjusted for better visibility */
     --destructive-foreground: 0 0% 98%;
 
-    --ring: 210 50% 65%; /* Ring color based on primary */
+    --ring: 243 55% 45%; /* Ring color based on new primary */
     
     --radius: 0.5rem;
 
@@ -69,7 +69,7 @@
     --border: 210 20% 30%;
     --input: 210 20% 25%;
 
-    --primary: 210 50% 60%; /* #6699CC */
+    --primary: 210 50% 60%; /* #6699CC - Kept for dark mode contrast */
     --primary-foreground: 0 0% 100%; /* White text on primary */
 
     --secondary: 210 30% 25%;
