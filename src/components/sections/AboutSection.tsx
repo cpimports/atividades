@@ -5,8 +5,8 @@ import Image from 'next/image';
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-secondary/30 relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 opacity-50 -z-10"></div>
+    <section id="about" className="py-16 md:py-24 relative">
+      <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/20 via-darkPurple/10 to-background/5 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
