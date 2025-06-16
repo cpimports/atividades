@@ -47,7 +47,7 @@ export default function HeroSection() {
           />
         </div>
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
-          Transforme o Dia a Dia da Sua Criança Autista com Atividades Divertidas e Inclusivas Criadas Especialmente para o Desenvolvimento Delas!
+          Transforme o Dia a Dia da Sua Criança com Atividades Divertidas e Inclusivas Criadas Especialmente para o Desenvolvimento Delas!
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-300 animate-fade-in-slow">
           Conteúdo completo, lúdico e estruturado para envolver crianças com estilos únicos de aprendizado e atenção
