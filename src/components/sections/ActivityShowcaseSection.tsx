@@ -40,9 +40,9 @@ export default function ActivityShowcaseSection() {
             <Image
               src="https://i.imgur.com/0NaA6hf.png"
               alt="Ilustração do conteúdo do Kit Gêniozinho em Ação"
-              data-ai-hint="educational kit"
-              width={150}
-              height={150}
+              data-ai-hint="educational kit activities"
+              width={480}
+              height={480}
               className="rounded-lg"
             />
           </div>
@@ -72,3 +72,4 @@ export default function ActivityShowcaseSection() {
     </section>
   );
 }
+
