@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,9 +10,16 @@ export default function HeroSection() {
         {/* Subtle background pattern or image can be added here */}
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="inline-flex items-center rounded-full bg-accent/20 px-4 py-1.5 text-sm font-medium text-accent-foreground mb-6 animate-fade-in-fast">
-          <Sparkles className="w-4 h-4 mr-2 text-accent" />
-          Nurturing Potential, Inspiring Growth
+        <div className="mb-6 animate-fade-in-fast flex justify-center">
+          <Image
+            src="https://i.imgur.com/1ia5AVO.jpeg"
+            alt="Spectrum Sprouts Emblem"
+            data-ai-hint="logo sprout"
+            width={80}
+            height={80}
+            className="rounded-lg"
+            priority
+          />
         </div>
         <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary animate-fade-in-medium">
           Unlock Your Child's World with <span className="text-accent">Spectrum Sprouts</span>
