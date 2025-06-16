@@ -10,13 +10,13 @@ export default function HeroSection() {
         {/* Subtle background pattern or image can be added here */}
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="mb-6 animate-fade-in-fast flex justify-center">
+        <div className="mb-6 mt-[-2rem] md:mt-[-3rem] animate-fade-in-fast flex justify-center">
           <Image
             src="https://i.imgur.com/sb4rEa0.png"
             alt="Spectrum Sprouts Logo"
             data-ai-hint="logo abstract"
-            width={120}
-            height={120}
+            width={160}
+            height={160}
             className="rounded-lg"
             priority
           />
