@@ -109,6 +109,16 @@ export default {
           '0%, 100%': { opacity: '0.2' },
           '50%': { opacity: '0.8' },
         },
+        'pulse-yellow-cta': {
+          '0%, 100%': {
+            transform: 'scale(1)',
+            boxShadow: '0 0 0 0 hsla(48, 96%, 57%, 0.7)', 
+          },
+          '50%': {
+            transform: 'scale(1.03)',
+            boxShadow: '0 0 0 8px hsla(48, 96%, 57%, 0)', 
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -119,6 +129,7 @@ export default {
         'cloud-drift-slow': 'cloud-drift-slow 50s ease-in-out infinite',
         'cloud-drift-medium': 'cloud-drift-medium 40s ease-in-out infinite',
         twinkle: 'twinkle 4s ease-in-out infinite',
+        'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
       },
     },
   },

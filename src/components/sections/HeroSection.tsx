@@ -64,7 +64,11 @@ export default function HeroSection() {
           />
         </div>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
-          <Button size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow bg-accent hover:bg-accent/90 text-primary-foreground">
+          <Button 
+            size="lg" 
+            asChild 
+            className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
+          >
             <Link href="#cta">
               Quero Acessar o Kit Agora <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
