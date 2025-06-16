@@ -11,11 +11,11 @@ export default function Footer() {
             <Leaf className="h-6 w-6 text-accent" />
             <span className="font-headline text-lg font-semibold text-primary">Spectrum Sprouts</span>
           </Link>
-          <p>&copy; {currentYear} Spectrum Sprouts. All rights reserved.</p>
-          <p>Designed with care for our little learners.</p>
+          <p>&copy; {currentYear} Spectrum Sprouts. Todos os direitos reservados.</p>
+          <p>Projetado com carinho para nossos pequenos aprendizes.</p>
           <div className="flex space-x-4">
-            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="hover:text-primary transition-colors">Política de Privacidade</Link>
+            <Link href="/terms-of-service" className="hover:text-primary transition-colors">Termos de Serviço</Link>
           </div>
         </div>
       </div>

@@ -32,7 +32,7 @@ export default function ActivityCard({ title, description, imageUrl, imageHint, 
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Button variant="outline" className="w-full group">
-          Learn More <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+          Saiba Mais <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
         </Button>
       </CardFooter>
     </Card>

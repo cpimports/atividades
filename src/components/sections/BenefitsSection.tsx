@@ -4,33 +4,33 @@ import { Brain, Smile, Users, Puzzle, Sparkles, Heart } from 'lucide-react';
 const benefits = [
   {
     icon: <Brain className="h-10 w-10 text-primary" />,
-    title: 'Cognitive Development',
-    description: 'Activities that stimulate critical thinking, problem-solving, and memory skills.',
+    title: 'Desenvolvimento Cognitivo',
+    description: 'Atividades que estimulam o pensamento crítico, a resolução de problemas e as habilidades de memória.',
   },
   {
     icon: <Smile className="h-10 w-10 text-accent" />,
-    title: 'Emotional Regulation',
-    description: 'Tools and techniques to help children understand and manage their emotions effectively.',
+    title: 'Regulação Emocional',
+    description: 'Ferramentas e técnicas para ajudar as crianças a entender e gerenciar suas emoções de forma eficaz.',
   },
   {
     icon: <Users className="h-10 w-10 text-primary" />,
-    title: 'Social Skill Enhancement',
-    description: 'Interactive games and scenarios to improve communication and social interaction.',
+    title: 'Aprimoramento de Habilidades Sociais',
+    description: 'Jogos e cenários interativos para melhorar a comunicação e a interação social.',
   },
   {
     icon: <Puzzle className="h-10 w-10 text-accent" />,
-    title: 'Fine & Gross Motor Skills',
-    description: 'Engaging tasks that promote coordination, balance, and dexterity.',
+    title: 'Habilidades Motoras Finas e Grossas',
+    description: 'Tarefas envolventes que promovem coordenação, equilíbrio e destreza.',
   },
    {
     icon: <Sparkles className="h-10 w-10 text-primary" />,
-    title: 'Sensory Integration',
-    description: 'Activities designed to help process sensory information in a positive way.',
+    title: 'Integração Sensorial',
+    description: 'Atividades projetadas para ajudar a processar informações sensoriais de forma positiva.',
   },
   {
     icon: <Heart className="h-10 w-10 text-accent" />,
-    title: 'Increased Engagement',
-    description: 'Fun and motivating tasks that capture attention and encourage participation.',
+    title: 'Maior Engajamento',
+    description: 'Tarefas divertidas e motivadoras que capturam a atenção e incentivam a participação.',
   },
 ];
 
@@ -40,10 +40,10 @@ export default function BenefitsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
-            How Spectrum Sprouts Helps
+            Como Spectrum Sprouts Ajuda
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-            Our activities are thoughtfully designed to provide numerous benefits for your child's growth and development.
+            Nossas atividades são cuidadosamente projetadas para fornecer inúmeros benefícios para o crescimento e desenvolvimento do seu filho.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

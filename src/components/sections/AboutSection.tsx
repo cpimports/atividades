@@ -11,26 +11,26 @@ export default function AboutSection() {
              <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent rounded-full opacity-50 -z-10"></div>
              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-lg opacity-30 -z-10 transform rotate-12"></div>
             <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary mb-6">
-              Understanding the Journey
+              Entendendo a Jornada
             </h2>
             <p className="text-lg text-foreground/80 mb-4">
-              Parenting a child with autism is a unique and rewarding journey, filled with moments of joy and unique challenges. We understand the desire to provide the best support for your child's development and well-being.
+              Criar um filho com autismo é uma jornada única e gratificante, repleta de momentos de alegria e desafios singulares. Entendemos o desejo de fornecer o melhor suporte para o desenvolvimento e bem-estar do seu filho.
             </p>
             <p className="text-lg text-foreground/80 mb-6">
-              Spectrum Sprouts offers a curated collection of activities designed by experts to cater to the specific needs of autistic children. Our goal is to make learning fun, engaging, and effective, helping your child thrive.
+              Spectrum Sprouts oferece uma coleção cuidadosamente selecionada de atividades elaboradas por especialistas para atender às necessidades específicas de crianças com autismo. Nosso objetivo é tornar o aprendizado divertido, envolvente e eficaz, ajudando seu filho a florescer.
             </p>
             <ul className="space-y-3">
               <li className="flex items-center text-foreground/90">
                 <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                Tailored activities for developmental milestones.
+                Atividades personalizadas para marcos do desenvolvimento.
               </li>
               <li className="flex items-center text-foreground/90">
                 <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                Focus on sensory integration and cognitive skills.
+                Foco na integração sensorial e habilidades cognitivas.
               </li>
               <li className="flex items-center text-foreground/90">
                 <CheckCircle className="h-5 w-5 text-accent mr-3 flex-shrink-0" />
-                Easy-to-follow guides for parents and caregivers.
+                Guias fáceis de seguir para pais e cuidadores.
               </li>
             </ul>
           </div>
@@ -38,7 +38,7 @@ export default function AboutSection() {
              <Card className="overflow-hidden shadow-xl transform hover:scale-105 transition-transform duration-300">
               <img
                 src="https://placehold.co/600x450.png"
-                alt="Supportive environment for autistic children"
+                alt="Ambiente de apoio para crianças com autismo"
                 data-ai-hint="child learning"
                 className="w-full h-auto object-cover aspect-[4/3]"
               />

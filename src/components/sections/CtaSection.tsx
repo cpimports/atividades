@@ -9,14 +9,14 @@ export default function CtaSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <Gift className="h-16 w-16 mx-auto mb-6 text-primary-foreground/80" />
         <h2 className="font-headline text-3xl sm:text-4xl font-bold mb-6">
-          Ready to Nurture Your Child's Potential?
+          Pronto para Nutrir o Potencial do Seu Filho?
         </h2>
         <p className="max-w-xl mx-auto text-lg text-primary-foreground/90 mb-10">
-          Join Spectrum Sprouts today and gain access to a wealth of activities designed to help your child learn, grow, and shine.
+          Junte-se ao Spectrum Sprouts hoje e tenha acesso a uma riqueza de atividades projetadas para ajudar seu filho a aprender, crescer e brilhar.
         </p>
         <Button size="lg" variant="secondary" asChild className="shadow-2xl hover:scale-105 transition-transform duration-300">
           <Link href="/signup"> {/* Placeholder link */}
-            Start Your Journey Now
+            Comece Sua Jornada Agora
           </Link>
         </Button>
       </div>

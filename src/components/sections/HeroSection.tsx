@@ -13,7 +13,7 @@ export default function HeroSection() {
         <div className="mb-6 mt-[-3rem] md:mt-[-4rem] animate-fade-in-fast flex justify-center">
           <Image
             src="https://i.imgur.com/sb4rEa0.png"
-            alt="Spectrum Sprouts Logo"
+            alt="Logo Spectrum Sprouts"
             data-ai-hint="logo abstract"
             width={200}
             height={200}
@@ -22,27 +22,27 @@ export default function HeroSection() {
           />
         </div>
         <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary animate-fade-in-medium">
-          Unlock Your Child's World with <span className="text-accent">Spectrum Sprouts</span>
+          Desvende o Mundo do Seu Filho com <span className="text-accent">Spectrum Sprouts</span>
         </h1>
         <p className="mt-6 max-w-2xl mx-auto text-lg md:text-xl text-foreground/80 animate-fade-in-slow">
-          Discover engaging, research-backed activities designed to support the unique developmental journey of children with autism. Foster skills, spark joy, and celebrate every milestone.
+          Descubra atividades envolventes e baseadas em pesquisas, projetadas para apoiar a jornada de desenvolvimento única de crianças com autismo. Promova habilidades, desperte alegria e celebre cada conquista.
         </p>
         <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
           <Button size="lg" asChild className="shadow-lg hover:shadow-xl transition-shadow">
             <Link href="#activities">
-              Explore Activities <ArrowRight className="ml-2 h-5 w-5" />
+              Explorar Atividades <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
           <Button size="lg" variant="outline" asChild className="shadow-lg hover:shadow-xl transition-shadow">
             <Link href="#about">
-              Learn More
+              Saiba Mais
             </Link>
           </Button>
         </div>
         <div className="mt-16 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
           <Image 
             src="https://placehold.co/800x400.png" 
-            alt="Happy children playing with educational toys" 
+            alt="Crianças felizes brincando com brinquedos educativos" 
             data-ai-hint="children playing"
             width={800} 
             height={400}

@@ -3,8 +3,8 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 
 export const metadata: Metadata = {
-  title: 'Spectrum Sprouts - Activities for Autistic Children',
-  description: 'Engaging and developmental activities tailored for children with autism. Nurturing growth and joy.',
+  title: 'Spectrum Sprouts - Atividades para Crianças com Autismo',
+  description: 'Atividades envolventes e de desenvolvimento personalizadas para crianças com autismo. Nutrindo o crescimento e a alegria.',
 };
 
 export default function RootLayout({
@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
