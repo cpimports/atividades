@@ -25,7 +25,7 @@ export default function HeroSection() {
           Descubra o Kit de Atividades que Está Facilitando o Ensino e Aprendizado em Casa e na Escola
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-foreground/80 animate-fade-in-slow">
-          Material completo e pronto para aplicar em casa ou na escola — ideal para crianças com estilos únicos de aprendizado e atenção.
+          Conteúdo completo, lúdico e estruturado para envolver crianças com estilos únicos de aprendizado e atenção
         </p>
         <div className="mt-12 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
           <Image 
