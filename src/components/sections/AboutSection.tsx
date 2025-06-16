@@ -1,3 +1,4 @@
+
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, Users } from 'lucide-react';
 import Image from 'next/image';
@@ -14,7 +15,7 @@ export default function AboutSection() {
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Card className="p-6 bg-card/80 backdrop-blur-lg border border-border/50 shadow-lg">
+            <Card className="p-6 bg-card/80 hover:bg-card/90 backdrop-blur-lg border border-border/50 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out">
               <ul className="space-y-4">
                 {[
                   "Seu aluno ou filho tem dificuldade para manter o foco?",
