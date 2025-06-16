@@ -16,18 +16,6 @@ export default function Header() {
           />
           <span className="font-headline text-xl font-semibold text-primary">Gêniozinho em Ação</span>
         </Link>
-        {/* Navigation items can be added here later if needed */}
-        {/* 
-        <nav className="hidden md:flex gap-6">
-          <Link href="#material" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">Material</Link>
-          <Link href="#oque-voce-recebe" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">O Que Você Recebe</Link>
-          <Link href="#depoimentos" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">Depoimentos</Link>
-          <Link href="#cta" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary">Começar</Link>
-        </nav>
-        <div className="md:hidden">
-          {/* Mobile menu button can be added here *}
-        </div>
-        */}
       </div>
     </header>
   );
