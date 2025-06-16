@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, MessageCircle, Waves, SquareStack, BookOpenCheck, Lightbulb } from 'lucide-react';
 
@@ -38,7 +39,7 @@ export default function ActivityShowcaseSection() {
             O Que Tem no Kit Gêniozinho em Ação?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-            Um universo de aprendizado lúdico e eficaz para desenvolver habilidades essenciais de forma divertida e interativa.
+            Um kit completo de atividades educativas e interativas pensadas para estimular o desenvolvimento de crianças com perfis de aprendizado diversos
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
