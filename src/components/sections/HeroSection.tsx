@@ -54,11 +54,11 @@ export default function HeroSection() {
         </p>
         <div className="mt-12 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
           <Image 
-            src="https://placehold.co/800x450.png" 
+            src="https://placehold.co/600x338.png" 
             alt="Crianças felizes e engajadas utilizando o material Gêniozinho em Ação" 
             data-ai-hint="children learning kit"
-            width={800} 
-            height={450}
+            width={600} 
+            height={338}
             className="rounded-xl shadow-2xl mx-auto aspect-video object-cover"
             priority
           />
