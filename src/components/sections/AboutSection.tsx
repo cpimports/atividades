@@ -1,7 +1,6 @@
 
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, Users } from 'lucide-react';
-import Image from 'next/image';
+import { Card } from '@/components/ui/card';
+import { CheckCircle } from 'lucide-react';
 
 export default function AboutSection() {
   return (
@@ -14,19 +13,21 @@ export default function AboutSection() {
           </h2>
           <p className="mt-4 text-lg text-foreground/80">Lembre-se: Seu tempo é precioso...</p>
         </div>
-        <div className="flex justify-center"> {/* Centering the remaining card */}
-          <div className="space-y-6 max-w-xl"> {/* Constraining width if needed */}
+        <div className="flex justify-center">
+          <div className="space-y-6 max-w-xl">
             <Card className="p-6 bg-card/80 hover:bg-card/90 backdrop-blur-lg border border-border/50 shadow-lg hover:shadow-2xl hover:scale-[1.02] transition-all duration-300 ease-in-out">
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {[
                   "Seu aluno ou filho tem dificuldade para manter o foco?",
                   "Você sente que ele se frustra facilmente com atividades comuns?",
                   "Fica difícil encontrar materiais que realmente estimulem o aprendizado?",
                   "Já tentou de tudo, mas sente que falta algo mais interativo?",
                 ].map((item, index) => (
-                  <li key={index} className="flex items-start text-foreground/90">
-                    <CheckCircle className="h-6 w-6 text-accent mr-3 mt-1 flex-shrink-0" />
-                    <span>{item}</span>
+                  <li key={index}>
+                    <div className="bg-muted/20 p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start text-foreground/90">
+                      <CheckCircle className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
                   </li>
                 ))}
               </ul>
