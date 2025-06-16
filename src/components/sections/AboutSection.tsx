@@ -1,6 +1,5 @@
 
 import { CheckCircle } from 'lucide-react';
-import Image from 'next/image';
 
 export default function AboutSection() {
   return (
@@ -8,16 +7,7 @@ export default function AboutSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/20 via-darkPurple/10 to-background/5 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <div className="flex justify-center mb-8">
-            <Image
-              src="https://i.imgur.com/0NaA6hf.png"
-              alt="Imagem ilustrativa para seção Chega de Perder Tempo"
-              data-ai-hint="thinking brain idea"
-              width={180}
-              height={180}
-              className="rounded-lg"
-            />
-          </div>
+          {/* Image removed from here */}
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             CHEGA DE PERDER TEMPO!
           </h2>

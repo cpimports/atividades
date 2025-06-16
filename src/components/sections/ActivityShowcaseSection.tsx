@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Eye, MessageCircle, Waves, SquareStack, BookOpenCheck, Lightbulb } from 'lucide-react';
+import Image from 'next/image';
 
 const materialItems = [
   {
@@ -35,6 +36,16 @@ export default function ActivityShowcaseSection() {
     <section id="material" className="py-16 md:py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
+          <div className="flex justify-center mb-6">
+            <Image
+              src="https://i.imgur.com/0NaA6hf.png"
+              alt="Ilustração do conteúdo do Kit Gêniozinho em Ação"
+              data-ai-hint="educational kit"
+              width={150}
+              height={150}
+              className="rounded-lg"
+            />
+          </div>
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             O Que Tem no Kit Gêniozinho em Ação?
           </h2>
