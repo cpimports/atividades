@@ -63,7 +63,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
           <Button 
             size="lg" 
             asChild 
@@ -73,6 +73,9 @@ export default function HeroSection() {
               BAIXAR MINHA CÓPIA
             </Link>
           </Button>
+          <p className="mt-2 text-xs text-gray-400 animate-fade-in-slow" style={{ animationDelay: '0.7s' }}>
+            REVISADO POR PEDAGOGOS E PSICÓLOGOS
+          </p>
         </div>
       </div>
     </section>
