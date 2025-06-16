@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
     <section id="depoimentos" className="py-16 md:py-24 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-darkPurple">
+          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             Resultados Reais: Veja o Que Estão Dizendo!
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
@@ -38,7 +38,7 @@ export default function TestimonialsSection() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="pt-2 mt-auto">
-                <p className="text-right font-semibold text-darkPurple">{testimonial.author}</p>
+                <p className="text-right font-semibold text-primary">{testimonial.author}</p>
                 <p className="text-right text-sm text-muted-foreground">{testimonial.role}</p>
               </CardContent>
             </Card>

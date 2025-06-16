@@ -31,7 +31,7 @@ export default function ActivityCard({ title, description, imageUrl, imageHint, 
         {category && (
           <span className="inline-block bg-accent/20 text-accent-foreground px-2 py-0.5 rounded-full text-xs font-medium mb-2">{category}</span>
         )}
-        <CardTitle className="font-headline text-xl mb-2 text-darkPurple">{title}</CardTitle>
+        <CardTitle className="font-headline text-xl mb-2 text-primary">{title}</CardTitle>
         <CardDescription className="text-foreground/70 line-clamp-3">{description}</CardDescription>
       </CardContent>
       <CardFooter className="p-6 pt-0">

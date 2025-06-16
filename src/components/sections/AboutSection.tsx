@@ -8,7 +8,7 @@ export default function AboutSection() {
       <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 opacity-50 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-darkPurple">
+          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             Você se identifica com isso?
           </h2>
         </div>
@@ -37,7 +37,7 @@ export default function AboutSection() {
           <div className="relative p-6 md:p-8 rounded-xl shadow-2xl bg-card/80 backdrop-blur-lg border border-border/50">
             <div className="absolute -top-4 -left-4 w-16 h-16 bg-accent rounded-full opacity-50 -z-10"></div>
             <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary rounded-lg opacity-30 -z-10 transform rotate-12"></div>
-            <h3 className="font-headline text-2xl sm:text-3xl font-semibold text-darkPurple mb-6 text-center md:text-left">
+            <h3 className="font-headline text-2xl sm:text-3xl font-semibold text-primary mb-6 text-center md:text-left">
               A Solução: Gêniozinho em Ação
             </h3>
             <Image

@@ -16,7 +16,7 @@ export default function Footer() {
               height={60}
               className="rounded-md"
             />
-            <span className="font-headline text-lg font-semibold text-darkPurple">Gêniozinho em Ação</span>
+            <span className="font-headline text-lg font-semibold text-primary">Gêniozinho em Ação</span>
           </Link>
           <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>
           <p>Transformando o aprendizado com atividades lúdicas e eficazes.</p>
