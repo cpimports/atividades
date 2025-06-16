@@ -65,7 +65,7 @@ export default {
           border: 'hsl(var(--sidebar-border))',
           ring: 'hsl(var(--sidebar-ring))',
         },
-        darkPurple: 'hsl(var(--dark-purple))', // Added custom dark purple
+        darkPurple: 'hsl(var(--dark-purple))', 
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -90,9 +90,21 @@ export default {
           },
         },
         fadeIn: {
-          '0%': { opacity: '0', transform: 'translateY(10px)' }, /* Adjusted Y transform for subtlety */
+          '0%': { opacity: '0', transform: 'translateY(10px)' }, 
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
+        'cloud-drift-slow': {
+          '0%, 100%': { transform: 'translateX(0) translateY(0)' },
+          '25%': { transform: 'translateX(10px) translateY(4px)' },
+          '50%': { transform: 'translateX(-10px) translateY(-6px)' },
+          '75%': { transform: 'translateX(6px) translateY(-4px)' },
+        },
+        'cloud-drift-medium': {
+          '0%, 100%': { transform: 'translateX(0) translateY(0)' },
+          '25%': { transform: 'translateX(15px) translateY(6px)' },
+          '50%': { transform: 'translateX(-15px) translateY(-9px)' },
+          '75%': { transform: 'translateX(9px) translateY(-6px)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -100,6 +112,8 @@ export default {
         'fade-in-slow': 'fadeIn 1s ease-out',
         'fade-in-medium': 'fadeIn 0.7s ease-out',
         'fade-in-fast': 'fadeIn 0.5s ease-out',
+        'cloud-drift-slow': 'cloud-drift-slow 35s ease-in-out infinite',
+        'cloud-drift-medium': 'cloud-drift-medium 25s ease-in-out infinite',
       },
     },
   },

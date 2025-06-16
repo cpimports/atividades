@@ -6,8 +6,12 @@ import Link from 'next/link';
 export default function HeroSection() {
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-b from-background to-secondary/30 relative overflow-hidden">
-      <div className="absolute inset-0 opacity-10 dark:opacity-5">
-        {/* Subtle background pattern or image can be added here */}
+      <div className="absolute inset-0 opacity-60 dark:opacity-30 filter blur-3xl pointer-events-none">
+        {/* Cloud Elements */}
+        <div className="absolute top-[-15%] left-[-20%] w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,_white_0%,transparent_70%)] rounded-full animate-cloud-drift-slow"></div>
+        <div className="absolute top-[10%] right-[-25%] w-[600px] h-[350px] bg-[radial-gradient(ellipse_at_center,_white_0%,transparent_75%)] rounded-full animate-cloud-drift-medium opacity-80"></div>
+        <div className="absolute bottom-[-10%] left-[5%] w-[450px] h-[250px] bg-[radial-gradient(ellipse_at_center,_white_0%,transparent_65%)] rounded-full animate-cloud-drift-slow opacity-90"></div>
+        <div className="absolute bottom-[5%] right-[0%] w-[300px] h-[200px] bg-[radial-gradient(ellipse_at_center,_white_0%,transparent_70%)] rounded-full animate-cloud-drift-medium"></div>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-6 mt-[-3rem] md:mt-[-4rem] animate-fade-in-fast flex justify-center">
