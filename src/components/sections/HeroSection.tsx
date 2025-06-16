@@ -15,8 +15,8 @@ export default function HeroSection() {
             src="https://i.imgur.com/sb4rEa0.png"
             alt="Spectrum Sprouts Logo"
             data-ai-hint="logo abstract"
-            width={160}
-            height={160}
+            width={200}
+            height={200}
             className="rounded-lg"
             priority
           />
