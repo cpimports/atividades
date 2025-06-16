@@ -1,7 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Eye, MessageCircle, Waves, SquareStack, BookOpenCheck, Lightbulb } from 'lucide-react';
-import Image from 'next/image';
+import { MessageCircle, Waves, SquareStack, BookOpenCheck, Lightbulb } from 'lucide-react';
 
 const materialItems = [
   {
@@ -34,20 +33,7 @@ const materialItems = [
 export default function ActivityShowcaseSection() {
   return (
     <section id="material" className="pt-0 pb-16 md:pb-24 bg-background">
-      {/* Full-width image container */}
-      <div className="w-full mb-12">
-        <div className="relative w-full h-[350px] sm:h-[450px] md:h-[600px] lg:h-[700px]">
-          <Image
-            src="https://i.imgur.com/0NaA6hf.png"
-            alt="Ilustração do conteúdo do Kit Gêniozinho em Ação em grande destaque"
-            data-ai-hint="educational kit activities"
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg" 
-            priority
-          />
-        </div>
-      </div>
+      {/* Image container removed */}
 
       {/* Constrained content container */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
