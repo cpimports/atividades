@@ -30,7 +30,7 @@ export default function CtaSection() {
               <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
-              <p className="text-foreground/80">
+              <p className="text-foreground/80 font-semibold">
                 Além de todos os benefícios que citamos acima, adquirindo hoje você tem 7 dias de garantia para testar o material.
               </p>
             </CardContent>
@@ -81,4 +81,3 @@ export default function CtaSection() {
     </section>
   );
 }
-
