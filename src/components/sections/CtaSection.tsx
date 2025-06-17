@@ -27,7 +27,7 @@ export default function CtaSection() {
                 height={180}
                 className="mb-3"
               />
-              <CardTitle className="font-headline text-2xl text-primary">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
+              <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-foreground/80">
