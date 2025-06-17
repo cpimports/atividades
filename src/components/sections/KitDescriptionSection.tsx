@@ -5,7 +5,7 @@ export default function KitDescriptionSection() {
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 -mt-[3.5rem] md:-mt-[4.5rem]">
+        <div className="text-center mb-12 -mt-[4rem] md:-mt-[5rem]">
           <Image
             src="https://i.imgur.com/OnWpWgf.png"
             alt="Ícone de livro com atividades"
