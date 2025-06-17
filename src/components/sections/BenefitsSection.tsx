@@ -28,11 +28,6 @@ const deliverables = [
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',
   },
-  {
-    icon: <RefreshCw className="h-10 w-10 text-accent" />,
-    title: 'Acesso Vitalício e Atualizações',
-    description: 'Conteúdo sempre atualizado e disponível para você usar quando quiser.',
-  },
 ];
 
 export default function BenefitsSection() {
