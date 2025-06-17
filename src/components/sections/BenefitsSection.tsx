@@ -75,7 +75,7 @@ export default function BenefitsSection() {
               data-ai-hint="gift bonus icon"
               width={100}
               height={100}
-              className="rounded-md"
+              className="rounded-md hover:scale-105 transition-transform duration-300"
             />
           </div>
           <h3 className="font-headline text-2xl sm:text-3xl font-semibold text-yellow-500 drop-shadow-md">
