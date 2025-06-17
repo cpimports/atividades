@@ -14,6 +14,7 @@ const deliverables = [
     icon: <CalendarClock className="h-10 w-10 text-accent" />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
     description: 'Ferramentas visuais para ajudar na organização e expressão emocional.',
+    titleClassName: 'font-headline text-2xl text-primary',
   },
   {
     icon: <Brain className="h-10 w-10 text-primary" />,
