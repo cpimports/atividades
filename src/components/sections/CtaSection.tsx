@@ -1,7 +1,8 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Gift, ShieldCheck, Star, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Gift, Star, AlertTriangle, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function CtaSection() {
   const bonuses = [
@@ -17,7 +18,14 @@ export default function CtaSection() {
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <Card className="shadow-xl bg-card/80 backdrop-blur-md">
             <CardHeader className="items-center text-center">
-              <ShieldCheck className="h-12 w-12 text-primary mb-3" />
+              <Image
+                src="https://i.imgur.com/lbSS21Q.png"
+                alt="Garantia de satisfação"
+                data-ai-hint="shield checkmark"
+                width={48}
+                height={48}
+                className="mb-3"
+              />
               <CardTitle className="font-headline text-2xl text-primary">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
             </CardHeader>
             <CardContent className="text-center">
