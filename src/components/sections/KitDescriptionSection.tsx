@@ -5,13 +5,13 @@ export default function KitDescriptionSection() {
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12 mt-[-2rem] md:mt-[-3rem]">
           <Image
             src="https://i.imgur.com/OnWpWgf.png"
             alt="Ícone de livro com atividades"
             data-ai-hint="book activities icon"
-            width={160}
-            height={160}
+            width={200}
+            height={200}
             className="mx-auto mb-4 rounded-md"
           />
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white">
