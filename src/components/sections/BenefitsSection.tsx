@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="https://i.imgur.com/Xc1eDY4.png" alt="Pacote de atividades" data-ai-hint="package box" width={40} height={40} />,
+    icon: <Image src="https://i.imgur.com/qWFe9DL.png" alt="Pacote de atividades" data-ai-hint="documents educational" width={40} height={40} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Educativas e interativas para engajar e desenvolver diversas habilidades.',
   },
