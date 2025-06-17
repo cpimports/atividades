@@ -5,10 +5,10 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="https://i.imgur.com/qWFe9DL.png" alt="Pacote de atividades" data-ai-hint="documents educational" width={40} height={40} />,
+    icon: <Image src="https://i.imgur.com/qWFe9DL.png" alt="Pacote de atividades" data-ai-hint="documents educational" width={48} height={48} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia',
-    titleClassName: 'font-headline text-2xl text-primary', // Added custom class for this title
+    titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
     icon: <CalendarClock className="h-10 w-10 text-accent" />,
