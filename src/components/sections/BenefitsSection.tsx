@@ -143,16 +143,7 @@ export default function BenefitsSection() {
             </div>
           )}
 
-          <div className="flex justify-center mb-4">
-            <Image
-              src="https://i.imgur.com/ZBKqeaL.png"
-              alt="Ícone de bônus exclusivo"
-              data-ai-hint="gift bonus icon"
-              width={100}
-              height={100}
-              className="rounded-md hover:scale-105 transition-transform duration-300"
-            />
-          </div>
+          {/* Image of gift box icon removed from here */}
           <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
@@ -178,8 +169,6 @@ export default function BenefitsSection() {
             </CardContent>
           </Card>
         </div>
-
-        {/* Image removed from here */}
 
         <div className="mt-12 flex justify-center">
           <Button 
