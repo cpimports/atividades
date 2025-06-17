@@ -22,7 +22,7 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
-            Resultados Reais: Veja o Que Estão Dizendo!
+            DEPOIMENTOS!
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
             Pais e educadores que transformaram o aprendizado com o Kit Gêniozinho em Ação.
@@ -48,3 +48,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+
