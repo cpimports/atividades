@@ -104,7 +104,7 @@ export default function BenefitsSection() {
           <Card className="mt-12 bg-primary/5 border-2 border-primary/20 shadow-xl p-6 md:p-8 rounded-lg backdrop-blur-md">
             <CardHeader className="p-0 mb-6">
               <CardTitle className="font-headline text-2xl sm:text-3xl text-primary text-center">
-                🎁 Bônus Exclusivos (somente hoje):
+                {/* Text removed as requested */}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
