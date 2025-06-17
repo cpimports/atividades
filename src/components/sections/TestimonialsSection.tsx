@@ -16,7 +16,7 @@ interface Testimonial {
 const testimonialsData: Testimonial[] = [
   {
     id: 1,
-    descriptor: '🗣️ Depoimento 1 – Mãe',
+    descriptor: 'Mãe',
     name: 'Carla M.',
     text: "Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!",
     avatarUrl: 'https://placehold.co/80x80.png',
@@ -25,7 +25,7 @@ const testimonialsData: Testimonial[] = [
   },
   {
     id: 2,
-    descriptor: '🗣️ Depoimento 2 – Professora',
+    descriptor: 'Professora',
     name: 'Vanessa G. – Professora do 2º ano',
     text: "Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!",
     avatarUrl: 'https://placehold.co/80x80.png',
@@ -34,7 +34,7 @@ const testimonialsData: Testimonial[] = [
   },
   {
     id: 3,
-    descriptor: '🗣️ Depoimento 3 – Terapeuta',
+    descriptor: 'Terapeuta',
     name: 'André P. – Psicopedagogo',
     text: "Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.",
     avatarUrl: 'https://placehold.co/80x80.png',
@@ -43,7 +43,7 @@ const testimonialsData: Testimonial[] = [
   },
   {
     id: 4,
-    descriptor: '🗣️ Depoimento 4 – Pai',
+    descriptor: 'Pai',
     name: 'Rafael T.',
     text: "Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis.",
     avatarUrl: 'https://placehold.co/80x80.png',
