@@ -18,7 +18,7 @@ export default function CtaSection() {
         
         <div className="grid lg:grid-cols-3 gap-8 mb-12">
           <Card className="shadow-xl bg-card/80 backdrop-blur-md">
-            <CardHeader className="items-center text-center shadow-xl shadow-yellow-500/40 rounded-t-lg">
+            <CardHeader className="items-center text-center">
               <Image
                 src="https://i.imgur.com/lbSS21Q.png"
                 alt="Garantia de satisfação"
@@ -27,7 +27,7 @@ export default function CtaSection() {
                 height={180}
                 className="mb-3"
               />
-              <CardTitle className="font-headline text-2xl text-yellow-500">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
+              <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
             </CardHeader>
             <CardContent className="text-center pt-6">
               <p className="text-foreground/80 font-semibold">
@@ -81,3 +81,4 @@ export default function CtaSection() {
     </section>
   );
 }
+
