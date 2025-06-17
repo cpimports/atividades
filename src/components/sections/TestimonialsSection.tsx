@@ -54,33 +54,33 @@ const testimonialsData: Testimonial[] = [
 
 export default function TestimonialsSection() {
   return (
-    <section id="depoimentos" className="py-16 md:py-24 bg-secondary/30">
+    <section id="depoimentos" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-4">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-white mb-4">
             DEPOIMENTOS!
           </h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Veja o que pais, professores e terapeutas estão dizendo sobre como o Kit Gêniozinho em Ação transformou suas rotinas e o aprendizado das crianças.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonialsData.map((testimonial) => (
-            <Card key={testimonial.id} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card/95 backdrop-blur-md flex flex-col overflow-hidden">
+            <Card key={testimonial.id} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-slate-800/60 backdrop-blur-sm flex flex-col overflow-hidden">
               <CardHeader className="p-6 flex flex-col items-center text-center sm:flex-row sm:items-start sm:space-x-4 sm:text-left">
-                <Avatar className="w-20 h-20 border-2 border-primary/30 flex-shrink-0 mb-4 sm:mb-0">
+                <Avatar className="w-20 h-20 border-2 border-sky-500/30 flex-shrink-0 mb-4 sm:mb-0">
                   <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
-                  <AvatarFallback className="text-2xl bg-primary/10 text-primary font-semibold">
+                  <AvatarFallback className="text-2xl bg-sky-700/50 text-sky-200 font-semibold">
                     {testimonial.avatarFallback}
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex-grow">
-                  <CardTitle className="font-headline text-xl text-primary mb-1">{testimonial.descriptor}</CardTitle>
-                  <p className="text-md font-semibold text-foreground/90">{testimonial.name}</p>
+                  <CardTitle className="font-headline text-xl text-sky-300 mb-1">{testimonial.descriptor}</CardTitle>
+                  <p className="text-md font-semibold text-gray-100">{testimonial.name}</p>
                 </div>
               </CardHeader>
               <CardContent className="p-6 pt-0 text-center sm:text-left flex-grow">
-                <p className="text-foreground/80 italic leading-relaxed">{testimonial.text}</p>
+                <p className="text-gray-300 italic leading-relaxed">{testimonial.text}</p>
               </CardContent>
             </Card>
           ))}
