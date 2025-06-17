@@ -6,7 +6,6 @@ import AboutSection from '@/components/sections/AboutSection';
 import KitDescriptionSection from '@/components/sections/KitDescriptionSection';
 import HowToReceiveSection from '@/components/sections/HowToReceiveSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import CtaSection from '@/components/sections/CtaSection';
 
 export default function HomePage() {
@@ -20,7 +19,6 @@ export default function HomePage() {
         <KitDescriptionSection />
         {/* ActivityShowcaseSection was here */}
         <BenefitsSection />
-        <TestimonialsSection />
         <CtaSection />
       </main>
       <Footer />
