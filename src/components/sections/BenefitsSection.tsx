@@ -13,7 +13,7 @@ const deliverables = [
   {
     icon: <Image src="https://i.imgur.com/JffYX0z.png" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={64} height={64} />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
-    description: 'Ferramentas visuais para ajudar na organização e expressão emocional.',
+    description: 'Cada exercício foi elaborado com linguagem simples, estímulos visuais e estrutura que respeita o tempo e o ritmo de cada criança, garantindo mais engajamento e menos frustração',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
