@@ -124,8 +124,8 @@ export default function BenefitsSection() {
             src="https://i.imgur.com/J3gznLj.png"
             alt="Selo de aprovação e recomendação para o kit Gêniozinho em Ação"
             data-ai-hint="approval seal recommendation"
-            width={800}
-            height={200} 
+            width={500}
+            height={125} 
             className="rounded-lg shadow-lg object-contain" 
           />
         </div>
