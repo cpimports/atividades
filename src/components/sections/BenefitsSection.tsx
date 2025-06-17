@@ -125,8 +125,8 @@ export default function BenefitsSection() {
             src="https://i.imgur.com/NYRDpoP.png"
             alt="Selo de Satisfação Garantida"
             data-ai-hint="satisfaction guarantee seal"
-            width={200}
-            height={200}
+            width={250}
+            height={250}
             className="rounded-md"
           />
         </div>
