@@ -20,6 +20,7 @@ const deliverables = [
     icon: <Brain className="h-8 w-8 text-primary" />,
     title: 'Material lúdico e interativo pronto para imprimir',
     description: 'Desafios divertidos para estimular o cérebro e aprimorar habilidades motoras.',
+    titleClassName: 'font-headline text-2xl text-primary',
   },
   {
     icon: <Palette className="h-10 w-10 text-accent" />,
