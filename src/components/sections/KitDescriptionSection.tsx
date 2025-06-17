@@ -1,5 +1,7 @@
 
 import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function KitDescriptionSection() {
   return (
@@ -26,8 +28,18 @@ export default function KitDescriptionSection() {
             Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
           </p>
         </div>
+        <div className="mt-10 flex justify-center">
+          <Button
+            size="lg"
+            asChild
+            className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
+          >
+            <Link href="#cta">
+              ACESSAR MATERIAL AGORA!
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
 }
-
