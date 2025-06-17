@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Brain, Palette, BookOpenText, RefreshCw } from 'lucide-react';
+import { Palette, BookOpenText, RefreshCw } from 'lucide-react';
 import Image from 'next/image';
 
 const deliverables = [
@@ -17,7 +17,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico e interativo" data-ai-hint="brain puzzle" width={32} height={32} />,
+    icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico e interativo" data-ai-hint="brain puzzle" width={40} height={40} />,
     title: 'Material lúdico e interativo pronto para imprimir',
     description: 'Desafios divertidos para estimular o cérebro e aprimorar habilidades motoras.',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -80,4 +80,3 @@ export default function BenefitsSection() {
     </section>
   );
 }
-
