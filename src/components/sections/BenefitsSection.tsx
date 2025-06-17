@@ -11,7 +11,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <CalendarClock className="h-10 w-10 text-accent" />,
+    icon: <CalendarClock className="h-12 w-12 text-accent" />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
     description: 'Ferramentas visuais para ajudar na organização e expressão emocional.',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -79,4 +79,3 @@ export default function BenefitsSection() {
     </section>
   );
 }
-
