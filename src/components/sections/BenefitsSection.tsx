@@ -119,6 +119,16 @@ export default function BenefitsSection() {
             </CardContent>
           </Card>
         </div>
+        <div className="mt-16 flex justify-center">
+          <Image
+            src="https://i.imgur.com/J3gznLj.png"
+            alt="Selo de aprovação e recomendação para o kit Gêniozinho em Ação"
+            data-ai-hint="approval seal recommendation"
+            width={800}
+            height={200} 
+            className="rounded-lg shadow-lg object-contain" 
+          />
+        </div>
       </div>
     </section>
   );
