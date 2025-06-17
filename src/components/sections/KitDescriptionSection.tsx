@@ -22,7 +22,7 @@ export default function KitDescriptionSection() {
         </div>
         <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-left md:text-justify">
           <p>
-            Material digital com mais de 100 atividades lúdicas e educativas, criado para estimular o foco, linguagem e comportamento de crianças com estilos únicos de aprendizagem.
+            Material digital com mais de 1000 atividades lúdicas e educativas, criado para estimular o foco, linguagem e comportamento de crianças com estilos únicos de aprendizagem.
           </p>
           <p>
             Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
