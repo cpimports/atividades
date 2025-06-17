@@ -81,7 +81,7 @@ export default function BenefitsSection() {
           <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
-          <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
         </div>
@@ -89,4 +89,3 @@ export default function BenefitsSection() {
     </section>
   );
 }
-
