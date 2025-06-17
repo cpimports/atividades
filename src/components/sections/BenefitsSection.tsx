@@ -1,4 +1,7 @@
 
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -48,6 +51,36 @@ const currentExclusiveBonuses = [
 
 
 export default function BenefitsSection() {
+  const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
+  const [targetDate, setTargetDate] = useState<Date | null>(null);
+
+  useEffect(() => {
+    setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); // 24 hours from now
+  }, []);
+
+  useEffect(() => {
+    if (!targetDate) return;
+
+    const calculateTimeLeft = () => {
+      const difference = +targetDate - +new Date();
+      let newTimeLeft = { days: '00', hours: '00', minutes: '00', seconds: '00' };
+
+      if (difference > 0) {
+        newTimeLeft = {
+          days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0'),
+          hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
+          minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
+          seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
+        };
+      }
+      setTimeLeft(newTimeLeft);
+    };
+
+    calculateTimeLeft(); // Initial calculation
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
+
   return (
     <section id="oque-voce-recebe" className="py-16 md:py-24 relative overflow-hidden">
       <Image
@@ -84,7 +117,32 @@ export default function BenefitsSection() {
             </Card>
           ))}
         </div>
+        
         <div className="text-center mt-12">
+          {timeLeft && (
+            <div className="text-center mb-8">
+              <p className="text-xl text-foreground/80 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
+              <div className="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.days}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Dias</span>
+                </div>
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.hours}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Horas</span>
+                </div>
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.minutes}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Minutos</span>
+                </div>
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.seconds}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Segundos</span>
+                </div>
+              </div>
+            </div>
+          )}
+
           <div className="flex justify-center mb-4">
             <Image
               src="https://i.imgur.com/ZBKqeaL.png"
@@ -143,7 +201,6 @@ export default function BenefitsSection() {
             </Link>
           </Button>
         </div>
-
       </div>
     </section>
   );
