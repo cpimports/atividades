@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BookOpenText, RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-react';
 import Image from 'next/image';
 
 const deliverables = [
@@ -27,11 +27,6 @@ const deliverables = [
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',
-  },
-   {
-    icon: <BookOpenText className="h-10 w-10 text-primary" />,
-    title: 'Guia Prático com Sugestões',
-    description: 'Orientações claras para pais e educadores aproveitarem ao máximo cada atividade.',
   },
   {
     icon: <RefreshCw className="h-10 w-10 text-accent" />,
