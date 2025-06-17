@@ -34,7 +34,7 @@ export default function HowToReceiveSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, index) => (
-            <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
+            <Card key={index} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
               <CardHeader className="flex flex-col items-center">
                 <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block">
                   {step.icon}
@@ -51,3 +51,4 @@ export default function HowToReceiveSection() {
     </section>
   );
 }
+
