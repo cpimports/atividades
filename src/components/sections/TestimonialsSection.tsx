@@ -1,18 +1,24 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Quote } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const testimonials = [
   {
     quote: "Usei com meus alunos e foi um sucesso. Eles se envolvem, se divertem e aprendem de verdade.",
     author: "Profa. Vanessa G.",
     role: "1º ano",
-    avatarFallback: "VG"
+    avatarFallback: "VG",
+    avatarUrl: "https://i.imgur.com/4AT6OXm.jpeg",
+    avatarHint: "woman teacher"
   },
   {
     quote: "Foi um alívio ter atividades que realmente prendem a atenção do meu filho e que podemos fazer juntos. Recomendo demais!",
     author: "Mônica R.",
     role: "Mãe",
-    avatarFallback: "MR"
+    avatarFallback: "MR",
+    avatarUrl: "https://placehold.co/64x64.png",
+    avatarHint: "woman mother"
   }
 ];
 
@@ -31,11 +37,17 @@ export default function TestimonialsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
-              <CardHeader className="pb-4">
-                <Quote className="h-10 w-10 text-accent/50 mb-2" />
-                <CardTitle className="text-lg font-normal italic text-foreground/85 leading-relaxed">
-                  "{testimonial.quote}"
-                </CardTitle>
+              <CardHeader className="pb-4 flex flex-col items-center text-center sm:flex-row sm:items-start sm:space-x-4 sm:text-left">
+                <Avatar className="h-16 w-16 mb-4 sm:mb-0 sm:flex-shrink-0">
+                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.author} data-ai-hint={testimonial.avatarHint} />
+                  <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
+                </Avatar>
+                <div className="flex-grow">
+                  <Quote className="h-8 w-8 text-accent/50 mb-2" />
+                  <CardTitle className="text-lg font-normal italic text-foreground/85 leading-relaxed">
+                    "{testimonial.quote}"
+                  </CardTitle>
+                </div>
               </CardHeader>
               <CardContent className="pt-2 mt-auto">
                 <p className="text-right font-semibold text-primary">{testimonial.author}</p>
@@ -48,4 +60,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
-
