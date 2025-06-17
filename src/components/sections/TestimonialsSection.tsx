@@ -66,7 +66,10 @@ export default function TestimonialsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonialsData.map((testimonial) => (
-            <Card key={testimonial.id} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card text-card-foreground flex flex-col overflow-hidden">
+            <Card 
+              key={testimonial.id} 
+              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
+            >
               <CardHeader className="p-6 flex flex-col items-center text-center sm:flex-row sm:items-start sm:space-x-4 sm:text-left">
                 <Avatar className="w-20 h-20 border-2 border-primary/20 flex-shrink-0 mb-4 sm:mb-0">
                   <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
