@@ -22,7 +22,7 @@ export default function CtaSection() {
             </CardHeader>
             <CardContent className="text-center">
               <p className="text-foreground/80">
-                Você tem 7 dias para experimentar. Se não se adaptar à sua realidade, devolvemos 100% do valor — simples assim.
+                Além de todos os benefícios que citamos acima, adquirindo hoje você tem 7 dias de garantia para testar o material.
               </p>
             </CardContent>
           </Card>
