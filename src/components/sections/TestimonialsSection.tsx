@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Quote } from 'lucide-react';
+// Quote import removed
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 const testimonials = [
@@ -43,8 +43,8 @@ export default function TestimonialsSection() {
                   <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
                 </Avatar>
                 <div className="flex-grow">
-                  <Quote className="h-8 w-8 text-accent/50 mb-2" />
-                  <CardTitle className="text-lg font-normal italic text-foreground/85 leading-relaxed">
+                  {/* Quote icon removed from here */}
+                  <CardTitle className="text-lg font-normal italic text-foreground/85 leading-relaxed pt-2 sm:pt-0"> {/* Added padding-top for potential visual adjustment */}
                     "{testimonial.quote}"
                   </CardTitle>
                 </div>
@@ -60,3 +60,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+
