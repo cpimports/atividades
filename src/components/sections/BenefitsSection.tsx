@@ -1,6 +1,7 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { RefreshCw } from 'lucide-react'; // Note: RefreshCw is not used, consider removing if not needed elsewhere.
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 import Image from 'next/image';
 
 const deliverables = [
@@ -129,6 +130,18 @@ export default function BenefitsSection() {
             height={250}
             className="rounded-md"
           />
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <Button 
+            size="lg" 
+            asChild 
+            className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
+          >
+            <Link href="#cta">
+              EU QUERO AS ATIVIDADES AGORA + BÔNUS
+            </Link>
+          </Button>
         </div>
 
       </div>
