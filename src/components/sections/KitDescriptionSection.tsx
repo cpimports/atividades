@@ -8,7 +8,7 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-12">
           <BookMarked className="h-16 w-16 text-white mx-auto mb-4" />
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white">
-            Kit Gêniozinho em Ação – Atividades Inclusivas
+            Mais de 1000 atividades prontas para usar
           </h2>
         </div>
         <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-left md:text-justify">
@@ -23,3 +23,4 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
