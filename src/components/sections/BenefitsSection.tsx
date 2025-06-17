@@ -30,7 +30,7 @@ const deliverables = [
   },
 ];
 
-const exclusiveBonuses = [
+const currentExclusiveBonuses = [
   { emoji: "🖌️", text: "Atividades de Colorir" },
   { emoji: "🔺", text: "Atividades de Formas Geométricas" },
   { emoji: "✏️", text: "Atividades de Complete as Palavras" },
@@ -44,6 +44,7 @@ const exclusiveBonuses = [
   { emoji: "📅", text: "Novas Atividades Publicadas Todos os Dias" },
   { emoji: "🚀", text: "Acesso Imediato e Vitalício" },
 ];
+
 
 export default function BenefitsSection() {
   return (
@@ -100,16 +101,15 @@ export default function BenefitsSection() {
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
           
-
           <Card className="mt-12 bg-primary/5 border-2 border-primary/20 shadow-xl p-6 md:p-8 rounded-lg backdrop-blur-md">
             <CardHeader className="p-0 mb-6">
-              <CardTitle className="font-headline text-2xl sm:text-3xl text-primary text-center">
-                {/* Text removed as requested */}
+              <CardTitle className="font-semibold tracking-tight font-headline text-2xl sm:text-3xl text-primary text-center">
+                {/* Content removed as requested */}
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-foreground/90">
-                {exclusiveBonuses.map((bonus, index) => (
+                {currentExclusiveBonuses.map((bonus, index) => (
                   <li key={index} className="flex items-start space-x-3 bg-background/50 p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200">
                     <span className="text-2xl mt-px">{bonus.emoji}</span>
                     <span className="font-medium">{bonus.text}</span>
@@ -118,16 +118,6 @@ export default function BenefitsSection() {
               </ul>
             </CardContent>
           </Card>
-        </div>
-        <div className="mt-16 flex justify-center">
-          <Image
-            src="https://i.imgur.com/J3gznLj.png"
-            alt="Selo de aprovação e recomendação para o kit Gêniozinho em Ação"
-            data-ai-hint="approval seal recommendation"
-            width={500}
-            height={125} 
-            className="rounded-lg shadow-lg object-contain" 
-          />
         </div>
       </div>
     </section>
