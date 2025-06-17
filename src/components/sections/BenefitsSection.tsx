@@ -25,7 +25,7 @@ const deliverables = [
   {
     icon: <Palette className="h-10 w-10 text-accent" />,
     title: 'Acesso em PDF com organização por temas',
-    description: 'Materiais para aprendizado fundamental de conceitos básicos de forma lúdica.',
+    description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
   },
    {
     icon: <BookOpenText className="h-10 w-10 text-primary" />,
