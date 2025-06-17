@@ -12,8 +12,8 @@ export default function KitDescriptionSection() {
             src="https://i.imgur.com/ca79VYx.png"
             alt="Ícone de cérebro com engrenagens simbolizando aprendizado"
             data-ai-hint="brain gears learning"
-            width={120}
-            height={120}
+            width={100}
+            height={100}
             className="mx-auto rounded-md"
           />
         </div>
