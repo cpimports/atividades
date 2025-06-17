@@ -1,11 +1,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Package, CalendarClock, Brain, Palette, BookOpenText, RefreshCw } from 'lucide-react';
+import { CalendarClock, Brain, Palette, BookOpenText, RefreshCw } from 'lucide-react';
 import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Package className="h-10 w-10 text-primary" />,
+    icon: <Image src="https://i.imgur.com/Xc1eDY4.png" alt="Pacote de atividades" data-ai-hint="package box" width={40} height={40} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Educativas e interativas para engajar e desenvolver diversas habilidades.',
   },
@@ -77,3 +77,4 @@ export default function BenefitsSection() {
     </section>
   );
 }
+
