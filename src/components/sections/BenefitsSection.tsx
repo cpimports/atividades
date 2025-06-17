@@ -23,7 +23,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.imgur.com/nCVoPsJ.png" alt="Acesso em PDF com organização por temas" data-ai-hint="documents files" width={56} height={56} />,
+    icon: <Image src="https://i.imgur.com/nCVoPsJ.png" alt="Ícone de PDF representando acesso digital" data-ai-hint="documents files" width={56} height={56} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -68,6 +68,16 @@ export default function BenefitsSection() {
           ))}
         </div>
         <div className="text-center mt-12">
+          <div className="flex justify-center mb-4">
+            <Image
+              src="https://i.imgur.com/ZBKqeaL.png"
+              alt="Ícone de bônus exclusivo"
+              data-ai-hint="gift bonus icon"
+              width={100}
+              height={100}
+              className="rounded-md"
+            />
+          </div>
           <h3 className="font-headline text-2xl sm:text-3xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
