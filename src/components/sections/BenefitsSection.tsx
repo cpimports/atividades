@@ -84,6 +84,7 @@ export default function BenefitsSection() {
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
+          <div className="mt-6 w-24 h-1 bg-accent/30 mx-auto rounded-full"></div>
         </div>
       </div>
     </section>
