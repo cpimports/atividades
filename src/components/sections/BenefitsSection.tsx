@@ -17,7 +17,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico e interativo" data-ai-hint="brain puzzle" width={56} height={56} />,
+    icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico" data-ai-hint="brain puzzle" width={56} height={56} />,
     title: 'Material lúdico e interativo pronto para imprimir',
     description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -26,6 +26,7 @@ const deliverables = [
     icon: <Palette className="h-10 w-10 text-accent" />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
+    titleClassName: 'font-headline text-2xl text-primary',
   },
    {
     icon: <BookOpenText className="h-10 w-10 text-primary" />,
