@@ -82,16 +82,7 @@ export default function BenefitsSection() {
   }, [targetDate]);
 
   return (
-    <section id="oque-voce-recebe" className="py-16 md:py-24 relative overflow-hidden">
-      <Image
-        src="https://i.imgur.com/EqKEu7v.png"
-        alt="Fundo com elementos educativos e lúdicos para crianças"
-        data-ai-hint="education kids background"
-        fill
-        className="object-cover -z-20"
-        quality={80}
-      />
-      <div className="absolute inset-0 bg-background/80 backdrop-blur-sm -z-10"></div>
+    <section id="oque-voce-recebe" className="py-16 md:py-24 relative">
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-0">
         <div className="text-center mb-12">
@@ -143,7 +134,6 @@ export default function BenefitsSection() {
             </div>
           )}
 
-          {/* Image removed from here */}
           <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
