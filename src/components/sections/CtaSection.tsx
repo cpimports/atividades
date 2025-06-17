@@ -1,3 +1,4 @@
+
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Gift, Star, AlertTriangle, ArrowRight } from 'lucide-react';
@@ -22,8 +23,8 @@ export default function CtaSection() {
                 src="https://i.imgur.com/lbSS21Q.png"
                 alt="Garantia de satisfação"
                 data-ai-hint="shield checkmark"
-                width={64}
-                height={64}
+                width={80}
+                height={80}
                 className="mb-3"
               />
               <CardTitle className="font-headline text-2xl text-primary">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
