@@ -85,11 +85,6 @@ export default function BenefitsSection() {
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
           <div className="mt-6 w-24 h-1 bg-accent/30 mx-auto rounded-full"></div>
-          <div className="flex justify-center space-x-2 mt-4">
-            <div className="w-2 h-2 bg-accent/30 rounded-full"></div>
-            <div className="w-2 h-2 bg-accent/30 rounded-full"></div>
-            <div className="w-2 h-2 bg-accent/30 rounded-full"></div>
-          </div>
         </div>
       </div>
     </section>
