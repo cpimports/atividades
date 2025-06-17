@@ -99,7 +99,7 @@ export default function BenefitsSection() {
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
-          <div className="mt-6 w-24 h-1 bg-accent/30 mx-auto rounded-full"></div>
+          
 
           <Card className="mt-12 bg-primary/5 border-2 border-primary/20 shadow-xl p-6 md:p-8 rounded-lg backdrop-blur-md">
             <CardHeader className="p-0 mb-6">
