@@ -67,6 +67,14 @@ export default function BenefitsSection() {
             </Card>
           ))}
         </div>
+        <div className="text-center mt-12">
+          <h3 className="font-headline text-2xl sm:text-3xl font-semibold text-accent">
+            + BÔNUS EXCLUSIVOS
+          </h3>
+          <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto">
+            Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
+          </p>
+        </div>
       </div>
     </section>
   );
