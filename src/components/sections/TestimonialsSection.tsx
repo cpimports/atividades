@@ -19,8 +19,8 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Mãe',
     name: 'Carla M.',
     text: "Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!",
-    avatarUrl: 'https://placehold.co/80x80.png',
-    avatarHint: 'mother child',
+    avatarUrl: 'https://i.imgur.com/qAIzmQQ.png',
+    avatarHint: 'woman smiling',
     avatarFallback: 'CM',
   },
   {
