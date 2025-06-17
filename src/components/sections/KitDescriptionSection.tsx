@@ -7,17 +7,8 @@ export default function KitDescriptionSection() {
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center -mt-[4rem] md:-mt-[5rem] mb-4">
-          <Image
-            src="https://i.imgur.com/ca79VYx.png"
-            alt="Ícone de cérebro com engrenagens simbolizando aprendizado"
-            data-ai-hint="brain gears learning"
-            width={100}
-            height={100}
-            className="mx-auto rounded-md"
-          />
-        </div>
-        <div className="text-center mb-12">
+        {/* Image removed from here */}
+        <div className="text-center mb-12 mt-4"> {/* Adjusted margin-top if image was pulled up */}
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white">
             Mais de 1000 atividades prontas para usar
           </h2>
