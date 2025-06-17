@@ -1,12 +1,19 @@
 
-import { BookMarked } from 'lucide-react';
+import Image from 'next/image';
 
 export default function KitDescriptionSection() {
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <BookMarked className="h-16 w-16 text-white mx-auto mb-4" />
+          <Image
+            src="https://i.imgur.com/OnWpWgf.png"
+            alt="Ícone de livro com atividades"
+            data-ai-hint="book activities icon"
+            width={64}
+            height={64}
+            className="mx-auto mb-4 rounded-md"
+          />
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white">
             Mais de 1000 atividades prontas para usar
           </h2>
@@ -23,4 +30,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
