@@ -24,7 +24,7 @@ const deliverables = [
   },
   {
     icon: <Palette className="h-10 w-10 text-accent" />,
-    title: 'Letras, Números, Formas e Cores',
+    title: 'Acesso em PDF com organização por temas',
     description: 'Materiais para aprendizado fundamental de conceitos básicos de forma lúdica.',
   },
    {
