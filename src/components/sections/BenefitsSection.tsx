@@ -17,7 +17,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Brain className="h-10 w-10 text-primary" />,
+    icon: <Brain className="h-12 w-12 text-primary" />,
     title: 'Jogos de Memória e Coordenação',
     description: 'Desafios divertidos para estimular o cérebro e aprimorar habilidades motoras.',
   },
