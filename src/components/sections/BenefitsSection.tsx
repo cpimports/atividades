@@ -17,7 +17,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Brain className="h-8 w-8 text-primary" />,
+    icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico e interativo" data-ai-hint="brain puzzle" width={32} height={32} />,
     title: 'Material lúdico e interativo pronto para imprimir',
     description: 'Desafios divertidos para estimular o cérebro e aprimorar habilidades motoras.',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -80,3 +80,4 @@ export default function BenefitsSection() {
     </section>
   );
 }
+
