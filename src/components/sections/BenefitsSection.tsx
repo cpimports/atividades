@@ -179,16 +179,7 @@ export default function BenefitsSection() {
           </Card>
         </div>
 
-        <div className="mt-16 flex justify-center">
-          <Image
-            src="https://i.imgur.com/NYRDpoP.png"
-            alt="Selo de Satisfação Garantida"
-            data-ai-hint="satisfaction guarantee seal"
-            width={250}
-            height={250}
-            className="rounded-md"
-          />
-        </div>
+        {/* Image removed from here */}
 
         <div className="mt-12 flex justify-center">
           <Button 
