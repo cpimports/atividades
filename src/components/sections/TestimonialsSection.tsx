@@ -71,7 +71,7 @@ export default function TestimonialsSection() {
               className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
             >
               <CardHeader className="p-6 flex flex-col items-center text-center sm:flex-row sm:items-start sm:space-x-4 sm:text-left">
-                <Avatar className="w-24 h-24 border-2 border-primary/20 flex-shrink-0 mb-4 sm:mb-0">
+                <Avatar className="w-28 h-28 border-2 border-primary/20 flex-shrink-0 mb-4 sm:mb-0">
                   <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
                   <AvatarFallback className="text-2xl bg-muted text-muted-foreground font-semibold">
                     {testimonial.avatarFallback}
