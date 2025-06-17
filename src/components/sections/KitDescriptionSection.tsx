@@ -10,8 +10,8 @@ export default function KitDescriptionSection() {
             src="https://i.imgur.com/OnWpWgf.png"
             alt="Ícone de livro com atividades"
             data-ai-hint="book activities icon"
-            width={128}
-            height={128}
+            width={160}
+            height={160}
             className="mx-auto mb-4 rounded-md"
           />
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white">
