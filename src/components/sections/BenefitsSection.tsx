@@ -7,7 +7,7 @@ const deliverables = [
   {
     icon: <Image src="https://i.imgur.com/qWFe9DL.png" alt="Pacote de atividades" data-ai-hint="documents educational" width={40} height={40} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
-    description: 'Educativas e interativas para engajar e desenvolver diversas habilidades.',
+    description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia',
   },
   {
     icon: <CalendarClock className="h-10 w-10 text-accent" />,
