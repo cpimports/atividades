@@ -6,7 +6,7 @@ import Image from 'next/image';
 const deliverables = [
   {
     icon: <Package className="h-10 w-10 text-primary" />,
-    title: 'Mais de 100 Atividades',
+    title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Educativas e interativas para engajar e desenvolver diversas habilidades.',
   },
   {
