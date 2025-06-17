@@ -76,7 +76,7 @@ export default function TestimonialsSection() {
                 </Avatar>
                 <div className="flex-grow">
                   <CardTitle className="font-headline text-xl text-primary mb-1">{testimonial.descriptor}</CardTitle>
-                  <p className="text-md font-semibold text-foreground/90">Nome: {testimonial.name}</p>
+                  <p className="text-md font-semibold text-foreground/90">{testimonial.name}</p>
                 </div>
               </CardHeader>
               <CardContent className="p-6 pt-0 text-center sm:text-left flex-grow">
