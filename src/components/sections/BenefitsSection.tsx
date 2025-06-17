@@ -19,7 +19,7 @@ const deliverables = [
   {
     icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico e interativo" data-ai-hint="brain puzzle" width={56} height={56} />,
     title: 'Material lúdico e interativo pronto para imprimir',
-    description: 'Desafios divertidos para estimular o cérebro e aprimorar habilidades motoras.',
+    description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
