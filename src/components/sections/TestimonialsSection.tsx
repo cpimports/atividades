@@ -66,21 +66,21 @@ export default function TestimonialsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonialsData.map((testimonial) => (
-            <Card key={testimonial.id} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-slate-800/60 backdrop-blur-sm flex flex-col overflow-hidden">
+            <Card key={testimonial.id} className="shadow-xl hover:shadow-2xl transition-shadow duration-300 bg-card text-card-foreground flex flex-col overflow-hidden">
               <CardHeader className="p-6 flex flex-col items-center text-center sm:flex-row sm:items-start sm:space-x-4 sm:text-left">
-                <Avatar className="w-20 h-20 border-2 border-sky-500/30 flex-shrink-0 mb-4 sm:mb-0">
+                <Avatar className="w-20 h-20 border-2 border-primary/20 flex-shrink-0 mb-4 sm:mb-0">
                   <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
-                  <AvatarFallback className="text-2xl bg-sky-700/50 text-sky-200 font-semibold">
+                  <AvatarFallback className="text-2xl bg-muted text-muted-foreground font-semibold">
                     {testimonial.avatarFallback}
                   </AvatarFallback>
                 </Avatar>
                 <div className="flex-grow">
-                  <CardTitle className="font-headline text-xl text-sky-300 mb-1">{testimonial.descriptor}</CardTitle>
-                  <p className="text-md font-semibold text-gray-100">{testimonial.name}</p>
+                  <CardTitle className="font-headline text-xl text-primary mb-1">{testimonial.descriptor}</CardTitle>
+                  <p className="text-md font-semibold text-foreground/90">{testimonial.name}</p>
                 </div>
               </CardHeader>
               <CardContent className="p-6 pt-0 text-center sm:text-left flex-grow">
-                <p className="text-gray-300 italic leading-relaxed">{testimonial.text}</p>
+                <p className="text-foreground/80 italic leading-relaxed">{testimonial.text}</p>
               </CardContent>
             </Card>
           ))}
