@@ -37,8 +37,8 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Terapeuta',
     name: 'André P. – Psicopedagogo',
     text: "Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.",
-    avatarUrl: 'https://placehold.co/80x80.png',
-    avatarHint: 'therapist consultation',
+    avatarUrl: 'https://i.imgur.com/JfE3o6V.jpeg',
+    avatarHint: 'therapist male',
     avatarFallback: 'AP',
   },
   {
@@ -92,4 +92,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
-
