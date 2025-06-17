@@ -28,8 +28,8 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Professora',
     name: 'Vanessa G. – Professora do 2º ano',
     text: "Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!",
-    avatarUrl: 'https://i.imgur.com/uMokmuq.png',
-    avatarHint: 'teacher smiling',
+    avatarUrl: 'https://i.imgur.com/XNa1fhn.jpeg',
+    avatarHint: 'teacher portrait',
     avatarFallback: 'VG',
   },
   {
@@ -92,3 +92,4 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+
