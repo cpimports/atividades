@@ -9,9 +9,9 @@ export default function KitDescriptionSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center -mt-[4rem] md:-mt-[5rem] mb-4">
           <Image
-            src="https://i.imgur.com/OnWpWgf.png"
-            alt="Ícone de livro com atividades"
-            data-ai-hint="book activities icon"
+            src="https://i.imgur.com/ca79VYx.png"
+            alt="Ícone de cérebro com engrenagens simbolizando aprendizado"
+            data-ai-hint="brain gears learning"
             width={120}
             height={120}
             className="mx-auto rounded-md"
