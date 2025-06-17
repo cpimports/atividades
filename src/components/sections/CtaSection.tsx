@@ -23,8 +23,8 @@ export default function CtaSection() {
                 src="https://i.imgur.com/lbSS21Q.png"
                 alt="Garantia de satisfação"
                 data-ai-hint="shield checkmark"
-                width={80}
-                height={80}
+                width={96}
+                height={96}
                 className="mb-3"
               />
               <CardTitle className="font-headline text-2xl text-primary">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
@@ -81,3 +81,4 @@ export default function CtaSection() {
     </section>
   );
 }
+
