@@ -11,7 +11,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://i.imgur.com/JffYX0z.png" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={56} height={56} />,
+    icon: <Image src="https://i.imgur.com/JffYX0z.png" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={64} height={64} />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
     description: 'Ferramentas visuais para ajudar na organização e expressão emocional.',
     titleClassName: 'font-headline text-2xl text-primary',
