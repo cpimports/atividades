@@ -23,7 +23,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.imgur.com/nCVoPsJ.png" alt="Acesso em PDF com organização por temas" data-ai-hint="documents files" width={48} height={48} />,
+    icon: <Image src="https://i.imgur.com/nCVoPsJ.png" alt="Acesso em PDF com organização por temas" data-ai-hint="documents files" width={56} height={56} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',
