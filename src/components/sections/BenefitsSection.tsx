@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { CalendarClock, Brain, Palette, BookOpenText, RefreshCw } from 'lucide-react';
+import { Brain, Palette, BookOpenText, RefreshCw } from 'lucide-react';
 import Image from 'next/image';
 
 const deliverables = [
@@ -11,7 +11,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <CalendarClock className="h-12 w-12 text-accent" />,
+    icon: <Image src="https://i.imgur.com/JffYX0z.png" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={48} height={48} />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
     description: 'Ferramentas visuais para ajudar na organização e expressão emocional.',
     titleClassName: 'font-headline text-2xl text-primary',
