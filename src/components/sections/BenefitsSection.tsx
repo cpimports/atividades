@@ -143,7 +143,16 @@ export default function BenefitsSection() {
             </div>
           )}
 
-          {/* Image of gift box icon removed from here */}
+          <div className="flex flex-col items-center mb-4">
+            <Image 
+              src="https://i.imgur.com/ZBKqeaL.png" 
+              alt="Ícone de bônus exclusivo" 
+              data-ai-hint="gift box present"
+              width={80} 
+              height={80} 
+              className="rounded-md" 
+            />
+          </div>
           <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
