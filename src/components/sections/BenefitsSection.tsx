@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { RefreshCw } from 'lucide-react';
+import { RefreshCw } from 'lucide-react'; // Note: RefreshCw is not used, consider removing if not needed elsewhere.
 import Image from 'next/image';
 
 const deliverables = [
@@ -28,6 +28,21 @@ const deliverables = [
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',
   },
+];
+
+const exclusiveBonuses = [
+  { emoji: "🖌️", text: "Atividades de Colorir" },
+  { emoji: "🔺", text: "Atividades de Formas Geométricas" },
+  { emoji: "✏️", text: "Atividades de Complete as Palavras" },
+  { emoji: "🔊", text: "Atividades de Consciência Fonológica" },
+  { emoji: "🍎", text: "Atividades de Alimentação Saudável" },
+  { emoji: "🔢", text: "Atividades de Números" },
+  { emoji: "🎨", text: "Atividades de Cores" },
+  { emoji: "🔠", text: "Atividades de Letras" },
+  { emoji: "📝", text: "Atividades de Sílabas" },
+  { emoji: "👨‍👩‍👧‍👦", text: "Acesso à Comunidade Exclusiva de Pais e Professores" },
+  { emoji: "📅", text: "Novas Atividades Publicadas Todos os Dias" },
+  { emoji: "🚀", text: "Acesso Imediato e Vitalício" },
 ];
 
 export default function BenefitsSection() {
@@ -85,6 +100,24 @@ export default function BenefitsSection() {
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
           <div className="mt-6 w-24 h-1 bg-accent/30 mx-auto rounded-full"></div>
+
+          <Card className="mt-12 bg-primary/5 border-2 border-primary/20 shadow-xl p-6 md:p-8 rounded-lg backdrop-blur-md">
+            <CardHeader className="p-0 mb-6">
+              <CardTitle className="font-headline text-2xl sm:text-3xl text-primary text-center">
+                🎁 Bônus Exclusivos (somente hoje):
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-foreground/90">
+                {exclusiveBonuses.map((bonus, index) => (
+                  <li key={index} className="flex items-start space-x-3 bg-background/50 p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200">
+                    <span className="text-2xl mt-px">{bonus.emoji}</span>
+                    <span className="font-medium">{bonus.text}</span>
+                  </li>
+                ))}
+              </ul>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
