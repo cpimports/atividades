@@ -78,7 +78,7 @@ export default function BenefitsSection() {
               className="rounded-md hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <h3 className="font-headline text-2xl sm:text-3xl font-semibold text-yellow-500 drop-shadow-md">
+          <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto">
@@ -89,3 +89,4 @@ export default function BenefitsSection() {
     </section>
   );
 }
+
