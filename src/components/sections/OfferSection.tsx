@@ -59,9 +59,7 @@ export default function OfferSection() {
                 </ul>
 
                 <div>
-                  <h4 className="font-headline text-xl font-semibold text-white text-center my-6"> 
-                    E ainda tem mais BÔNUS ESPECIAIS:
-                  </h4>
+                  
                   <ul className="divide-y divide-white/30 space-y-4 mt-6">
                     {bonusItems.map((bonus, index) => (
                       <li key={index} className="flex items-start text-white pt-4 first:pt-0">
