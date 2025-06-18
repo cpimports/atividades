@@ -7,9 +7,9 @@ import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react
 
 export default function OfferSection() {
   const items = [
-    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Kit Completo Gêniozinho em Ação", subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
-    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Acesso Imediato e Vitalício ao Material em PDF", subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
-    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Tranquilidade e Suporte para Você", subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
+    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Kit Completo Gêniozinho em Ação" },
+    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Acesso Imediato e Vitalício ao Material em PDF" },
+    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Tranquilidade e Suporte para Você" },
   ];
 
   const bonusItems = [
@@ -53,7 +53,6 @@ export default function OfferSection() {
                       {React.cloneElement(item.icon, { className: "h-6 w-6 text-[#50C878] mr-3 flex-shrink-0"})}
                       <div>
                         <span className="font-semibold text-sm text-white">{item.text}</span>
-                        {item.subtext && <p className="text-xs text-gray-200 mt-1">{item.subtext}</p>}
                       </div>
                     </li>
                   ))}
