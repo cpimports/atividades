@@ -45,36 +45,36 @@ export default function OfferSection() {
                   </li>
                 ))}
               </ul>
-            </div>
 
-            <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
-              <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
-              <div className="my-2 flex items-center justify-center">
-                <DollarSign className="h-12 w-12 text-green-600 mr-1" />
-                <span className="text-6xl sm:text-7xl font-extrabold text-green-600">19,90</span>
+              <div className="bg-accent/10 p-6 rounded-lg border border-accent/30">
+                <h3 className="font-headline text-2xl font-semibold text-accent-foreground text-center mb-6">
+                  <Gift className="inline-block h-8 w-8 mr-2 text-yellow-500" />
+                  E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE:
+                </h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                  {bonusItems.map((bonus, index) => (
+                    <li key={index} className="flex items-start text-foreground/90 bg-background/50 p-3.5 rounded-md shadow-sm border border-dashed border-accent/50">
+                      <CheckCircle className="h-5 w-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" />
+                      <span className="font-medium">{bonus}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <div className="mb-2">
-                <span className="text-lg text-muted-foreground line-through">De R$ 97,00</span>
-                <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span>
+
+              <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
+                <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
+                <div className="my-2 flex items-center justify-center">
+                  <DollarSign className="h-12 w-12 text-green-600 mr-1" />
+                  <span className="text-6xl sm:text-7xl font-extrabold text-green-600">19,90</span>
+                </div>
+                <div className="mb-2">
+                  <span className="text-lg text-muted-foreground line-through">De R$ 97,00</span>
+                  <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span>
+                </div>
+                <p className="text-sm text-green-700/90 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
-              <p className="text-sm text-green-700/90 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
             </div>
             
-            <div className="bg-accent/10 p-6 rounded-lg border border-accent/30">
-              <h3 className="font-headline text-2xl font-semibold text-accent-foreground text-center mb-6">
-                <Gift className="inline-block h-8 w-8 mr-2 text-yellow-500" />
-                E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE:
-              </h3>
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                {bonusItems.map((bonus, index) => (
-                  <li key={index} className="flex items-start text-foreground/90 bg-background/50 p-3.5 rounded-md shadow-sm border border-dashed border-accent/50">
-                    <CheckCircle className="h-5 w-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" />
-                    <span className="font-medium">{bonus}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
             <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md mt-8 shadow-lg">
               <div className="flex">
                 <div className="flex-shrink-0">
