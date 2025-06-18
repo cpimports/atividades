@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Gift, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
+import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
 
 export default function OfferSection() {
   const bonusItems = [
@@ -46,20 +46,14 @@ export default function OfferSection() {
                 ))}
               </ul>
 
-              <div className="bg-accent/10 p-6 rounded-lg border border-accent/30">
-                <h3 className="font-headline text-2xl font-semibold text-accent-foreground text-center mb-6">
-                  <Gift className="inline-block h-8 w-8 mr-2 text-yellow-500" />
-                  E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE:
-                </h3>
-                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                  {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-foreground/90 bg-background/50 p-3.5 rounded-md shadow-sm border border-dashed border-accent/50">
-                      <CheckCircle className="h-5 w-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" />
-                      <span className="font-medium">{bonus}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                {bonusItems.map((bonus, index) => (
+                  <li key={index} className="flex items-start text-foreground/90 bg-background/50 p-3.5 rounded-md shadow-sm border border-dashed border-accent/50">
+                    <CheckCircle className="h-5 w-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" />
+                    <span className="font-medium">{bonus}</span>
+                  </li>
+                ))}
+              </ul>
 
               <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
                 <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
