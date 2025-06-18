@@ -20,13 +20,18 @@ export default function OfferSection() {
   ];
 
   return (
-    <section id="oferta-especial" className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section 
+      id="oferta-especial" 
+      className="py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: "url('https://i.imgur.com/KU32057.jpeg')" }}
+    >
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-white mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
             Chega de procurar atividades aleatórias que não funcionam. Tenha tudo o que você precisa em um só lugar: organizado, eficaz e pronto para imprimir
           </p>
         </div>
@@ -99,7 +104,7 @@ export default function OfferSection() {
                   <ArrowRight className="ml-2 h-6 w-6" />
                 </Link>
               </Button>
-              <p className="mt-4 text-sm text-muted-foreground">Compra 100% segura e satisfação que transforma.</p>
+              <p className="mt-4 text-sm text-white/90">Compra 100% segura e satisfação que transforma.</p>
             </div>
           </CardContent>
         </Card>
