@@ -46,10 +46,10 @@ export default function OfferSection() {
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
               
-              <div className="space-y-6">
-                <ul className="divide-y divide-white/30 space-y-4">
+              <div className="space-y-3">
+                <ul className="divide-y divide-white/30">
                   {items.map((item, index) => (
-                    <li key={index} className="flex items-start text-white pt-4 first:pt-0">
+                    <li key={index} className="flex items-start text-white pt-2 first:pt-0">
                       {React.cloneElement(item.icon, { className: "h-6 w-6 text-[#50C878] mr-3 flex-shrink-0"})}
                       <div>
                         <span className="font-semibold text-sm text-white">{item.text}</span>
@@ -58,11 +58,11 @@ export default function OfferSection() {
                   ))}
                 </ul>
 
-                <div className="border-b border-white/30"></div>
+                <div className="border-b border-white/30 !mt-3 !mb-3"></div>
 
-                <ul className="divide-y divide-white/30 space-y-4">
+                <ul className="divide-y divide-white/30">
                     {bonusItems.map((bonus, index) => (
-                      <li key={index} className="flex items-start text-white pt-4 first:pt-0">
+                      <li key={index} className="flex items-start text-white pt-2 first:pt-0">
                         <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />
                         <span className="font-medium text-sm text-white">{bonus}</span>
                       </li>
