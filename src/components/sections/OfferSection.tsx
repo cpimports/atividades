@@ -23,7 +23,7 @@ export default function OfferSection() {
     <section 
       id="oferta-especial" 
       className="py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('https://i.imgur.com/KU32057.jpeg')" }}
+      style={{ backgroundImage: "url('https://i.imgur.com/wFPVRXT.png')" }}
     >
       <div className="absolute inset-0 bg-black/70 z-0"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -55,7 +55,7 @@ export default function OfferSection() {
 
               <div>
                 
-                <ul className="space-y-4 divide-y divide-border">
+                <ul className="divide-y divide-border">
                   {bonusItems.map((bonus, index) => (
                     <li key={index} className="flex items-start text-foreground py-4">
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
