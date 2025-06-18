@@ -22,17 +22,19 @@ export default function OfferSection() {
   return (
     <section 
       id="oferta-especial" 
-      className="py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('https://i.imgur.com/WZlskCw.png')" }}
+      className="py-16 md:py-24 bg-background relative overflow-hidden"
     >
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      {/* Blue decorative elements */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 md:w-96 md:h-96 bg-primary/5 rounded-full filter blur-3xl opacity-50 -z-0"></div>
+      <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-primary/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
+
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-white mb-3">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
             Chega de procurar atividades aleatórias que não funcionam. Tenha tudo o que você precisa em um só lugar: organizado, eficaz e pronto para imprimir
           </p>
         </div>
@@ -42,7 +44,7 @@ export default function OfferSection() {
             <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
             <div className="space-y-6">
-              <ul className="divide-y divide-border space-y-4">
+              <ul className="divide-y divide-border/50 space-y-4">
                 {items.map((item, index) => (
                   <li key={index} className="flex items-start text-neutral-800 pt-4 first:pt-0">
                     {item.icon}
@@ -55,7 +57,7 @@ export default function OfferSection() {
               </ul>
 
               <div>
-                <ul className="divide-y divide-border space-y-4 mt-6">
+                <ul className="divide-y divide-border/50 space-y-4 mt-6">
                   {bonusItems.map((bonus, index) => (
                     <li key={index} className="flex items-start text-neutral-800 pt-4 first:pt-0">
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
