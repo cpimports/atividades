@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { CheckCircle, Gift, Zap, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
+import { CheckCircle, Gift, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
 
 export default function OfferSection() {
   const bonusItems = [
@@ -19,7 +19,7 @@ export default function OfferSection() {
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <div className="p-6 md:p-8 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
             <div className="text-center">
-              <Zap className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
+              
               <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
                 Adquira agora seu KIT de Atividades e tenha atividades prontas todos os meses, garanta a praticidade de suas aulas!
               </h2>
