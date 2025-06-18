@@ -1,5 +1,7 @@
 
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -19,6 +21,37 @@ export default function OfferSection() {
     "SUPER BÔNUS 3: Acesso Prioritário a Futuros Lançamentos com Desconto",
     "SUPER BÔNUS 4: Comunidade VIP de Suporte e Troca de Experiências"
   ];
+
+  const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
+  const [targetDate, setTargetDate] = useState<Date | null>(null);
+
+  useEffect(() => {
+    // Set targetDate only on the client-side
+    setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); // 24 hours from now
+  }, []);
+
+  useEffect(() => {
+    if (!targetDate) return;
+
+    const calculateTimeLeft = () => {
+      const difference = +targetDate - +new Date();
+      let newTimeLeft = { days: '00', hours: '00', minutes: '00', seconds: '00' };
+
+      if (difference > 0) {
+        newTimeLeft = {
+          days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0'),
+          hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
+          minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
+          seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
+        };
+      }
+      setTimeLeft(newTimeLeft);
+    };
+
+    calculateTimeLeft(); // Initial calculation
+    const timer = setInterval(calculateTimeLeft, 1000);
+    return () => clearInterval(timer);
+  }, [targetDate]);
 
   return (
     <section
@@ -68,7 +101,7 @@ export default function OfferSection() {
                     </li>
                   ))}
                 </ul>
-
+                
                 <div className="border-b border-white/30 !my-3"></div>
 
                 <ul className="divide-y divide-white/30">
@@ -105,6 +138,31 @@ export default function OfferSection() {
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
+
+                {timeLeft && (
+                  <div className="text-center mt-8 mb-6">
+                    <p className="text-md text-white/90 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
+                    <div className="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
+                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
+                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.days}</span>
+                        <span className="block text-xs sm:text-sm text-white/80">Dias</span>
+                      </div>
+                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
+                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.hours}</span>
+                        <span className="block text-xs sm:text-sm text-white/80">Horas</span>
+                      </div>
+                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
+                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.minutes}</span>
+                        <span className="block text-xs sm:text-sm text-white/80">Minutos</span>
+                      </div>
+                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
+                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.seconds}</span>
+                        <span className="block text-xs sm:text-sm text-white/80">Segundos</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+
                 <p className="mt-4 text-sm text-white/90">Compra 100% segura e satisfação que transforma.</p>
                 <div className="mt-4 flex justify-center">
                   <Image
