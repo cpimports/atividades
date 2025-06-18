@@ -41,11 +41,11 @@ export default function OfferSection() {
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
-            <div className="p-6 md:p-8 space-y-8 bg-accent/60 shadow-lg">
+            <div className="p-6 md:p-8 space-y-8 bg-green-700/60 shadow-lg">
               <h3 className="font-headline text-3xl sm:text-4xl font-bold text-white text-center mb-4 uppercase drop-shadow-md">OFERTA ESPECIAL POR TEMPO LIMITADO!</h3>
               
               <div className="space-y-6">
-                <ul className="divide-y divide-border/30 space-y-4">
+                <ul className="divide-y divide-white/30 space-y-4">
                   {items.map((item, index) => (
                     <li key={index} className="flex items-start text-white pt-4 first:pt-0">
                       {React.cloneElement(item.icon, { className: "h-6 w-6 text-yellow-400 mr-3 flex-shrink-0"})}
@@ -61,7 +61,7 @@ export default function OfferSection() {
                   <h4 className="font-headline text-xl font-semibold text-white text-center my-6"> 
                     E ainda tem mais BÔNUS ESPECIAIS:
                   </h4>
-                  <ul className="divide-y divide-border/30 space-y-4 mt-6">
+                  <ul className="divide-y divide-white/30 space-y-4 mt-6">
                     {bonusItems.map((bonus, index) => (
                       <li key={index} className="flex items-start text-white pt-4 first:pt-0">
                         <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />
@@ -71,7 +71,7 @@ export default function OfferSection() {
                   </ul>
                 </div>
 
-                <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30 mt-6">
+                <div className="text-center bg-black/20 p-6 rounded-lg border border-yellow-400/50 mt-6">
                   <p className="text-sm uppercase tracking-wider mb-2 font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                   <div className="my-2 flex items-center justify-center">
                     <DollarSign className="h-12 w-12 text-yellow-400 mr-1" />
