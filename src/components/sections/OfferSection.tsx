@@ -63,19 +63,6 @@ export default function OfferSection() {
       <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-accent/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-3xl mx-auto bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8 md:mb-12">
-          <div className="flex">
-            <div className="flex-shrink-0">
-              <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
-            </div>
-            <div className="ml-3">
-              <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
-              <div className="mt-2 text-sm text-yellow-100/90">
-                <p>Essa <span className="font-extrabold">condição especial</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> fazem parte de uma <span className="font-extrabold">oferta de lançamento exclusiva</span>, válida somente para os <span className="font-extrabold">100 primeiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Depois disso, a <span className="font-extrabold">oferta será encerrada</span>. <span className="font-extrabold">Aproveite agora</span> e comece hoje mesmo a transformar o futuro de suas crianças!</p>
-              </div>
-            </div>
-          </div>
-        </div>
         
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
@@ -138,6 +125,20 @@ export default function OfferSection() {
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
+
+                <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mt-8 mb-6">
+                  <div className="flex">
+                    <div className="flex-shrink-0">
+                      <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
+                    </div>
+                    <div className="ml-3">
+                      <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
+                      <div className="mt-2 text-sm text-yellow-100/90">
+                        <p>Essa <span className="font-extrabold">condição especial</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> fazem parte de uma <span className="font-extrabold">oferta de lançamento exclusiva</span>, válida somente para os <span className="font-extrabold">100 primeiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Depois disso, a <span className="font-extrabold">oferta será encerrada</span>. <span className="font-extrabold">Aproveite agora</span> e comece hoje mesmo a transformar o futuro de suas crianças!</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 {timeLeft && (
                   <div className="text-center mt-8 mb-6">
