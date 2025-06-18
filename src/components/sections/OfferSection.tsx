@@ -34,9 +34,7 @@ export default function OfferSection() {
           <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
-          <p className="text-lg text-foreground/70 max-w-2xl mx-auto">
-            Chega de procurar atividades aleatórias que não funcionam. Tenha tudo o que você precisa em um só lugar: organizado, eficaz e pronto para imprimir
-          </p>
+          
         </div>
 
         <div className="max-w-3xl mx-auto bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8 md:mb-12">
@@ -56,7 +54,7 @@ export default function OfferSection() {
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
             <div className="p-6 md:p-8 space-y-3 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
-              <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
+              <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))] drop-shadow-md">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
               
