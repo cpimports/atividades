@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
+import { CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function OfferSection() {
   const items = [
@@ -84,7 +84,7 @@ export default function OfferSection() {
                 <div className="text-center bg-black/20 p-6 rounded-lg border border-yellow-400/50 mt-6">
                   <p className="text-sm uppercase tracking-wider mb-2 font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                   <div className="my-2 flex items-center justify-center">
-                    <DollarSign className="h-12 w-12 text-yellow-400 mr-1" />
+                    <span className="text-5xl font-semibold text-yellow-400 mr-1">R$</span>
                     <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400">19,90</span>
                   </div>
                   <div className="mb-2">
