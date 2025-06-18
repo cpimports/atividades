@@ -6,6 +6,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
 
 export default function OfferSection() {
+  const items = [
+    { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
+    { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
+    { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
+  ];
+
   const bonusItems = [
     "SUPER BÔNUS 1: Pacote Extra de Atividades Criativas (+50 páginas!)",
     "SUPER BÔNUS 2: Guia Prático 'Despertando o Gêniozinho'",
@@ -29,33 +35,34 @@ export default function OfferSection() {
           <CardContent className="p-6 md:p-8 space-y-8 bg-yellow-400">
             <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
-            <div className="space-y-4">
-              <ul className="space-y-3">
-                {[
-                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
-                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
-                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
-                ].map((item, index) => (
-                  <li key={index} className="flex items-start bg-muted/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+            <div className="space-y-6"> {/* Increased spacing for better separation after removing boxes */}
+              <ul className="space-y-4"> {/* Increased spacing between items */}
+                {items.map((item, index) => (
+                  <li key={index} className="flex items-start text-foreground">
                     {item.icon}
                     <div>
-                      <span className="text-foreground text-sm">{item.text}</span>
+                      {item.text}
                       {item.subtext && <p className="text-xs text-muted-foreground mt-1">{item.subtext}</p>}
                     </div>
                   </li>
                 ))}
               </ul>
 
-              <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
-                {bonusItems.map((bonus, index) => (
-                  <li key={index} className="flex items-start bg-muted/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
-                    <span className="font-medium text-sm text-foreground">{bonus}</span>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <h4 className="font-headline text-xl font-semibold text-primary text-center my-6"> {/* Added a title for bonuses */}
+                  E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE:
+                </h4>
+                <ul className="space-y-4"> {/* Increased spacing between items */}
+                  {bonusItems.map((bonus, index) => (
+                    <li key={index} className="flex items-start text-foreground">
+                      <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                      <span className="font-medium text-sm">{bonus}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
+              <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30 mt-6"> {/* Added mt-6 for spacing */}
                 <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                 <div className="my-2 flex items-center justify-center">
                   <DollarSign className="h-12 w-12 text-green-600 mr-1" />
@@ -63,7 +70,7 @@ export default function OfferSection() {
                 </div>
                 <div className="mb-2">
                   <span className="text-lg text-muted-foreground line-through">De R$ 97,00</span>
-                  <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span>
+                  <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-500 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span> {/* Changed bg-yellow-400 to bg-yellow-500 for better contrast */}
                 </div>
                 <p className="text-sm text-green-700/90 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
@@ -87,7 +94,7 @@ export default function OfferSection() {
               <Button 
                 size="lg" 
                 asChild 
-                className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
+                className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105" /* Changed bg-yellow-400 to bg-yellow-500 and hover to bg-yellow-600 for consistency */
               >
                 <Link href="#cta">
                   GARANTIR MEU KIT COMPLETO AGORA!
