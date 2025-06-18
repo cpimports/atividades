@@ -39,9 +39,23 @@ export default function OfferSection() {
           </p>
         </div>
 
+        <div className="max-w-3xl mx-auto bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8 md:mb-12">
+          <div className="flex">
+            <div className="flex-shrink-0">
+              <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
+            </div>
+            <div className="ml-3">
+              <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
+              <div className="mt-2 text-sm text-yellow-100/90">
+                <p>Este valor promocional de <span className="font-extrabold">R$ 19,90</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> são uma oferta de lançamento. Válido apenas para os <span className="font-extrabold">primeiros 100 aventureiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Não deixe para depois o futuro que você pode construir hoje!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
-            <div className="p-6 md:p-8 space-y-8 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
+            <div className="p-6 md:p-8 space-y-3 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
               <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
@@ -83,19 +97,6 @@ export default function OfferSection() {
                   <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
                 </div>
               
-              <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md mt-8 shadow-lg">
-                <div className="flex">
-                  <div className="flex-shrink-0">
-                    <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
-                  </div>
-                  <div className="ml-3">
-                    <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
-                    <div className="mt-2 text-sm text-yellow-100/90">
-                      <p>Este valor promocional de <span className="font-extrabold">R$ 19,90</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> são uma oferta de lançamento. Válido apenas para os <span className="font-extrabold">primeiros 100 aventureiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Não deixe para depois o futuro que você pode construir hoje!</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
 
               <div className="text-center mt-10">
                 <Button
