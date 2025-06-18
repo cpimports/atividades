@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Added import for Image
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
@@ -111,8 +111,8 @@ export default function OfferSection() {
                     src="https://i.imgur.com/xCuyx6F.png"
                     alt="Métodos de pagamento aceitos"
                     data-ai-hint="payment methods"
-                    width={350}
-                    height={35}
+                    width={250}
+                    height={25}
                     className="object-contain"
                   />
                 </div>
