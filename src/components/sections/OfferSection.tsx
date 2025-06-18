@@ -26,6 +26,7 @@ export default function OfferSection() {
   const [targetDate, setTargetDate] = useState<Date | null>(null);
 
   useEffect(() => {
+    // Initialize targetDate only on the client-side
     setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); 
   }, []);
 
@@ -71,6 +72,16 @@ export default function OfferSection() {
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
             <div className="p-6 md:p-8 space-y-3 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
+              <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg">
+                <div className="flex">
+                  <div className="flex-shrink-0">
+                    <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
+                  </div>
+                  <div className="ml-3">
+                    <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
+                  </div>
+                </div>
+              </div>
               <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
@@ -141,18 +152,6 @@ export default function OfferSection() {
         </Card>
 
         <div className="max-w-3xl mx-auto mt-8 text-center">
-          <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
-              </div>
-              <div className="ml-3">
-                <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
-                {/* The descriptive text paragraph that was here has been removed */}
-              </div>
-            </div>
-          </div>
-
           {timeLeft && (
             <div className="text-center mb-8">
               <p className="text-md text-foreground/80 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
@@ -181,4 +180,3 @@ export default function OfferSection() {
     </section>
   );
 }
-
