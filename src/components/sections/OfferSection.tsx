@@ -75,7 +75,7 @@ export default function OfferSection() {
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
               
-              <div>
+              <div className="space-y-3">
                 <ul className="divide-y divide-white/30">
                   {items.map((item, index) => (
                     <li key={index} className="flex items-start text-white pt-2 first:pt-0">
@@ -148,9 +148,7 @@ export default function OfferSection() {
               </div>
               <div className="ml-3">
                 <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
-                <div className="mt-2 text-sm text-yellow-100/90">
-                  <p>Essa <span className="font-extrabold">condição especial</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> fazem parte de uma <span className="font-extrabold">oferta de lançamento exclusiva</span>, válida somente para os <span className="font-extrabold">100 primeiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Depois disso, a <span className="font-extrabold">oferta será encerrada</span>. <span className="font-extrabold">Aproveite agora</span> e comece hoje mesmo a transformar o futuro de suas crianças!</p>
-                </div>
+                {/* The descriptive text paragraph that was here has been removed */}
               </div>
             </div>
           </div>
