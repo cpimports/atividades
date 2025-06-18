@@ -70,12 +70,12 @@ export default function OfferSection() {
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
-            <div className="p-6 md:p-8 space-y-6 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
+            <div className="p-6 md:p-8 space-y-3 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
               <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
               
-              <div className="space-y-3">
+              <div>
                 <ul className="divide-y divide-white/30">
                   {items.map((item, index) => (
                     <li key={index} className="flex items-start text-white pt-2 first:pt-0">
@@ -122,6 +122,19 @@ export default function OfferSection() {
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
+                <p className="mt-6 text-sm text-gray-300 font-medium">
+                  Compra 100% segura e satisfação que transforma.
+                </p>
+                <div className="mt-4 flex justify-center">
+                  <Image
+                    src="https://i.imgur.com/xCuyx6F.png"
+                    alt="Métodos de pagamento aceitos"
+                    data-ai-hint="payment methods"
+                    width={250}
+                    height={25}
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
           </CardContent>
@@ -165,21 +178,9 @@ export default function OfferSection() {
               </div>
             </div>
           )}
-
-          <p className="mt-4 text-sm text-foreground/80">Compra 100% segura e satisfação que transforma.</p>
-          <div className="mt-4 flex justify-center">
-            <Image
-              src="https://i.imgur.com/xCuyx6F.png"
-              alt="Métodos de pagamento aceitos"
-              data-ai-hint="payment methods"
-              width={250}
-              height={25}
-              className="object-contain"
-            />
-          </div>
         </div>
-
       </div>
     </section>
   );
 }
+
