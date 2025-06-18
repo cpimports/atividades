@@ -7,7 +7,7 @@ import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react
 
 export default function OfferSection() {
   const items = [
-    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Kit Completo Gêniozinho em Ação" },
+    { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "kit completo de atividades" },
     { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Acesso Imediato e Vitalício ao Material em PDF" },
     { icon: <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />, text: "Tranquilidade e Suporte para Você" },
   ];
@@ -120,4 +120,3 @@ export default function OfferSection() {
     </section>
   );
 }
-
