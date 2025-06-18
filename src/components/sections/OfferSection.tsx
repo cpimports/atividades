@@ -58,17 +58,17 @@ export default function OfferSection() {
                   ))}
                 </ul>
 
-                <div>
-                  
-                  <ul className="divide-y divide-white/30 space-y-4 mt-6">
+                <div className="border-b border-white/30"></div>
+
+                <ul className="divide-y divide-white/30 space-y-4">
                     {bonusItems.map((bonus, index) => (
                       <li key={index} className="flex items-start text-white pt-4 first:pt-0">
                         <CheckCircle className="h-6 w-6 text-[#50C878] mr-3 flex-shrink-0" />
                         <span className="font-medium text-sm text-white">{bonus}</span>
                       </li>
                     ))}
-                  </ul>
-                </div>
+                </ul>
+              </div>
 
                 <div className="text-center bg-black/20 p-6 rounded-lg border border-yellow-400/50 mt-6">
                   <p className="text-sm uppercase tracking-wider mb-2 font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
@@ -82,7 +82,6 @@ export default function OfferSection() {
                   </div>
                   <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
                 </div>
-              </div>
               
               <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md mt-8 shadow-lg">
                 <div className="flex">
