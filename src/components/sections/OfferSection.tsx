@@ -26,7 +26,7 @@ export default function OfferSection() {
     >
       {/* Blue decorative elements */}
       <div className="absolute -top-20 -left-20 w-72 h-72 md:w-96 md:h-96 bg-primary/5 rounded-full filter blur-3xl opacity-50 -z-0"></div>
-      <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-primary/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
+      <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-accent/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
 
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -42,7 +42,7 @@ export default function OfferSection() {
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
             <div className="p-6 md:p-8 space-y-8 bg-primary/60 shadow-lg">
-              <h3 className="font-headline text-2xl font-semibold text-white text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
+              <h3 className="font-headline text-2xl font-semibold text-white text-center mb-4">OFERTA ESPECIAL POR TEMPO LIMITADO!</h3>
               
               <div className="space-y-6">
                 <ul className="divide-y divide-border/30 space-y-4">
