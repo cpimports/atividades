@@ -32,9 +32,9 @@ export default function OfferSection() {
             <div className="space-y-4">
               <ul className="space-y-3">
                 {[
-                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
-                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
-                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
+                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
+                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
+                  { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
                 ].map((item, index) => (
                   <li key={index} className="flex items-start bg-muted/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     {item.icon}
@@ -48,9 +48,9 @@ export default function OfferSection() {
 
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                 {bonusItems.map((bonus, index) => (
-                  <li key={index} className="flex items-start text-foreground/90 bg-background/50 p-3.5 rounded-md shadow-sm border border-dashed border-accent/50">
-                    <CheckCircle className="h-5 w-5 text-accent mr-2.5 mt-0.5 flex-shrink-0" />
-                    <span className="font-medium">{bonus}</span>
+                  <li key={index} className="flex items-start bg-muted/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                    <span className="font-medium text-sm text-foreground">{bonus}</span>
                   </li>
                 ))}
               </ul>
