@@ -21,7 +21,7 @@ export default function OfferSection() {
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
           <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
-            Imagine ter em mãos as ferramentas certas para despertar o potencial do seu gêniozinho, por um valor que é puro carinho. O <span className="font-semibold text-primary">Kit Gêniozinho em Ação</span> é a solução completa e divertida que você esperava!
+            Chega de procurar atividades aleatórias que não funcionam. Tenha tudo o que você precisa em um só lugar: organizado, eficaz e pronto para imprimir
           </p>
         </div>
 
