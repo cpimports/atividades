@@ -41,7 +41,7 @@ export default function OfferSection() {
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
-            <div className="p-6 md:p-8 space-y-8 bg-primary/60 shadow-lg">
+            <div className="p-6 md:p-8 space-y-8 bg-accent/60 shadow-lg">
               <h3 className="font-headline text-3xl sm:text-4xl font-bold text-white text-center mb-4 uppercase drop-shadow-md">OFERTA ESPECIAL POR TEMPO LIMITADO!</h3>
               
               <div className="space-y-6">
