@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // Added import for Image
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
@@ -105,6 +106,16 @@ export default function OfferSection() {
                   </Link>
                 </Button>
                 <p className="mt-4 text-sm text-white/90">Compra 100% segura e satisfação que transforma.</p>
+                <div className="mt-4 flex justify-center">
+                  <Image
+                    src="https://i.imgur.com/xCuyx6F.png"
+                    alt="Métodos de pagamento aceitos"
+                    data-ai-hint="payment methods"
+                    width={350}
+                    height={35}
+                    className="object-contain"
+                  />
+                </div>
               </div>
             </div>
           </CardContent>
