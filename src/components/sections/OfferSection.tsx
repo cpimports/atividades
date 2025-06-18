@@ -26,8 +26,8 @@ export default function OfferSection() {
         </div>
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
-          {/* The div that previously held the title and description with a gradient background has been removed as its content was moved outside the card. */}
           <CardContent className="p-6 md:p-8 space-y-8">
+            <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
               <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
               <div className="my-2 flex items-center justify-center">
@@ -42,7 +42,7 @@ export default function OfferSection() {
             </div>
 
             <div className="space-y-4">
-              <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
+              
               <ul className="space-y-3">
                 {[
                   { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
