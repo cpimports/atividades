@@ -1,5 +1,5 @@
 
-import Image from 'next/image';
+import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
@@ -7,9 +7,9 @@ import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react
 
 export default function OfferSection() {
   const items = [
-    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
-    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
-    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
+    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: "Kit Completo Gêniozinho em Ação", subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
+    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: "Acesso Imediato e Vitalício ao Material em PDF", subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
+    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: "Tranquilidade e Suporte para Você", subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
   ];
 
   const bonusItems = [
@@ -20,8 +20,8 @@ export default function OfferSection() {
   ];
 
   return (
-    <section 
-      id="oferta-especial" 
+    <section
+      id="oferta-especial"
       className="py-16 md:py-24 bg-background relative overflow-hidden"
     >
       {/* Blue decorative elements */}
@@ -40,16 +40,16 @@ export default function OfferSection() {
         </div>
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
-          <CardContent className="p-6 md:p-8 space-y-8 bg-primary/80">
+          <CardContent className="p-6 md:p-8 space-y-8 bg-primary/60"> {/* Changed from bg-primary/80 to bg-primary/60 */}
             <h3 className="font-headline text-2xl font-semibold text-white text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
             <div className="space-y-6">
               <ul className="divide-y divide-border/30 space-y-4">
                 {items.map((item, index) => (
                   <li key={index} className="flex items-start text-white pt-4 first:pt-0">
-                    {item.icon}
+                    {React.cloneElement(item.icon, { className: "h-6 w-6 text-yellow-400 mr-3 flex-shrink-0"})}
                     <div>
-                      {item.text}
+                      <span className="font-semibold text-sm text-white">{item.text}</span>
                       {item.subtext && <p className="text-xs text-gray-200 mt-1">{item.subtext}</p>}
                     </div>
                   </li>
@@ -57,11 +57,14 @@ export default function OfferSection() {
               </ul>
 
               <div>
+                <h4 className="font-headline text-xl font-semibold text-white text-center my-6"> 
+                  E ainda tem mais BÔNUS ESPECIAIS:
+                </h4>
                 <ul className="divide-y divide-border/30 space-y-4 mt-6">
                   {bonusItems.map((bonus, index) => (
                     <li key={index} className="flex items-start text-white pt-4 first:pt-0">
                       <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />
-                      <span className="font-medium text-sm">{bonus}</span>
+                      <span className="font-medium text-sm text-white">{bonus}</span>
                     </li>
                   ))}
                 </ul>
@@ -96,9 +99,9 @@ export default function OfferSection() {
             </div>
 
             <div className="text-center mt-10">
-              <Button 
-                size="lg" 
-                asChild 
+              <Button
+                size="lg"
+                asChild
                 className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
               >
                 <Link href="#cta">
