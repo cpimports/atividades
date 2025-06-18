@@ -39,8 +39,8 @@ export default function OfferSection() {
                   <li key={index} className="flex items-start bg-muted/40 p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     {item.icon}
                     <div>
-                      <span className="text-foreground text-md">{item.text}</span>
-                      {item.subtext && <p className="text-sm text-muted-foreground mt-1">{item.subtext}</p>}
+                      <span className="text-foreground text-sm">{item.text}</span>
+                      {item.subtext && <p className="text-xs text-muted-foreground mt-1">{item.subtext}</p>}
                     </div>
                   </li>
                 ))}
