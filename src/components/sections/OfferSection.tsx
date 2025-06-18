@@ -26,8 +26,7 @@ export default function OfferSection() {
   const [targetDate, setTargetDate] = useState<Date | null>(null);
 
   useEffect(() => {
-    // Set targetDate only on the client-side
-    setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); // 24 hours from now
+    setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); 
   }, []);
 
   useEffect(() => {
@@ -48,7 +47,7 @@ export default function OfferSection() {
       setTimeLeft(newTimeLeft);
     };
 
-    calculateTimeLeft(); // Initial calculation
+    calculateTimeLeft(); 
     const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -58,7 +57,6 @@ export default function OfferSection() {
       id="oferta-especial"
       className="py-16 md:py-24 bg-background relative overflow-hidden"
     >
-      {/* Blue decorative elements */}
       <div className="absolute -top-20 -left-20 w-72 h-72 md:w-96 md:h-96 bg-primary/5 rounded-full filter blur-3xl opacity-50 -z-0"></div>
       <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-accent/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
 
@@ -72,7 +70,7 @@ export default function OfferSection() {
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
-            <div className="p-6 md:p-8 space-y-3 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
+            <div className="p-6 md:p-8 space-y-6 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
               <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
@@ -101,7 +99,7 @@ export default function OfferSection() {
                 </ul>
               </div>
 
-                <div className="text-center bg-black/20 p-6 rounded-lg border border-yellow-400/50 mt-6">
+                <div className="text-center bg-black/20 p-6 rounded-lg border border-yellow-400/50">
                   <p className="text-sm uppercase tracking-wider mb-2 font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                   <div className="my-2 flex items-center justify-center">
                     <span className="text-5xl font-semibold text-yellow-400 mr-1">R$</span>
@@ -114,7 +112,6 @@ export default function OfferSection() {
                   <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
                 </div>
               
-
               <div className="text-center mt-10">
                 <Button
                   size="lg"
@@ -125,60 +122,63 @@ export default function OfferSection() {
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
-
-                <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mt-8 mb-6">
-                  <div className="flex">
-                    <div className="flex-shrink-0">
-                      <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
-                    </div>
-                    <div className="ml-3">
-                      <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
-                      <div className="mt-2 text-sm text-yellow-100/90">
-                        <p>Essa <span className="font-extrabold">condição especial</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> fazem parte de uma <span className="font-extrabold">oferta de lançamento exclusiva</span>, válida somente para os <span className="font-extrabold">100 primeiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Depois disso, a <span className="font-extrabold">oferta será encerrada</span>. <span className="font-extrabold">Aproveite agora</span> e comece hoje mesmo a transformar o futuro de suas crianças!</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {timeLeft && (
-                  <div className="text-center mt-8 mb-6">
-                    <p className="text-md text-white/90 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
-                    <div className="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
-                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
-                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.days}</span>
-                        <span className="block text-xs sm:text-sm text-white/80">Dias</span>
-                      </div>
-                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
-                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.hours}</span>
-                        <span className="block text-xs sm:text-sm text-white/80">Horas</span>
-                      </div>
-                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
-                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.minutes}</span>
-                        <span className="block text-xs sm:text-sm text-white/80">Minutos</span>
-                      </div>
-                      <div className="bg-card/20 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-white/20">
-                        <span className="block text-3xl sm:text-4xl font-bold text-white">{timeLeft.seconds}</span>
-                        <span className="block text-xs sm:text-sm text-white/80">Segundos</span>
-                      </div>
-                    </div>
-                  </div>
-                )}
-
-                <p className="mt-4 text-sm text-white/90">Compra 100% segura e satisfação que transforma.</p>
-                <div className="mt-4 flex justify-center">
-                  <Image
-                    src="https://i.imgur.com/xCuyx6F.png"
-                    alt="Métodos de pagamento aceitos"
-                    data-ai-hint="payment methods"
-                    width={250}
-                    height={25}
-                    className="object-contain"
-                  />
-                </div>
               </div>
             </div>
           </CardContent>
         </Card>
+
+        <div className="max-w-3xl mx-auto mt-8 text-center">
+          <div className="bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8">
+            <div className="flex">
+              <div className="flex-shrink-0">
+                <AlertTriangle className="h-7 w-7 text-yellow-300" aria-hidden="true" />
+              </div>
+              <div className="ml-3">
+                <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
+                <div className="mt-2 text-sm text-yellow-100/90">
+                  <p>Essa <span className="font-extrabold">condição especial</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> fazem parte de uma <span className="font-extrabold">oferta de lançamento exclusiva</span>, válida somente para os <span className="font-extrabold">100 primeiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Depois disso, a <span className="font-extrabold">oferta será encerrada</span>. <span className="font-extrabold">Aproveite agora</span> e comece hoje mesmo a transformar o futuro de suas crianças!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {timeLeft && (
+            <div className="text-center mb-8">
+              <p className="text-md text-foreground/80 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
+              <div className="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.days}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Dias</span>
+                </div>
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.hours}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Horas</span>
+                </div>
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.minutes}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Minutos</span>
+                </div>
+                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
+                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.seconds}</span>
+                  <span className="block text-xs sm:text-sm text-primary/90">Segundos</span>
+                </div>
+              </div>
+            </div>
+          )}
+
+          <p className="mt-4 text-sm text-foreground/80">Compra 100% segura e satisfação que transforma.</p>
+          <div className="mt-4 flex justify-center">
+            <Image
+              src="https://i.imgur.com/xCuyx6F.png"
+              alt="Métodos de pagamento aceitos"
+              data-ai-hint="payment methods"
+              width={250}
+              height={25}
+              className="object-contain"
+            />
+          </div>
+        </div>
+
       </div>
     </section>
   );
