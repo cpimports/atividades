@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, AlertTriangle, ArrowRight } from 'lucide-react';
+import { CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function OfferSection() {
   const items = [
@@ -27,7 +27,6 @@ export default function OfferSection() {
       {/* Blue decorative elements */}
       <div className="absolute -top-20 -left-20 w-72 h-72 md:w-96 md:h-96 bg-primary/5 rounded-full filter blur-3xl opacity-50 -z-0"></div>
       <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-accent/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
-
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8 md:mb-12">
@@ -102,8 +101,7 @@ export default function OfferSection() {
                   className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
                 >
                   <Link href="#cta">
-                    GARANTIR MEU KIT COMPLETO AGORA!
-                    <ArrowRight className="ml-2 h-6 w-6" />
+                    COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
                 <p className="mt-4 text-sm text-white/90">Compra 100% segura e satisfação que transforma.</p>
@@ -115,4 +113,3 @@ export default function OfferSection() {
     </section>
   );
 }
-
