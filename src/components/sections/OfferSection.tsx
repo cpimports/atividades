@@ -30,13 +30,6 @@ export default function OfferSection() {
 
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
-            Transforme o Aprendizado das Crianças com um Só Clique!
-          </h2>
-          
-        </div>
-
         <div className="max-w-3xl mx-auto bg-destructive/80 border-l-4 border-red-700 text-destructive-foreground p-4 rounded-md shadow-lg mb-8 md:mb-12">
           <div className="flex">
             <div className="flex-shrink-0">
@@ -50,11 +43,17 @@ export default function OfferSection() {
             </div>
           </div>
         </div>
+        
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
+            Transforme o Aprendizado das Crianças com um Só Clique!
+          </h2>
+        </div>
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
             <div className="p-6 md:p-8 space-y-3 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
-              <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))] drop-shadow-md">
+              <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
               
@@ -70,7 +69,7 @@ export default function OfferSection() {
                   ))}
                 </ul>
 
-                <div className="border-b border-white/30 !mt-3 !mb-3"></div>
+                <div className="border-b border-white/30 !my-3"></div>
 
                 <ul className="divide-y divide-white/30">
                     {bonusItems.map((bonus, index) => (
