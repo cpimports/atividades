@@ -38,7 +38,7 @@ export default function OfferSection() {
             <div className="ml-3">
               <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
               <div className="mt-2 text-sm text-yellow-100/90">
-                <p>Este valor promocional de <span className="font-extrabold">R$ 19,90</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> são uma oferta de lançamento. Válido apenas para os <span className="font-extrabold">primeiros 100 aventureiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Não deixe para depois o futuro que você pode construir hoje!</p>
+                <p>Essa <span className="font-extrabold">condição especial</span> e todos os <span className="font-extrabold">SUPER BÔNUS</span> fazem parte de uma <span className="font-extrabold">oferta de lançamento exclusiva</span>, válida somente para os <span className="font-extrabold">100 primeiros</span> ou pelas <span className="font-extrabold">próximas 24 HORAS</span>. Depois disso, a <span className="font-extrabold">oferta será encerrada</span>. <span className="font-extrabold">Aproveite agora</span> e comece hoje mesmo a transformar o futuro de suas crianças!</p>
               </div>
             </div>
           </div>
@@ -115,3 +115,4 @@ export default function OfferSection() {
     </section>
   );
 }
+
