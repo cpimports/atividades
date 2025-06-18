@@ -22,16 +22,15 @@ export default function OfferSection() {
   return (
     <section 
       id="oferta-especial" 
-      className="py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
-      style={{ backgroundImage: "url('https://i.imgur.com/wFPVRXT.png')" }}
+      className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50"
     >
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      {/* Overlay removed */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-white mb-3">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
-          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
             Chega de procurar atividades aleatórias que não funcionam. Tenha tudo o que você precisa em um só lugar: organizado, eficaz e pronto para imprimir
           </p>
         </div>
@@ -41,9 +40,9 @@ export default function OfferSection() {
             <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
             <div className="space-y-6">
-              <ul className="divide-y divide-border">
+              <ul className="divide-y divide-border space-y-4">
                 {items.map((item, index) => (
-                  <li key={index} className="flex items-start text-foreground py-4">
+                  <li key={index} className="flex items-start text-foreground pt-4 first:pt-0">
                     {item.icon}
                     <div>
                       {item.text}
@@ -54,10 +53,10 @@ export default function OfferSection() {
               </ul>
 
               <div>
-                
-                <ul className="divide-y divide-border">
+                {/* Removed title: E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE: */}
+                <ul className="divide-y divide-border space-y-4 mt-6">
                   {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-foreground py-4">
+                    <li key={index} className="flex items-start text-foreground pt-4 first:pt-0">
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
                       <span className="font-medium text-sm">{bonus}</span>
                     </li>
