@@ -26,7 +26,7 @@ export default function OfferSection() {
         </div>
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
-          <CardContent className="p-6 md:p-8 space-y-8 bg-[#FFF3B0]">
+          <CardContent className="p-6 md:p-8 space-y-8 bg-yellow-400">
             <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
             <div className="space-y-4">
