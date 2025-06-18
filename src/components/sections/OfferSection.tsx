@@ -32,7 +32,7 @@ export default function OfferSection() {
         </div>
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
-          <CardContent className="p-6 md:p-8 space-y-8 bg-yellow-400">
+          <CardContent className="p-6 md:p-8 space-y-8 bg-gradient-to-b from-yellow-400 to-blue-500">
             <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
             <div className="space-y-6">
@@ -52,7 +52,7 @@ export default function OfferSection() {
                 
                 <ul className="space-y-4 divide-y divide-border">
                   {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-foreground py-4"> {/* Adjusted py for bonus items as well */}
+                    <li key={index} className="flex items-start text-foreground py-4">
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
                       <span className="font-medium text-sm">{bonus}</span>
                     </li>
