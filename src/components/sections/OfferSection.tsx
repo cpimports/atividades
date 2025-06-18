@@ -7,9 +7,9 @@ import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react
 
 export default function OfferSection() {
   const items = [
-    { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
-    { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
-    { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
+    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
+    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Acesso Imediato e Vitalício ao Material em PDF</span>, subtext: "Receba tudo no seu e-mail assim que confirmar. Imprima quantas vezes quiser!" },
+    { icon: <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />, text: <span className="font-semibold text-sm">Tranquilidade e Suporte para Você</span>, subtext: "Menos estresse na busca por materiais e mais tempo de qualidade com sua criança." },
   ];
 
   const bonusItems = [
@@ -40,27 +40,27 @@ export default function OfferSection() {
         </div>
 
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
-          <CardContent className="p-6 md:p-8 space-y-8 bg-gradient-to-b from-yellow-400 to-blue-500">
-            <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
+          <CardContent className="p-6 md:p-8 space-y-8 bg-primary/80">
+            <h3 className="font-headline text-2xl font-semibold text-white text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
             
             <div className="space-y-6">
-              <ul className="divide-y divide-border/50 space-y-4">
+              <ul className="divide-y divide-border/30 space-y-4">
                 {items.map((item, index) => (
-                  <li key={index} className="flex items-start text-neutral-800 pt-4 first:pt-0">
+                  <li key={index} className="flex items-start text-white pt-4 first:pt-0">
                     {item.icon}
                     <div>
                       {item.text}
-                      {item.subtext && <p className="text-xs text-neutral-700/90 mt-1">{item.subtext}</p>}
+                      {item.subtext && <p className="text-xs text-gray-200 mt-1">{item.subtext}</p>}
                     </div>
                   </li>
                 ))}
               </ul>
 
               <div>
-                <ul className="divide-y divide-border/50 space-y-4 mt-6">
+                <ul className="divide-y divide-border/30 space-y-4 mt-6">
                   {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-neutral-800 pt-4 first:pt-0">
-                      <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
+                    <li key={index} className="flex items-start text-white pt-4 first:pt-0">
+                      <CheckCircle className="h-6 w-6 text-yellow-400 mr-3 flex-shrink-0" />
                       <span className="font-medium text-sm">{bonus}</span>
                     </li>
                   ))}
@@ -68,16 +68,16 @@ export default function OfferSection() {
               </div>
 
               <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30 mt-6">
-                <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
+                <p className="text-sm uppercase tracking-wider mb-2 font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                 <div className="my-2 flex items-center justify-center">
-                  <DollarSign className="h-12 w-12 text-green-600 mr-1" />
-                  <span className="text-6xl sm:text-7xl font-extrabold text-green-600">19,90</span>
+                  <DollarSign className="h-12 w-12 text-yellow-400 mr-1" />
+                  <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400">19,90</span>
                 </div>
                 <div className="mb-2">
-                  <span className="text-lg text-muted-foreground line-through">De R$ 97,00</span>
-                  <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-500 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span>
+                  <span className="text-lg text-gray-300 line-through">De R$ 97,00</span>
+                  <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-black text-xs font-bold rounded">ECONOMIZE 79%!</span>
                 </div>
-                <p className="text-sm text-green-700/90 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
+                <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
             </div>
             
