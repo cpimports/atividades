@@ -16,19 +16,17 @@ export default function OfferSection() {
   return (
     <section id="oferta-especial" className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
-          <div className="p-6 md:p-8 bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10">
-            <div className="text-center">
-              
-              <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
-                Adquira agora seu KIT de Atividades e tenha atividades prontas todos os meses, garanta a praticidade de suas aulas!
-              </h2>
-              <p className="text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
-                Imagine ter em mãos as ferramentas certas para despertar o potencial do seu gêniozinho, por um valor que é puro carinho. O <span className="font-semibold text-primary">Kit Gêniozinho em Ação</span> é a solução completa e divertida que você esperava!
-              </p>
-            </div>
-          </div>
+        <div className="text-center mb-8 md:mb-12">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
+            Adquira agora seu KIT de Atividades e tenha atividades prontas todos os meses, garanta a praticidade de suas aulas!
+          </h2>
+          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+            Imagine ter em mãos as ferramentas certas para despertar o potencial do seu gêniozinho, por um valor que é puro carinho. O <span className="font-semibold text-primary">Kit Gêniozinho em Ação</span> é a solução completa e divertida que você esperava!
+          </p>
+        </div>
 
+        <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
+          {/* The div that previously held the title and description with a gradient background has been removed as its content was moved outside the card. */}
           <CardContent className="p-6 md:p-8 space-y-8">
             <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
               <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
