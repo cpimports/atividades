@@ -49,12 +49,10 @@ export default function OfferSection() {
               </ul>
 
               <div>
-                <h4 className="font-headline text-xl font-semibold text-primary text-center my-6">
-                  E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE:
-                </h4>
+                
                 <ul className="space-y-4">
                   {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-foreground">
+                    <li key={index} className="flex items-start text-foreground py-2"> {/* Adjusted py for bonus items as well */}
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
                       <span className="font-medium text-sm">{bonus}</span>
                     </li>
