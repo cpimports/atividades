@@ -28,21 +28,8 @@ export default function OfferSection() {
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-6 md:p-8 space-y-8">
             <h3 className="font-headline text-2xl font-semibold text-primary text-center mb-4">O que você garante AGORA com este investimento simbólico:</h3>
-            <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
-              <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
-              <div className="my-2 flex items-center justify-center">
-                <DollarSign className="h-12 w-12 text-green-600 mr-1" />
-                <span className="text-6xl sm:text-7xl font-extrabold text-green-600">19,90</span>
-              </div>
-              <div className="mb-2">
-                <span className="text-lg text-muted-foreground line-through">De R$ 97,00</span>
-                <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span>
-              </div>
-              <p className="text-sm text-green-700/90 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
-            </div>
-
+            
             <div className="space-y-4">
-              
               <ul className="space-y-3">
                 {[
                   { icon: <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />, text: <span className="font-semibold">Kit Completo Gêniozinho em Ação</span>, subtext: "Mais de 1000 atividades educativas e lúdicas para estimular foco, linguagem e comportamento." },
@@ -58,6 +45,19 @@ export default function OfferSection() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="text-center bg-green-500/10 p-6 rounded-lg border border-green-500/30">
+              <p className="text-muted-foreground text-sm uppercase tracking-wider mb-2 font-semibold text-green-700">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
+              <div className="my-2 flex items-center justify-center">
+                <DollarSign className="h-12 w-12 text-green-600 mr-1" />
+                <span className="text-6xl sm:text-7xl font-extrabold text-green-600">19,90</span>
+              </div>
+              <div className="mb-2">
+                <span className="text-lg text-muted-foreground line-through">De R$ 97,00</span>
+                <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-yellow-900 text-xs font-bold rounded">ECONOMIZE 79%!</span>
+              </div>
+              <p className="text-sm text-green-700/90 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
             </div>
             
             <div className="bg-accent/10 p-6 rounded-lg border border-accent/30">
