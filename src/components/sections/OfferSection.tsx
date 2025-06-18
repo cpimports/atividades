@@ -50,9 +50,9 @@ export default function OfferSection() {
 
               <div>
                 
-                <ul className="space-y-4">
+                <ul className="space-y-4 divide-y divide-border">
                   {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-foreground py-2"> {/* Adjusted py for bonus items as well */}
+                    <li key={index} className="flex items-start text-foreground py-4"> {/* Adjusted py for bonus items as well */}
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
                       <span className="font-medium text-sm">{bonus}</span>
                     </li>
