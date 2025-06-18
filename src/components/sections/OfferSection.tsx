@@ -21,7 +21,7 @@ export default function OfferSection() {
             <div className="text-center">
               <Zap className="h-16 w-16 text-yellow-500 mx-auto mb-4" />
               <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
-                Sua Chance de Ouro para Transformar o Aprendizado!
+                Adquira agora seu KIT de Atividades e tenha atividades prontas todos os meses, garanta a praticidade de suas aulas!
               </h2>
               <p className="text-lg text-foreground/80 mb-6 max-w-2xl mx-auto">
                 Imagine ter em mãos as ferramentas certas para despertar o potencial do seu gêniozinho, por um valor que é puro carinho. O <span className="font-semibold text-primary">Kit Gêniozinho em Ação</span> é a solução completa e divertida que você esperava!
