@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle, ArrowRight, DollarSign } from 'lucide-react';
 
 export default function OfferSection() {
@@ -22,21 +22,17 @@ export default function OfferSection() {
   return (
     <section 
       id="oferta-especial" 
-      className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50 relative overflow-hidden"
+      className="py-16 md:py-24 bg-cover bg-center bg-no-repeat relative"
+      style={{ backgroundImage: "url('https://i.imgur.com/WZlskCw.png')" }}
     >
-      {/* Abstract paint splatter elements */}
-      <div className="absolute top-[5%] left-[10%] w-48 h-48 bg-primary/5 rounded-full filter blur-2xl opacity-50 pointer-events-none -z-10"></div>
-      <div className="absolute bottom-[10%] right-[5%] w-56 h-56 bg-accent/10 rounded-full filter blur-3xl opacity-40 pointer-events-none -z-10"></div>
-      <div className="absolute top-[30%] left-[40%] w-32 h-32 bg-secondary/5 rounded-lg filter blur-2xl opacity-30 pointer-events-none -z-10 transform rotate-12"></div>
-      <div className="absolute bottom-[25%] left-[15%] w-40 h-40 bg-yellow-500/5 rounded-full filter blur-2xl opacity-60 pointer-events-none -z-10"></div>
-      <div className="absolute top-[15%] right-[20%] w-36 h-36 bg-pink-500/5 rounded-full filter blur-xl opacity-50 pointer-events-none -z-10"></div>
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-white mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
-          <p className="text-lg text-foreground/80 max-w-2xl mx-auto">
+          <p className="text-lg text-gray-200 max-w-2xl mx-auto">
             Chega de procurar atividades aleatórias que não funcionam. Tenha tudo o que você precisa em um só lugar: organizado, eficaz e pronto para imprimir
           </p>
         </div>
