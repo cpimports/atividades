@@ -22,10 +22,16 @@ export default function OfferSection() {
   return (
     <section 
       id="oferta-especial" 
-      className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50"
+      className="py-16 md:py-24 bg-gradient-to-b from-background to-muted/50 relative overflow-hidden"
     >
-      {/* Overlay removed */}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Abstract paint splatter elements */}
+      <div className="absolute top-[5%] left-[10%] w-48 h-48 bg-primary/5 rounded-full filter blur-2xl opacity-50 pointer-events-none -z-10"></div>
+      <div className="absolute bottom-[10%] right-[5%] w-56 h-56 bg-accent/10 rounded-full filter blur-3xl opacity-40 pointer-events-none -z-10"></div>
+      <div className="absolute top-[30%] left-[40%] w-32 h-32 bg-secondary/5 rounded-lg filter blur-2xl opacity-30 pointer-events-none -z-10 transform rotate-12"></div>
+      <div className="absolute bottom-[25%] left-[15%] w-40 h-40 bg-yellow-500/5 rounded-full filter blur-2xl opacity-60 pointer-events-none -z-10"></div>
+      <div className="absolute top-[15%] right-[20%] w-36 h-36 bg-pink-500/5 rounded-full filter blur-xl opacity-50 pointer-events-none -z-10"></div>
+
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
@@ -42,21 +48,20 @@ export default function OfferSection() {
             <div className="space-y-6">
               <ul className="divide-y divide-border space-y-4">
                 {items.map((item, index) => (
-                  <li key={index} className="flex items-start text-foreground pt-4 first:pt-0">
+                  <li key={index} className="flex items-start text-neutral-800 pt-4 first:pt-0">
                     {item.icon}
                     <div>
                       {item.text}
-                      {item.subtext && <p className="text-xs text-muted-foreground mt-1">{item.subtext}</p>}
+                      {item.subtext && <p className="text-xs text-neutral-700/90 mt-1">{item.subtext}</p>}
                     </div>
                   </li>
                 ))}
               </ul>
 
               <div>
-                {/* Removed title: E NÃO PARA POR AÍ! BÔNUS ESPECIAIS SÓ HOJE: */}
                 <ul className="divide-y divide-border space-y-4 mt-6">
                   {bonusItems.map((bonus, index) => (
-                    <li key={index} className="flex items-start text-foreground pt-4 first:pt-0">
+                    <li key={index} className="flex items-start text-neutral-800 pt-4 first:pt-0">
                       <CheckCircle className="h-6 w-6 text-green-500 mr-3 flex-shrink-0" />
                       <span className="font-medium text-sm">{bonus}</span>
                     </li>
