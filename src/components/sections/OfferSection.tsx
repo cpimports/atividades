@@ -42,7 +42,7 @@ export default function OfferSection() {
         <Card className="max-w-3xl mx-auto shadow-2xl overflow-hidden border-2 border-primary/30 bg-card">
           <CardContent className="p-0">
             <div className="p-6 md:p-8 space-y-8 bg-gradient-to-br from-indigo-800 to-slate-900 shadow-lg">
-              <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase drop-shadow-md">
+              <h3 className="font-headline text-3xl sm:text-4xl font-bold text-yellow-400 text-center mb-4 uppercase [filter:drop-shadow(0_0_1px_white)_drop-shadow(0_0_5px_theme(colors.yellow.400))]">
                 OFERTA ESPECIAL POR TEMPO LIMITADO!
               </h3>
               
@@ -121,3 +121,4 @@ export default function OfferSection() {
     </section>
   );
 }
+
