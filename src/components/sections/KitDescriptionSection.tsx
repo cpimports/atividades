@@ -80,17 +80,8 @@ export default function KitDescriptionSection() {
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12 mt-[-4rem]">
-          <div className="flex justify-center mb-6">
-            <Image
-              src="https://i.imgur.com/qribBbs.png"
-              alt="Ícone de atividades"
-              data-ai-hint="activities puzzle"
-              width={150}
-              height={150}
-              className="rounded-md"
-            />
-          </div>
+        <div className="text-center mb-12">
+          {/* Image previously here has been removed */}
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white">
             Mais de 1000 atividades prontas para usar
           </h2>
