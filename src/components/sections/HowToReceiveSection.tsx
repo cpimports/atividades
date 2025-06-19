@@ -1,6 +1,6 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Printer, PlayCircle } from 'lucide-react';
+import { PlayCircle } from 'lucide-react'; // Printer removed
 import Image from 'next/image';
 
 const steps = [
@@ -10,7 +10,7 @@ const steps = [
     description: 'Receba Imediatamente em seu e-mail.',
   },
   {
-    icon: <Printer className="h-10 w-10 text-accent-foreground" />,
+    icon: <Image src="https://i.imgur.com/kozs9lt.png" alt="Printer icon" data-ai-hint="printer document" width={40} height={40} className="text-accent-foreground" />,
     title: 'ACESSE E IMPRIMA QUANDO QUISER',
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
@@ -51,4 +51,3 @@ export default function HowToReceiveSection() {
     </section>
   );
 }
-
