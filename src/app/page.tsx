@@ -8,6 +8,7 @@ import HowToReceiveSection from '@/components/sections/HowToReceiveSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
 import OfferSection from '@/components/sections/OfferSection'; 
+import FaqSection from '@/components/sections/FaqSection';
 
 export default function HomePage() {
   return (
@@ -22,6 +23,7 @@ export default function HomePage() {
         <BenefitsSection />
         <TestimonialsSection />
         <OfferSection /> 
+        <FaqSection />
       </main>
       <Footer />
     </div>
