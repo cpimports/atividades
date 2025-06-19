@@ -35,24 +35,13 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        {/* Image was here */}
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium pt-12 md:pt-16">
           Transforme o Dia a Dia da Sua Criança com Atividades Divertidas e Inclusivas Criadas Especialmente para o Desenvolvimento Delas!
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow">
           Mais conexão, menos estresse e mais evolução: um material completo com atividades lúdicas e terapêuticas que estimulam o aprendizado, a linguagem, o foco e o comportamento da criança
         </p>
-        <div className="mt-12 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
-          <Image 
-            src="https://placehold.co/480x270.png" 
-            alt="Crianças felizes e engajadas utilizando o material Gêniozinho em Ação" 
-            data-ai-hint="children learning kit"
-            width={480} 
-            height={270}
-            className="rounded-xl shadow-2xl mx-auto aspect-video object-cover"
-            priority
-          />
-        </div>
+        {/* Image div removed from here */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
           <Button 
             size="lg" 
@@ -71,4 +60,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
