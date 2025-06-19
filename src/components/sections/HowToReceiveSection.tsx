@@ -1,11 +1,10 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlayCircle } from 'lucide-react'; // Printer removed
 import Image from 'next/image';
 
 const steps = [
   {
-    icon: <Image src="https://i.imgur.com/z0BAXDu.png" alt="Email icon" data-ai-hint="email mail envelope" width={40} height={40} className="text-primary" />,
+    icon: <Image src="https://i.imgur.com/z0BAXDu.png" alt="Email icon" data-ai-hint="email mail" width={40} height={40} className="text-primary" />,
     title: 'RECEBA EM SEU E-MAIL',
     description: 'Receba Imediatamente em seu e-mail.',
   },
@@ -15,7 +14,7 @@ const steps = [
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
   {
-    icon: <PlayCircle className="h-10 w-10 text-primary" />,
+    icon: <Image src="https://i.imgur.com/8HMLXYb.png" alt="Play icon" data-ai-hint="play button" width={40} height={40} className="text-primary" />,
     title: 'APLIQUE SEU KIT AGORA MESMO',
     description: 'Coloque em prática com seus alunos ou filhos.',
   },
