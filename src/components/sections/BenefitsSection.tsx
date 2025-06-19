@@ -55,11 +55,8 @@ export default function BenefitsSection() {
   const [targetDate, setTargetDate] = useState<Date | null>(null);
 
   useEffect(() => {
-    // Initialize targetDate only on the client-side
     if (typeof window !== 'undefined') {
       const now = new Date();
-      // Set targetDate to be 24 hours from the current time,
-      // but fixed to the start of the current hour to reduce frequent re-renders if now changes by milliseconds
       const initialTargetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 24, 0, 0, 0);
       setTargetDate(initialTargetDate);
     }
@@ -146,8 +143,8 @@ export default function BenefitsSection() {
               src="https://i.imgur.com/wZyjoiu.png"
               alt="Oferta especial Gêniozinho em Ação"
               data-ai-hint="offer banner"
-              width={350}
-              height={50}
+              width={280}
+              height={40}
               className="rounded-md shadow-lg"
             />
           </div>
