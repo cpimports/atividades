@@ -7,8 +7,7 @@ import KitDescriptionSection from '@/components/sections/KitDescriptionSection';
 import HowToReceiveSection from '@/components/sections/HowToReceiveSection';
 import BenefitsSection from '@/components/sections/BenefitsSection';
 import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import OfferSection from '@/components/sections/OfferSection'; // Added import
-import CtaSection from '@/components/sections/CtaSection';
+import OfferSection from '@/components/sections/OfferSection'; 
 
 export default function HomePage() {
   return (
@@ -22,8 +21,7 @@ export default function HomePage() {
         {/* ActivityShowcaseSection was here */}
         <BenefitsSection />
         <TestimonialsSection />
-        <OfferSection /> {/* Added new section here */}
-        <CtaSection />
+        <OfferSection /> 
       </main>
       <Footer />
     </div>

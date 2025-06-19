@@ -27,7 +27,7 @@ export default function KitDescriptionSection() {
             asChild
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#cta">
+            <Link href="#oferta-especial">
               ACESSAR MATERIAL AGORA!
             </Link>
           </Button>

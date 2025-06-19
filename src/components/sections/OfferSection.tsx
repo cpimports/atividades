@@ -140,7 +140,7 @@ export default function OfferSection() {
                   asChild
                   className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
                 >
-                  <Link href="#cta">
+                  <Link href="#oferta-especial">
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
@@ -207,7 +207,7 @@ export default function OfferSection() {
               asChild
               className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
             >
-              <Link href="#cta">
+              <Link href="#oferta-especial">
                 COMPRAR COM DESCONTO
               </Link>
             </Button>
