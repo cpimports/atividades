@@ -180,6 +180,17 @@ export default function OfferSection() {
               </div>
             </div>
           )}
+           <div className="mt-8 flex justify-center">
+            <Button
+              size="lg"
+              asChild
+              className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
+            >
+              <Link href="#cta">
+                COMPRAR COM DESCONTO
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     </section>
