@@ -32,6 +32,11 @@ const carouselImages = [
     alt: "Exemplo de Atividade do Kit 4",
     hint: "kids drawing",
   },
+  {
+    src: "https://i.imgur.com/PJJnvy0.png",
+    alt: "Exemplo de Atividade do Kit 5",
+    hint: "kids activity",
+  },
 ];
 
 export default function KitDescriptionSection() {
