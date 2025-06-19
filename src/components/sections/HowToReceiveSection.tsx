@@ -1,11 +1,11 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Printer, PlayCircle } from 'lucide-react';
-// Image import is no longer needed
+import { Printer, PlayCircle } from 'lucide-react';
+import Image from 'next/image';
 
 const steps = [
   {
-    icon: <Mail className="h-10 w-10 text-primary" />,
+    icon: <Image src="https://i.imgur.com/z0BAXDu.png" alt="Email icon" data-ai-hint="email mail envelope" width={40} height={40} className="text-primary" />,
     title: 'RECEBA EM SEU E-MAIL',
     description: 'Receba Imediatamente em seu e-mail.',
   },
