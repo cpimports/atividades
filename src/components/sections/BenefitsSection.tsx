@@ -55,7 +55,14 @@ export default function BenefitsSection() {
   const [targetDate, setTargetDate] = useState<Date | null>(null);
 
   useEffect(() => {
-    setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); // 24 hours from now
+    // Initialize targetDate only on the client-side
+    if (typeof window !== 'undefined') {
+      const now = new Date();
+      // Set targetDate to be 24 hours from the current time,
+      // but fixed to the start of the current hour to reduce frequent re-renders if now changes by milliseconds
+      const initialTargetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 24, 0, 0, 0);
+      setTargetDate(initialTargetDate);
+    }
   }, []);
 
   useEffect(() => {
@@ -76,7 +83,7 @@ export default function BenefitsSection() {
       setTimeLeft(newTimeLeft);
     };
 
-    calculateTimeLeft(); // Initial calculation
+    calculateTimeLeft(); 
     const timer = setInterval(calculateTimeLeft, 1000);
     return () => clearInterval(timer);
   }, [targetDate]);
@@ -133,6 +140,17 @@ export default function BenefitsSection() {
               </div>
             </div>
           )}
+
+          <div className="my-8 flex justify-center">
+            <Image
+              src="https://i.imgur.com/wZyjoiu.png"
+              alt="Oferta especial Gêniozinho em Ação"
+              data-ai-hint="offer banner"
+              width={700}
+              height={99}
+              className="rounded-md shadow-lg"
+            />
+          </div>
 
           <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
