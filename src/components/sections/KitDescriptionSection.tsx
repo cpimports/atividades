@@ -27,6 +27,11 @@ const carouselImages = [
     alt: "Exemplo de Atividade Vertical 3",
     hint: "atividade infantil",
   },
+  {
+    src: "https://i.imgur.com/WXvX9kt.jpeg",
+    alt: "Exemplo de Atividade do Kit 4",
+    hint: "kids drawing",
+  },
 ];
 
 export default function KitDescriptionSection() {
@@ -95,4 +100,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
