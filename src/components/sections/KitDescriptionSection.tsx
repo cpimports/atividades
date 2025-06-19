@@ -86,8 +86,8 @@ export default function KitDescriptionSection() {
               src="https://i.imgur.com/qribBbs.png"
               alt="Ícone de atividades"
               data-ai-hint="activities puzzle"
-              width={120}
-              height={120}
+              width={150}
+              height={150}
               className="rounded-md"
             />
           </div>
