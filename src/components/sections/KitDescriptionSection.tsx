@@ -93,6 +93,9 @@ export default function KitDescriptionSection() {
             Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
           </p>
           
+          <p className="text-center text-md text-gray-300/90 mt-8 mb-4">
+            🧩 Veja Algumas das Atividades Que Estão no Kit ou 👀 Dê uma Olhada no que Você Vai Receber
+          </p>
           <div className="mt-8 md:mt-12 text-center">
             <Carousel
               setApi={setApi}
@@ -159,3 +162,4 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
