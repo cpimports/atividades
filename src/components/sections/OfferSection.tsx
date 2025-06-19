@@ -151,7 +151,7 @@ export default function OfferSection() {
                     <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
                     <div className="mt-2">
                       <p className="text-sm font-semibold text-yellow-100/90">
-                        CORRA! ESSA É A SUA ÚLTIMA CHANCE! Minutos Restantes com Desconto DE DESCONTO APLICADO SOMENTE PARA AS PRIMEIRAS 50 PESSOAS!
+                        CORRA! ESSA É A SUA ÚLTIMA CHANCE! DESCONTO APLICADO SOMENTE PARA AS PRIMEIRAS 50 PESSOAS!
                       </p>
                     </div>
                   </div>
