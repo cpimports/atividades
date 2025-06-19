@@ -13,9 +13,9 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const carouselImages = [
   {
-    src: "https://placehold.co/1080x1350.png",
-    alt: "Exemplo de Atividade Vertical 1",
-    hint: "material educativo",
+    src: "https://i.imgur.com/Yn2TFGz.jpeg", // Updated image source
+    alt: "Exemplo de Atividade do Kit", // Updated alt text
+    hint: "activity sheet", // Updated hint
   },
   {
     src: "https://placehold.co/1080x1350.png",
@@ -95,4 +95,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
