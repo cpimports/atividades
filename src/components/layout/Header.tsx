@@ -14,7 +14,6 @@ export default function Header() {
             height={40}
             className="rounded-md"
           />
-          <span className="font-headline text-xl font-semibold text-primary">Gêniozinho em Ação</span>
         </Link>
       </div>
     </header>
