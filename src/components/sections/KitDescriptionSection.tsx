@@ -23,7 +23,7 @@ const carouselImages = [
     hint: "activity sheet kids",
   },
   {
-    src: "https://placehold.co/1080x1350.png",
+    src: "https://i.imgur.com/T61nB4k.jpeg",
     alt: "Exemplo de Atividade Vertical 3",
     hint: "atividade infantil",
   },
@@ -95,3 +95,4 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
