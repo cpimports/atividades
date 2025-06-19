@@ -34,24 +34,14 @@ export default function HeroSection() {
         <div className="absolute bottom-[20%] right-[10%] w-0.5 h-0.5 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '3.2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-12"> {/* Added pt-12 here */}
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
           Transforme o Dia a Dia da Sua Criança com Atividades Divertidas e Inclusivas Criadas Especialmente para o Desenvolvimento Delas!
         </h1>
         <p className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow">
           Mais conexão, menos estresse e mais evolução: um material completo com atividades lúdicas e terapêuticas que estimulam o aprendizado, a linguagem, o foco e o comportamento da criança
         </p>
-        <div className="mt-8 md:mt-12 animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-          <Image
-            src="https://placehold.co/700x450.png"
-            alt="Crianças se divertindo com atividades Gêniozinho em Ação"
-            data-ai-hint="kids learning"
-            width={700}
-            height={450}
-            className="mx-auto rounded-lg shadow-2xl"
-            priority
-          />
-        </div>
+        {/* Image previously here was removed */}
         <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
           <Button 
             size="lg" 
