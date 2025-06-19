@@ -80,8 +80,15 @@ export default function KitDescriptionSection() {
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          {/* Image previously here has been removed */}
+        <div className="text-center mt-0 mb-12">
+          <Image
+            src="https://i.imgur.com/8yWIGO6.png"
+            alt="Promoção Gêniozinho em Ação"
+            data-ai-hint="sale promotion"
+            width={400}
+            height={75}
+            className="mx-auto mb-4 rounded-md"
+          />
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white">
             Mais de 1000 atividades prontas para usar
           </h2>
@@ -110,7 +117,7 @@ export default function KitDescriptionSection() {
                 {carouselImages.map((image, index) => (
                   <CarouselItem key={index} className="basis-full">
                     <div className="p-1">
-                      <Card className="overflow-hidden border-slate-600 shadow-xl">
+                      <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
                         <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
                           <Image
                             src={image.src}
@@ -166,4 +173,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
