@@ -40,8 +40,8 @@ export default function HeroSection() {
             src="https://i.imgur.com/sb4rEa0.png"
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo abstract playful"
-            width={280}
-            height={280}
+            width={200}
+            height={200}
             className="rounded-lg"
             priority
           />
