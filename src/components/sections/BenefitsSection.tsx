@@ -86,8 +86,8 @@ export default function BenefitsSection() {
   }, [targetDate]);
 
   return (
-    <section id="oque-voce-recebe" className="py-16 md:py-24 relative">
-      
+    <section id="oque-voce-recebe" className="py-16 md:py-24 relative bg-gradient-to-br from-background to-muted/30">
+      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/light-paper-fibers.png')] opacity-[0.03] mix-blend-overlay pointer-events-none -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-0">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
@@ -138,9 +138,7 @@ export default function BenefitsSection() {
             </div>
           )}
 
-          {/* Image removed from here */}
-
-          <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md mt-8"> {/* Added mt-8 here */}
+          <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">
@@ -150,7 +148,7 @@ export default function BenefitsSection() {
           <Card className="mt-12 bg-primary/5 border-2 border-primary/20 shadow-xl p-6 md:p-8 rounded-lg backdrop-blur-md">
             <CardHeader className="p-0 mb-6">
               <CardTitle className="font-semibold tracking-tight font-headline text-2xl sm:text-3xl text-primary text-center">
-                {/* Content removed as requested */}
+                Seus Bônus Exclusivos Valem Somente Hoje!
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">

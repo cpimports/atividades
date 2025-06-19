@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image'; // Using Image for the logo
 
@@ -12,8 +13,8 @@ export default function Footer() {
               src="https://i.imgur.com/sb4rEa0.png" 
               alt="Logo Gêniozinho em Ação"
               data-ai-hint="logo abstract playful"
-              width={48} 
-              height={48}
+              width={64} 
+              height={64}
               className="rounded-md"
             />
             <span className="font-headline text-lg font-semibold text-primary">Gêniozinho em Ação</span>

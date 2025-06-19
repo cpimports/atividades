@@ -78,22 +78,25 @@ export default function KitDescriptionSection() {
   }, [api]);
 
   return (
-    <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mt-0 mb-12">
-          <Image
-            src="https://i.imgur.com/8yWIGO6.png"
-            alt="Promoção Gêniozinho em Ação"
-            data-ai-hint="sale promotion"
-            width={400}
-            height={75}
-            className="mx-auto mb-4 rounded-md"
-          />
-          <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white">
+    <section id="kit-description" className="py-16 md:py-24 bg-muted/40">
+      <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/10 via-darkPurple/5 to-background/0 -z-10"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-0">
+        <div className="text-center">
+          <div className="inline-block p-3 bg-background/80 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
+            <Image
+              src="https://i.imgur.com/qribBbs.png"
+              alt="Ícone de Atividades do Kit"
+              data-ai-hint="puzzle brain kids"
+              width={64}
+              height={64}
+              className="rounded-md"
+            />
+          </div>
+          <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-primary">
             Mais de 1000 atividades prontas para usar
           </h2>
         </div>
-        <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-left md:text-justify">
+        <div className="max-w-3xl mx-auto space-y-6 text-lg text-foreground/80 text-left md:text-justify">
           <p>
             Material digital com mais de 1000 atividades lúdicas e educativas, criado para estimular o foco, linguagem e comportamento de crianças com estilos únicos de aprendizagem.
           </p>
@@ -101,7 +104,7 @@ export default function KitDescriptionSection() {
             Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
           </p>
           
-          <p className="text-center text-md text-gray-300/90 mt-8 mb-4">
+          <p className="text-center text-md text-foreground/90 mt-8 mb-4">
             🧩 Veja Algumas das Atividades Que Estão no Kit
           </p>
           <div className="mt-8 md:mt-12 text-center">
@@ -117,7 +120,7 @@ export default function KitDescriptionSection() {
                 {carouselImages.map((image, index) => (
                   <CarouselItem key={index} className="basis-full">
                     <div className="p-1">
-                      <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
+                      <Card className="overflow-hidden border-0 shadow-xl bg-slate-800/30">
                         <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
                           <Image
                             src={image.src}
@@ -152,7 +155,7 @@ export default function KitDescriptionSection() {
                 ))}
               </div>
             )}
-             <p className="text-center text-md text-gray-300/90 mt-6 mb-4">
+             <p className="text-center text-md text-foreground/80 mt-6 mb-4">
               Essas são apenas algumas das mais de 1000 atividades exclusivas que você recebe no Kit Gêniozinho em Ação!
             </p>
           </div>

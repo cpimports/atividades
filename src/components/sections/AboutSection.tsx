@@ -1,13 +1,23 @@
 
 import { CheckCircle } from 'lucide-react';
+import Image from 'next/image';
 
 export default function AboutSection() {
   return (
     <section id="about" className="pt-16 md:pt-24 pb-8 md:pb-12 relative">
-      
+      <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/20 via-darkPurple/10 to-background/5 -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          {/* Image previously here has been removed */}
+          <div className="flex justify-center mb-10 md:mb-12">
+            <Image
+                src="https://placehold.co/500x300.png"
+                alt="Crianças aprendendo e se divertindo"
+                data-ai-hint="children learning happy"
+                width={500}
+                height={300}
+                className="rounded-lg shadow-xl"
+            />
+          </div>
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
             CHEGA DE PERDER TEMPO!
           </h2>
