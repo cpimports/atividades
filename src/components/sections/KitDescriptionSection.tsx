@@ -2,6 +2,32 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import { Card, CardContent } from "@/components/ui/card";
+
+const carouselImages = [
+  {
+    src: "https://placehold.co/1080x1350.png",
+    alt: "Exemplo de Atividade Vertical 1",
+    hint: "material educativo",
+  },
+  {
+    src: "https://placehold.co/1080x1350.png",
+    alt: "Exemplo de Atividade Vertical 2",
+    hint: "jogo didático",
+  },
+  {
+    src: "https://placehold.co/1080x1350.png",
+    alt: "Exemplo de Atividade Vertical 3",
+    hint: "atividade infantil",
+  },
+];
 
 export default function KitDescriptionSection() {
   return (
@@ -19,7 +45,40 @@ export default function KitDescriptionSection() {
           <p>
             Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
           </p>
-          {/* Carousel removed from here */}
+          
+          <div className="mt-8 md:mt-12">
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-lg mx-auto" 
+            >
+              <CarouselContent>
+                {carouselImages.map((image, index) => (
+                  <CarouselItem key={index} className="basis-full">
+                    <div className="p-1">
+                      <Card className="overflow-hidden border-slate-600 bg-slate-700/30 shadow-xl">
+                        <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
+                          <Image
+                            src={image.src}
+                            alt={image.alt}
+                            data-ai-hint={image.hint}
+                            fill
+                            className="object-cover rounded-md"
+                            sizes="(max-width: 640px) 90vw, (max-width: 1024px) 60vw, 500px"
+                          />
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+              <CarouselNext className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            </Carousel>
+          </div>
+
         </div>
         <div className="mt-10 flex justify-center">
           <Button
@@ -36,4 +95,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
