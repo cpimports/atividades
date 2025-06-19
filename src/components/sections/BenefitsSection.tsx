@@ -138,18 +138,9 @@ export default function BenefitsSection() {
             </div>
           )}
 
-          <div className="my-8 flex justify-center">
-            <Image
-              src="https://i.imgur.com/wZyjoiu.png"
-              alt="Oferta especial Gêniozinho em Ação"
-              data-ai-hint="offer banner"
-              width={280}
-              height={40}
-              className="rounded-md shadow-lg"
-            />
-          </div>
+          {/* Image removed from here */}
 
-          <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
+          <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md mt-8"> {/* Added mt-8 here */}
             + BÔNUS EXCLUSIVOS
           </h3>
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">
