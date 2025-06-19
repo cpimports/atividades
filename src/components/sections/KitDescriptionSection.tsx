@@ -13,14 +13,14 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const carouselImages = [
   {
-    src: "https://i.imgur.com/Yn2TFGz.jpeg", // Updated image source
-    alt: "Exemplo de Atividade do Kit", // Updated alt text
-    hint: "activity sheet", // Updated hint
+    src: "https://i.imgur.com/Yn2TFGz.jpeg",
+    alt: "Exemplo de Atividade do Kit",
+    hint: "activity sheet",
   },
   {
-    src: "https://placehold.co/1080x1350.png",
-    alt: "Exemplo de Atividade Vertical 2",
-    hint: "jogo didático",
+    src: "https://i.imgur.com/vV6dZzL.jpeg",
+    alt: "Exemplo de Atividade do Kit 2",
+    hint: "activity sheet kids",
   },
   {
     src: "https://placehold.co/1080x1350.png",
