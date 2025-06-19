@@ -16,27 +16,8 @@ export default function CtaSection() {
     <section id="cta" className="py-16 md:py-24 bg-gradient-to-br from-primary/10 via-accent/10 to-secondary/10 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        <div className="grid lg:grid-cols-3 gap-8 mb-12">
-          <Card className="shadow-xl bg-card/80 backdrop-blur-md">
-            <CardHeader className="items-center text-center">
-              <Image
-                src="https://i.imgur.com/lbSS21Q.png"
-                alt="Garantia de satisfação"
-                data-ai-hint="shield checkmark"
-                width={180}
-                height={180}
-                className="mb-3"
-              />
-              <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
-            </CardHeader>
-            <CardContent className="text-center pt-6">
-              <p className="text-foreground/80 font-semibold">
-                Além de todos os benefícios que citamos acima, adquirindo hoje você tem 7 dias de garantia para testar o material.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card className="shadow-xl bg-card/80 backdrop-blur-md lg:col-span-2">
+        <div className="flex justify-center mb-12">
+          <Card className="shadow-xl bg-card/80 backdrop-blur-md w-full max-w-2xl">
             <CardHeader className="items-center text-center">
               <Star className="h-12 w-12 text-accent mb-3" />
               <CardTitle className="font-headline text-2xl text-primary">E Ainda Tem Mais! Bônus Exclusivos:</CardTitle>
@@ -81,4 +62,3 @@ export default function CtaSection() {
     </section>
   );
 }
-

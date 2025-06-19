@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle, AlertTriangle } from 'lucide-react';
 
 export default function OfferSection() {
@@ -62,6 +62,27 @@ export default function OfferSection() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
+        <div className="flex justify-center mb-8 md:mb-12">
+            <Card className="shadow-xl bg-card/80 backdrop-blur-md max-w-md">
+                <CardHeader className="items-center text-center">
+                <Image
+                    src="https://i.imgur.com/lbSS21Q.png"
+                    alt="Garantia de satisfação"
+                    data-ai-hint="shield checkmark"
+                    width={180}
+                    height={180}
+                    className="mb-3"
+                />
+                <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
+                </CardHeader>
+                <CardContent className="text-center pt-6">
+                <p className="text-foreground/80 font-semibold">
+                    Além de todos os benefícios que citamos acima, adquirindo hoje você tem 7 dias de garantia para testar o material.
+                </p>
+                </CardContent>
+            </Card>
+        </div>
+
         <div className="text-center mb-8 md:mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
@@ -196,4 +217,3 @@ export default function OfferSection() {
     </section>
   );
 }
-
