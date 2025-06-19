@@ -146,8 +146,8 @@ export default function BenefitsSection() {
               src="https://i.imgur.com/wZyjoiu.png"
               alt="Oferta especial Gêniozinho em Ação"
               data-ai-hint="offer banner"
-              width={700}
-              height={99}
+              width={350}
+              height={50}
               className="rounded-md shadow-lg"
             />
           </div>
