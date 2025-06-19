@@ -12,8 +12,8 @@ export default function Footer() {
               src="https://i.imgur.com/sb4rEa0.png" 
               alt="Logo Gêniozinho em Ação"
               data-ai-hint="logo abstract playful"
-              width={60} 
-              height={60}
+              width={48} 
+              height={48}
               className="rounded-md"
             />
             <span className="font-headline text-lg font-semibold text-primary">Gêniozinho em Ação</span>
