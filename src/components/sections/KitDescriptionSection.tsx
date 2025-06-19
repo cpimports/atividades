@@ -52,7 +52,7 @@ export default function KitDescriptionSection() {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-sm mx-auto" 
+              className="w-full max-w-xs mx-auto" 
             >
               <CarouselContent>
                 {carouselImages.map((image, index) => (
