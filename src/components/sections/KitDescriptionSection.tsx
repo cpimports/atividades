@@ -94,7 +94,7 @@ export default function KitDescriptionSection() {
           </p>
           
           <p className="text-center text-md text-gray-300/90 mt-8 mb-4">
-            🧩 Veja Algumas das Atividades Que Estão no Kit ou 👀 Dê uma Olhada no que Você Vai Receber
+            🧩 Veja Algumas das Atividades Que Estão no Kit
           </p>
           <div className="mt-8 md:mt-12 text-center">
             <Carousel
