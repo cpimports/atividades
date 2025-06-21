@@ -35,7 +35,7 @@ export default function HowToReceiveSection() {
           {steps.map((step, index) => (
             <Card key={index} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
               <CardHeader className="flex flex-col items-center">
-                <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block">
+                <div className="mb-4">
                   {step.icon}
                 </div>
                 <CardTitle className="font-headline text-xl text-primary">{step.title}</CardTitle>
