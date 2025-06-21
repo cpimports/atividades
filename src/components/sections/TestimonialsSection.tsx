@@ -1,12 +1,16 @@
 
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 interface Testimonial {
   id: number;
   descriptor: string;
   name: string;
   text: string;
+  avatarUrl: string;
+  avatarFallback: string;
+  avatarHint: string;
 }
 
 const testimonialsData: Testimonial[] = [
@@ -15,24 +19,36 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Mãe',
     name: 'Carla M.',
     text: "Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!",
+    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarFallback: 'CM',
+    avatarHint: 'woman portrait',
   },
   {
     id: 2,
     descriptor: 'Professora',
     name: 'Vanessa G. – Professora do 2º ano',
     text: "Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!",
+    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarFallback: 'VG',
+    avatarHint: 'teacher portrait',
   },
   {
     id: 3,
     descriptor: 'Terapeuta',
     name: 'André P. – Psicopedagogo',
     text: "Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.",
+    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarFallback: 'AP',
+    avatarHint: 'therapist portrait',
   },
   {
     id: 4,
     descriptor: 'Pai',
     name: 'Rafael T.',
     text: "Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis.",
+    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarFallback: 'RT',
+    avatarHint: 'man portrait',
   },
 ];
 
@@ -67,7 +83,7 @@ export default function TestimonialsSection() {
         <div className="absolute bottom-[20%] right-[10%] w-0.5 h-0.5 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '3.2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10"> {/* Added relative z-10 here */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white mb-4 drop-shadow-md">
             DEPOIMENTOS!
@@ -82,14 +98,18 @@ export default function TestimonialsSection() {
               key={testimonial.id} 
               className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
             >
-              <CardHeader className="p-6 flex flex-col items-center text-center">
+              <CardHeader className="p-6 flex flex-row items-center space-x-4">
+                <Avatar className="h-16 w-16">
+                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
+                  <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
+                </Avatar>
                 <div className="flex-grow">
                   <CardTitle className="font-headline text-xl text-primary mb-1">{testimonial.descriptor}</CardTitle>
                   <p className="text-md font-semibold text-foreground/90">{testimonial.name}</p>
                 </div>
               </CardHeader>
-              <CardContent className="p-6 pt-0 text-center flex-grow">
-                <p className="text-foreground/80 italic leading-relaxed">{testimonial.text}</p>
+              <CardContent className="p-6 pt-0 text-left flex-grow">
+                <p className="text-foreground/80 italic leading-relaxed">"{testimonial.text}"</p>
               </CardContent>
             </Card>
           ))}
