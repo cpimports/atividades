@@ -1,9 +1,16 @@
+'use client';
 
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // Using Image for the logo
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState<number | string>('');
+
+  useEffect(() => {
+    setCurrentYear(new Date().getFullYear());
+  }, []);
+
   return (
     <footer className="border-t border-border/40 py-8 bg-muted/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm text-muted-foreground">
@@ -19,7 +26,8 @@ export default function Footer() {
             />
             <span className="font-headline text-lg font-semibold text-primary">Gêniozinho em Ação</span>
           </Link>
-          <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>
+          {/* Conditional rendering to avoid server/client mismatch */}
+          {currentYear && <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>}
           <p>Transformando o aprendizado com atividades lúdicas e eficazes.</p>
           <div className="flex space-x-4">
             <Link href="/privacy-policy" className="hover:text-primary transition-colors">Política de Privacidade</Link>
