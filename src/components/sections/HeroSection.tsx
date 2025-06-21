@@ -35,6 +35,17 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+        <div className="flex justify-center mb-6 animate-fade-in-medium">
+            <Image
+                src="https://i.imgur.com/8cG97gv.png"
+                alt="Gêniozinho em Ação Logo"
+                data-ai-hint="logo abstract playful"
+                width={150}
+                height={150}
+                className="rounded-full"
+                priority
+            />
+        </div>
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
           Transforme o Dia a Dia da Sua Criança com Atividades Divertidas e Inclusivas Criadas Especialmente para o Desenvolvimento Delas!
         </h1>
