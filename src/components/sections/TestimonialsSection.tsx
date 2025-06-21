@@ -28,7 +28,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Professora',
     name: 'Vanessa G. – Professora do 2º ano',
     text: "Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!",
-    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarUrl: 'https://i.imgur.com/jZ6Cs3g.jpeg',
     avatarFallback: 'VG',
     avatarHint: 'teacher portrait',
   },
