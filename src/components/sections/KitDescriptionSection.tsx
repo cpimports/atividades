@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -78,11 +77,37 @@ export default function KitDescriptionSection() {
   }, [api]);
 
   return (
-    <section id="kit-description" className="py-16 md:py-24 bg-muted/40">
-      <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/10 via-darkPurple/5 to-background/0 -z-10"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-0">
+    <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
+      {/* Diffuse cloud-like elements */}
+      <div className="absolute inset-0 opacity-10 filter blur-3xl pointer-events-none">
+        <div className="absolute top-[-15%] left-[-20%] w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_70%)] rounded-full animate-cloud-drift-slow"></div>
+        <div className="absolute top-[10%] right-[-25%] w-[600px] h-[350px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_75%)] rounded-full animate-cloud-drift-medium opacity-80"></div>
+        <div className="absolute bottom-[-10%] left-[5%] w-[450px] h-[250px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_65%)] rounded-full animate-cloud-drift-slow opacity-90"></div>
+        <div className="absolute bottom-[5%] right-[0%] w-[300px] h-[200px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_70%)] rounded-full animate-cloud-drift-medium"></div>
+      </div>
+
+      {/* Shiny star-like elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-[10%] left-[20%] w-1 h-1 bg-white rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '0s' }}></div>
+        <div className="absolute top-[25%] left-[85%] w-1.5 h-1.5 bg-sky-200 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-[50%] left-[50%] w-0.5 h-0.5 bg-white rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-[75%] left-[15%] w-1 h-1 bg-sky-300 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-[80%] left-[90%] w-1.5 h-1.5 bg-white rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-[5%] left-[60%] w-1 h-1 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '2.5s' }}></div>
+        <div className="absolute top-[40%] left-[5%] w-1.5 h-1.5 bg-white rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '0.2s' }}></div>
+        <div className="absolute bottom-[10%] left-[70%] w-1 h-1 bg-sky-300 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-[15%] left-[5%] w-0.5 h-0.5 bg-sky-100 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '0.3s' }}></div>
+        <div className="absolute top-[30%] left-[70%] w-1 h-1 bg-white rounded-full filter blur-[0.8px] animate-twinkle" style={{ animationDelay: '0.8s' }}></div>
+        <div className="absolute top-[60%] left-[10%] w-1.5 h-1.5 bg-sky-200 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '1.2s' }}></div>
+        <div className="absolute top-[85%] left-[55%] w-0.5 h-0.5 bg-white rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '1.8s' }}></div>
+        <div className="absolute top-[5%] left-[35%] w-1 h-1 bg-sky-300 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '2.2s' }}></div>
+        <div className="absolute top-[65%] left-[95%] w-1 h-1 bg-white rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '2.8s' }}></div>
+        <div className="absolute bottom-[20%] right-[10%] w-0.5 h-0.5 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '3.2s' }}></div>
+      </div>
+      
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center">
-          <div className="inline-block p-3 bg-background/80 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
+          <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
             <Image
               src="https://i.imgur.com/qribBbs.png"
               alt="Ícone de Atividades do Kit"
@@ -92,11 +117,11 @@ export default function KitDescriptionSection() {
               className="rounded-md"
             />
           </div>
-          <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-primary">
+          <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white">
             Mais de 1000 atividades prontas para usar
           </h2>
         </div>
-        <div className="max-w-3xl mx-auto space-y-6 text-lg text-foreground/80 text-left md:text-justify">
+        <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-left md:text-justify">
           <p>
             Material digital com mais de 1000 atividades lúdicas e educativas, criado para estimular o foco, linguagem e comportamento de crianças com estilos únicos de aprendizagem.
           </p>
@@ -104,7 +129,7 @@ export default function KitDescriptionSection() {
             Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
           </p>
           
-          <p className="text-center text-md text-foreground/90 mt-8 mb-4">
+          <p className="text-center text-md text-gray-200 mt-8 mb-4">
             🧩 Veja Algumas das Atividades Que Estão no Kit
           </p>
           <div className="mt-8 md:mt-12 text-center">
@@ -155,7 +180,7 @@ export default function KitDescriptionSection() {
                 ))}
               </div>
             )}
-             <p className="text-center text-md text-foreground/80 mt-6 mb-4">
+             <p className="text-center text-md text-gray-300 mt-6 mb-4">
               Essas são apenas algumas das mais de 1000 atividades exclusivas que você recebe no Kit Gêniozinho em Ação!
             </p>
           </div>
