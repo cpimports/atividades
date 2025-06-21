@@ -24,25 +24,27 @@ export default function OfferSection() {
   const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 1);
 
-    const calculateTimeLeft = () => {
-      const difference = +targetDate - +new Date();
-      let newTimeLeft = { days: '00', hours: '00', minutes: '00', seconds: '00' };
+    const updateTimer = () => {
+      const now = new Date();
+      const difference = targetDate.getTime() - now.getTime();
 
       if (difference > 0) {
-        newTimeLeft = {
-          days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0'),
-          hours: String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0'),
-          minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0'),
-          seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, '0'),
-        };
+        const days = String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0');
+        const hours = String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+        const minutes = String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0');
+        const seconds = String(Math.floor((difference / 1000) % 60)).padStart(2, '0');
+        setTimeLeft({ days, hours, minutes, seconds });
+      } else {
+        setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
+        clearInterval(timer);
       }
-      setTimeLeft(newTimeLeft);
     };
-
-    calculateTimeLeft();
-    const timer = setInterval(calculateTimeLeft, 1000);
+    
+    updateTimer();
+    const timer = setInterval(updateTimer, 1000);
 
     return () => clearInterval(timer);
   }, []);
@@ -174,7 +176,7 @@ export default function OfferSection() {
                   </div>
                 </div>
               </div>
-          {timeLeft && (
+          {timeLeft ? (
             <div className="text-center mb-8">
               <p className="text-md text-foreground/80 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
               <div className="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
@@ -195,6 +197,10 @@ export default function OfferSection() {
                   <span className="block text-xs sm:text-sm text-primary/90">Segundos</span>
                 </div>
               </div>
+            </div>
+          ) : (
+             <div className="text-center mb-8 h-[124px] flex items-center justify-center">
+               <p className="text-xl text-foreground/80 font-semibold">Carregando oferta...</p>
             </div>
           )}
            <div className="mt-8 flex justify-center">
