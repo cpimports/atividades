@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -53,27 +54,24 @@ export default function BenefitsSection() {
   const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
 
   useEffect(() => {
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 1);
+    // Set a target date 24 hours from when the component mounts.
+    const targetTime = new Date().getTime() + 24 * 60 * 60 * 1000;
 
-    const updateTimer = () => {
-      const now = new Date();
-      const difference = targetDate.getTime() - now.getTime();
+    const timer = setInterval(() => {
+      const now = new Date().getTime();
+      const difference = targetTime - now;
 
       if (difference > 0) {
         const days = String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0');
-        const hours = String(Math.floor((difference / (1000 * 60 * 60)) % 24)).padStart(2, '0');
-        const minutes = String(Math.floor((difference / 1000 / 60) % 60)).padStart(2, '0');
-        const seconds = String(Math.floor((difference / 1000) % 60)).padStart(2, '0');
+        const hours = String(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
+        const minutes = String(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
+        const seconds = String(Math.floor((difference % (1000 * 60)) / 1000)).padStart(2, '0');
         setTimeLeft({ days, hours, minutes, seconds });
       } else {
         setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
         clearInterval(timer);
       }
-    };
-    
-    updateTimer();
-    const timer = setInterval(updateTimer, 1000);
+    }, 1000);
 
     return () => clearInterval(timer);
   }, []);
