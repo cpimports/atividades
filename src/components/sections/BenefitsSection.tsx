@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -52,18 +51,9 @@ const currentExclusiveBonuses = [
 
 export default function BenefitsSection() {
   const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
-  const [targetDate, setTargetDate] = useState<Date | null>(null);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const now = new Date();
-      const initialTargetDate = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours() + 24, 0, 0, 0);
-      setTargetDate(initialTargetDate);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (!targetDate) return;
+    const targetDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
     const calculateTimeLeft = () => {
       const difference = +targetDate - +new Date();
@@ -80,10 +70,12 @@ export default function BenefitsSection() {
       setTimeLeft(newTimeLeft);
     };
 
-    calculateTimeLeft(); 
+    calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
+
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, []);
+
 
   return (
     <section id="oque-voce-recebe" className="py-16 md:py-24 relative bg-gradient-to-br from-background to-muted/30">

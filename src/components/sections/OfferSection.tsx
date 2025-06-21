@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -23,14 +22,9 @@ export default function OfferSection() {
   ];
 
   const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
-  const [targetDate, setTargetDate] = useState<Date | null>(null);
 
   useEffect(() => {
-    setTargetDate(new Date(new Date().getTime() + 24 * 60 * 60 * 1000)); 
-  }, []);
-
-  useEffect(() => {
-    if (!targetDate) return;
+    const targetDate = new Date(new Date().getTime() + 24 * 60 * 60 * 1000);
 
     const calculateTimeLeft = () => {
       const difference = +targetDate - +new Date();
@@ -47,10 +41,12 @@ export default function OfferSection() {
       setTimeLeft(newTimeLeft);
     };
 
-    calculateTimeLeft(); 
+    calculateTimeLeft();
     const timer = setInterval(calculateTimeLeft, 1000);
+
     return () => clearInterval(timer);
-  }, [targetDate]);
+  }, []);
+
 
   return (
     <section
@@ -217,4 +213,3 @@ export default function OfferSection() {
     </section>
   );
 }
-
