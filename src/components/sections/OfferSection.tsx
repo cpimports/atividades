@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -123,6 +122,7 @@ export default function OfferSection() {
                     <span className="text-5xl font-semibold text-yellow-400 mr-1">R$</span>
                     <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400">19,90</span>
                   </div>
+                  <div className="text-lg text-white font-semibold mb-2">ou 4x de R$ 5,77</div>
                   <div className="mb-2">
                     <span className="text-lg text-gray-300 line-through">De R$ 97,00</span>
                     <span className="ml-2 inline-block px-2 py-0.5 bg-yellow-400 text-black text-xs font-bold rounded">ECONOMIZE 79%!</span>
