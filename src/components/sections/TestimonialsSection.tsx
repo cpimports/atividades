@@ -97,7 +97,7 @@ export default function TestimonialsSection() {
           {testimonialsData.map((testimonial) => (
             <Card 
               key={testimonial.id} 
-              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300"
+              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-xl hover:shadow-2xl hover:shadow-sky-500/20 transition-all duration-300"
             >
               <CardHeader className="p-6 flex flex-row items-center space-x-4">
                 <Avatar className="h-16 w-16">
