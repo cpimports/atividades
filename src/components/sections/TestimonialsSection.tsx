@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Star } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -106,6 +107,11 @@ export default function TestimonialsSection() {
                 <div className="flex-grow">
                   <CardTitle className="font-headline text-xl text-primary mb-1">{testimonial.descriptor}</CardTitle>
                   <p className="text-md font-semibold text-foreground/90">{testimonial.name}</p>
+                   <div className="flex items-center mt-2">
+                    {Array(5).fill(0).map((_, i) => (
+                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
+                    ))}
+                  </div>
                 </div>
               </CardHeader>
               <CardContent className="p-6 pt-0 text-left flex-grow">
