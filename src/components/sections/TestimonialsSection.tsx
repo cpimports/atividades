@@ -60,7 +60,7 @@ const testimonialsData: Testimonial[] = [
 ];
 
 const youtubeShorts = [
-  { id: "LqgaS2n2mnI", title: "Depoimento em Vídeo 1" },
+  { id: "5Jppp049f8c", title: "Depoimento em Vídeo 1" },
   { id: "J39n5b4bC-I", title: "Depoimento em Vídeo 2" },
   { id: "O2na26AnH00", title: "Depoimento em Vídeo 3" },
   { id: "yW3sfg_i7hY", title: "Depoimento em Vídeo 4" },
