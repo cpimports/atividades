@@ -155,7 +155,7 @@ export default function TestimonialsSection() {
               {youtubeShorts.map((video) => (
                 <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                     <div className="aspect-[9/16] w-full max-w-xs mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
+                     <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
                         <iframe
                           className="w-full h-full"
                           src={`https://www.youtube.com/embed/${video.id}?controls=0&rel=0`}
@@ -169,8 +169,8 @@ export default function TestimonialsSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-2 sm:-left-8 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
-            <CarouselNext className="right-2 sm:-right-8 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            <CarouselPrevious className="left-[-0.5rem] sm:-left-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            <CarouselNext className="right-[-0.5rem] sm:-right-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
           </Carousel>
           {api && (
             <div className="flex justify-center items-center space-x-2 mt-4 py-2">
