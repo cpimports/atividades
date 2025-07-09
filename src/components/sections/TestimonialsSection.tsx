@@ -155,7 +155,7 @@ export default function TestimonialsSection() {
               {youtubeShorts.map((video) => (
                 <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                     <div className="aspect-[9/16] w-full max-w-sm mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
+                     <div className="aspect-[9/16] w-full max-w-xs mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
                         <iframe
                           className="w-full h-full"
                           src={`https://www.youtube.com/embed/${video.id}?controls=0&rel=0`}
@@ -193,7 +193,7 @@ export default function TestimonialsSection() {
           {testimonialsData.map((testimonial) => (
             <Card 
               key={testimonial.id} 
-              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-2xl shadow-sky-400/50"
+              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-2xl shadow-sky-500/50"
             >
               <CardHeader className="p-6 flex flex-row items-center space-x-4">
                 <Avatar className="h-16 w-16">
