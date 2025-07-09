@@ -78,6 +78,7 @@ export default function TestimonialsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
 
   useEffect(() => {
     if (!api) {
@@ -88,13 +89,26 @@ export default function TestimonialsSection() {
     setCurrent(api.selectedScrollSnap());
 
     const onSelect = () => {
+      if (api.isDragging()) return;
       setCurrent(api.selectedScrollSnap());
     };
 
+    const onPointerDown = () => {
+      setIsDragging(true);
+    };
+
+    const onPointerUp = () => {
+      setIsDragging(false);
+    };
+
     api.on("select", onSelect);
+    api.on("pointerDown", onPointerDown);
+    api.on("pointerUp", onPointerUp);
 
     return () => {
       api.off("select", onSelect);
+      api.off("pointerDown", onPointerDown);
+      api.off("pointerUp", onPointerUp);
     };
   }, [api]);
 
@@ -157,7 +171,10 @@ export default function TestimonialsSection() {
                   <div className="p-1">
                      <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
                         <iframe
-                          className="w-full h-full"
+                          className={cn(
+                            "w-full h-full",
+                            isDragging && "pointer-events-none"
+                          )}
                           src={`https://www.youtube.com/embed/${video.id}?controls=0&rel=0`}
                           title={video.title}
                           frameBorder="0"
