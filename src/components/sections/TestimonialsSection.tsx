@@ -158,7 +158,7 @@ export default function TestimonialsSection() {
                      <div className="aspect-[9/16] w-full max-w-sm mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
                         <iframe
                           className="w-full h-full"
-                          src={`https://www.youtube.com/embed/${video.id}`}
+                          src={`https://www.youtube.com/embed/${video.id}?controls=0&rel=0`}
                           title={video.title}
                           frameBorder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
