@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star } from 'lucide-react';
+import { Star, Eye } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -79,6 +79,18 @@ export default function TestimonialsSection() {
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [liveViewers, setLiveViewers] = useState<number | null>(null);
+
+  useEffect(() => {
+    const getRandomViewers = () => Math.floor(Math.random() * (50 - 20 + 1)) + 20;
+    setLiveViewers(getRandomViewers());
+
+    const interval = setInterval(() => {
+      setLiveViewers(getRandomViewers());
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     if (!api) {
@@ -156,6 +168,16 @@ export default function TestimonialsSection() {
           </p>
         </div>
         
+        {liveViewers !== null && (
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center justify-center space-x-2 bg-white/10 text-white py-2 px-4 rounded-full shadow-lg backdrop-blur-sm">
+              <Eye className="h-5 w-5 text-sky-300 animate-pulse" />
+              <span className="font-semibold w-8 text-center">{liveViewers}</span>
+              <span className="text-gray-300 text-sm">pessoas assistindo agora</span>
+            </div>
+          </div>
+        )}
+
         <div className="mb-16">
            <Carousel
             setApi={setApi}
