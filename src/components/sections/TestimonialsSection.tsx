@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -97,7 +96,7 @@ export default function TestimonialsSection() {
           {testimonialsData.map((testimonial) => (
             <Card 
               key={testimonial.id} 
-              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-xl shadow-sky-500/20"
+              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-2xl shadow-sky-400/50"
             >
               <CardHeader className="p-6 flex flex-row items-center space-x-4">
                 <Avatar className="h-16 w-16">
