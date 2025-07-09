@@ -65,6 +65,8 @@ const youtubeShorts = [
   { id: "Z1Y3fXl7gvU", title: "Depoimento em Vídeo 2" },
   { id: "o_jx6412bbY", title: "Depoimento em Vídeo 3" },
   { id: "YCKgms_HOzA", title: "Depoimento em Vídeo 4" },
+  { id: "aCq1Y2VpG3I", title: "Depoimento em Vídeo 5" },
+  { id: "l6a_PAaPpfI", title: "Depoimento em Vídeo 6" },
 ];
 
 
