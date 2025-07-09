@@ -2,6 +2,13 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Testimonial {
   id: number;
@@ -52,6 +59,12 @@ const testimonialsData: Testimonial[] = [
   },
 ];
 
+const videoTestimonials = [
+  { id: '_TknL5zXQyA', title: 'Depoimento em Vídeo de Mãe sobre o Kit' },
+  { id: 'd4uASLpA6wQ', title: 'Experiência de uma Professora com as Atividades' },
+  { id: '7_m_q_YyfpY', title: 'Resultados Reais vistos por um Psicopedagogo' },
+];
+
 export default function TestimonialsSection() {
   return (
     <section id="depoimentos" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
@@ -92,6 +105,40 @@ export default function TestimonialsSection() {
             Veja o que pais, professores e terapeutas estão dizendo sobre como o Kit Gêniozinho em Ação transformou suas rotinas e o aprendizado das crianças.
           </p>
         </div>
+
+        <div className="mb-16">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-3xl mx-auto"
+          >
+            <CarouselContent>
+              {videoTestimonials.map((video) => (
+                <CarouselItem key={video.id}>
+                  <div className="p-1">
+                    <Card className="overflow-hidden border-2 border-sky-500/30 bg-slate-800/20 shadow-xl">
+                      <CardContent className="p-0 aspect-video">
+                        <iframe
+                          className="w-full h-full"
+                          src={`https://www.youtube.com/embed/${video.id}`}
+                          title={video.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400 -left-4 md:-left-12" />
+            <CarouselNext className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400 -right-4 md:-right-12" />
+          </Carousel>
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {testimonialsData.map((testimonial) => (
             <Card 
