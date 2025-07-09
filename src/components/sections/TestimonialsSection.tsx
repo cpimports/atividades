@@ -2,6 +2,13 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Testimonial {
   id: number;
@@ -52,6 +59,14 @@ const testimonialsData: Testimonial[] = [
   },
 ];
 
+const youtubeShorts = [
+  { id: "LqgaS2n2mnI", title: "Depoimento em Vídeo 1" },
+  { id: "J39n5b4bC-I", title: "Depoimento em Vídeo 2" },
+  { id: "O2na26AnH00", title: "Depoimento em Vídeo 3" },
+  { id: "yW3sfg_i7hY", title: "Depoimento em Vídeo 4" },
+];
+
+
 export default function TestimonialsSection() {
   return (
     <section id="depoimentos" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
@@ -91,6 +106,37 @@ export default function TestimonialsSection() {
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Veja o que pais, professores e terapeutas estão dizendo sobre como o Kit Gêniozinho em Ação transformou suas rotinas e o aprendizado das crianças.
           </p>
+        </div>
+        
+        <div className="mb-16">
+           <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-5xl mx-auto"
+          >
+            <CarouselContent className="-ml-2 md:-ml-4">
+              {youtubeShorts.map((video) => (
+                <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                     <div className="aspect-[9/16] w-full max-w-sm mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
+                        <iframe
+                          className="w-full h-full"
+                          src={`https://www.youtube.com/embed/${video.id}`}
+                          title={video.title}
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                        ></iframe>
+                      </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            <CarouselNext className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+          </Carousel>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
