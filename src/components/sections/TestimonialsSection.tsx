@@ -82,12 +82,25 @@ export default function TestimonialsSection() {
   const [liveViewers, setLiveViewers] = useState<number | null>(null);
 
   useEffect(() => {
-    const getRandomViewers = () => Math.floor(Math.random() * (50 - 20 + 1)) + 20;
-    setLiveViewers(getRandomViewers());
+    // Set initial viewers
+    setLiveViewers(Math.floor(Math.random() * (50 - 20 + 1)) + 20);
 
     const interval = setInterval(() => {
-      setLiveViewers(getRandomViewers());
-    }, 2000);
+      setLiveViewers((prevViewers) => {
+        if (prevViewers === null) return 35; // Fallback
+
+        // Tend to move towards the middle to avoid getting stuck at edges
+        const direction = (prevViewers > 45 || (prevViewers > 25 && Math.random() < 0.5)) ? -1 : 1;
+        const change = (Math.floor(Math.random() * 3) + 1) * direction; // +/- 1, 2, 3
+        
+        let newViewers = prevViewers + change;
+
+        // Clamp to be safe
+        newViewers = Math.max(20, Math.min(50, newViewers));
+
+        return newViewers;
+      });
+    }, 5000); // Update every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
