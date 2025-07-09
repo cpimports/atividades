@@ -100,7 +100,7 @@ export default function TestimonialsSection() {
 
         return newViewers;
       });
-    }, 5000); // Update every 5 seconds
+    }, 3000); // Update every 3 seconds
 
     return () => clearInterval(interval);
   }, []);
