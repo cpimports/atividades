@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -185,7 +184,7 @@ export default function TestimonialsSection() {
         {liveViewers !== null && (
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md py-2 px-4 rounded-full shadow-xl shadow-white/10 border border-white/20">
-              <Eye className="h-5 w-5 text-red-500 animate-pulse" />
+              <Eye className="h-5 w-5 text-red-400 animate-pulse" />
               <span className="font-semibold w-8 text-center text-white">{liveViewers}</span>
               <span className="text-gray-200 text-sm">pessoas assistindo agora</span>
             </div>
