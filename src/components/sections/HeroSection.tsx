@@ -81,15 +81,15 @@ export default function HeroSection() {
             <p className="mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
-                    <span className="mr-2 text-base animate-twinkle" style={{ color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>⭐</span>
+                    <span className="mr-2 text-base animate-twinkle" style={{ color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
                     <span className="font-semibold">Atividades lúdicas e terapêuticas criadas por especialistas</span>
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-base animate-twinkle" style={{ animationDelay: '0.8s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>⭐</span>
+                    <span className="mr-2 text-base animate-twinkle" style={{ animationDelay: '0.8s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
                     <span className="font-semibold">Estimulam o aprendizado, a linguagem, o foco e o comportamento</span>
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-base animate-twinkle" style={{ animationDelay: '1.2s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>⭐</span>
+                    <span className="mr-2 text-base animate-twinkle" style={{ animationDelay: '1.2s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
                     <span className="font-semibold">Ajudam a fortalecer o vínculo entre pais e filhos</span>
                 </li>
             </ul>
