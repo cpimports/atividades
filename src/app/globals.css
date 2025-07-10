@@ -122,3 +122,23 @@
     to { opacity: 1; transform: translateY(0); }
   }
 }
+
+@layer utilities {
+  .animate-subtle-glow {
+    animation: subtle-glow 5s infinite ease-in-out;
+  }
+  @keyframes subtle-glow {
+    0%, 100% {
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0);
+      filter: brightness(1);
+    }
+    10% {
+      box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
+      filter: brightness(1.05);
+    }
+    20%, 90% {
+      box-shadow: 0 0 4px rgba(255, 255, 255, 0);
+      filter: brightness(1);
+    }
+  }
+}

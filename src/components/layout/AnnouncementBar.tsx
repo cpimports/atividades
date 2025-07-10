@@ -4,9 +4,9 @@ export default function AnnouncementBar() {
   return (
     <>
       <div
-        className="p-2 text-center text-sm md:text-base font-bold fixed top-0 left-0 right-0 z-50 flex items-center justify-center shadow-md"
+        className="p-2 text-center text-sm md:text-base font-bold fixed top-0 left-0 right-0 z-50 flex items-center justify-center shadow-md animate-subtle-glow"
         style={{
-          backgroundColor: '#FFD700',
+          backgroundColor: '#B3D4FC', // Soft blue background
           color: '#2C1E5F',
           height: '45px',
         }}
