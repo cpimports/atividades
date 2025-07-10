@@ -54,9 +54,9 @@ export default function HeroSection() {
         </p>
         <div className="mt-8 md:mt-12 animate-fade-in-slow" style={{ animationDelay: '0.5s' }}>
             <Image
-                src="https://placehold.co/700x450.png"
+                src="https://i.imgur.com/sKbY73Q.png"
                 alt="Crianças engajadas em atividades Gêniozinho em Ação"
-                data-ai-hint="children activities focused"
+                data-ai-hint="activity collage"
                 width={700}
                 height={450}
                 className="rounded-xl shadow-2xl mx-auto"
