@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -134,7 +135,7 @@ export default {
         'cloud-drift-slow': 'cloud-drift-slow 50s ease-in-out infinite',
         'cloud-drift-medium': 'cloud-drift-medium 40s ease-in-out infinite',
         twinkle: 'twinkle 4s ease-in-out infinite',
-        'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
+        'twinkle-colorful': 'twinkle-colorful 2s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
       },
     },
