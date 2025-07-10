@@ -2,8 +2,6 @@
 
 import { X, Megaphone } from 'lucide-react';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { Button } from '@/components/ui/button';
 
 export default function AnnouncementBar() {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,17 +25,11 @@ export default function AnnouncementBar() {
   }
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 via-yellow-500 to-red-600 text-white shadow-lg animate-fade-in-fast">
+    <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-red-600 via-red-500 to-red-600 text-white shadow-lg animate-fade-in-fast">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-center h-12">
-          <Megaphone className="hidden md:block h-6 w-6 mr-3 text-white/90 animate-pulse" />
-          <p className="text-center text-sm sm:text-base font-semibold tracking-wide">
-            <span className="hidden sm:inline">🔥 DESCONTO DE LANÇAMENTO!</span>
-            <span className="font-bold text-yellow-200">
-              {' '}
-              Só hoje: 80% OFF
-            </span>{' '}
-            no Kit Gêniozinho em Ação!
+          <p className="text-center text-sm sm:text-base font-bold tracking-wide">
+            🔥 DESCONTO DE LANÇAMENTO! Só hoje: 80% OFF no Kit Gêniozinho em Ação! 🔥
           </p>
           <div className="absolute right-2 top-1/2 -translate-y-1/2">
             <button
