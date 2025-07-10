@@ -8,7 +8,7 @@ export default function AnnouncementBar() {
         style={{
           backgroundColor: '#B3D4FC', // Soft blue background
           color: '#1F1F60',
-          height: '45px',
+          height: '55px',
           padding: '8px 0',
         }}
       >
@@ -23,7 +23,7 @@ export default function AnnouncementBar() {
         </p>
       </div>
       {/* Add a placeholder to push down the content */}
-      <div style={{ height: '45px' }} />
+      <div style={{ height: '55px' }} />
     </>
   );
 }
