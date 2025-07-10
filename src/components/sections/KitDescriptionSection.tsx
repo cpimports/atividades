@@ -118,7 +118,7 @@ export default function KitDescriptionSection() {
               className="rounded-md"
             />
           </div>
-          <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white">
+          <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
             Mais de 1000 atividades prontas para usar
           </h2>
         </div>
@@ -193,7 +193,7 @@ export default function KitDescriptionSection() {
             asChild
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#oferta-especial">
+            <Link href="#depoimentos">
               ACESSAR MATERIAL AGORA!
             </Link>
           </Button>
