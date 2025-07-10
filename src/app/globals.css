@@ -106,6 +106,9 @@
   * {
     @apply border-border;
   }
+  html {
+    @apply !scroll-smooth;
+  }
   body {
     @apply bg-background text-foreground;
     /* Removed font-family: Arial from here, will be handled by tailwind.config.ts and layout.tsx */
