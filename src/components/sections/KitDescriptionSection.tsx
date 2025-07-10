@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -106,7 +107,7 @@ export default function KitDescriptionSection() {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-6">
+        <div className="text-center mb-10">
           <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
             <Image
               src="https://i.imgur.com/qribBbs.png"
@@ -121,7 +122,7 @@ export default function KitDescriptionSection() {
             Mais de 1000 atividades prontas para usar
           </h2>
         </div>
-        <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-left md:text-justify">
+        <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-center">
           <p>
             Material digital com mais de 1000 atividades lúdicas e educativas, criado para estimular o foco, linguagem e comportamento de crianças com estilos únicos de aprendizagem.
           </p>
