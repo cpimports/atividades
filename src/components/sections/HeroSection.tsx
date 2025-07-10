@@ -52,7 +52,7 @@ export default function HeroSection() {
         <p className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow">
           Mais conexão, menos estresse e mais evolução: um material completo com atividades lúdicas e terapêuticas que estimulam o aprendizado, a linguagem, o foco e o comportamento da criança
         </p>
-        <div className="mt-8 md:mt-12 animate-fade-in-slow" style={{ animationDelay: '0.5s' }}>
+        <div className="mt-6 md:mt-8 animate-fade-in-slow" style={{ animationDelay: '0.5s' }}>
             <Image
                 src="https://i.imgur.com/sKbY73Q.png"
                 alt="Crianças engajadas em atividades Gêniozinho em Ação"
