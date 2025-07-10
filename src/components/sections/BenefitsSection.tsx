@@ -166,7 +166,7 @@ export default function BenefitsSection() {
             asChild 
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#oferta-especial">
+            <Link href="#depoimentos">
               EU QUERO AS ATIVIDADES AGORA + BÔNUS
             </Link>
           </Button>
