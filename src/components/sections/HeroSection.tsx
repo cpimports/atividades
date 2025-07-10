@@ -37,12 +37,12 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="flex justify-center mb-6 animate-fade-in-medium">
             <Image
-                src="https://i.imgur.com/8cG97gv.png"
+                src="https://i.imgur.com/sKbY73Q.png"
                 alt="Gêniozinho em Ação Logo"
                 data-ai-hint="logo abstract playful"
                 width={150}
                 height={150}
-                className="rounded-full"
+                className="rounded-full object-cover"
                 priority
             />
         </div>
