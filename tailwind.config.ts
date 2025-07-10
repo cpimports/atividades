@@ -110,6 +110,10 @@ export default {
           '0%, 100%': { opacity: '0.2' },
           '50%': { opacity: '0.8' },
         },
+        sparkle: {
+          '0%, 100%': { opacity: '1', filter: 'drop-shadow(0 0 3px #f4d35e)' },
+          '50%': { opacity: '0.4', filter: 'drop-shadow(0 0 10px #f4d35e)' },
+        },
         'twinkle-colorful': {
             '0%':   { opacity: '0.3', backgroundColor: '#00ff00' },
             '20%':  { opacity: '1', backgroundColor: '#00ccff' },
@@ -140,6 +144,7 @@ export default {
         twinkle: 'twinkle 4s ease-in-out infinite',
         'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
+        sparkle: 'sparkle 1.5s infinite alternate',
       },
     },
   },
