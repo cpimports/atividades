@@ -83,7 +83,7 @@ export default function HeroSection() {
             asChild 
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#oferta-especial">
+            <Link href="#kit-description">
               BAIXAR MINHA CÓPIA
             </Link>
           </Button>
