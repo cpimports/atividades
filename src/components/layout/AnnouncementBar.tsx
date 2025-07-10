@@ -19,7 +19,7 @@ export default function AnnouncementBar() {
           >
             🎁
           </span>
-          Oferta de Lançamento: 80% de desconto só hoje no Kit Gêniozinho em Ação!
+          OFERTA DE LANÇAMENTO: 80% de desconto só hoje no Kit Gêniozinho em Ação!
         </p>
       </div>
       {/* Add a placeholder to push down the content */}
