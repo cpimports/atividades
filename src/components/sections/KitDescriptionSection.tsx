@@ -106,7 +106,7 @@ export default function KitDescriptionSection() {
       </div>
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center">
+        <div className="text-center mb-6">
           <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
             <Image
               src="https://i.imgur.com/qribBbs.png"
