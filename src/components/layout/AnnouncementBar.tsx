@@ -4,11 +4,12 @@ export default function AnnouncementBar() {
   return (
     <>
       <div
-        className="p-2 text-center text-sm md:text-base font-bold fixed top-0 left-0 right-0 z-50 flex items-center justify-center shadow-md animate-subtle-glow"
+        className="text-center font-bold fixed top-0 left-0 right-0 z-50 flex items-center justify-center shadow-md animate-subtle-glow text-base"
         style={{
           backgroundColor: '#B3D4FC', // Soft blue background
-          color: '#2C1E5F',
+          color: '#1F1F60',
           height: '45px',
+          padding: '10px 0',
         }}
       >
         <p>
