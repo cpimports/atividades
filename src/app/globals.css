@@ -125,7 +125,7 @@
 
 @layer utilities {
   .animate-subtle-glow {
-    animation: subtle-glow 2s infinite ease-in-out;
+    animation: subtle-glow 3s infinite ease-in-out;
   }
   @keyframes subtle-glow {
     0%, 100% {
