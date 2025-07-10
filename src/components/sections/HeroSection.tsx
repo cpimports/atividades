@@ -78,7 +78,7 @@ export default function HeroSection() {
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
-            <p className="mt-4">Mais conexão, menos estresse e mais evolução:</p>
+            <p className="mt-4 font-semibold">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
                     <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)'}}>✨</span>
