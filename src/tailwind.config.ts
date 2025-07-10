@@ -140,7 +140,7 @@ export default {
         'fade-in-fast': 'fadeIn 0.5s ease-out',
         'cloud-drift-slow': 'cloud-drift-slow 50s ease-in-out infinite',
         'cloud-drift-medium': 'cloud-drift-medium 40s ease-in-out infinite',
-        twinkle: 'twinkle 8s ease-in-out infinite',
+        twinkle: 'twinkle 2s ease-in-out infinite',
         'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
         sparkle: 'sparkle 1.5s infinite alternate',
