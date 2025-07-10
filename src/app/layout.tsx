@@ -1,7 +1,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
-import AnnouncementBar from '@/components/layout/AnnouncementBar';
 
 export const metadata: Metadata = {
   title: 'Gêniozinho em Ação - Atividades Educativas para Crianças',
@@ -22,10 +21,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;500;700;800&display=swap" rel="stylesheet" />
       </head>
       <body className="font-body antialiased">
-        <AnnouncementBar />
-        <div className="pt-12"> {/* Add padding to the top of the content to prevent overlap */}
-          {children}
-        </div>
+        {children}
         <Toaster />
       </body>
     </html>
