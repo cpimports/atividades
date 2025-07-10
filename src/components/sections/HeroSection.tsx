@@ -54,14 +54,27 @@ export default function HeroSection() {
         </p>
 
         <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-          <iframe 
-            className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20" 
-            src="https://www.youtube.com/embed/5Jppp049f8c" 
-            title="YouTube video player" 
-            frameBorder="0" 
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-            allowFullScreen>
-          </iframe>
+          <div
+            className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden"
+            dangerouslySetInnerHTML={{
+              __html: `
+                <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
+                <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
+                  <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
+                    <iframe
+                      id="ifr_686fd145e397e681c4ce4c3b"
+                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                      frameborder="0"
+                      allowfullscreen
+                      src="about:blank"
+                      referrerpolicy="origin"
+                      onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)"
+                    ></iframe>
+                  </div>
+                </div>
+              `,
+            }}
+          />
         </div>
         
         <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
