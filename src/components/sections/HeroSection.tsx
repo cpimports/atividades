@@ -52,6 +52,17 @@ export default function HeroSection() {
         <p className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow">
           Mais conexão, menos estresse e mais evolução: um material completo com atividades lúdicas e terapêuticas que estimulam o aprendizado, a linguagem, o foco e o comportamento da criança
         </p>
+
+        <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
+          <iframe 
+            className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20" 
+            src="https://www.youtube.com/embed/5Jppp049f8c" 
+            title="YouTube video player" 
+            frameBorder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowFullScreen>
+          </iframe>
+        </div>
         
         <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
           <Button 
