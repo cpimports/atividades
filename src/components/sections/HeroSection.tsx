@@ -35,7 +35,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="flex justify-center mb-6 pt-5 animate-fade-in-medium">
+        <div className="flex justify-center mb-6 animate-fade-in-medium">
             <Image
                 src="https://i.imgur.com/sKbY73Q.png"
                 alt="Gêniozinho em Ação Logo"
@@ -81,7 +81,7 @@ export default function HeroSection() {
             <p className="mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{ animationDelay: '0.4s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{ color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
                     <span>Atividades lúdicas e terapêuticas criadas por especialistas</span>
                 </li>
                 <li className="flex items-start">
