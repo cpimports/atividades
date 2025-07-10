@@ -9,7 +9,8 @@ export default function AnnouncementBar() {
           backgroundColor: '#B3D4FC', // Soft blue background
           color: '#1F1F60',
           height: '55px',
-          padding: '8px 0',
+          padding: '10px 20px',
+          lineHeight: '1.4',
         }}
       >
         <p>
@@ -19,7 +20,7 @@ export default function AnnouncementBar() {
           >
             🎁
           </span>
-          OFERTA DE LANÇAMENTO: 80% de desconto só hoje no Kit Gêniozinho em Ação!
+          <strong>OFERTA DE LANÇAMENTO:</strong> 80% de desconto só hoje no <strong>Kit Gêniozinho em Ação!</strong>
         </p>
       </div>
       {/* Add a placeholder to push down the content */}
