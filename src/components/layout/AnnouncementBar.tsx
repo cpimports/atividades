@@ -1,6 +1,6 @@
 'use client';
 
-import { X, Megaphone } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 export default function AnnouncementBar() {
