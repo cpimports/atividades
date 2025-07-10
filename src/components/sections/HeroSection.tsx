@@ -57,8 +57,8 @@ export default function HeroSection() {
                 src="https://i.imgur.com/sKbY73Q.png"
                 alt="Crianças engajadas em atividades Gêniozinho em Ação"
                 data-ai-hint="activity collage"
-                width={700}
-                height={450}
+                width={600}
+                height={386}
                 className="rounded-xl shadow-2xl mx-auto"
                 priority
             />
