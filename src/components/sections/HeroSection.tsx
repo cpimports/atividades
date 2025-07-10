@@ -1,4 +1,3 @@
-
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -35,7 +34,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="flex justify-center mb-6 animate-fade-in-medium">
+        <div className="flex justify-center mb-6 pt-5 animate-fade-in-medium">
             <Image
                 src="https://i.imgur.com/sKbY73Q.png"
                 alt="Gêniozinho em Ação Logo"
