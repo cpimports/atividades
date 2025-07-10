@@ -129,16 +129,12 @@
   }
   @keyframes subtle-glow {
     0%, 100% {
-      box-shadow: 0 0 4px rgba(255, 255, 255, 0);
+      box-shadow: 0 0 2px rgba(255, 255, 255, 0);
       filter: brightness(1);
     }
-    10% {
-      box-shadow: 0 0 8px rgba(255, 255, 255, 0.7);
-      filter: brightness(1.05);
-    }
-    20%, 90% {
-      box-shadow: 0 0 4px rgba(255, 255, 255, 0);
-      filter: brightness(1);
+    50% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+      filter: brightness(1.02);
     }
   }
 }
