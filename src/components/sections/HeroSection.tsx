@@ -82,15 +82,15 @@ export default function HeroSection() {
             <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{color: '#f4d35e'}}>⭐</span>
+                    <span className="mr-2 text-2xl md:text-xl">✨</span>
                     Atividades lúdicas e terapêuticas criadas por especialistas
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.8s', color: '#f4d35e' }}>⭐</span>
+                    <span className="mr-2 text-2xl md:text-xl">✨</span>
                     Estimulam o aprendizado, a linguagem, o foco e o comportamento
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '1.2s', color: '#f4d35e' }}>⭐</span>
+                    <span className="mr-2 text-2xl md:text-xl">✨</span>
                     Ajudam a fortalecer o vínculo entre pais e filhos
                 </li>
             </ul>
