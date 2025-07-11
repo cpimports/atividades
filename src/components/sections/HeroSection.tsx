@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="flex justify-center mb-6 animate-fade-in-medium">
             <Image
-                src="https://i.imgur.com/sKbY73Ql.png"
+                src="https://i.imgur.com/sKbY73Q.png"
                 alt="Gêniozinho em Ação Logo"
                 data-ai-hint="logo abstract playful"
                 width={120}
@@ -82,15 +82,15 @@ export default function HeroSection() {
             <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle">✨</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.3s' }}>✨</span>
                     Atividades lúdicas e terapêuticas criadas por especialistas
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.3s' }}>✨</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.6s' }}>✨</span>
                     Estimulam o aprendizado, a linguagem, o foco e o comportamento
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.6s' }}>✨</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.9s' }}>✨</span>
                     Ajudam a fortalecer o vínculo entre pais e filhos
                 </li>
             </ul>

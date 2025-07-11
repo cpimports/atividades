@@ -25,7 +25,7 @@ export default function OfferSection() {
   const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
 
   useEffect(() => {
-    // Set a target date 24 hours from when the component mounts.
+    // Set targetTime to be 24 hours from when the component mounts on the client
     const targetTime = new Date().getTime() + 24 * 60 * 60 * 1000;
 
     const timer = setInterval(() => {
@@ -44,8 +44,9 @@ export default function OfferSection() {
       }
     }, 1000);
 
+    // Cleanup interval on component unmount
     return () => clearInterval(timer);
-  }, []);
+  }, []); // Empty dependency array ensures this runs only once on the client
 
 
   return (
@@ -62,7 +63,7 @@ export default function OfferSection() {
             <Card className="shadow-xl bg-card/80 backdrop-blur-md max-w-md">
                 <CardHeader className="items-center text-center">
                 <Image
-                    src="https://i.imgur.com/lbSS21Ql.png"
+                    src="https://i.imgur.com/lbSS21Q.png"
                     alt="Garantia de satisfação"
                     data-ai-hint="shield checkmark"
                     width={180}
@@ -146,7 +147,7 @@ export default function OfferSection() {
                 </p>
                 <div className="mt-4 flex justify-center">
                   <Image
-                    src="https://i.imgur.com/xCuyx6Fl.png"
+                    src="https://i.imgur.com/xCuyx6F.png"
                     alt="Métodos de pagamento aceitos"
                     data-ai-hint="payment methods"
                     width={250}

@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -17,7 +18,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <Link href="/" className="flex flex-col items-center space-y-2">
             <Image
-              src="https://i.imgur.com/sb4rEa0l.png" 
+              src="https://i.imgur.com/sb4rEa0.png" 
               alt="Logo Gêniozinho em Ação"
               data-ai-hint="logo abstract playful"
               width={64} 
@@ -29,9 +30,6 @@ export default function Footer() {
           {/* Conditional rendering to avoid server/client mismatch */}
           {currentYear && <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>}
           <p>Transformando o aprendizado com atividades lúdicas e eficazes.</p>
-          <div className="flex space-x-4">
-            {/* Links removidos para corrigir o build estático */}
-          </div>
         </div>
       </div>
     </footer>

@@ -32,7 +32,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Mãe',
     name: 'Carla M.',
     text: "Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!",
-    avatarUrl: 'https://i.imgur.com/iDxyKPnl.png',
+    avatarUrl: 'https://i.imgur.com/iDxyKPn.png',
     avatarFallback: 'CM',
     avatarHint: 'woman portrait',
   },
@@ -41,7 +41,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Professora',
     name: 'Vanessa G. – Professora do 2º ano',
     text: "Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!",
-    avatarUrl: 'https://i.imgur.com/jZ6Cs3gl.jpeg',
+    avatarUrl: 'https://i.imgur.com/jZ6Cs3g.jpeg',
     avatarFallback: 'VG',
     avatarHint: 'teacher portrait',
   },
@@ -50,7 +50,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Terapeuta',
     name: 'André P. – Psicopedagogo',
     text: "Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.",
-    avatarUrl: 'https://i.imgur.com/zUeo9qCl.jpeg',
+    avatarUrl: 'https://i.imgur.com/zUeo9qC.jpeg',
     avatarFallback: 'AP',
     avatarHint: 'therapist portrait',
   },
@@ -59,7 +59,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Pai',
     name: 'Rafael T.',
     text: "Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis.",
-    avatarUrl: 'https://i.imgur.com/OcXCdY4l.jpeg',
+    avatarUrl: 'https://i.imgur.com/OcXCdY4.jpeg',
     avatarFallback: 'RT',
     avatarHint: 'man portrait',
   },
@@ -83,22 +83,19 @@ export default function TestimonialsSection() {
   const [liveViewers, setLiveViewers] = useState<number | null>(null);
 
   useEffect(() => {
-    // Set initial viewers
-    setLiveViewers(Math.floor(Math.random() * (50 - 20 + 1)) + 20);
+    // This logic now runs only on the client
+    const initialViewers = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
+    setLiveViewers(initialViewers);
 
     const interval = setInterval(() => {
       setLiveViewers((prevViewers) => {
         if (prevViewers === null) return 35; // Fallback
 
-        // Tend to move towards the middle to avoid getting stuck at edges
         const direction = (prevViewers > 45 || (prevViewers > 25 && Math.random() < 0.5)) ? -1 : 1;
-        const change = (Math.floor(Math.random() * 3) + 1) * direction; // +/- 1, 2, 3
+        const change = (Math.floor(Math.random() * 3) + 1) * direction;
         
         let newViewers = prevViewers + change;
-
-        // Clamp to be safe
         newViewers = Math.max(20, Math.min(50, newViewers));
-
         return newViewers;
       });
     }, 3000); // Update every 3 seconds
@@ -182,13 +179,17 @@ export default function TestimonialsSection() {
           </p>
         </div>
         
-        {liveViewers !== null && (
+        {liveViewers !== null ? (
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md py-2 px-4 rounded-full shadow-xl shadow-white/10 border border-white/20">
               <Eye className="h-5 w-5 text-red-400 animate-pulse" />
               <span className="font-semibold w-8 text-center text-white">{liveViewers}</span>
               <span className="text-gray-200 text-sm">pessoas assistindo agora</span>
             </div>
+          </div>
+        ) : (
+          <div className="text-center mb-8 h-[40px]">
+            {/* Placeholder to prevent layout shift */}
           </div>
         )}
 

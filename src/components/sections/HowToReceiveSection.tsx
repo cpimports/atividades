@@ -4,17 +4,17 @@ import Image from 'next/image';
 
 const steps = [
   {
-    icon: <Image src="https://i.imgur.com/z0BAXDul.png" alt="Email icon" data-ai-hint="email mail" width={40} height={40} className="text-primary" />,
+    icon: <Image src="https://i.imgur.com/z0BAXDu.png" alt="Email icon" data-ai-hint="email mail" width={40} height={40} className="text-primary" />,
     title: 'RECEBA EM SEU E-MAIL',
     description: 'Receba Imediatamente em seu e-mail.',
   },
   {
-    icon: <Image src="https://i.imgur.com/kozs9ltl.png" alt="Printer icon" data-ai-hint="printer document" width={40} height={40} className="text-accent-foreground" />,
+    icon: <Image src="https://i.imgur.com/kozs9lt.png" alt="Printer icon" data-ai-hint="printer document" width={40} height={40} className="text-accent-foreground" />,
     title: 'ACESSE E IMPRIMA QUANDO QUISER',
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
   {
-    icon: <Image src="https://i.imgur.com/8HMLXYbl.png" alt="Play icon" data-ai-hint="play button" width={40} height={40} className="text-primary" />,
+    icon: <Image src="https://i.imgur.com/8HMLXYb.png" alt="Play icon" data-ai-hint="play button" width={40} height={40} className="text-primary" />,
     title: 'APLIQUE SEU KIT AGORA MESMO',
     description: 'Coloque em prática com seus alunos ou filhos.',
   },
