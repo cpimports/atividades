@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section className="pt-4 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
+    <section className="pt-12 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
       {/* Diffuse cloud-like elements */}
       <div className="absolute inset-0 opacity-10 filter blur-3xl pointer-events-none">
         <div className="absolute top-[-15%] left-[-20%] w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_70%)] rounded-full animate-cloud-drift-slow"></div>
@@ -78,19 +78,19 @@ export default function HeroSection() {
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
-            <p className="mt-4 font-semibold">Mais conexão, menos estresse e mais evolução:</p>
+            <p className="mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)'}}>✨</span>
-                    <span className="font-semibold">Atividades lúdicas e terapêuticas criadas por especialistas</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)'}}>⭐</span>
+                    Atividades lúdicas e terapêuticas criadas por especialistas
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{ animationDelay: '0.8s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
-                    <span className="font-semibold">Estimulam o aprendizado, a linguagem, o foco e o comportamento</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{ animationDelay: '0.8s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>⭐</span>
+                    Estimulam o aprendizado, a linguagem, o foco e o comportamento
                 </li>
                 <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{ animationDelay: '1.2s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>✨</span>
-                    <span className="font-semibold">Ajudam a fortalecer o vínculo entre pais e filhos</span>
+                    <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{ animationDelay: '1.2s', color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)' }}>⭐</span>
+                    Ajudam a fortalecer o vínculo entre pais e filhos
                 </li>
             </ul>
         </div>
