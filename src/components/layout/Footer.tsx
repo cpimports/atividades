@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image'; // Using Image for the logo
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState<number | string>('');
+  const [currentYear, setCurrentYear] = useState<number | null>(null);
 
   useEffect(() => {
     setCurrentYear(new Date().getFullYear());
