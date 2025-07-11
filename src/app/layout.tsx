@@ -29,9 +29,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${alegreya.variable}`} suppressHydrationWarning>
       <head>
-        {/* Font links are now handled by next/font */}
+        {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://scripts.converteai.net" />
+        <link rel="preconnect" href="https://img.youtube.com" />
       </head>
       <body className="font-body antialiased">
         <AnnouncementBar />

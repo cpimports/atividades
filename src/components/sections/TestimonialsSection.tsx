@@ -5,7 +5,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star, Eye } from 'lucide-react';
+import { Star, Eye, PlayCircle } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -74,12 +74,49 @@ const youtubeShorts = [
   { id: "4fLlRxscoOI", title: "Depoimento em Vídeo 6" },
 ];
 
+const YouTubeFacade = ({ videoId, title }: { videoId: string, title: string }) => {
+  const [showVideo, setShowVideo] = useState(false);
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+  if (showVideo) {
+    return (
+      <iframe
+        className="w-full h-full"
+        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
+        title={title}
+        frameBorder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      ></iframe>
+    );
+  }
+
+  return (
+    <div
+      className="w-full h-full relative cursor-pointer"
+      onClick={() => setShowVideo(true)}
+    >
+      <Image
+        src={thumbnailUrl}
+        alt={`Thumbnail para o vídeo: ${title}`}
+        fill
+        sizes="(max-width: 768px) 80vw, (max-width: 1200px) 30vw, 33vw"
+        className="object-cover"
+        loading="lazy"
+        data-ai-hint="youtube thumbnail"
+      />
+      <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+        <PlayCircle className="h-16 w-16 text-white/80 drop-shadow-lg" />
+      </div>
+    </div>
+  );
+};
+
 
 export default function TestimonialsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
   const [liveViewers, setLiveViewers] = useState<number | null>(null);
 
   useEffect(() => {
@@ -116,22 +153,10 @@ export default function TestimonialsSection() {
       setCurrent(api.selectedScrollSnap());
     };
 
-    const onPointerDown = () => {
-      setIsDragging(true);
-    };
-
-    const onPointerUp = () => {
-      setIsDragging(false);
-    };
-
     api.on("select", onSelect);
-    api.on("pointerDown", onPointerDown);
-    api.on("pointerUp", onPointerUp);
 
     return () => {
       api.off("select", onSelect);
-      api.off("pointerDown", onPointerDown);
-      api.off("pointerUp", onPointerUp);
     };
   }, [api]);
 
@@ -207,17 +232,7 @@ export default function TestimonialsSection() {
                 <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                      <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
-                        <iframe
-                          className={cn(
-                            "w-full h-full",
-                            isDragging && "pointer-events-none"
-                          )}
-                          src={`https://www.youtube.com/embed/${video.id}?controls=0&rel=0`}
-                          title={video.title}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
+                        <YouTubeFacade videoId={video.id} title={video.title} />
                       </div>
                   </div>
                 </CarouselItem>
