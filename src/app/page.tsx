@@ -1,24 +1,43 @@
 
+'use client';
+
+import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
-import AboutSection from '@/components/sections/AboutSection';
-import KitDescriptionSection from '@/components/sections/KitDescriptionSection';
-import HowToReceiveSection from '@/components/sections/HowToReceiveSection';
-import BenefitsSection from '@/components/sections/BenefitsSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import OfferSection from '@/components/sections/OfferSection'; 
-import FaqSection from '@/components/sections/FaqSection';
+import { Skeleton } from '@/components/ui/skeleton';
+
+// Dynamically import sections that are below the fold
+const AboutSection = dynamic(() => import('@/components/sections/AboutSection'), { 
+  loading: () => <Skeleton className="h-[400px] w-full" />
+});
+const KitDescriptionSection = dynamic(() => import('@/components/sections/KitDescriptionSection'), {
+  loading: () => <Skeleton className="h-[600px] w-full" />
+});
+const HowToReceiveSection = dynamic(() => import('@/components/sections/HowToReceiveSection'), {
+  loading: () => <Skeleton className="h-[300px] w-full" />
+});
+const BenefitsSection = dynamic(() => import('@/components/sections/BenefitsSection'), {
+  loading: () => <Skeleton className="h-[800px] w-full" />
+});
+const TestimonialsSection = dynamic(() => import('@/components/sections/TestimonialsSection'), {
+  loading: () => <Skeleton className="h-[800px] w-full" />
+});
+const OfferSection = dynamic(() => import('@/components/sections/OfferSection'), {
+  loading: () => <Skeleton className="h-[1000px] w-full" />
+});
+const FaqSection = dynamic(() => import('@/components/sections/FaqSection'), {
+  loading: () => <Skeleton className="h-[500px] w-full" />
+});
+
 
 export default function HomePage() {
   return (
     <div className="flex flex-col min-h-screen bg-background fade-in-load">
-      {/* <Header /> removed */}
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
         <HowToReceiveSection />
         <KitDescriptionSection />
-        {/* ActivityShowcaseSection was here */}
         <BenefitsSection />
         <TestimonialsSection />
         <OfferSection /> 

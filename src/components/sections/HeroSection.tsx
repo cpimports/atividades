@@ -63,6 +63,7 @@ export default function HeroSection() {
                   <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
                     <iframe
                       id="ifr_686fd145e397e681c4ce4c3b"
+                      title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
                       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
                       frameborder="0"
                       allowfullscreen
@@ -78,7 +79,7 @@ export default function HeroSection() {
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
-            <p className="mt-4">Mais conexão, menos estresse e mais evolução:</p>
+            <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
                 <li className="flex items-start">
                     <span className="mr-2 text-2xl md:text-xl animate-twinkle" style={{color: '#f4d35e', filter: 'drop-shadow(0 0 5px #f4d35e)'}}>⭐</span>

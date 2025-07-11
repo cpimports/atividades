@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -221,8 +222,8 @@ export default function TestimonialsSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-[-0.5rem] sm:-left-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
-            <CarouselNext className="right-[-0.5rem] sm:-right-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            <CarouselPrevious aria-label="Slide anterior" className="left-[-0.5rem] sm:-left-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            <CarouselNext aria-label="Próximo slide" className="right-[-0.5rem] sm:-right-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
           </Carousel>
           {api && (
             <div className="flex justify-center items-center space-x-2 mt-4 py-2">
