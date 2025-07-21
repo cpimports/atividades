@@ -37,7 +37,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://connect.facebook.net" />
 
         {/* Meta Pixel Code */}
-        <Script id="facebook-pixel" strategy="afterInteractive">
+        <Script id="facebook-pixel-base" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -60,6 +60,17 @@ export default function RootLayout({
           src="https://www.facebook.com/tr?id=1650519618943117&ev=PageView&noscript=1"/>
         </noscript>
         {/* End Meta Pixel Code (noscript) */}
+
+        {/* InitiateCheckout Event Script */}
+        <Script id="facebook-pixel-initiate-checkout" strategy="afterInteractive">
+          {`
+            document.getElementById('btn-comprar')?.addEventListener('click', function() {
+              if (typeof fbq === 'function') {
+                fbq('track', 'InitiateCheckout');
+              }
+            });
+          `}
+        </Script>
         
         <AnnouncementBar />
         {children}
