@@ -52,6 +52,18 @@ export default function RootLayout({
           `}
         </Script>
         {/* End Meta Pixel Code */}
+
+        {/* UTMify Script */}
+        <Script 
+          id="utmify-script"
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          strategy="afterInteractive"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+          async 
+          defer
+        ></Script>
+        {/* End UTMify Script */}
       </head>
       <body className="font-body antialiased">
         {/* Meta Pixel Code (noscript) */}
@@ -62,15 +74,15 @@ export default function RootLayout({
         {/* End Meta Pixel Code (noscript) */}
 
         {/* InitiateCheckout Event Script */}
-        <Script id="facebook-pixel-initiate-checkout" strategy="afterInteractive">
+        <Script id="facebook-pixel-initiate-checkout" strategy="lazyOnload">
           {`
-            document.addEventListener('click', function(e) {
+            document.body.addEventListener('click', function(e) {
               if (e.target && e.target.closest('#btn-comprar')) {
                 if (typeof fbq === 'function') {
                   fbq('track', 'InitiateCheckout');
                 }
               }
-            });
+            }, true);
           `}
         </Script>
         
