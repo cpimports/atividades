@@ -64,9 +64,11 @@ export default function RootLayout({
         {/* InitiateCheckout Event Script */}
         <Script id="facebook-pixel-initiate-checkout" strategy="afterInteractive">
           {`
-            document.getElementById('btn-comprar')?.addEventListener('click', function() {
-              if (typeof fbq === 'function') {
-                fbq('track', 'InitiateCheckout');
+            document.addEventListener('click', function(e) {
+              if (e.target && e.target.closest('#btn-comprar')) {
+                if (typeof fbq === 'function') {
+                  fbq('track', 'InitiateCheckout');
+                }
               }
             });
           `}
