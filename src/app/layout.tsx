@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import { Inter, Alegreya } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
@@ -33,8 +34,33 @@ export default function RootLayout({
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://scripts.converteai.net" />
         <link rel="preconnect" href="https://img.youtube.com" />
+        <link rel="preconnect" href="https://connect.facebook.net" />
+
+        {/* Meta Pixel Code */}
+        <Script id="facebook-pixel" strategy="afterInteractive">
+          {`
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src='https://connect.facebook.net/en_US/fbevents.js';
+            s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script');
+            fbq('init', '1650519618943117');
+            fbq('track', 'PageView');
+          `}
+        </Script>
+        {/* End Meta Pixel Code */}
       </head>
       <body className="font-body antialiased">
+        {/* Meta Pixel Code (noscript) */}
+        <noscript>
+          <img height="1" width="1" style={{display: 'none'}}
+          src="https://www.facebook.com/tr?id=1650519618943117&ev=PageView&noscript=1"/>
+        </noscript>
+        {/* End Meta Pixel Code (noscript) */}
+        
         <AnnouncementBar />
         {children}
         <Toaster />
