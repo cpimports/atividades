@@ -9,25 +9,25 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="https://images.wsrv.nl/?url=i.imgur.com/qWFe9DL.png&output=webp" alt="Pacote de atividades" data-ai-hint="documents educational" width={64} height={64} />,
+    icon: <Image src="https://i.imgur.com/qWFe9DL.png" alt="Pacote de atividades" data-ai-hint="documents educational" width={64} height={64} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://images.wsrv.nl/?url=i.imgur.com/JffYX0z.png&output=webp" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={64} height={64} />,
+    icon: <Image src="https://i.imgur.com/JffYX0z.png" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={64} height={64} />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
     description: 'Cada exercício foi elaborado com linguagem simples, estímulos visuais e estrutura que respeita o tempo e o ritmo de cada criança, garantindo mais engajamento e menos frustração',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://images.wsrv.nl/?url=i.imgur.com/QE7BUe3.png&output=webp" alt="Material lúdico e interativo pronto para imprimir" data-ai-hint="brain puzzle" width={56} height={56} />,
+    icon: <Image src="https://i.imgur.com/QE7BUe3.png" alt="Material lúdico e interativo pronto para imprimir" data-ai-hint="brain puzzle" width={56} height={56} />,
     title: 'Material lúdico e interativo pronto para imprimir',
     description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://images.wsrv.nl/?url=i.imgur.com/nCVoPsJ.png&output=webp" alt="Ícone de PDF representando acesso digital" data-ai-hint="documents files" width={56} height={56} />,
+    icon: <Image src="https://i.imgur.com/nCVoPsJ.png" alt="Ícone de PDF representando acesso digital" data-ai-hint="documents files" width={56} height={56} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',

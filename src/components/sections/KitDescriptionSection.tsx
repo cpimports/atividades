@@ -18,32 +18,32 @@ import { cn } from '@/lib/utils';
 
 const carouselImages = [
   {
-    src: "https://images.wsrv.nl/?url=i.imgur.com/Yn2TFGz.jpeg&output=webp",
+    src: "https://i.imgur.com/Yn2TFGz.jpeg",
     alt: "Exemplo de Atividade do Kit Gêniozinho em Ação - Foco Vertical",
     hint: "activity sheet",
   },
   {
-    src: "https://images.wsrv.nl/?url=i.imgur.com/vV6dZzL.jpeg&output=webp",
+    src: "https://i.imgur.com/vV6dZzL.jpeg",
     alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 2 - Foco Vertical",
     hint: "activity sheet kids",
   },
   {
-    src: "https://images.wsrv.nl/?url=i.imgur.com/T61nB4k.jpeg&output=webp",
+    src: "https://i.imgur.com/T61nB4k.jpeg",
     alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 3 - Foco Vertical",
     hint: "atividade infantil",
   },
   {
-    src: "https://images.wsrv.nl/?url=i.imgur.com/WXvX9kt.jpeg&output=webp",
+    src: "https://i.imgur.com/WXvX9kt.jpeg",
     alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 4 - Foco Vertical",
     hint: "kids drawing",
   },
   {
-    src: "https://images.wsrv.nl/?url=i.imgur.com/PJJnvy0.png&output=webp",
+    src: "https://i.imgur.com/PJJnvy0.png",
     alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 5 - Foco Vertical",
     hint: "kids activity",
   },
   {
-    src: "https://images.wsrv.nl/?url=i.imgur.com/KBRpWOO.png&output=webp",
+    src: "https://i.imgur.com/KBRpWOO.png",
     alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 6 - Foco Vertical",
     hint: "coloring page",
   },
@@ -110,7 +110,7 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-10">
           <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
             <Image
-              src="https://images.wsrv.nl/?url=i.imgur.com/qribBbs.png&output=webp"
+              src="https://i.imgur.com/qribBbs.png"
               alt="Ícone de Atividades do Kit"
               data-ai-hint="puzzle brain kids"
               width={64}

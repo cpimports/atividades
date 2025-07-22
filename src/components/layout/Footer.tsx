@@ -6,10 +6,10 @@ import Link from 'next/link';
 import Image from 'next/image'; // Using Image for the logo
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState<number | null>(null);
+  const [currentYear, setYear] = useState<number | null>(null);
 
   useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
+    setYear(new Date().getFullYear());
   }, []);
 
   return (
@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <Link href="/" className="flex flex-col items-center space-y-2">
             <Image
-              src="https://images.wsrv.nl/?url=i.imgur.com/sb4rEa0.png&output=webp" 
+              src="https://i.imgur.com/sb4rEa0.png" 
               alt="Logo Gêniozinho em Ação"
               data-ai-hint="logo abstract playful"
               width={64} 

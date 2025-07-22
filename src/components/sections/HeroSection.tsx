@@ -37,7 +37,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="flex justify-center mb-6 animate-fade-in-medium">
             <Image
-                src="https://images.wsrv.nl/?url=i.imgur.com/sKbY73Q.png&output=webp"
+                src="https://i.imgur.com/sKbY73Q.png"
                 alt="Gêniozinho em Ação Logo"
                 data-ai-hint="logo abstract playful"
                 width={120}
