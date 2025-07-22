@@ -74,6 +74,51 @@ const youtubeShorts = [
   { id: "4fLlRxscoOI", title: "Depoimento em Vídeo 6" },
 ];
 
+const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => {
+  const [showVideo, setShowVideo] = useState(false);
+  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
+
+  const handlePlay = () => {
+    setShowVideo(true);
+  };
+
+  if (showVideo) {
+    return (
+      <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
+        <iframe
+          className="w-full h-full"
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+          title={title}
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+        ></iframe>
+      </div>
+    );
+  }
+
+  return (
+    <div
+      onClick={handlePlay}
+      className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20 relative cursor-pointer group"
+    >
+      <Image
+        src={thumbnailUrl}
+        alt={`Thumbnail para ${title}`}
+        data-ai-hint="video thumbnail"
+        fill
+        sizes="(max-width: 768px) 50vw, 33vw"
+        loading="lazy"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+        <PlayCircle className="h-16 w-16 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+      </div>
+    </div>
+  );
+};
+
+
 export default function TestimonialsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -81,7 +126,6 @@ export default function TestimonialsSection() {
   const [liveViewers, setLiveViewers] = useState<number | null>(null);
 
   useEffect(() => {
-    // This logic now runs only on the client
     const initialViewers = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
     setLiveViewers(initialViewers);
 
@@ -192,16 +236,7 @@ export default function TestimonialsSection() {
               {youtubeShorts.map((video) => (
                 <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                     <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
-                        <iframe
-                          className="w-full h-full"
-                          src={`https://www.youtube.com/embed/${video.id}`}
-                          title={video.title}
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                        ></iframe>
-                      </div>
+                    <VideoFacade videoId={video.id} title={video.title} />
                   </div>
                 </CarouselItem>
               ))}
