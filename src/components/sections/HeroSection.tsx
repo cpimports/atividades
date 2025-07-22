@@ -4,42 +4,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
 import { PlayCircle } from 'lucide-react';
-
-const VideoPlayer = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
-  if (!isClient) {
-    // Render a placeholder on the server to prevent SSR errors and layout shift
-    return <div className="w-full bg-slate-800/50 rounded-lg animate-pulse" style={{paddingTop: '56.25%'}}></div>;
-  }
-
-  return (
-      <div
-      className="w-full h-full"
-      dangerouslySetInnerHTML={{
-          __html: `
-            <div id="vid_686fd145e397e681c4ce4c3b" style="position:relative;width:100%;padding: 56.25% 0 0;">
-              <img id="thumb_686fd145e397e681c4ce4c3b" src="https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
-              <div id="backdrop_686fd145e397e681c4ce4c3b" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
-            </div>
-            <script type="text/javascript" id="scr_686fd145e397e681c4ce4c3b">
-              var s=document.createElement("script");
-              s.src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/player.js";
-              s.async=true;
-              document.head.appendChild(s);
-            </script>
-          `,
-      }}
-      />
-  );
-};
-
 
 export default function HeroSection() {
 
@@ -91,10 +56,6 @@ export default function HeroSection() {
             <p className="font-semibold text-sky-200 text-base md:text-lg">Com Atividades Divertidas, Inclusivas e Criadas para Estimular o Desenvolvimento Infantil</p>
         </div>
         
-        <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-           <VideoPlayer />
-        </div>
-
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
             <ul className="mt-4 space-y-4 inline-block text-left">
