@@ -17,15 +17,16 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     if (isClient) {
-      // Use requestIdleCallback to run the script when the main thread is idle
-      const handle = window.requestIdleCallback(() => {
-        const script = document.createElement("script");
-        script.src = "https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/player.js";
-        script.async = true;
-        document.head.appendChild(script);
-      }, { timeout: 2000 }); // Fallback timeout
+      const script = document.createElement("script");
+      script.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+      script.async = true;
+      document.head.appendChild(script);
 
-      return () => window.cancelIdleCallback(handle);
+      return () => {
+        if (document.head.contains(script)) {
+          document.head.removeChild(script);
+        }
+      }
     }
   }, [isClient]);
 
@@ -41,11 +42,25 @@ const VideoPlayer = () => {
     );
   }
 
-  // The vtuber-smartplayer tag will be recognized once the script above is loaded.
+  // The video player HTML block
   return (
     <div className="mt-8 mb-4 animate-fade-in-medium" style={{ animationDelay: '0.4s' }}>
-      <div className="w-full max-w-3xl mx-auto">
-        <vturb-smartplayer id="vid-686fd145e397e681c4ce4c3b" style={{display: 'block', margin: '0 auto', width: '100%'}}></vturb-smartplayer>
+      <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style={{ margin: '0 auto', width: '100%' }}>
+        <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} id="ifr_686fd145e397e681c4ce4c3b_aspect">
+          <iframe
+            frameBorder="0"
+            allowFullScreen
+            src="about:blank"
+            id="ifr_686fd145e397e681c4ce4c3b"
+            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+            referrerPolicy="origin"
+            onLoad={(e) => {
+              const target = e.target as HTMLIFrameElement;
+              target.onload = null;
+              target.src = 'https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);
+            }}
+          ></iframe>
+        </div>
       </div>
     </div>
   );
