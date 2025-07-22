@@ -4,36 +4,79 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { PlayCircle } from 'lucide-react';
 
 const VideoPlayer = () => {
+  const [showVideo, setShowVideo] = useState(false);
+
+  // Use a generic but fitting placeholder for the VSL thumbnail
+  const thumbnailUrl = 'https://placehold.co/1280x720.png';
+
+  const handlePlay = () => {
+    setShowVideo(true);
+  };
+
+  if (showVideo) {
+    return (
+       <div
+        className="w-full h-full"
+        dangerouslySetInnerHTML={{
+          __html: `
+            <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
+            <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
+              <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
+                <iframe
+                  id="ifr_686fd145e397e681c4ce4c3b"
+                  title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                  frameborder="0"
+                  allowfullscreen
+                  allow="autoplay"
+                  src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html?autoplay=1&preload=metadata"
+                  referrerpolicy="origin"
+                ></iframe>
+              </div>
+            </div>
+          `,
+        }}
+      />
+    );
+  }
+
   return (
     <div
-      className="w-full h-full"
-      dangerouslySetInnerHTML={{
-        __html: `
-          <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
-          <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
-            <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
-              <iframe
-                id="ifr_686fd145e397e681c4ce4c3b"
-                title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
-                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                frameborder="0"
-                allowfullscreen
-                allow="autoplay"
-                src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html?autoplay=1&preload=metadata"
-                referrerpolicy="origin"
-              ></iframe>
-            </div>
-          </div>
-        `,
-      }}
-    />
+      onClick={handlePlay}
+      className="w-full h-full bg-slate-900/50 rounded-lg overflow-hidden shadow-2xl relative cursor-pointer group"
+      style={{ paddingTop: '56.25%' }}
+    >
+      <Image
+        src={thumbnailUrl}
+        alt="Apresentação do Kit Gêniozinho em Ação"
+        data-ai-hint="video thumbnail kids"
+        fill
+        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+        loading="lazy"
+        className="object-cover transition-transform duration-300 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+        <PlayCircle className="h-20 w-20 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+      </div>
+       <div className="absolute bottom-4 left-4 text-white">
+        <p className="font-semibold text-lg drop-shadow-md">Clique para assistir!</p>
+      </div>
+    </div>
   );
 };
 
 
 export default function HeroSection() {
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
+
 
   return (
     <section className="pt-12 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
@@ -84,7 +127,7 @@ export default function HeroSection() {
         </div>
         
         <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-           <VideoPlayer />
+           {isClient ? <VideoPlayer /> : <div className="w-full h-full bg-slate-800/50 rounded-lg animate-pulse"></div>}
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
