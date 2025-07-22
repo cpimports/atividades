@@ -15,7 +15,7 @@ const VideoPlayer = () => {
 
   if (!isClient) {
     return (
-        <div className="w-full h-full bg-black flex items-center justify-center">
+        <div className="w-full h-full bg-black flex items-center justify-center rounded-lg">
             <p className="text-white">Carregando vídeo...</p>
         </div>
     );
@@ -140,5 +140,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-    
