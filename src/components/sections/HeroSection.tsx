@@ -9,6 +9,15 @@ import { PlayCircle } from 'lucide-react';
 
 const VideoPlayer = () => {
   const [showVideo, setShowVideo] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return <div className="w-full h-full bg-slate-800/50 rounded-lg animate-pulse"></div>;
+  }
 
   // Use a generic but fitting placeholder for the VSL thumbnail
   const thumbnailUrl = 'https://placehold.co/1280x720.png';
@@ -63,7 +72,7 @@ const VideoPlayer = () => {
         <PlayCircle className="h-20 w-20 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
       </div>
        <div className="absolute bottom-4 left-4 text-white">
-        <p className="font-semibold text-lg drop-shadow-md">Clique para assistir!</p>
+        <p className="font-semibold text-lg drop-shadow-md">tire esse video daqui</p>
       </div>
     </div>
   );
@@ -71,12 +80,6 @@ const VideoPlayer = () => {
 
 
 export default function HeroSection() {
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
-
 
   return (
     <section className="pt-12 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
@@ -127,7 +130,7 @@ export default function HeroSection() {
         </div>
         
         <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-           {isClient ? <VideoPlayer /> : <div className="w-full h-full bg-slate-800/50 rounded-lg animate-pulse"></div>}
+           <VideoPlayer />
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
