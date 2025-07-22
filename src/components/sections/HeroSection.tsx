@@ -4,69 +4,6 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlayCircle } from 'lucide-react';
-import { useState, useEffect } from 'react';
-
-
-const VideoPlayer = () => {
-  const [isClient, setIsClient] = useState(false);
-
-  useEffect(() => {
-    // This effect runs only on the client, ensuring window/document are available.
-    setIsClient(true);
-  }, []);
-
-  useEffect(() => {
-    // This effect runs after the component has mounted on the client.
-    if (isClient) {
-      // Check if the script is already there to avoid adding it multiple times
-      if (!document.querySelector('script[src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"]')) {
-        const script = document.createElement("script");
-        script.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
-        script.async = true;
-        document.head.appendChild(script);
-      }
-    }
-  }, [isClient]);
-
-  if (!isClient) {
-    // Render a static placeholder on the server and during the initial client render.
-    // This prevents hydration errors.
-    return (
-      <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-800/50 rounded-lg flex items-center justify-center">
-        <div className="text-center">
-          <PlayCircle className="h-16 w-16 text-white/50 mb-4" />
-          <p className="text-white font-semibold">Carregando vídeo...</p>
-        </div>
-      </div>
-    );
-  }
-
-  // Render the actual video player structure only on the client.
-  return (
-    <div className="mt-8 mb-4 animate-fade-in-medium" style={{ animationDelay: '0.4s' }}>
-      <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style={{ margin: '0 auto', width: '100%' }}>
-        <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} id="ifr_686fd145e397e681c4ce4c3b_aspect">
-          <iframe
-            frameBorder="0"
-            allowFullScreen
-            src="about:blank"
-            id="ifr_686fd145e397e681c4ce4c3b"
-            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-            referrerPolicy="origin"
-            onLoad={(e) => {
-              const target = e.target as HTMLIFrameElement;
-              // The onload logic from the original HTML snippet
-              target.onload = null; 
-              target.src = 'https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);
-            }}
-          ></iframe>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 
 export default function HeroSection() {
 
@@ -117,8 +54,6 @@ export default function HeroSection() {
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold text-sky-200 text-base md:text-lg">Com Atividades Divertidas, Inclusivas e Criadas para Estimular o Desenvolvimento Infantil</p>
         </div>
-
-        <VideoPlayer />
         
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
@@ -156,7 +91,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-    
-
-    
