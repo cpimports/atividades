@@ -18,19 +18,25 @@ const VideoPlayer = () => {
   return (
     <div className="mt-8 mb-4 animate-fade-in-medium" style={{ animationDelay: '0.4s' }}>
       {isClient ? (
-        <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-900/50 rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
+        <div className="w-full max-w-3xl mx-auto">
           <div
             dangerouslySetInnerHTML={{
               __html: `
-                <div id="vid_686fd145e397e681c4ce4c3b" style="position:relative;width:100%;padding: 56.25% 0 0;">
-                  <img id="thumb_686fd145e397e681c4ce4c3b" src="https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
-                  <div id="backdrop_686fd145e397e681c4ce4c3b" style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
-                </div>
-                <script type="text/javascript" id="scr_686fd145e397e681c4ce4c3b">
-                  var s=document.createElement("script");
-                  s.src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/player.js",
-                  s.async=!0,document.head.appendChild(s);
+                <script type="text/javascript">
+                  var s = document.createElement("script");
+                  s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+                  s.async = true;
+                  document.head.appendChild(s);
                 </script>
+                <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="margin: 0 auto; width: 100%;">
+                  <div style="padding: 56.48535564853556% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
+                    <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_686fd145e397e681c4ce4c3b"
+                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                      referrerpolicy="origin"
+                      onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);">
+                    </iframe>
+                  </div>
+                </div>
               `,
             }}
           />
@@ -136,5 +142,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-    
