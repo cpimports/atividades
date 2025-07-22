@@ -4,45 +4,25 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import { PlayCircle } from 'lucide-react';
 
 const VideoPlayer = () => {
-  const [showVideo, setShowVideo] = useState(false);
   const videoId = '686fd145e397e681c4ce4c3b';
   const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b';
   
-  // Use a placeholder image to prevent loading the video iframe immediately
-  const thumbnailUrl = `https://i.imgur.com/sKbY73Q.png`;
-
-  const handlePlay = () => {
-    setShowVideo(true);
-  };
-
-  if (showVideo) {
-    return (
-      <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }}>
-        <iframe
-          frameBorder="0"
-          allowFullScreen
-          src={`https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html?autoplay=1&vl=${encodeURIComponent(location.href)}`}
-          id={`ifr_${videoId}`}
-          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-          referrerPolicy="origin"
-        ></iframe>
-      </div>
-    );
-  }
+  // Construct the full URL for the iframe source
+  const videoSrc = `https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html?vl=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`;
 
   return (
-    <div
-      onClick={handlePlay}
-      style={{ padding: '56.48535564853556% 0 0 0', position: 'relative', cursor: 'pointer',  backgroundImage: `url(${thumbnailUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-      className="bg-slate-900/50 rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20 group"
-    >
-        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <PlayCircle className="h-20 w-20 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
-        </div>
+    <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
+      <iframe
+        frameBorder="0"
+        allowFullScreen
+        src={videoSrc}
+        id={`ifr_${videoId}`}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+        referrerPolicy="origin"
+      ></iframe>
     </div>
   );
 };
