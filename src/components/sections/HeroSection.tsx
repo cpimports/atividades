@@ -12,8 +12,24 @@ const VideoPlayer = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
+    // Set isClient to true only on the client-side
     setIsClient(true);
   }, []);
+  
+  useEffect(() => {
+    // This effect runs only on the client, after the component has mounted
+    if (isClient) {
+      // Use a timeout to delay script injection, preventing it from blocking the main thread
+      const timer = setTimeout(() => {
+        const script = document.createElement("script");
+        script.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+        script.async = true;
+        document.head.appendChild(script);
+      }, 500); // Small delay to allow the page to become interactive
+  
+      return () => clearTimeout(timer); // Cleanup timer on component unmount
+    }
+  }, [isClient]);
 
   return (
     <div className="mt-8 mb-4 animate-fade-in-medium" style={{ animationDelay: '0.4s' }}>
@@ -22,12 +38,6 @@ const VideoPlayer = () => {
           <div
             dangerouslySetInnerHTML={{
               __html: `
-                <script type="text/javascript">
-                  var s = document.createElement("script");
-                  s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
-                  s.async = true;
-                  document.head.appendChild(s);
-                </script>
                 <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="margin: 0 auto; width: 100%;">
                   <div style="padding: 56.48535564853556% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
                     <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_686fd145e397e681c4ce4c3b"
@@ -142,3 +152,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+    
