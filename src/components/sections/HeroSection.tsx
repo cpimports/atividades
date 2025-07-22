@@ -4,37 +4,8 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 const VideoPlayer = () => {
-  const [showVideo, setShowVideo] = useState(false);
-
-  // Use a thumbnail to represent the video initially
-  const thumbnailUrl = "https://i.imgur.com/your-video-thumbnail.jpg"; // Replace with your actual video thumbnail
-
-  if (!showVideo) {
-    return (
-      <div
-        onClick={() => setShowVideo(true)}
-        className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden relative cursor-pointer group bg-slate-900"
-      >
-        <Image
-          src="https://img.youtube.com/vi/ID_DO_VIDEO_AQUI/hqdefault.jpg" // You should replace this with a real thumbnail of your VSL
-          alt="Apresentação do Kit Gêniozinho em Ação"
-          data-ai-hint="video thumbnail presentation"
-          fill
-          priority
-          sizes="(max-width: 768px) 90vw, (max-width: 1024px) 70vw, 50vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110 drop-shadow-lg"><circle cx="12" cy="12" r="10"></circle><polygon points="10,8 16,12 10,16 10,8"></polygon></svg>
-        </div>
-      </div>
-    );
-  }
-
-  // Once showVideo is true, render the actual player
   return (
     <div
       className="w-full h-full"
@@ -152,5 +123,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-    
