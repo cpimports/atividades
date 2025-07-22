@@ -87,7 +87,7 @@ const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => 
       <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
         <iframe
           className="w-full h-full"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1`}
+          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
           title={title}
           frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -294,3 +294,4 @@ export default function TestimonialsSection() {
   );
 }
 
+    

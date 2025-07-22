@@ -7,20 +7,34 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const VideoPlayer = () => {
-  const [isClient, setIsClient] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
+  // Use a thumbnail to represent the video initially
+  const thumbnailUrl = "https://i.imgur.com/your-video-thumbnail.jpg"; // Replace with your actual video thumbnail
 
-  if (!isClient) {
+  if (!showVideo) {
     return (
-        <div className="w-full h-full bg-black flex items-center justify-center rounded-lg">
-            <p className="text-white">Carregando vídeo...</p>
+      <div
+        onClick={() => setShowVideo(true)}
+        className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden relative cursor-pointer group bg-slate-900"
+      >
+        <Image
+          src="https://img.youtube.com/vi/ID_DO_VIDEO_AQUI/hqdefault.jpg" // You should replace this with a real thumbnail of your VSL
+          alt="Apresentação do Kit Gêniozinho em Ação"
+          data-ai-hint="video thumbnail presentation"
+          fill
+          priority
+          sizes="(max-width: 768px) 90vw, (max-width: 1024px) 70vw, 50vw"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
+        />
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110 drop-shadow-lg"><circle cx="12" cy="12" r="10"></circle><polygon points="10,8 16,12 10,16 10,8"></polygon></svg>
         </div>
+      </div>
     );
   }
 
+  // Once showVideo is true, render the actual player
   return (
     <div
       className="w-full h-full"
@@ -36,9 +50,8 @@ const VideoPlayer = () => {
                 frameborder="0"
                 allowfullscreen
                 allow="autoplay"
-                src="about:blank"
+                src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html?autoplay=1&preload=metadata"
                 referrerpolicy="origin"
-                onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html?autoplay=1' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)"
               ></iframe>
             </div>
           </div>
@@ -47,6 +60,7 @@ const VideoPlayer = () => {
     />
   );
 };
+
 
 export default function HeroSection() {
 
@@ -99,9 +113,7 @@ export default function HeroSection() {
         </div>
         
         <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-           <div className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden">
-            <VideoPlayer />
-           </div>
+           <VideoPlayer />
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
@@ -140,3 +152,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+    
