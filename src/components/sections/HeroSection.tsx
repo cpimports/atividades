@@ -5,6 +5,48 @@ import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlayCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+
+
+const VideoPlayer = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  return (
+    <div className="mt-8 mb-4 animate-fade-in-medium" style={{ animationDelay: '0.4s' }}>
+      {isClient ? (
+        <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-900/50 rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
+                <div id="vid_686fd145e397e681c4ce4c3b" style="position:relative;width:100%;padding: 56.25% 0 0;">
+                  <img id="thumb_686fd145e397e681c4ce4c3b" src="https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;">
+                  <div id="backdrop_686fd145e397e681c4ce4c3b" style="position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,0.5);-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div>
+                </div>
+                <script type="text/javascript" id="scr_686fd145e397e681c4ce4c3b">
+                  var s=document.createElement("script");
+                  s.src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/player.js",
+                  s.async=!0,document.head.appendChild(s);
+                </script>
+              `,
+            }}
+          />
+        </div>
+      ) : (
+        <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-800/50 rounded-lg flex items-center justify-center">
+          <div className="text-center">
+            <PlayCircle className="h-16 w-16 text-white/50 mb-4" />
+            <p className="text-white font-semibold">Carregando vídeo...</p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 
 export default function HeroSection() {
 
@@ -55,6 +97,8 @@ export default function HeroSection() {
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold text-sky-200 text-base md:text-lg">Com Atividades Divertidas, Inclusivas e Criadas para Estimular o Desenvolvimento Infantil</p>
         </div>
+
+        <VideoPlayer />
         
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
@@ -92,3 +136,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+    
