@@ -77,7 +77,7 @@ export default function RootLayout({
         {/* InitiateCheckout Event Script */}
         <Script id="facebook-pixel-initiate-checkout" strategy="lazyOnload">
           {`
-            document.body.addEventListener('click', function(e) {
+            document.addEventListener('click', function(e) {
               if (e.target && e.target.closest('#btn-comprar')) {
                 if (typeof fbq === 'function') {
                   fbq('track', 'InitiateCheckout');

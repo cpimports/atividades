@@ -1,9 +1,18 @@
 
+'use client';
+
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useState } from 'react';
 
 export default function HeroSection() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="pt-12 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
       {/* Diffuse cloud-like elements */}
@@ -54,28 +63,30 @@ export default function HeroSection() {
         </div>
         
         <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
-          <div
-            className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden"
-            dangerouslySetInnerHTML={{
-              __html: `
-                <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
-                <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
-                  <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
-                    <iframe
-                      id="ifr_686fd145e397e681c4ce4c3b"
-                      title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
-                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                      frameborder="0"
-                      allowfullscreen
-                      src="about:blank"
-                      referrerpolicy="origin"
-                      onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)"
-                    ></iframe>
+          {isClient && (
+            <div
+              className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden"
+              dangerouslySetInnerHTML={{
+                __html: `
+                  <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
+                  <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
+                    <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
+                      <iframe
+                        id="ifr_686fd145e397e681c4ce4c3b"
+                        title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                        frameborder="0"
+                        allowfullscreen
+                        src="about:blank"
+                        referrerpolicy="origin"
+                        onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)"
+                      ></iframe>
+                    </div>
                   </div>
-                </div>
-              `,
-            }}
-          />
+                `,
+              }}
+            />
+          )}
         </div>
 
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
