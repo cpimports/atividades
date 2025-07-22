@@ -126,6 +126,7 @@ export default function TestimonialsSection() {
   const [liveViewers, setLiveViewers] = useState<number | null>(null);
 
   useEffect(() => {
+    // This effect runs only on the client
     const initialViewers = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
     setLiveViewers(initialViewers);
 
