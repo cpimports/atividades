@@ -63,7 +63,7 @@ export default function OfferSection() {
             <Card className="shadow-xl bg-card/80 backdrop-blur-md max-w-md">
                 <CardHeader className="items-center text-center">
                 <Image
-                    src="https://i.imgur.com/lbSS21Q.png"
+                    src="https://images.wsrv.nl/?url=i.imgur.com/lbSS21Q.png&output=webp"
                     alt="Garantia de satisfação"
                     data-ai-hint="shield checkmark"
                     width={180}
@@ -147,7 +147,7 @@ export default function OfferSection() {
                 </p>
                 <div className="mt-4 flex justify-center">
                   <Image
-                    src="https://i.imgur.com/xCuyx6F.png"
+                    src="https://images.wsrv.nl/?url=i.imgur.com/xCuyx6F.png&output=webp"
                     alt="Métodos de pagamento aceitos"
                     data-ai-hint="payment methods"
                     width={250}

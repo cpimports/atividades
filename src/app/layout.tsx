@@ -31,7 +31,7 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${alegreya.variable}`} suppressHydrationWarning>
       <head>
         {/* Preconnect to critical third-party origins */}
-        <link rel="preconnect" href="https://i.imgur.com" />
+        <link rel="preconnect" href="https://images.wsrv.nl" />
         <link rel="preconnect" href="https://scripts.converteai.net" />
         <link rel="preconnect" href="https://img.youtube.com" />
         <link rel="preconnect" href="https://connect.facebook.net" />
