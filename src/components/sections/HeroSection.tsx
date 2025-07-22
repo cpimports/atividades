@@ -4,6 +4,54 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect, useRef } from 'react';
+
+const VideoPlayer = () => {
+  const videoRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Only run on the client
+    if (typeof window === 'undefined' || !videoRef.current) {
+      return;
+    }
+
+    // Check if the script is already added
+    if (document.querySelector('script[src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"]')) {
+        return;
+    }
+
+    const script = document.createElement("script");
+    script.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+  }, []);
+
+  // Use dangerouslySetInnerHTML for the specific HTML structure provided.
+  // This is often necessary for third-party embed codes.
+  const videoHtml = `
+    <div style="padding: 56.48535564853556% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
+      <iframe
+        frameborder="0"
+        allowfullscreen
+        src="about:blank"
+        id="ifr_686fd145e397e681c4ce4c3b"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        referrerpolicy="origin"
+        onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);">
+      </iframe>
+    </div>
+  `;
+
+  return (
+    <div
+      id="ifr_686fd145e397e681c4ce4c3b_wrapper"
+      style={{ margin: '0 auto', width: '100%' }}
+      dangerouslySetInnerHTML={{ __html: videoHtml }}
+    />
+  );
+};
+
 
 export default function HeroSection() {
 
@@ -53,6 +101,10 @@ export default function HeroSection() {
         </h1>
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold text-sky-200 text-base md:text-lg">Com Atividades Divertidas, Inclusivas e Criadas para Estimular o Desenvolvimento Infantil</p>
+        </div>
+
+        <div className="mt-8 max-w-4xl mx-auto animate-fade-in-slow">
+            <VideoPlayer />
         </div>
         
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
