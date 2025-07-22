@@ -6,34 +6,49 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-const VideoPlayer = () => (
-  <div
-    className="w-full h-full"
-    dangerouslySetInnerHTML={{
-      __html: `
-        <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
-        <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
-          <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
-            <iframe
-              id="ifr_686fd145e397e681c4ce4c3b"
-              title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-              frameborder="0"
-              allowfullscreen
-              allow="autoplay"
-              src="about:blank"
-              referrerpolicy="origin"
-              onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html?autoplay=1' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)"
-            ></iframe>
-          </div>
+const VideoPlayer = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
+  if (!isClient) {
+    return (
+        <div className="w-full h-full bg-black flex items-center justify-center">
+            <p className="text-white">Carregando vídeo...</p>
         </div>
-      `,
-    }}
-  />
-);
+    );
+  }
+
+  return (
+    <div
+      className="w-full h-full"
+      dangerouslySetInnerHTML={{
+        __html: `
+          <script type="text/javascript" async src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"></script>
+          <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="width: 100%; height: 100%; position: relative;">
+            <div style="padding: 56.25% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
+              <iframe
+                id="ifr_686fd145e397e681c4ce4c3b"
+                title="Vídeo de Apresentação do Kit Gêniozinho em Ação"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+                frameborder="0"
+                allowfullscreen
+                allow="autoplay"
+                src="about:blank"
+                referrerpolicy="origin"
+                onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html?autoplay=1' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)"
+              ></iframe>
+            </div>
+          </div>
+        `,
+      }}
+    />
+  );
+};
 
 export default function HeroSection() {
-  const [showVideo, setShowVideo] = useState(false);
 
   return (
     <section className="pt-12 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
@@ -85,25 +100,7 @@ export default function HeroSection() {
         
         <div className="mt-10 aspect-video max-w-2xl mx-auto animate-fade-in-slow" style={{ animationDelay: '0.4s' }}>
            <div className="w-full h-full rounded-lg shadow-2xl shadow-sky-400/20 overflow-hidden">
-             {showVideo ? (
-                <VideoPlayer />
-             ) : (
-                <div onClick={() => setShowVideo(true)} className="relative w-full h-full cursor-pointer group">
-                  <Image
-                    src="https://img.youtube.com/vi/686fd145e397e681c4ce4c3b/maxresdefault.jpg"
-                    alt="Vídeo de Apresentação do Kit Gêniozinho em Ação"
-                    layout="fill"
-                    objectFit="cover"
-                    className="transition-transform duration-300 group-hover:scale-105"
-                    priority
-                  />
-                   <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-                     <svg className="h-16 w-16 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
-                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-                     </svg>
-                   </div>
-                </div>
-             )}
+            <VideoPlayer />
            </div>
         </div>
 
@@ -143,3 +140,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+    
