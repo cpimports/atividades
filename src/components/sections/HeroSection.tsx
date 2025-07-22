@@ -12,53 +12,41 @@ const VideoPlayer = () => {
   const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    // Set isClient to true only on the client-side
     setIsClient(true);
   }, []);
-  
+
   useEffect(() => {
-    // This effect runs only on the client, after the component has mounted
     if (isClient) {
-      // Use a timeout to delay script injection, preventing it from blocking the main thread
-      const timer = setTimeout(() => {
+      // Use requestIdleCallback to run the script when the main thread is idle
+      const handle = window.requestIdleCallback(() => {
         const script = document.createElement("script");
-        script.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+        script.src = "https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/player.js";
         script.async = true;
         document.head.appendChild(script);
-      }, 500); // Small delay to allow the page to become interactive
-  
-      return () => clearTimeout(timer); // Cleanup timer on component unmount
+      }, { timeout: 2000 }); // Fallback timeout
+
+      return () => window.cancelIdleCallback(handle);
     }
   }, [isClient]);
 
+  if (!isClient) {
+    // Render a placeholder on the server and during initial client render
+    return (
+      <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-800/50 rounded-lg flex items-center justify-center">
+        <div className="text-center">
+          <PlayCircle className="h-16 w-16 text-white/50 mb-4" />
+          <p className="text-white font-semibold">Carregando vídeo...</p>
+        </div>
+      </div>
+    );
+  }
+
+  // The vtuber-smartplayer tag will be recognized once the script above is loaded.
   return (
     <div className="mt-8 mb-4 animate-fade-in-medium" style={{ animationDelay: '0.4s' }}>
-      {isClient ? (
-        <div className="w-full max-w-3xl mx-auto">
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `
-                <div id="ifr_686fd145e397e681c4ce4c3b_wrapper" style="margin: 0 auto; width: 100%;">
-                  <div style="padding: 56.48535564853556% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
-                    <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_686fd145e397e681c4ce4c3b"
-                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-                      referrerpolicy="origin"
-                      onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);">
-                    </iframe>
-                  </div>
-                </div>
-              `,
-            }}
-          />
-        </div>
-      ) : (
-        <div className="aspect-video w-full max-w-3xl mx-auto bg-slate-800/50 rounded-lg flex items-center justify-center">
-          <div className="text-center">
-            <PlayCircle className="h-16 w-16 text-white/50 mb-4" />
-            <p className="text-white font-semibold">Carregando vídeo...</p>
-          </div>
-        </div>
-      )}
+      <div className="w-full max-w-3xl mx-auto">
+        <vturb-smartplayer id="vid-686fd145e397e681c4ce4c3b" style={{display: 'block', margin: '0 auto', width: '100%'}}></vturb-smartplayer>
+      </div>
     </div>
   );
 };
@@ -152,5 +140,3 @@ export default function HeroSection() {
     </section>
   );
 }
-
-    
