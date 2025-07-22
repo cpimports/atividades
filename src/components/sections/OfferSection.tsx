@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -69,6 +68,8 @@ export default function OfferSection() {
                     width={180}
                     height={180}
                     className="mb-3"
+                    loading="lazy"
+                    sizes="180px"
                 />
                 <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
                 </CardHeader>
@@ -153,6 +154,8 @@ export default function OfferSection() {
                     width={250}
                     height={25}
                     className="object-contain"
+                    loading="lazy"
+                    sizes="250px"
                   />
                 </div>
               </div>

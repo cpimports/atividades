@@ -4,51 +4,46 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useState } from 'react';
+import { PlayCircle } from 'lucide-react';
 
 const VideoPlayer = () => {
-  const videoRef = useRef<HTMLDivElement>(null);
+  const [showVideo, setShowVideo] = useState(false);
+  const videoId = '686fd145e397e681c4ce4c3b';
+  const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b';
+  
+  // Use a placeholder image to prevent loading the video iframe immediately
+  const thumbnailUrl = `https://i.imgur.com/sKbY73Q.png`;
 
-  useEffect(() => {
-    // Only run on the client
-    if (typeof window === 'undefined' || !videoRef.current) {
-      return;
-    }
+  const handlePlay = () => {
+    setShowVideo(true);
+  };
 
-    // Check if the script is already added
-    if (document.querySelector('script[src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js"]')) {
-        return;
-    }
-
-    const script = document.createElement("script");
-    script.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
-    script.async = true;
-    document.head.appendChild(script);
-
-  }, []);
-
-  // Use dangerouslySetInnerHTML for the specific HTML structure provided.
-  // This is often necessary for third-party embed codes.
-  const videoHtml = `
-    <div style="padding: 56.48535564853556% 0 0 0; position: relative;" id="ifr_686fd145e397e681c4ce4c3b_aspect">
-      <iframe
-        frameborder="0"
-        allowfullscreen
-        src="about:blank"
-        id="ifr_686fd145e397e681c4ce4c3b"
-        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
-        referrerpolicy="origin"
-        onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href);">
-      </iframe>
-    </div>
-  `;
+  if (showVideo) {
+    return (
+      <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }}>
+        <iframe
+          frameBorder="0"
+          allowFullScreen
+          src={`https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html?autoplay=1&vl=${encodeURIComponent(location.href)}`}
+          id={`ifr_${videoId}`}
+          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+          referrerPolicy="origin"
+        ></iframe>
+      </div>
+    );
+  }
 
   return (
     <div
-      id="ifr_686fd145e397e681c4ce4c3b_wrapper"
-      style={{ margin: '0 auto', width: '100%' }}
-      dangerouslySetInnerHTML={{ __html: videoHtml }}
-    />
+      onClick={handlePlay}
+      style={{ padding: '56.48535564853556% 0 0 0', position: 'relative', cursor: 'pointer',  backgroundImage: `url(${thumbnailUrl})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+      className="bg-slate-900/50 rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20 group"
+    >
+        <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
+            <PlayCircle className="h-20 w-20 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
+        </div>
+    </div>
   );
 };
 
@@ -94,6 +89,7 @@ export default function HeroSection() {
                 height={120}
                 className="rounded-full object-cover"
                 priority
+                sizes="120px"
             />
         </div>
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">

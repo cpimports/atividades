@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -107,7 +106,7 @@ const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => 
         alt={`Thumbnail para ${title}`}
         data-ai-hint="video thumbnail"
         fill
-        sizes="(max-width: 768px) 50vw, 33vw"
+        sizes="280px"
         loading="lazy"
         className="object-cover transition-transform duration-300 group-hover:scale-105"
       />
@@ -270,7 +269,7 @@ export default function TestimonialsSection() {
             >
               <CardHeader className="p-6 flex flex-row items-center space-x-4">
                 <Avatar className="h-16 w-16">
-                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} />
+                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} sizes="64px" />
                   <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
                 </Avatar>
                 <div className="flex-grow">
