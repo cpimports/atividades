@@ -234,7 +234,7 @@ export default function TestimonialsSection() {
             >
               <CardHeader className="p-6 flex flex-row items-center space-x-4">
                 <Avatar className="h-16 w-16">
-                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} sizes="64px" />
+                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} sizes="64px" loading="lazy"/>
                   <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
                 </Avatar>
                 <div className="flex-grow">

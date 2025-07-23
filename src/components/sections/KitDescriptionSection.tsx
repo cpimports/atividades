@@ -116,6 +116,7 @@ export default function KitDescriptionSection() {
               width={128}
               height={128}
               className="rounded-full"
+              loading="lazy"
             />
           </div>
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
@@ -155,7 +156,7 @@ export default function KitDescriptionSection() {
                             fill
                             className="object-cover rounded-md"
                             sizes="(max-width: 480px) 90vw, (max-width: 768px) 60vw, 320px"
-                            priority={index < 2}
+                            loading="lazy"
                           />
                         </CardContent>
                       </Card>

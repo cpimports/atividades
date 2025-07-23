@@ -9,25 +9,25 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="/images/abc-otimizado.webp" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} />,
+    icon: <Image src="/images/abc-otimizado.webp" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} loading="lazy"/>,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism puzzle" width={64} height={64} />,
+    icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism puzzle" width={64} height={64} loading="lazy" />,
     title: 'Atividades adaptadas para dificuldades de atenção',
     description: 'Exercícios com linguagem simples, estímulos visuais e estrutura que respeita o ritmo de cada criança, garantindo mais engajamento e menos frustração.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/PDF-otimizado.webp" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} />,
+    icon: <Image src="/images/PDF-otimizado.webp" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} loading="lazy" />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Material digital pronto para imprimir, com acesso vitalício e organizado para que você encontre a atividade certa sempre que precisar.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/aprendendo-otimizado.webp" alt="Material lúdico" data-ai-hint="kids playing education" width={64} height={64} />,
+    icon: <Image src="/images/aprendendo-otimizado.webp" alt="Material lúdico" data-ai-hint="kids playing education" width={64} height={64} loading="lazy"/>,
     title: 'Material lúdico e interativo pronto para imprimir',
     description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar.',
     titleClassName: 'font-headline text-2xl text-primary',

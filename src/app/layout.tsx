@@ -47,7 +47,17 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://scripts.converteai.net" />
         <link rel="dns-prefetch" href="https://images.converteai.net" />
         <link rel="dns-prefetch" href="https://api.vturb.com.br" />
+      </head>
+      <body className="font-body antialiased">
+        <noscript>
+          <img height="1" width="1" style={{display: 'none'}}
+          src="https://www.facebook.com/tr?id=1650519618943117&ev=PageView&noscript=1"/>
+        </noscript>
         
+        <AnnouncementBar />
+        {children}
+        <Toaster />
+
         {/* Meta Pixel Code */}
         <Script id="facebook-pixel-base" strategy="afterInteractive">
           {`
@@ -63,28 +73,7 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-        {/* End Meta Pixel Code */}
-
-        {/* UTMify Script */}
-        <Script 
-          id="utmify-script"
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          strategy="afterInteractive"
-          data-utmify-prevent-xcod-sck
-          data-utmify-prevent-subids
-          async 
-          defer
-        ></Script>
-        {/* End UTMify Script */}
-      </head>
-      <body className="font-body antialiased">
-        {/* Meta Pixel Code (noscript) */}
-        <noscript>
-          <img height="1" width="1" style={{display: 'none'}}
-          src="https://www.facebook.com/tr?id=1650519618943117&ev=PageView&noscript=1"/>
-        </noscript>
-        {/* End Meta Pixel Code (noscript) */}
-
+        
         {/* InitiateCheckout Event Script */}
         <Script id="facebook-pixel-initiate-checkout" strategy="lazyOnload">
           {`
@@ -97,10 +86,17 @@ export default function RootLayout({
             }, true);
           `}
         </Script>
-        
-        <AnnouncementBar />
-        {children}
-        <Toaster />
+
+        {/* UTMify Script */}
+        <Script 
+          id="utmify-script"
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          strategy="afterInteractive"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+          async 
+          defer
+        ></Script>
       </body>
     </html>
   );
