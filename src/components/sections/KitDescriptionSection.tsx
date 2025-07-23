@@ -110,12 +110,12 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-10">
           <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
             <Image
-              src="https://i.imgur.com/qribBbs.png"
-              alt="Ícone de Atividades do Kit"
-              data-ai-hint="puzzle brain kids"
-              width={64}
-              height={64}
-              className="rounded-md"
+              src="/images/crianças-otimizado.webp"
+              alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
+              data-ai-hint="kids playing"
+              width={128}
+              height={128}
+              className="rounded-full"
             />
           </div>
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
@@ -202,3 +202,5 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
+    
