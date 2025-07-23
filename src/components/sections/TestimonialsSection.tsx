@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -31,7 +32,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Mãe',
     name: 'Carla M.',
     text: "Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!",
-    avatarUrl: 'https://i.imgur.com/iDxyKPn.png',
+    avatarUrl: '/images/mãe-otimizado.webp',
     avatarFallback: 'CM',
     avatarHint: 'woman portrait',
   },
