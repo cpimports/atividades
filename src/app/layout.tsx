@@ -34,15 +34,19 @@ export default function RootLayout({
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://connect.facebook.net" />
+        <link rel="preconnect" href="https://scripts.converteai.net" />
+        <link rel="preconnect" href="https://cdn.converteai.net" />
+        <link rel="preconnect" href="https://images.converteai.net" />
+        <link rel="preconnect" href="https://api.vturb.com.br" />
 
         {/* VSL Optimizations (ConverteAi) */}
-        <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html" />
+        <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html" as="fetch" crossOrigin="anonymous" />
         <Script id="vsl-timing-optimization" strategy="beforeInteractive">
           {`!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`}
         </Script>
         <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/player.js" as="script" />
         <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
-        <link rel="preload" href="https://cdn.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/686fd13fd5ca67ae2917e1a0/main.m3u8" as="fetch" />
+        <link rel="preload" href="https://cdn.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/686fd13fd5ca67ae2917e1a0/main.m3u8" as="fetch" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://cdn.converteai.net" />
         <link rel="dns-prefetch" href="https://scripts.converteai.net" />
         <link rel="dns-prefetch" href="https://images.converteai.net" />
