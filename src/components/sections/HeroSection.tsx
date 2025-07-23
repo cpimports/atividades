@@ -31,7 +31,7 @@ const VideoPlayer = () => {
 export default function HeroSection() {
 
   return (
-    <section className="pt-0 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
+    <section className="pt-10 pb-16 md:pb-24 lg:pb-32 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
       {/* Diffuse cloud-like elements */}
       <div className="absolute inset-0 opacity-10 filter blur-3xl pointer-events-none">
         <div className="absolute top-[-15%] left-[-20%] w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_70%)] rounded-full animate-cloud-drift-slow"></div>
@@ -59,7 +59,7 @@ export default function HeroSection() {
         <div className="absolute bottom-[20%] right-[10%] w-0.5 h-0.5 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '3.2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-0">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-10">
         <div className="mb-8 animate-fade-in-medium">
           <Image
             src="/images/geniozinho-otimizado.webp"
@@ -118,3 +118,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+    
