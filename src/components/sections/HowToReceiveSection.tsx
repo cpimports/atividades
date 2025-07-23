@@ -14,7 +14,7 @@ const steps = [
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
   {
-    icon: <Image src="https://i.imgur.com/8HMLXYb.png" alt="Play icon" data-ai-hint="play button" width={40} height={40} className="text-primary" />,
+    icon: <Image src="/images/PLAY.webp" alt="Play icon" data-ai-hint="play button" width={40} height={40} className="text-primary" />,
     title: 'APLIQUE SEU KIT AGORA MESMO',
     description: 'Coloque em prática com seus alunos ou filhos.',
   },
