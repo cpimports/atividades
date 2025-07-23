@@ -8,19 +8,19 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="/images/abc-otimizado.webp" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} />,
+    icon: <Image src="https://placehold.co/64x64.png" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism awareness" width={64} height={64} />,
+    icon: <Image src="https://placehold.co/64x64.png" alt="Atividades adaptadas para autismo" data-ai-hint="autism awareness" width={64} height={64} />,
     title: 'Atividades adaptadas para dificuldades de atenção',
     description: 'Exercícios com linguagem simples, estímulos visuais e estrutura que respeita o ritmo de cada criança, garantindo mais engajamento e menos frustração.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/PDF-otimizado.webp" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} />,
+    icon: <Image src="https://placehold.co/64x64.png" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Material digital pronto para imprimir, com acesso vitalício e organizado para que você encontre a atividade certa sempre que precisar.',
     titleClassName: 'font-headline text-2xl text-primary',
