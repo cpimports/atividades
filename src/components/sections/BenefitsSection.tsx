@@ -26,6 +26,12 @@ const deliverables = [
     description: 'Material digital pronto para imprimir, com acesso vitalício e organizado para que você encontre a atividade certa sempre que precisar.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
+  {
+    icon: <Image src="https://placehold.co/64x64.png" alt="Material lúdico" data-ai-hint="kids playing education" width={64} height={64} />,
+    title: 'Material lúdico e interativo pronto para imprimir',
+    description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar.',
+    titleClassName: 'font-headline text-2xl text-primary',
+  },
 ];
 
 const currentExclusiveBonuses = [
@@ -84,7 +90,7 @@ export default function BenefitsSection() {
             Um pacote completo para transformar o aprendizado em uma aventura diária, repleta de descobertas e desenvolvimento.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {deliverables.map((item, index) => (
             <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
               <CardHeader className="flex flex-col items-center">
