@@ -9,7 +9,7 @@ const steps = [
     description: 'Receba Imediatamente em seu e-mail.',
   },
   {
-    icon: <Image src="https://i.imgur.com/kozs9lt.png" alt="Printer icon" data-ai-hint="printer document" width={40} height={40} className="text-accent-foreground" />,
+    icon: <Image src="/images/IMPRESSORA.webp" alt="Printer icon" data-ai-hint="printer document" width={40} height={40} className="text-accent-foreground" />,
     title: 'ACESSE E IMPRIMA QUANDO QUISER',
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
