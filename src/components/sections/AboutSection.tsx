@@ -13,8 +13,19 @@ export default function AboutSection() {
           </h2>
           <p className="mt-4 text-lg text-foreground/80 font-semibold">Lembre-se: Seu tempo é precioso...</p>
         </div>
-        <div className="flex justify-center">
-          <div className="space-y-6 max-w-xl">
+
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
+            <Image
+              src="/images/criancas-otimizado.webp"
+              alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
+              fill
+              loading="lazy"
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <div className="space-y-6">
             <ul className="space-y-3">
               {[
                 "Seu aluno ou filho tem dificuldade para manter o foco?",
@@ -35,6 +46,7 @@ export default function AboutSection() {
             </p>
           </div>
         </div>
+
       </div>
     </section>
   );
