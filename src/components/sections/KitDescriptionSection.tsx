@@ -110,7 +110,7 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-10">
           <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
             <Image
-              src="https://placehold.co/128x128.png"
+              src="/images/crianças-otimizado.webp"
               alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
               data-ai-hint="kids playing"
               width={128}
