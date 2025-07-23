@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -10,13 +11,19 @@ const deliverables = [
   {
     icon: <Image src="/images/abc-otimizado.webp" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
-    description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia',
+    description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
     icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism awareness" width={64} height={64} />,
-    title: 'Atividades adaptadas para crianças com dificuldades de atenção',
-    description: 'Cada exercício foi elaborado com linguagem simples, estímulos visuais e estrutura que respeita o tempo e o ritmo de cada criança, garantindo mais engajamento e menos frustração',
+    title: 'Atividades adaptadas para dificuldades de atenção',
+    description: 'Exercícios com linguagem simples, estímulos visuais e estrutura que respeita o ritmo de cada criança, garantindo mais engajamento e menos frustração.',
+    titleClassName: 'font-headline text-2xl text-primary',
+  },
+  {
+    icon: <Image src="/images/PDF-otimizado.webp" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} />,
+    title: 'Acesso em PDF com organização por temas',
+    description: 'Material digital pronto para imprimir, com acesso vitalício e organizado para que você encontre a atividade certa sempre que precisar.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
 ];
@@ -77,7 +84,7 @@ export default function BenefitsSection() {
             Um pacote completo para transformar o aprendizado em uma aventura diária, repleta de descobertas e desenvolvimento.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-8">
           {deliverables.map((item, index) => (
             <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
               <CardHeader className="flex flex-col items-center">
@@ -161,7 +168,5 @@ export default function BenefitsSection() {
         </div>
       </div>
     </section>
-    
-    
-
-    
+  );
+}
