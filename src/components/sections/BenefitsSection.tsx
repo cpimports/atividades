@@ -9,7 +9,7 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="https://placehold.co/64x64.png" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} />,
+    icon: <Image src="/images/abc-otimizado.webp" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} />,
     title: 'Pacote completo com mais de 1000 atividades educativas',
     description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
