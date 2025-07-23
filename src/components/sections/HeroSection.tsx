@@ -60,19 +60,7 @@ export default function HeroSection() {
         <div className="absolute bottom-[20%] right-[10%] w-0.5 h-0.5 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '3.2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="flex justify-center mb-6 animate-fade-in-medium">
-            <Image
-                src="/images/geniozinho-otimizado.webp"
-                alt="Logo Gêniozinho em Ação"
-                data-ai-hint="logo abstract playful"
-                width={150}
-                height={150}
-                className="rounded-full object-cover"
-                loading="lazy"
-                sizes="150px"
-            />
-        </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-8">
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
           Transforme o Dia a Dia da Sua Criança!
         </h1>
