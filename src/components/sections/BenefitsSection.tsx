@@ -14,7 +14,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://i.imgur.com/JffYX0z.png" alt="Atividades adaptadas" data-ai-hint="focus schedule" width={64} height={64} />,
+    icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism awareness" width={64} height={64} />,
     title: 'Atividades adaptadas para crianças com dificuldades de atenção',
     description: 'Cada exercício foi elaborado com linguagem simples, estímulos visuais e estrutura que respeita o tempo e o ritmo de cada criança, garantindo mais engajamento e menos frustração',
     titleClassName: 'font-headline text-2xl text-primary',
