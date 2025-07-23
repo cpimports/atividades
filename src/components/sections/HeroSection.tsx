@@ -11,7 +11,7 @@ const VideoPlayer = () => {
   const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b';
   
   // Construct the full URL for the iframe source
-  const videoSrc = `https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html?vl=${encodeURIComponent(typeof window !== 'undefined' ? window.location.href : '')}`;
+  const videoSrc = `https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html`;
 
   return (
     <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
@@ -22,6 +22,7 @@ const VideoPlayer = () => {
         id={`ifr_${videoId}`}
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         referrerPolicy="origin"
+        onLoad="this.src+=(location.search||'?')+'&vl='+encodeURIComponent(location.href)"
       ></iframe>
     </div>
   );
@@ -62,14 +63,14 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="flex justify-center mb-6 animate-fade-in-medium">
             <Image
-                src="https://i.imgur.com/sKbY73Q.png"
-                alt="Gêniozinho em Ação Logo"
+                src="/images/geniozinho-otimizado.webp"
+                alt="Logo Gêniozinho em Ação"
                 data-ai-hint="logo abstract playful"
-                width={120}
-                height={120}
+                width={150}
+                height={150}
                 className="rounded-full object-cover"
-                priority
-                sizes="120px"
+                loading="lazy"
+                sizes="150px"
             />
         </div>
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
