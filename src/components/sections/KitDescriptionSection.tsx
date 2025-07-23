@@ -16,7 +16,14 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
-const carouselImages: { src: string; alt: string; hint: string }[] = [];
+const carouselImages: { src: string; alt: string; hint: string }[] = [
+  { src: '/images/ALFABETO DAS BOQUINHAS.webp', alt: 'Atividade Alfabeto das Boquinhas', hint: 'alphabet mouth chart' },
+  { src: '/images/ALIMENTAÇÃO SAUDÁVEL.webp', alt: 'Atividade Alimentação Saudável', hint: 'healthy food worksheet' },
+  { src: '/images/BINGO DAS PALAVRAS.webp', alt: 'Atividade Bingo das Palavras', hint: 'word bingo game' },
+  { src: '/images/MINHA ROTINA.webp', alt: 'Atividade Minha Rotina', hint: 'daily routine chart' },
+  { src: '/images/NOME PRÓPRIO.webp', alt: 'Atividade Nome Próprio', hint: 'name writing practice' },
+  { src: '/images/ROLETA DAS CORES.webp', alt: 'Atividade Roleta das Cores', hint: 'color wheel game' },
+];
 
 export default function KitDescriptionSection() {
   const [api, setApi] = useState<CarouselApi>();
