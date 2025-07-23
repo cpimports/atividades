@@ -1,20 +1,11 @@
 
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star, Eye, PlayCircle } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-  type CarouselApi,
-} from "@/components/ui/carousel";
-import { cn } from '@/lib/utils';
+import { Star, PlayCircle } from 'lucide-react';
 
 interface Testimonial {
   id: number;
@@ -120,56 +111,7 @@ const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => 
 
 
 export default function TestimonialsSection() {
-  const [api, setApi] = useState<CarouselApi>();
-  const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
-  const [liveViewers, setLiveViewers] = useState<number | null>(null);
 
-  useEffect(() => {
-    // This effect runs only on the client
-    const initialViewers = Math.floor(Math.random() * (50 - 20 + 1)) + 20;
-    setLiveViewers(initialViewers);
-
-    const interval = setInterval(() => {
-      setLiveViewers((prevViewers) => {
-        if (prevViewers === null) return 35; // Fallback
-
-        const direction = (prevViewers > 45 || (prevViewers > 25 && Math.random() < 0.5)) ? -1 : 1;
-        const change = (Math.floor(Math.random() * 3) + 1) * direction;
-        
-        let newViewers = prevViewers + change;
-        newViewers = Math.max(20, Math.min(50, newViewers));
-        return newViewers;
-      });
-    }, 3000); // Update every 3 seconds
-
-    return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    if (!api) {
-      return;
-    }
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    const onSelect = () => {
-      if (api.isDragging()) return;
-      setCurrent(api.selectedScrollSnap());
-    };
-
-    api.on("select", onSelect);
-
-    return () => {
-      api.off("select", onSelect);
-    };
-  }, [api]);
-
-  const handleDotClick = useCallback((index: number) => {
-    api?.scrollTo(index);
-  }, [api]);
-  
   return (
     <section id="depoimentos" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
       {/* Diffuse cloud-like elements */}
@@ -210,56 +152,14 @@ export default function TestimonialsSection() {
           </p>
         </div>
         
-        {liveViewers !== null ? (
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-md py-2 px-4 rounded-full shadow-xl shadow-white/10 border border-white/20">
-              <Eye className="h-5 w-5 text-red-400 animate-pulse" />
-              <span className="font-semibold w-8 text-center text-white">{liveViewers}</span>
-              <span className="text-gray-200 text-sm">pessoas assistindo agora</span>
-            </div>
-          </div>
-        ) : (
-          <div className="text-center mb-8 h-[40px]">
-            {/* Placeholder to prevent layout shift */}
-          </div>
-        )}
-
         <div className="mb-16">
-           <Carousel
-            setApi={setApi}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full max-w-5xl mx-auto"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
+           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {youtubeShorts.map((video) => (
-                <CarouselItem key={video.id} className="pl-2 md:pl-4 basis-full md:basis-1/2 lg:basis-1/3">
-                  <div className="p-1">
-                    <VideoFacade videoId={video.id} title={video.title} />
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious aria-label="Slide anterior" className="left-[-0.5rem] sm:-left-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
-            <CarouselNext aria-label="Próximo slide" className="right-[-0.5rem] sm:-right-12 z-10 text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
-          </Carousel>
-          {api && (
-            <div className="flex justify-center items-center space-x-2 mt-4 py-2">
-              {Array.from({ length: count }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => handleDotClick(index)}
-                  className={cn(
-                    "h-2.5 w-2.5 rounded-full transition-all duration-150 ease-in-out",
-                    current === index ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
-                  )}
-                  aria-label={`Ir para slide ${index + 1}`}
-                />
+                <div key={video.id} className="p-1">
+                  <VideoFacade videoId={video.id} title={video.title} />
+                </div>
               ))}
             </div>
-          )}
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
