@@ -1,6 +1,5 @@
 
 import { CheckCircle } from 'lucide-react';
-import Image from 'next/image';
 
 export default function AboutSection() {
   return (
@@ -14,17 +13,7 @@ export default function AboutSection() {
           <p className="mt-4 text-lg text-foreground/80 font-semibold">Lembre-se: Seu tempo é precioso...</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div className="relative aspect-[4/3] rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src="/images/criancas-otimizado.webp"
-              alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
-              fill
-              loading="lazy"
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
+        <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             <ul className="space-y-3">
               {[
@@ -41,7 +30,7 @@ export default function AboutSection() {
                 </li>
               ))}
             </ul>
-            <p className="text-lg text-foreground/80 text-center font-semibold">
+            <p className="text-lg text-foreground/80 text-center font-semibold pt-4">
               Você não está só — pais, educadores e terapeutas enfrentam os mesmos desafios todos os dias.
             </p>
           </div>
