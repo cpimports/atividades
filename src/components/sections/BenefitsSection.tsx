@@ -15,7 +15,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://placehold.co/64x64.png" alt="Atividades adaptadas para autismo" data-ai-hint="autism awareness" width={64} height={64} />,
+    icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism puzzle" width={64} height={64} />,
     title: 'Atividades adaptadas para dificuldades de atenção',
     description: 'Exercícios com linguagem simples, estímulos visuais e estrutura que respeita o ritmo de cada criança, garantindo mais engajamento e menos frustração.',
     titleClassName: 'font-headline text-2xl text-primary',
