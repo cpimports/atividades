@@ -26,7 +26,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/caderno-otimizado.webp" alt="Ícone de PDF representando acesso digital" data-ai-hint="documents files" width={56} height={56} />,
+    icon: <Image src="/images/caderno-otimizado.webp" alt="Ícone de PDF representando acesso digital" data-ai-hint="documents files" width={64} height={64} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
     titleClassName: 'font-headline text-2xl text-primary',
