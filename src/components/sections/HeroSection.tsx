@@ -61,6 +61,17 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 pt-8">
+        <div className="mb-8 animate-fade-in-medium">
+          <Image
+            src="/images/geniozinho-otimizado.webp"
+            alt="Logo Gêniozinho em Ação"
+            data-ai-hint="logo brain lightbulb"
+            width={128}
+            height={128}
+            className="mx-auto rounded-full"
+            priority
+          />
+        </div>
         <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
           Transforme o Dia a Dia da Sua Criança!
         </h1>
