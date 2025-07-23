@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -26,7 +27,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/caderno-otimizado.webp" alt="Acesso em PDF com organização por temas" data-ai-hint="notebook organized" width={64} height={64} />,
+    icon: <Image src="/images/PDF-otimizado.webp" alt="Acesso em PDF com organização por temas" data-ai-hint="pdf document" width={64} height={64} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'As atividades são organizadas por temas, facilitando o acesso e a aplicação no dia a dia escolar ou em casa.',
     titleClassName: 'font-headline text-2xl text-primary',
