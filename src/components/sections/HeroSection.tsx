@@ -63,12 +63,12 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-8 animate-fade-in-medium">
           <Image
-            src="https://placehold.co/128x128.png"
+            src="https://i.imgur.com/1ia5AVO.jpeg"
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo brain lightbulb"
-            width={128}
-            height={128}
-            className="mx-auto rounded-full"
+            width={150}
+            height={150}
+            className="mx-auto"
             priority
           />
         </div>
