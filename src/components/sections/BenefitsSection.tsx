@@ -21,7 +21,7 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://placehold.co/64x64.png" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} />,
+    icon: <Image src="/images/PDF-otimizado.webp" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Material digital pronto para imprimir, com acesso vitalício e organizado para que você encontre a atividade certa sempre que precisar.',
     titleClassName: 'font-headline text-2xl text-primary',
