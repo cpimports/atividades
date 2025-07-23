@@ -27,12 +27,6 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/aprendendo-otimizado.webp" alt="Material lúdico e interativo pronto para imprimir" data-ai-hint="kids learning" width={64} height={64} />,
-    title: 'Material lúdico e interativo pronto para imprimir',
-    description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar',
-    titleClassName: 'font-headline text-2xl text-primary',
-  },
-  {
     icon: <Image src="/images/caderno-otimizado.webp" alt="Ícone de prancheta com lápis representando atividades escolares" data-ai-hint="documents files" width={64} height={64} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
@@ -96,7 +90,7 @@ export default function BenefitsSection() {
             Um pacote completo para transformar o aprendizado em uma aventura diária, repleta de descobertas e desenvolvimento.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {deliverables.map((item, index) => (
             <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
               <CardHeader className="flex flex-col items-center">
