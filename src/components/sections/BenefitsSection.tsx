@@ -27,9 +27,9 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/caderno-otimizado.webp" alt="Ícone de prancheta com lápis representando atividades escolares" data-ai-hint="documents files" width={64} height={64} />,
-    title: 'Acesso em PDF com organização por temas',
-    description: 'Você poderá acessar o material completo em PDF, com todas as atividades separadas por temas como linguagem, cores, números, formas e muito mais. Fácil de localizar e aplicar',
+    icon: <Image src="/images/aprendendo-otimizado.webp" alt="Material lúdico e interativo pronto para imprimir" data-ai-hint="kids learning" width={64} height={64} />,
+    title: 'Material lúdico e interativo pronto para imprimir',
+    description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar',
     titleClassName: 'font-headline text-2xl text-primary',
   },
 ];
