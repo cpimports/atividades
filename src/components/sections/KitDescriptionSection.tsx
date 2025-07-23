@@ -16,38 +16,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
-const carouselImages = [
-  {
-    src: "https://i.imgur.com/Yn2TFGz.jpeg",
-    alt: "Exemplo de Atividade do Kit Gêniozinho em Ação - Foco Vertical",
-    hint: "activity sheet",
-  },
-  {
-    src: "https://i.imgur.com/vV6dZzL.jpeg",
-    alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 2 - Foco Vertical",
-    hint: "activity sheet kids",
-  },
-  {
-    src: "https://i.imgur.com/T61nB4k.jpeg",
-    alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 3 - Foco Vertical",
-    hint: "atividade infantil",
-  },
-  {
-    src: "https://i.imgur.com/WXvX9kt.jpeg",
-    alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 4 - Foco Vertical",
-    hint: "kids drawing",
-  },
-  {
-    src: "https://i.imgur.com/PJJnvy0.png",
-    alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 5 - Foco Vertical",
-    hint: "kids activity",
-  },
-  {
-    src: "https://i.imgur.com/KBRpWOO.png",
-    alt: "Exemplo de Atividade do Kit Gêniozinho em Ação 6 - Foco Vertical",
-    hint: "coloring page",
-  },
-];
+const carouselImages: { src: string; alt: string; hint: string }[] = [];
 
 export default function KitDescriptionSection() {
   const [api, setApi] = useState<CarouselApi>();
@@ -167,7 +136,7 @@ export default function KitDescriptionSection() {
               <CarouselPrevious aria-label="Slide anterior" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
               <CarouselNext aria-label="Próximo slide" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
             </Carousel>
-            {api && (
+            {api && count > 0 && (
               <div className="flex justify-center items-center space-x-2 mt-4 py-2">
                 {Array.from({ length: count }).map((_, index) => (
                   <button
