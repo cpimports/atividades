@@ -60,7 +60,7 @@ const testimonialsData: Testimonial[] = [
     descriptor: 'Pai',
     name: 'Rafael T.',
     text: "Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis.",
-    avatarUrl: 'https://placehold.co/64x64.png',
+    avatarUrl: '/images/pai-otimizado.webp',
     avatarFallback: 'RT',
     avatarHint: 'man portrait',
   },
@@ -257,7 +257,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
-
-    
-
-    
