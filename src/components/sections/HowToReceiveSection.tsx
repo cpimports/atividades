@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const steps = [
   {
-    icon: <Image src="https://i.imgur.com/z0BAXDu.png" alt="Email icon" data-ai-hint="email mail" width={40} height={40} className="text-primary" />,
+    icon: <Image src="/images/EMAIL.webp" alt="Email icon" data-ai-hint="email mail" width={40} height={40} className="text-primary" />,
     title: 'RECEBA EM SEU E-MAIL',
     description: 'Receba Imediatamente em seu e-mail.',
   },
