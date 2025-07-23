@@ -6,6 +6,13 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Star, PlayCircle } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
 
 interface Testimonial {
   id: number;
@@ -153,13 +160,25 @@ export default function TestimonialsSection() {
         </div>
         
         <div className="mb-16">
-           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <Carousel 
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
+          >
+            <CarouselContent>
               {youtubeShorts.map((video) => (
-                <div key={video.id} className="p-1">
-                  <VideoFacade videoId={video.id} title={video.title} />
-                </div>
+                <CarouselItem key={video.id} className="sm:basis-1/2 md:basis-1/3">
+                  <div className="p-1">
+                    <VideoFacade videoId={video.id} title={video.title} />
+                  </div>
+                </CarouselItem>
               ))}
-            </div>
+            </CarouselContent>
+            <CarouselPrevious aria-label="Slide anterior" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+            <CarouselNext aria-label="Próximo slide" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+          </Carousel>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
