@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -30,6 +29,12 @@ const deliverables = [
     icon: <Image src="/images/caderno-otimizado.webp" alt="Acesso em PDF com organização por temas" data-ai-hint="notebook organized" width={64} height={64} />,
     title: 'Acesso em PDF com organização por temas',
     description: 'As atividades são organizadas por temas, facilitando o acesso e a aplicação no dia a dia escolar ou em casa.',
+    titleClassName: 'font-headline text-2xl text-primary',
+  },
+  {
+    icon: <Image src="/images/aprendendo-otimizado.webp" alt="Material lúdico e interativo pronto para imprimir" data-ai-hint="kids learning" width={64} height={64} />,
+    title: 'Material lúdico e interativo pronto para imprimir',
+    description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar',
     titleClassName: 'font-headline text-2xl text-primary',
   },
 ];
