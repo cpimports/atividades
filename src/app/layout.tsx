@@ -38,6 +38,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.converteai.net" />
         <link rel="preconnect" href="https://images.converteai.net" />
         <link rel="preconnect" href="https://api.vturb.com.br" />
+        <link rel="preconnect" href="https://cdn.utmify.com.br" />
 
         {/* VSL Optimizations (ConverteAi) */}
         <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/686fd145e397e681c4ce4c3b/v4/embed.html" as="fetch" crossOrigin="anonymous" />
@@ -51,16 +52,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://scripts.converteai.net" />
         <link rel="dns-prefetch" href="https://images.converteai.net" />
         <link rel="dns-prefetch" href="https://api.vturb.com.br" />
-      </head>
-      <body className="font-body antialiased">
-        <noscript>
-          <img height="1" width="1" style={{display: 'none'}}
-          src="https://www.facebook.com/tr?id=1650519618943117&ev=PageView&noscript=1"/>
-        </noscript>
-        
-        <AnnouncementBar />
-        {children}
-        <Toaster />
 
         {/* Meta Pixel Code */}
         <Script id="facebook-pixel-base" strategy="afterInteractive">
@@ -77,23 +68,50 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
+
+        {/* UTMify Pixel Loader */}
+        <Script id="utmify-pixel-loader" strategy="afterInteractive">
+          {`
+            window.pixelId = "689374be46b9142a86a43379";
+            var a = document.createElement("script");
+            a.setAttribute("async", "");
+            a.setAttribute("defer", "");
+            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+            document.head.appendChild(a);
+          `}
+        </Script>
+      </head>
+      <body className="font-body antialiased">
+        <noscript>
+          <img height="1" width="1" style={{display: 'none'}}
+          src="https://www.facebook.com/tr?id=1650519618943117&ev=PageView&noscript=1"/>
+        </noscript>
         
-        {/* InitiateCheckout Event Script */}
-        <Script id="facebook-pixel-initiate-checkout" strategy="lazyOnload">
+        <AnnouncementBar />
+        {children}
+        <Toaster />
+
+        {/* InitiateCheckout Event Script for FB and UTMify */}
+        <Script id="initiate-checkout-tracker" strategy="lazyOnload">
           {`
             document.addEventListener('click', function(e) {
               if (e.target && e.target.closest('#btn-comprar')) {
+                // Facebook Pixel
                 if (typeof fbq === 'function') {
                   fbq('track', 'InitiateCheckout');
+                }
+                // UTMify Pixel
+                if (window.utmify_pixel && typeof window.utmify_pixel.track === 'function') {
+                  window.utmify_pixel.track('InitiateCheckout');
                 }
               }
             }, true);
           `}
         </Script>
 
-        {/* UTMify Script */}
+        {/* UTMify Script for appending UTMs to links */}
         <Script 
-          id="utmify-script"
+          id="utmify-utm-script"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           strategy="afterInteractive"
           data-utmify-prevent-xcod-sck
