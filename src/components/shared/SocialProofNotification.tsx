@@ -31,17 +31,17 @@ export default function SocialProofNotification() {
       setAnimationKey(prevKey => prevKey + 1); // Reset animation
       setIsVisible(true);
 
-      // Hide the notification after 3.5 seconds, allowing for animation out
+      // Hide the notification after 7.5 seconds, allowing for animation out
       setTimeout(() => {
         setIsVisible(false);
-      }, 3500);
+      }, 7500);
     };
 
     // Show the first notification after a short delay
     const initialTimeout = setTimeout(showNotification, 4000);
     
-    // Then set the interval to show notifications every 8 seconds (4s visible + 4s hidden)
-    const interval = setInterval(showNotification, 8000);
+    // Then set the interval to show notifications every 12 seconds (8s visible + 4s hidden)
+    const interval = setInterval(showNotification, 12000);
 
     return () => {
       clearTimeout(initialTimeout);
