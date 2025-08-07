@@ -40,7 +40,7 @@ export default function SocialProofNotification() {
     };
 
     // Mostra a primeira notificação após um pequeno atraso
-    const initialTimeout = setTimeout(showRandomNotification, 3000);
+    const initialTimeout = setTimeout(showRandomNotification, 5000);
 
     // Mostra uma nova notificação a cada 15 segundos
     const interval = setInterval(showRandomNotification, 15000);
@@ -64,8 +64,9 @@ export default function SocialProofNotification() {
     >
       <ShoppingCart className="h-6 w-6" />
       <div>
-        <p className="font-bold">{notification.name}</p>
-        <p className="text-sm">acabou de comprar!</p>
+        <p className="text-sm">
+          <span className="font-bold">{notification.name}</span> acabou de comprar!
+        </p>
       </div>
     </div>
   );
