@@ -58,10 +58,9 @@ export default function SocialProofNotification() {
   return (
     <div
       key={notification.key}
-      className={`fixed bottom-5 left-5 z-50 flex items-center gap-3 rounded-lg px-4 py-3 text-white shadow-lg ${
+      className={`fixed bottom-5 left-5 z-50 flex items-center gap-3 rounded-lg bg-green-500 px-4 py-3 text-white shadow-lg ${
         isVisible ? 'animate-fadeInOut' : 'opacity-0'
       }`}
-      style={{ backgroundColor: '#5bc0de' }}
     >
       <ShoppingCart className="h-6 w-6" />
       <div>
