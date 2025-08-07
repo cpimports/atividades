@@ -31,10 +31,10 @@ export default function SocialProofNotification() {
       setAnimationKey(prevKey => prevKey + 1); // Reset animation
       setIsVisible(true);
 
-      // Hide the notification after 7.5 seconds, allowing for animation out
+      // Hide the notification after the animation ends (8s)
       setTimeout(() => {
         setIsVisible(false);
-      }, 7500);
+      }, 8000);
     };
 
     // Show the first notification after a short delay

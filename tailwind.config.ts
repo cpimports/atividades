@@ -134,8 +134,8 @@ export default {
         },
         'slide-in-out': {
           '0%': { transform: 'translateY(100%)', opacity: '0' },
-          '15%': { transform: 'translateY(0)', opacity: '1' },
-          '85%': { transform: 'translateY(0)', opacity: '1' },
+          '10%': { transform: 'translateY(0)', opacity: '1' },
+          '90%': { transform: 'translateY(0)', opacity: '1' },
           '100%': { transform: 'translateY(100%)', opacity: '0' },
         }
       },
@@ -151,7 +151,7 @@ export default {
         'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
         sparkle: 'sparkle 1.5s infinite alternate',
-        'slide-in-out': 'slide-in-out 4s ease-in-out forwards',
+        'slide-in-out': 'slide-in-out 8s ease-in-out forwards',
       },
     },
   },
