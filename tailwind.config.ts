@@ -150,7 +150,7 @@ export default {
         'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
         sparkle: 'sparkle 1.5s infinite alternate',
-        'fadeInOut': 'fadeInOut 5.5s forwards',
+        'fadeInOut': 'fadeInOut 10.5s forwards',
       },
     },
   },
