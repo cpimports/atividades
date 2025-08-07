@@ -6,8 +6,8 @@ import { ShoppingBag } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const names = [
-  'Ana', 'Beatriz', 'Carlos', 'Daniela', 'Eduardo', 'Fernanda', 'Gustavo', 'Helena', 'Isabela',
-  'João', 'Karina', 'Lucas', 'Mariana', 'Nicole', 'Otávio', 'Patrícia', 'Ricardo', 'Sofia', 'Tiago', 'Vanessa'
+  'Ana C.', 'Beatriz S.', 'Carlos M.', 'Daniela R.', 'Eduardo F.', 'Fernanda A.', 'Gustavo L.', 'Helena P.', 'Isabela G.',
+  'João V.', 'Karina O.', 'Lucas T.', 'Mariana B.', 'Nicole J.', 'Otávio N.', 'Patrícia D.', 'Ricardo E.', 'Sofia Q.', 'Tiago H.', 'Vanessa W.'
 ];
 
 const locations = [
@@ -28,17 +28,17 @@ export default function SocialProofNotification() {
       setCurrentBuyer({ name: randomName, location: randomLocation });
       setIsVisible(true);
 
-      // Hide the notification after 10 seconds
+      // Hide the notification after 5 seconds
       setTimeout(() => {
         setIsVisible(false);
-      }, 10000);
+      }, 5000);
     };
 
     // Show the first notification after a short delay
     const initialTimeout = setTimeout(showRandomNotification, 5000);
     
-    // Then, show a new notification every 15 seconds
-    const interval = setInterval(showRandomNotification, 15000);
+    // Then, show a new notification every 5 seconds
+    const interval = setInterval(showRandomNotification, 5000);
 
     return () => {
       clearTimeout(initialTimeout);
