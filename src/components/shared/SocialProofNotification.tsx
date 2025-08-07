@@ -5,16 +5,16 @@ import { useEffect, useState } from 'react';
 import { ShoppingCart } from 'lucide-react';
 
 const buyers = [
-    { name: 'Nicole S.', location: 'São Paulo, SP' },
-    { name: 'Lucas M.', location: 'Rio de Janeiro, RJ' },
-    { name: 'Fernanda L.', location: 'Belo Horizonte, MG' },
-    { name: 'Rafael P.', location: 'Curitiba, PR' },
-    { name: 'Juliana A.', location: 'Salvador, BA' },
-    { name: 'Carlos E.', location: 'Fortaleza, CE' },
-    { name: 'Ana B.', location: 'Porto Alegre, RS' },
-    { name: 'Pedro H.', location: 'Recife, PE' },
-    { name: 'Beatriz C.', location: 'Goiânia, GO' },
-    { name: 'Thiago R.', location: 'Brasília, DF' },
+    { name: 'Nicole', location: 'São Paulo, SP' },
+    { name: 'Lucas', location: 'Rio de Janeiro, RJ' },
+    { name: 'Fernanda', location: 'Belo Horizonte, MG' },
+    { name: 'Rafael', location: 'Curitiba, PR' },
+    { name: 'Juliana', location: 'Salvador, BA' },
+    { name: 'Carlos', location: 'Fortaleza, CE' },
+    { name: 'Ana', location: 'Porto Alegre, RS' },
+    { name: 'Pedro', location: 'Recife, PE' },
+    { name: 'Beatriz', location: 'Goiânia, GO' },
+    { name: 'Thiago', location: 'Brasília, DF' },
 ];
 
 interface CurrentNotification {
