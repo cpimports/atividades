@@ -5,7 +5,6 @@ import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
-import SocialProofNotification from '@/components/shared/SocialProofNotification';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -91,8 +90,7 @@ export default function RootLayout({
         <AnnouncementBar />
         {children}
         <Toaster />
-        <SocialProofNotification />
-
+        
         {/* InitiateCheckout Event Script for FB and UTMify */}
         <Script id="initiate-checkout-tracker" strategy="lazyOnload">
           {`
