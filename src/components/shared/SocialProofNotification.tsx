@@ -28,17 +28,17 @@ export default function SocialProofNotification() {
       setCurrentBuyer({ name: randomName, location: randomLocation });
       setIsVisible(true);
 
-      // Hide the notification after 5 seconds
+      // Hide the notification after 10 seconds
       setTimeout(() => {
         setIsVisible(false);
-      }, 5000);
+      }, 10000);
     };
 
     // Show the first notification after a short delay
     const initialTimeout = setTimeout(showRandomNotification, 5000);
     
-    // Then, show a new notification every 12 seconds
-    const interval = setInterval(showRandomNotification, 12000);
+    // Then, show a new notification every 15 seconds
+    const interval = setInterval(showRandomNotification, 15000);
 
     return () => {
       clearTimeout(initialTimeout);
