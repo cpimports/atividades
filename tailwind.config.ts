@@ -132,12 +132,6 @@ export default {
             boxShadow: '0 0 0 8px hsla(48, 96%, 57%, 0)', 
           },
         },
-        'slide-in-out': {
-          '0%': { transform: 'translateX(-120%)', opacity: '0' },
-          '10%': { transform: 'translateX(0)', opacity: '1' },
-          '90%': { transform: 'translateX(0)', opacity: '1' },
-          '100%': { transform: 'translateX(-120%)', opacity: '0' },
-        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -151,7 +145,6 @@ export default {
         'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
         sparkle: 'sparkle 1.5s infinite alternate',
-        'slide-in-out': 'slide-in-out 5s ease-in-out forwards',
       },
     },
   },
