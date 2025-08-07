@@ -132,6 +132,11 @@ export default {
             boxShadow: '0 0 0 8px hsla(48, 96%, 57%, 0)', 
           },
         },
+        'fadeInOut': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '10%, 90%': { opacity: '1', transform: 'translateY(0)' },
+          '100%': { opacity: '0', transform: 'translateY(20px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -145,6 +150,7 @@ export default {
         'twinkle-colorful': 'twinkle-colorful 3s ease-in-out infinite',
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
         sparkle: 'sparkle 1.5s infinite alternate',
+        'fadeInOut': 'fadeInOut 5.5s forwards',
       },
     },
   },
