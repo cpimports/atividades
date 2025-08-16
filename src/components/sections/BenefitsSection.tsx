@@ -9,27 +9,27 @@ import Image from 'next/image';
 
 const deliverables = [
   {
-    icon: <Image src="/images/abc-otimizado.webp" alt="Pacote de atividades" data-ai-hint="alphabet blocks" width={64} height={64} loading="lazy"/>,
-    title: 'Pacote completo com mais de 1000 atividades educativas',
-    description: 'Receba um acervo variado de atividades pensadas para estimular diferentes habilidades cognitivas e comportamentais, organizadas para facilitar a aplicação no dia a dia.',
+    icon: <Image src="https://i.imgur.com/YvI4vpP.jpeg" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
+    title: 'Mais de 1.500 Atividades Adaptadas para Crianças Autistas',
+    description: 'Acervo completo de atividades para estimular habilidades cognitivas, motoras e comportamentais, pronto para uso no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="/images/autismo-otimizado.webp" alt="Atividades adaptadas para autismo" data-ai-hint="autism puzzle" width={64} height={64} loading="lazy" />,
-    title: 'Atividades adaptadas para dificuldades de atenção',
-    description: 'Exercícios com linguagem simples, estímulos visuais e estrutura que respeita o ritmo de cada criança, garantindo mais engajamento e menos frustração.',
+    icon: <Image src="https://i.imgur.com/JNBiwQN.jpeg" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
+    title: 'Atividades Lúdicas e Adaptadas',
+    description: 'Exercícios de fácil compreensão, com estímulos visuais e linguagem simples para promover mais engajamento.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/PDF-otimizado.webp" alt="PDF Organizado" data-ai-hint="pdf document" width={64} height={64} loading="lazy" />,
-    title: 'Acesso em PDF com organização por temas',
-    description: 'Material digital pronto para imprimir, com acesso vitalício e organizado para que você encontre a atividade certa sempre que precisar.',
+    icon: <Image src="https://i.imgur.com/CgFJ1gS.png" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
+    title: 'Acesso Vitalício e Organizado',
+    description: 'Material digital pronto para imprimir, com acesso vitalício e organização por categorias.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="/images/aprendendo-otimizado.webp" alt="Material lúdico" data-ai-hint="kids playing education" width={64} height={64} loading="lazy"/>,
-    title: 'Material lúdico e interativo pronto para imprimir',
-    description: 'Tudo foi criado para transformar o aprendizado em diversão! São jogos, desafios e exercícios que encantam e educam ao mesmo tempo — é só imprimir e usar.',
+    icon: <Image src="https://i.imgur.com/Lwg6HKn.png" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
+    title: 'Comunidade Exclusiva de Professores',
+    description: 'Participe de um grupo fechado para trocar experiências e compartilhar atividades adaptadas.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
 ];
@@ -84,13 +84,20 @@ export default function BenefitsSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {deliverables.map((item, index) => (
             <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
-              <CardHeader className="flex flex-col items-center">
-                <div className="p-4 bg-primary/10 rounded-full mb-4 inline-block">
-                  {item.icon}
-                </div>
-                <CardTitle className={item.titleClassName || 'font-headline text-xl text-primary'}>{item.title}</CardTitle>
+              <CardHeader className="p-0">
+                 <div className="aspect-video relative">
+                    <Image
+                      src={(item.icon as React.ReactElement).props.src}
+                      alt={(item.icon as React.ReactElement).props.alt}
+                      data-ai-hint={(item.icon as React.ReactElement).props['data-ai-hint']}
+                      fill
+                      className="object-cover rounded-t-lg"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                    />
+                  </div>
               </CardHeader>
-              <CardContent className="flex-grow">
+              <CardContent className="p-6 flex-grow flex flex-col">
+                 <CardTitle className={'font-headline text-xl text-primary mt-4 mb-2 flex-grow'}>{item.title}</CardTitle>
                 <p className="text-foreground/70">{item.description}</p>
               </CardContent>
             </Card>
