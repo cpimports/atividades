@@ -88,8 +88,8 @@ export default function KitDescriptionSection() {
             src="https://i.imgur.com/ubkRboJ.png"
             alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
             data-ai-hint="kids playing"
-            width={128}
-            height={128}
+            width={140}
+            height={140}
             className="mx-auto mt-[-2rem] md:mt-[-3rem] mb-8 [filter:drop-shadow(0_0_10px_rgba(255,255,255,0.3))]"
             loading="lazy"
           />
