@@ -34,10 +34,10 @@ const nextConfig: NextConfig = {
     ],
   },
   experimental: {
-    allowedDevOrigins: [
-      'https://6000-firebase-pagina-atv-autistas-1755351984826.cluster-ve345ymguzcd6qqzuko2qbxtfe.cloudworkstations.dev',
-    ],
   },
+  allowedDevOrigins: [
+    'https://6000-firebase-pagina-atv-autistas-1755351984826.cluster-ve345ymguzcd6qqzuko2qbxtfe.cloudworkstations.dev',
+  ],
 };
 
 export default nextConfig;
