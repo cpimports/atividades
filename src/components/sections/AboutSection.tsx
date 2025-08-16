@@ -17,10 +17,9 @@ export default function AboutSection() {
           <div className="space-y-6">
             <ul className="space-y-3">
               {[
-                "Seu aluno ou filho tem dificuldade para manter o foco?",
-                "Você sente que ele se frustra facilmente com atividades comuns?",
-                "Fica difícil encontrar materiais que realmente estimulem o aprendizado?",
-                "Já tentou de tudo, mas sente que falta algo mais interativo?",
+                "Passar horas buscando e adaptando atividades que nem sempre funcionam.",
+                "A dificuldade de encontrar materiais que realmente prendam a atenção dos alunos.",
+                "A sensação de que falta apoio e de que você precisa criar tudo do zero."
               ].map((item, index) => (
                 <li key={index}>
                   <div className="bg-card p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start text-card-foreground">
