@@ -17,19 +17,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
 const carouselImages: { src: string; alt: string; hint: string }[] = [
-    { src: 'https://i.imgur.com/9xG6c21.png', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
-    { src: 'https://i.imgur.com/yO89y08.png', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
-    { src: 'https://i.imgur.com/iR32aM3.png', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
-    { src: 'https://i.imgur.com/2bQ2B6O.png', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
-    { src: 'https://i.imgur.com/7g5h4Q5.png', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
-    { src: 'https://i.imgur.com/yI5b1fP.png', alt: 'Atividade de Números', hint: 'numbers counting' },
-    { src: 'https://i.imgur.com/S8e9J2R.png', alt: 'Atividade de Cores', hint: 'colors activity' },
-    { src: 'https://i.imgur.com/8cZ1ePm.png', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
-    { src: 'https://i.imgur.com/p5Qf7jT.png', alt: 'Atividade Sensorial', hint: 'sensory play' },
-    { src: 'https://i.imgur.com/3fX3Z5u.png', alt: 'Atividade de Leitura', hint: 'reading practice' },
-    { src: 'https://i.imgur.com/k6KjS7V.png', alt: 'Atividade de Escrita', hint: 'writing practice' },
-    { src: 'https://i.imgur.com/z0a7X9a.png', alt: 'Atividade de Emoções', hint: 'emotions chart' },
-    { src: 'https://i.imgur.com/D4J8h1A.png', alt: 'Quebra-cabeça', hint: 'puzzle game' },
+    { src: 'https://i.imgur.com/SciijaD.jpeg', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
+    { src: 'https://i.imgur.com/KSkNNlg.png', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
+    { src: 'https://i.imgur.com/B9r3Mjk.png', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
+    { src: 'https://i.imgur.com/9D41EJs.png', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
+    { src: 'https://i.imgur.com/vV3dwBm.png', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
+    { src: 'https://i.imgur.com/4KBRIQ6.jpeg', alt: 'Atividade de Números', hint: 'numbers counting' },
+    { src: 'https://i.imgur.com/lfA9SQm.png', alt: 'Atividade de Cores', hint: 'colors activity' },
+    { src: 'https://i.imgur.com/Tfg8tik.png', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
+    { src: 'https://i.imgur.com/E3IOgYJ.jpeg', alt: 'Atividade Sensorial', hint: 'sensory play' },
+    { src: 'https://i.imgur.com/xd0G7oC.png', alt: 'Atividade de Leitura', hint: 'reading practice' },
+    { src: 'https://i.imgur.com/SuPfmQ8.png', alt: 'Atividade de Escrita', hint: 'writing practice' },
+    { src: 'https://i.imgur.com/OG9XCJR.png', alt: 'Atividade de Emoções', hint: 'emotions chart' },
+    { src: 'https://i.imgur.com/2btcAKk.png', alt: 'Quebra-cabeça', hint: 'puzzle game' },
 ];
 
 export default function KitDescriptionSection() {
