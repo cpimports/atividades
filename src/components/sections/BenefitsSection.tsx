@@ -36,7 +36,7 @@ const deliverables = [
 
 const bonusImages = [
     { src: 'https://i.imgur.com/kAN1TAq.png', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
-    { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 2', hint: 'educational game' },
+    { src: 'https://i.imgur.com/NQGTwqs.png', alt: 'Bônus 2', hint: 'educational game' },
     { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 3', hint: 'coloring page' },
     { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 4', hint: 'learning chart' },
 ]
