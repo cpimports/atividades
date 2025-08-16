@@ -136,7 +136,7 @@ export default function KitDescriptionSection() {
                 </div>
               )}
                <p className="text-center text-md text-gray-300 mt-6 mb-4">
-                Essas são apenas algumas das mais de 1000 atividades exclusivas que você recebe no Kit Gêniozinho em Ação!
+                Essas são apenas algumas das mais de 1500 atividades exclusivas que você recebe na Plataforma Gêniozinho em Ação!
               </p>
             </div>
           </div>
