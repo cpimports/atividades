@@ -70,8 +70,8 @@ export default function AboutSection() {
 
         {/* Comparison Section */}
         <div className="mt-16 max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-          {/* With Kit - Aparece primeiro no mobile */}
-          <div className="bg-darkPurple/10 p-6 rounded-xl shadow-lg border border-primary/20 order-1 md:order-2">
+          {/* With Kit */}
+          <div className="bg-darkPurple/10 p-6 rounded-xl shadow-lg border border-primary/20 order-2 md:order-2">
             <h3 className="font-headline text-2xl font-bold text-center mb-6 text-purple-800">Com o Gêniozinho em Ação</h3>
              <ul className="space-y-4">
               {withKit.map((item, index) => (
@@ -85,8 +85,8 @@ export default function AboutSection() {
             </ul>
           </div>
 
-          {/* Without Kit - Aparece depois no mobile */}
-          <div className="bg-muted/50 p-6 rounded-xl shadow-md border border-border/20 order-2 md:order-1">
+          {/* Without Kit */}
+          <div className="bg-muted/50 p-6 rounded-xl shadow-md border border-border/20 order-1 md:order-1">
             <h3 className="font-headline text-2xl font-bold text-center mb-6 text-red-800">Sem o Gêniozinho em Ação</h3>
             <ul className="space-y-4">
               {withoutKit.map((item, index) => (
