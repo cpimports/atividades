@@ -96,6 +96,18 @@ export default function HeroSection() {
           <p className="mt-2 text-xs text-gray-400 animate-fade-in-slow" style={{ animationDelay: '0.7s' }}>
             REVISADO POR PEDAGOGOS E PSICÓLOGOS
           </p>
+          <div className="mt-2 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
+            <Image
+                src="https://i.imgur.com/xCuyx6F.png"
+                alt="Métodos de pagamento aceitos"
+                data-ai-hint="payment methods"
+                width={250}
+                height={25}
+                className="object-contain"
+                loading="lazy"
+                sizes="250px"
+              />
+          </div>
         </div>
       </div>
     </section>
