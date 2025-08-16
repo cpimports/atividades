@@ -61,9 +61,9 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="mb-8 animate-fade-in-medium">
+        <div className="mb-8 animate-fade-in-medium [filter:drop-shadow(0_0_10px_theme(colors.yellow.400))]">
           <Image
-            src="/images/geniozinho-otimizado.webp"
+            src="https://i.imgur.com/ubkRboJ.png"
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo brain lightbulb"
             width={150}
