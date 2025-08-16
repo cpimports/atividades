@@ -10,6 +10,9 @@ import { Skeleton } from '@/components/ui/skeleton';
 const AboutSection = dynamic(() => import('@/components/sections/AboutSection'), { 
   loading: () => <Skeleton className="h-[400px] w-full" />
 });
+const ComparisonSection = dynamic(() => import('@/components/sections/ComparisonSection'), {
+  loading: () => <Skeleton className="h-[400px] w-full" />
+});
 const KitDescriptionSection = dynamic(() => import('@/components/sections/KitDescriptionSection'), {
   loading: () => <Skeleton className="h-[600px] w-full" />
 });
@@ -36,6 +39,7 @@ export default function HomePage() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
+        <ComparisonSection />
         <HowToReceiveSection />
         <KitDescriptionSection />
         <BenefitsSection />

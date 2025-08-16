@@ -19,8 +19,7 @@ export default function AboutSection() {
   ];
 
   return (
-    <section id="about" className="pt-16 md:pt-24 pb-8 md:pb-12 relative">
-      <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/20 via-darkPurple/10 to-background/5 -z-10"></div>
+    <section id="about" className="pt-16 md:pt-24 bg-gradient-to-br from-darkPurple/20 via-darkPurple/10 to-background/5 -z-10">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
