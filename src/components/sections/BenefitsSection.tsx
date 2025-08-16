@@ -34,21 +34,12 @@ const deliverables = [
   },
 ];
 
-const currentExclusiveBonuses = [
-  { emoji: "🖌️", text: "Atividades de Colorir" },
-  { emoji: "🔺", text: "Atividades de Formas Geométricas" },
-  { emoji: "✏️", text: "Atividades de Complete as Palavras" },
-  { emoji: "🔊", text: "Atividades de Consciência Fonológica" },
-  { emoji: "🍎", text: "Atividades de Alimentação Saudável" },
-  { emoji: "🔢", text: "Atividades de Números" },
-  { emoji: "🎨", text: "Atividades de Cores" },
-  { emoji: "🔠", text: "Atividades de Letras" },
-  { emoji: "📝", text: "Atividades de Sílabas" },
-  { emoji: "👨‍👩‍👧‍👦", text: "Acesso à Comunidade Exclusiva de Pais e Professores" },
-  { emoji: "📅", text: "Novas Atividades Publicadas Todos os Dias" },
-  { emoji: "🚀", text: "Acesso Imediato e Vitalício" },
-];
-
+const bonusImages = [
+    { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
+    { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 2', hint: 'educational game' },
+    { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 3', hint: 'coloring page' },
+    { src: 'https://placehold.co/1080x1350.png', alt: 'Bônus 4', hint: 'learning chart' },
+]
 
 export default function BenefitsSection() {
   const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
@@ -142,23 +133,21 @@ export default function BenefitsSection() {
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
           
-          <Card className="mt-12 bg-primary/5 border-2 border-primary/20 shadow-xl p-6 md:p-8 rounded-lg backdrop-blur-md">
-            <CardHeader className="p-0 mb-6">
-              <CardTitle className="font-semibold tracking-tight font-headline text-2xl sm:text-3xl text-primary text-center">
-                Seus Bônus Exclusivos Valem Somente Hoje!
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="p-0">
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-4 text-foreground/90">
-                {currentExclusiveBonuses.map((bonus, index) => (
-                  <li key={index} className="flex items-start space-x-3 bg-background/50 p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200">
-                    <span className="text-2xl mt-px">{bonus.emoji}</span>
-                    <span className="font-medium">{bonus.text}</span>
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            {bonusImages.map((image, index) => (
+                <div key={index} className="relative aspect-[1080/1350] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                    <Image
+                        src={image.src}
+                        alt={image.alt}
+                        data-ai-hint={image.hint}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 250px"
+                        loading="lazy"
+                    />
+                </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 flex justify-center">
