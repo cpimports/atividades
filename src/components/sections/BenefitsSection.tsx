@@ -147,6 +147,16 @@ export default function BenefitsSection() {
                 </div>
             ))}
           </div>
+
+          <div className="mt-8 max-w-2xl mx-auto p-6 bg-accent/20 border-2 border-dashed border-accent/80 rounded-lg text-center">
+            <p className="font-semibold text-foreground/90">
+              Todos os 12 bônus, que custariam <span className="line-through">R$297,00</span>
+            </p>
+            <p className="font-bold text-xl text-primary mt-2">
+              HOJE SAEM TOTALMENTE GRÁTIS!
+            </p>
+          </div>
+
         </div>
 
         <div className="mt-12 flex justify-center">
