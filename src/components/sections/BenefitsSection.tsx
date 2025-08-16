@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -107,7 +108,7 @@ export default function BenefitsSection() {
                 </div>
                 <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24">
                   <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.hours}</span>
-                  <span className="block text-xs sm:text-sm text-primary/90">Horas</span>
+                  <span className="block text-xs smtext-sm text-primary/90">Horas</span>
                 </div>
                 <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24">
                   <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.minutes}</span>
