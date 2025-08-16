@@ -84,16 +84,6 @@ export default function KitDescriptionSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <Image
-            src="https://i.imgur.com/hwMc8SF.png"
-            alt="Atividades do Kit Gêniozinho em Ação"
-            data-ai-hint="activity sheets"
-            width={180}
-            height={180}
-            className="mx-auto mb-8"
-            loading="lazy"
-            sizes="180px"
-          />
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
             Mais de 1000 atividades prontas para usar
           </h2>
