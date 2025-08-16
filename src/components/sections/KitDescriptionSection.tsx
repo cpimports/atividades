@@ -90,7 +90,7 @@ export default function KitDescriptionSection() {
             data-ai-hint="kids playing"
             width={128}
             height={128}
-            className="rounded-full mx-auto mt-[-2rem] md:mt-[-3rem] mb-8"
+            className="mx-auto mt-[-2rem] md:mt-[-3rem] mb-8"
             loading="lazy"
           />
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
