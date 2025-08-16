@@ -89,11 +89,11 @@ export default function KitDescriptionSection() {
             O material é 100% digital, disponível na nossa plataforma em PDF pronto para imprimir, para você usar imediatamente em casa, na escola ou no consultório.
           </p>
           
-          <p className="text-center text-md text-gray-200 mt-8 mb-4">
-            🧩 Veja Algumas das Atividades Que Estão no Kit
-          </p>
           <div className="mt-8 md:mt-12 text-center">
             <div className="inline-block bg-slate-800/30 p-4 rounded-2xl shadow-2xl shadow-sky-400/10">
+              <p className="text-center text-md text-gray-200 mt-2 mb-4">
+                🧩 Veja Algumas das Atividades Que Estão no Kit
+              </p>
               <Carousel
                 setApi={setApi}
                 opts={{
@@ -103,25 +103,6 @@ export default function KitDescriptionSection() {
                 className="w-full max-w-xs mx-auto" 
               >
                 <CarouselContent>
-                  {carouselImages.map((image, index) => (
-                    <CarouselItem key={index} className="basis-full">
-                      <div className="p-1">
-                        <Card className="overflow-hidden border-0 shadow-xl bg-slate-800/30">
-                          <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
-                            <Image
-                              src={image.src}
-                              alt={image.alt}
-                              data-ai-hint={image.hint}
-                              fill
-                              className="object-cover rounded-md"
-                              sizes="(max-width: 480px) 90vw, (max-width: 768px) 60vw, 320px"
-                              loading="lazy"
-                            />
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  ))}
                    {carouselImages.length === 0 && (
                     <CarouselItem>
                       <div className="p-1">
@@ -139,25 +120,25 @@ export default function KitDescriptionSection() {
                 <CarouselPrevious aria-label="Slide anterior" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
                 <CarouselNext aria-label="Próximo slide" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
               </Carousel>
+              {api && count > 0 && (
+                <div className="flex justify-center items-center space-x-2 mt-4 py-2">
+                  {Array.from({ length: count }).map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => handleDotClick(index)}
+                      className={cn(
+                        "h-2.5 w-2.5 rounded-full transition-all duration-150 ease-in-out",
+                        current === index ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
+                      )}
+                      aria-label={`Ir para slide ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              )}
+               <p className="text-center text-md text-gray-300 mt-6 mb-4">
+                Essas são apenas algumas das mais de 1000 atividades exclusivas que você recebe no Kit Gêniozinho em Ação!
+              </p>
             </div>
-            {api && count > 0 && (
-              <div className="flex justify-center items-center space-x-2 mt-4 py-2">
-                {Array.from({ length: count }).map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => handleDotClick(index)}
-                    className={cn(
-                      "h-2.5 w-2.5 rounded-full transition-all duration-150 ease-in-out",
-                      current === index ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
-                    )}
-                    aria-label={`Ir para slide ${index + 1}`}
-                  />
-                ))}
-              </div>
-            )}
-             <p className="text-center text-md text-gray-300 mt-6 mb-4">
-              Essas são apenas algumas das mais de 1000 atividades exclusivas que você recebe no Kit Gêniozinho em Ação!
-            </p>
           </div>
 
         </div>
