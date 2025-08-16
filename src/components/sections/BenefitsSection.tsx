@@ -1,7 +1,6 @@
-
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -43,10 +42,10 @@ const bonusImages = [
 ]
 
 export default function BenefitsSection() {
-    const [progress, setProgress] = useState(0);
+    const [progress, setProgress] = React.useState(0);
     const initialProgress = 40;
 
-    useEffect(() => {
+    React.useEffect(() => {
         // Animate from 0 to initialProgress
         const animationTimeout = setTimeout(() => setProgress(initialProgress), 500);
 
@@ -151,7 +150,7 @@ export default function BenefitsSection() {
         </div>
 
         <div className="mt-12 max-w-2xl mx-auto text-center">
-            <p className="font-bold text-destructive mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
+            <p className="font-bold text-black mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
           <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 shadow-md">
             <p className="font-semibold text-yellow-900 mb-2">
                 ⏳ {progress}% dos kits promocionais já foram vendidos!
