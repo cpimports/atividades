@@ -1,6 +1,6 @@
 
 import type {Metadata} from 'next';
-import { Inter, Alegreya } from 'next/font/google';
+import { Inter, Alegreya, Merriweather } from 'next/font/google';
 import Script from 'next/script';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
@@ -19,6 +19,14 @@ const alegreya = Alegreya({
   variable: '--font-alegreya',
 });
 
+const merriweather = Merriweather({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: '700',
+  style: 'italic',
+  variable: '--font-merriweather',
+});
+
 export const metadata: Metadata = {
   title: 'Gêniozinho em Ação - Atividades Educativas para Crianças',
   description: 'Kit completo de atividades educativas e interativas, prontas para aplicar em casa ou na escola, e transformar a rotina de aprendizado de crianças com estilos únicos de aprendizagem e atenção.',
@@ -30,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className={`${inter.variable} ${alegreya.variable}`} suppressHydrationWarning>
+    <html lang="pt-BR" className={`${inter.variable} ${alegreya.variable} ${merriweather.variable}`} suppressHydrationWarning>
       <head>
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://i.imgur.com" />

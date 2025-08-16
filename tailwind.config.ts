@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         body: ['var(--font-inter)', 'sans-serif'],
         headline: ['var(--font-alegreya)', 'serif'],
+        merriweather: ['var(--font-merriweather)', 'serif'],
         code: ['monospace'],
       },
       colors: {

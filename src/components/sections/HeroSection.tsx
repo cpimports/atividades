@@ -72,7 +72,7 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <h1 className="font-headline text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
+        <h1 className="font-merriweather text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
           Transforme o Dia a Dia da Sua Criança!
         </h1>
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
