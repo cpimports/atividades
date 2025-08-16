@@ -44,6 +44,9 @@ export default function AboutSection() {
             <p className="text-lg text-foreground/80 text-center font-semibold pt-4">
               Se você se identificou com esses pontos, saiba que não está sozinho. E o mais importante: existe um caminho mais leve.
             </p>
+            <p className="text-lg text-foreground text-center font-bold pt-2">
+              Foi por isso que criamos a Plataforma Gêniozinho em Ação.
+            </p>
           </div>
         </div>
 
