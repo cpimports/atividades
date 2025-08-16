@@ -84,16 +84,13 @@ export default function KitDescriptionSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <h2 className="font-merriweather text-3xl sm:text-4xl font-bold text-white mb-8">
+          <h2 className="font-merriweather text-2xl sm:text-3xl font-bold text-white mb-8">
             O Kit que estimula o desenvolvimento das crianças autistas e facilita sua rotina em sala de aula
           </h2>
         </div>
         <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-center">
           <p>
-            Material digital com mais de 1000 atividades lúdicas e educativas, criado para estimular o foco, linguagem e comportamento de crianças com estilos únicos de aprendizagem.
-          </p>
-          <p>
-            Acesso imediato em PDF, pronto para imprimir e usar em casa, na escola ou no consultório.
+            Mais de 1500 atividades inclusivas e adaptadas para crianças autistas, criadas para estimular o foco, a linguagem, a interação social e o desenvolvimento cognitivo. O material é 100% digital, disponível na nossa plataforma em PDF pronto para imprimir, para você usar imediatamente em casa, na escola ou no consultório.
           </p>
           
           <p className="text-center text-md text-gray-200 mt-8 mb-4">
