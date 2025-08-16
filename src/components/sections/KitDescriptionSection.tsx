@@ -78,7 +78,7 @@ export default function KitDescriptionSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
           <h2 className="font-merriweather text-2xl sm:text-3xl font-bold text-white mb-8">
-            O Kit que estimula o desenvolvimento das crianças autistas e facilita sua rotina em sala de aula
+            O Kit que estimula o <span className="text-yellow-400">desenvolvimento das crianças autistas</span> e facilita sua rotina em sala de aula
           </h2>
         </div>
         <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-center">
@@ -157,3 +157,5 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
+    
