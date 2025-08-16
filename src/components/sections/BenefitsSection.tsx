@@ -92,7 +92,7 @@ export default function BenefitsSection() {
             + BÔNUS EXCLUSIVOS
           </h3>
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">
-            Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
+            Além do material principal, você recebe gratuitamente 12 recursos extras cuidadosamente preparados para tornar suas aulas mais atrativas, dinâmicas e inclusivas.
           </p>
           
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
