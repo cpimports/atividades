@@ -153,7 +153,7 @@ export default function BenefitsSection() {
             <p className="font-semibold text-foreground/90">
               Todos os 12 bônus, que custariam <span className="line-through">R$297,00</span>
             </p>
-            <p className="font-bold text-xl text-primary mt-2">
+            <p className="font-bold text-xl text-accent-foreground mt-2">
               HOJE SAEM TOTALMENTE GRÁTIS!
             </p>
           </div>
