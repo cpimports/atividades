@@ -113,12 +113,12 @@ export default function BenefitsSection() {
             ))}
           </div>
 
-          <div className="mt-12 bg-[#DFF6DD] p-6 rounded-lg shadow-md text-center max-w-4xl mx-auto">
-            <p className="font-bold text-gray-800 text-lg">
+          <div className="mt-12 bg-[#DFF6DD] p-8 rounded-lg shadow-lg text-center max-w-4xl mx-auto border border-green-800/20">
+            <p className="font-bold text-gray-800 text-lg md:text-xl">
               TODOS OS 12 BÔNUS, QUE CUSTARIAM
-              <span className="text-[#E63946] line-through ml-2">R$297,00</span>
+              <span className="text-[#E63946] line-through ml-2 text-base md:text-xl">R$297,00</span>
             </p>
-            <p className="font-bold text-[#1B4332] text-2xl mt-2">
+            <p className="font-bold text-[#1B4332] text-2xl md:text-3xl mt-3 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
               HOJE SAEM TOTALMENTE GRÁTIS!
             </p>
           </div>
