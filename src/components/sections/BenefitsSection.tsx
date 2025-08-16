@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -135,6 +136,19 @@ export default function BenefitsSection() {
                     </div>
                 </div>
             ))}
+          </div>
+
+          <div className="my-12 text-center">
+            <div className="inline-block p-4 rounded-lg animate-pulse-yellow-cta">
+              <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-400 uppercase tracking-wide drop-shadow-lg">
+                + 8 Bônus Surpresa
+              </h4>
+              <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
+                <p className="text-base md:text-lg font-bold">
+                  LIBERADOS SOMENTE APÓS A COMPRA 🎁🔥
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 bg-[#DFF6DD] p-8 rounded-lg shadow-lg text-center max-w-4xl mx-auto border border-green-800/20">
