@@ -8,7 +8,7 @@ export default function AboutSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
-            CHEGA DE PERDER TEMPO!
+            Preparar atividades para alunos com TEA não precisa ser um desafio...
           </h2>
           <p className="mt-4 text-lg text-foreground/80 font-semibold">Lembre-se: Seu tempo é precioso...</p>
         </div>
