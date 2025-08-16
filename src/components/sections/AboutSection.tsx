@@ -1,7 +1,23 @@
 
-import { CheckCircle } from 'lucide-react';
+import { Hourglass, Focus, PenSquare } from 'lucide-react';
 
 export default function AboutSection() {
+
+  const challenges = [
+    {
+      text: "Passar horas buscando e adaptando atividades que nem sempre funcionam.",
+      icon: <Hourglass className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+    },
+    {
+      text: "A dificuldade de encontrar materiais que realmente prendam a atenção dos alunos.",
+      icon: <Focus className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+    },
+    {
+      text: "A sensação de que falta apoio e de que você precisa criar tudo do zero.",
+      icon: <PenSquare className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+    }
+  ];
+
   return (
     <section id="about" className="pt-16 md:pt-24 pb-8 md:pb-12 relative">
       <div className="absolute inset-0 bg-gradient-to-br from-darkPurple/20 via-darkPurple/10 to-background/5 -z-10"></div>
@@ -16,15 +32,11 @@ export default function AboutSection() {
         <div className="max-w-3xl mx-auto">
           <div className="space-y-6">
             <ul className="space-y-3">
-              {[
-                "Passar horas buscando e adaptando atividades que nem sempre funcionam.",
-                "A dificuldade de encontrar materiais que realmente prendam a atenção dos alunos.",
-                "A sensação de que falta apoio e de que você precisa criar tudo do zero."
-              ].map((item, index) => (
+              {challenges.map((item, index) => (
                 <li key={index}>
                   <div className="bg-card p-3 rounded-md shadow-sm hover:shadow-md transition-shadow duration-200 flex items-start text-card-foreground">
-                    <CheckCircle className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="font-semibold">{item}</span>
+                    {item.icon}
+                    <span className="font-semibold">{item.text}</span>
                   </div>
                 </li>
               ))}
