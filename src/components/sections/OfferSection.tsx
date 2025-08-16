@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -33,24 +33,38 @@ export default function OfferSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="flex justify-center mb-8 md:mb-12">
-            <Card className="shadow-xl bg-card/80 backdrop-blur-md max-w-md">
-                <CardHeader className="items-center text-center">
-                <Image
-                    src="https://i.imgur.com/lbSS21Q.png"
-                    alt="Garantia de satisfação"
-                    data-ai-hint="shield checkmark"
-                    width={180}
-                    height={180}
-                    className="mb-3"
-                    loading="lazy"
-                    sizes="180px"
-                />
-                <CardTitle className="font-headline text-2xl text-yellow-500 drop-shadow-md">SUA SATISFAÇÃO GARANTIDA OU SEU DINHEIRO DE VOLTA!</CardTitle>
-                </CardHeader>
-                <CardContent className="text-center pt-6">
-                <p className="text-foreground/80 font-semibold">
-                    Além de todos os benefícios que citamos acima, adquirindo hoje você tem 7 dias de garantia para testar o material.
-                </p>
+            <Card className="shadow-xl bg-card/80 backdrop-blur-md max-w-lg w-full">
+                <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6">
+                    <div className="flex-shrink-0">
+                        <Image
+                            src="https://i.imgur.com/lbSS21Q.png"
+                            alt="Selo de Garantia de 7 dias"
+                            data-ai-hint="gold shield guarantee"
+                            width={150}
+                            height={150}
+                            className="mx-auto"
+                            loading="lazy"
+                            sizes="150px"
+                        />
+                    </div>
+                    <div className="flex-grow">
+                        <h3 className="text-2xl font-bold font-headline text-yellow-500 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
+                        <p className="text-foreground/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
+                        <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-muted-foreground font-semibold">
+                            <div className="flex items-center gap-1.5">
+                                <CheckCircle className="h-4 w-4 text-green-600" />
+                                <span>Compra Segura</span>
+                            </div>
+                            <div className="flex items-center gap-1.5">
+                                <CheckCircle className="h-4 w-4 text-green-600" />
+                                <span>Privacidade</span>
+                            </div>
+                             <div className="flex items-center gap-1.5">
+                                <CheckCircle className="h-4 w-4 text-green-600" />
+                                <span>Qualidade</span>
+                            </div>
+                        </div>
+                    </div>
                 </CardContent>
             </Card>
         </div>
