@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const steps = [
   {
-    icon: <Image src="/images/EMAIL.webp" alt="Email icon" data-ai-hint="email mail" width={40} height={40} className="text-primary" />,
+    icon: <span className="text-4xl">📲</span>,
     title: 'RECEBA EM SEU E-MAIL',
     description: 'Receba Imediatamente em seu e-mail.',
   },
@@ -35,7 +35,7 @@ export default function HowToReceiveSection() {
           {steps.map((step, index) => (
             <Card key={index} className="text-center shadow-lg hover:shadow-2xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
               <CardHeader className="flex flex-col items-center">
-                <div className="mb-4">
+                <div className="mb-4 h-10 w-10 flex items-center justify-center">
                   {step.icon}
                 </div>
                 <CardTitle className="font-headline text-xl text-primary">{step.title}</CardTitle>
