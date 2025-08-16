@@ -5,7 +5,7 @@ import Image from 'next/image';
 const steps = [
   {
     icon: <span className="text-4xl">📲</span>,
-    title: 'RECEBA EM SEU E-MAIL',
+    title: 'ACESSE NOSSA PLATAFORMA EXCLUSIVA',
     description: 'Receba Imediatamente em seu e-mail.',
   },
   {
