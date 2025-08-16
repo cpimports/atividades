@@ -42,7 +42,7 @@ export default function AboutSection() {
               ))}
             </ul>
             <p className="text-lg text-foreground/80 text-center font-semibold pt-4">
-              Você não está só — pais, educadores e terapeutas enfrentam os mesmos desafios todos os dias.
+              Se você se identificou com esses pontos, saiba que não está sozinho. E o mais importante: existe um caminho mais leve.
             </p>
           </div>
         </div>
