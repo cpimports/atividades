@@ -38,8 +38,8 @@ export default function HomePage() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
-        <HowToReceiveSection />
         <KitDescriptionSection />
+        <HowToReceiveSection />
         <BenefitsSection />
         <TestimonialsSection />
         <OfferSection /> 
