@@ -84,17 +84,15 @@ export default function KitDescriptionSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <div className="inline-block p-3 bg-white/10 backdrop-blur-sm rounded-full shadow-lg mt-[-2rem] md:mt-[-3rem] mb-8">
-            <Image
-              src="https://i.imgur.com/ubkRboJ.png"
-              alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
-              data-ai-hint="kids playing"
-              width={128}
-              height={128}
-              className="rounded-full"
-              loading="lazy"
-            />
-          </div>
+          <Image
+            src="https://i.imgur.com/ubkRboJ.png"
+            alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
+            data-ai-hint="kids playing"
+            width={128}
+            height={128}
+            className="rounded-full mx-auto mt-[-2rem] md:mt-[-3rem] mb-8"
+            loading="lazy"
+          />
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
             Mais de 1000 atividades prontas para usar
           </h2>
