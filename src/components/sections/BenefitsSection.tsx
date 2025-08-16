@@ -150,9 +150,9 @@ export default function BenefitsSection() {
 
         </div>
 
-        <div className="mt-12 max-w-2xl mx-auto">
-          <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 text-center shadow-md">
+        <div className="mt-12 max-w-2xl mx-auto text-center">
             <p className="font-bold text-destructive mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
+          <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 shadow-md">
             <p className="font-semibold text-yellow-900 mb-2">
                 ⏳ {progress}% dos kits promocionais já foram vendidos!
             </p>
