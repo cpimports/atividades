@@ -85,12 +85,12 @@ export default function KitDescriptionSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
           <Image
-            src="https://i.imgur.com/ubkRboJ.png"
+            src="https://i.imgur.com/Ve38GeQ.png"
             alt="Crianças brincando e aprendendo com o Gêniozinho em Ação"
             data-ai-hint="kids playing"
             width={140}
             height={140}
-            className="mx-auto mt-[-2rem] md:mt-[-3rem] mb-8 [filter:drop-shadow(0_0_10px_rgba(255,255,255,0.3))]"
+            className="mx-auto mb-8"
             loading="lazy"
           />
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
@@ -177,3 +177,5 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
+    
