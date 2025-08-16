@@ -78,7 +78,7 @@ export default function BenefitsSection() {
             O Que Você Recebe ao Adquirir o Kit?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
-            Um pacote completo para transformar o aprendizado em uma aventura diária, repleta de descobertas e desenvolvimento.
+            Atividades especialmente adaptadas para crianças com autismo (TEA), focadas em estimular a atenção e promover o desenvolvimento cognitivo de forma lúdica e inclusiva.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
