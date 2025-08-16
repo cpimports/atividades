@@ -91,6 +91,16 @@ export default function KitDescriptionSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
+          <div className="mb-8">
+            <Image
+              src="https://i.imgur.com/hwMc8SF.png"
+              alt="Crianças estudando felizes"
+              data-ai-hint="children studying happy"
+              width={150}
+              height={150}
+              className="mx-auto"
+            />
+          </div>
           <h2 className="font-merriweather text-2xl sm:text-3xl font-bold text-white mb-8">
             O Kit que estimula o <span className="text-yellow-400">desenvolvimento das crianças autistas</span> e facilita sua rotina em sala de aula
           </h2>
