@@ -83,24 +83,6 @@ export default function HeroSection() {
             <VideoPlayer />
         </div>
         
-        <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
-            <p className="font-semibold mt-4">Mais conexão, menos estresse e mais evolução:</p>
-            <ul className="mt-4 space-y-4 inline-block text-left">
-                <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.3s' }}>✨</span>
-                    Atividades lúdicas e terapêuticas criadas por especialistas
-                </li>
-                <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.6s' }}>✨</span>
-                    Estimulam o aprendizado, a linguagem, o foco e o comportamento
-                </li>
-                <li className="flex items-start">
-                    <span className="mr-2 text-2xl md:text-xl animate-sparkle" style={{ animationDelay: '0.9s' }}>✨</span>
-                    Ajudam a fortalecer o vínculo entre pais e filhos
-                </li>
-            </ul>
-        </div>
-        
         <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
           <Button 
             size="lg" 
