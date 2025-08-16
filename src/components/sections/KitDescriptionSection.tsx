@@ -16,14 +16,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
-const carouselImages: { src: string; alt: string; hint: string }[] = [
-  { src: '/images/ALFABETO DAS BOQUINHAS.webp', alt: 'Atividade Alfabeto das Boquinhas', hint: 'alphabet mouth chart' },
-  { src: '/images/ALIMENTAÇÃO SAUDÁVEL.webp', alt: 'Atividade Alimentação Saudável', hint: 'healthy food worksheet' },
-  { src: '/images/BINGO DAS PALAVRAS.webp', alt: 'Atividade Bingo das Palavras', hint: 'word bingo game' },
-  { src: '/images/MINHA ROTINA.webp', alt: 'Atividade Minha Rotina', hint: 'daily routine chart' },
-  { src: '/images/NOME PRÓPRIO.webp', alt: 'Atividade Nome Próprio', hint: 'name writing practice' },
-  { src: '/images/ROLETA DAS CORES.webp', alt: 'Atividade Roleta das Cores', hint: 'color wheel game' },
-];
+const carouselImages: { src: string; alt: string; hint: string }[] = [];
 
 export default function KitDescriptionSection() {
   const [api, setApi] = useState<CarouselApi>();
@@ -100,38 +93,53 @@ export default function KitDescriptionSection() {
             🧩 Veja Algumas das Atividades Que Estão no Kit
           </p>
           <div className="mt-8 md:mt-12 text-center">
-            <Carousel
-              setApi={setApi}
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-              className="w-full max-w-xs mx-auto" 
-            >
-              <CarouselContent>
-                {carouselImages.map((image, index) => (
-                  <CarouselItem key={index} className="basis-full">
-                    <div className="p-1">
-                      <Card className="overflow-hidden border-0 shadow-xl bg-slate-800/30">
-                        <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
-                          <Image
-                            src={image.src}
-                            alt={image.alt}
-                            data-ai-hint={image.hint}
-                            fill
-                            className="object-cover rounded-md"
-                            sizes="(max-width: 480px) 90vw, (max-width: 768px) 60vw, 320px"
-                            loading="lazy"
-                          />
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <CarouselPrevious aria-label="Slide anterior" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
-              <CarouselNext aria-label="Próximo slide" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
-            </Carousel>
+            <div className="inline-block bg-slate-800/30 p-4 rounded-2xl shadow-2xl shadow-sky-400/10">
+              <Carousel
+                setApi={setApi}
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-xs mx-auto" 
+              >
+                <CarouselContent>
+                  {carouselImages.map((image, index) => (
+                    <CarouselItem key={index} className="basis-full">
+                      <div className="p-1">
+                        <Card className="overflow-hidden border-0 shadow-xl bg-slate-800/30">
+                          <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              data-ai-hint={image.hint}
+                              fill
+                              className="object-cover rounded-md"
+                              sizes="(max-width: 480px) 90vw, (max-width: 768px) 60vw, 320px"
+                              loading="lazy"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                   {carouselImages.length === 0 && (
+                    <CarouselItem>
+                      <div className="p-1">
+                          <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
+                            <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
+                               <div className="flex items-center justify-center h-full w-full bg-slate-900/50 rounded-lg">
+                                <p className="text-gray-400 text-sm p-4">Imagens serão adicionadas em breve</p>
+                               </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                    </CarouselItem>
+                  )}
+                </CarouselContent>
+                <CarouselPrevious aria-label="Slide anterior" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+                <CarouselNext aria-label="Próximo slide" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
+              </Carousel>
+            </div>
             {api && count > 0 && (
               <div className="flex justify-center items-center space-x-2 mt-4 py-2">
                 {Array.from({ length: count }).map((_, index) => (
