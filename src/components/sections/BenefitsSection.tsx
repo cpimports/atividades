@@ -1,11 +1,12 @@
 
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Progress } from '@/components/ui/progress';
 
 const deliverables = [
   {
@@ -42,6 +43,30 @@ const bonusImages = [
 ]
 
 export default function BenefitsSection() {
+    const [progress, setProgress] = useState(0);
+    const initialProgress = 40;
+
+    useEffect(() => {
+        // Animate from 0 to initialProgress
+        const animationTimeout = setTimeout(() => setProgress(initialProgress), 500);
+
+        // Slowly increase progress over time
+        const interval = setInterval(() => {
+        setProgress((prev) => {
+            if (prev < 95) {
+            return prev + 1;
+            }
+            clearInterval(interval);
+            return prev;
+        });
+        }, 25000); // Increases every 25 seconds
+
+        return () => {
+        clearTimeout(animationTimeout);
+        clearInterval(interval);
+        };
+    }, []);
+
   return (
     <section id="oque-voce-recebe" className="py-16 md:py-24 relative bg-gradient-to-br from-background to-muted/30">
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/light-paper-fibers.png')] opacity-[0.03] mix-blend-overlay pointer-events-none -z-10"></div>
@@ -118,14 +143,26 @@ export default function BenefitsSection() {
               TODOS OS 12 BÔNUS, QUE CUSTARIAM
               <span className="text-[#E63946] line-through ml-2 text-base md:text-xl">R$297,00</span>
             </p>
-            <p className="font-bold text-[#1B4332] text-2xl md:text-3xl mt-3 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
+            <p className="font-bold text-[#1B4332] text-2xl md:text-4xl mt-3 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
               HOJE SAEM TOTALMENTE GRÁTIS!
             </p>
           </div>
 
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-12 max-w-2xl mx-auto">
+          <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 text-center shadow-md">
+            <p className="font-semibold text-yellow-900 mb-2">
+                ⏳ {progress}% dos kits promocionais já foram vendidos!
+            </p>
+            <Progress value={progress} className="w-full h-3 bg-gray-200 [&>div]:bg-yellow-400" />
+            <p className="text-sm text-yellow-800 mt-2 font-medium">
+                150 kits pelo valor promocional
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8 flex justify-center">
           <Button 
             size="lg" 
             asChild 
