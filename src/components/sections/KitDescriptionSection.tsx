@@ -90,7 +90,10 @@ export default function KitDescriptionSection() {
         </div>
         <div className="max-w-3xl mx-auto space-y-6 text-lg text-gray-300 text-center">
           <p>
-            Mais de 1500 atividades inclusivas e adaptadas para crianças autistas, criadas para estimular o foco, a linguagem, a interação social e o desenvolvimento cognitivo. O material é 100% digital, disponível na nossa plataforma em PDF pronto para imprimir, para você usar imediatamente em casa, na escola ou no consultório.
+            Mais de 1500 atividades inclusivas e adaptadas para crianças autistas, criadas para estimular o foco, a linguagem, a interação social e o desenvolvimento cognitivo.
+          </p>
+          <p>
+            O material é 100% digital, disponível na nossa plataforma em PDF pronto para imprimir, para você usar imediatamente em casa, na escola ou no consultório.
           </p>
           
           <p className="text-center text-md text-gray-200 mt-8 mb-4">
