@@ -16,7 +16,21 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
-const carouselImages: { src: string; alt: string; hint: string }[] = [];
+const carouselImages: { src: string; alt: string; hint: string }[] = [
+    { src: 'https://i.imgur.com/9xG6c21.png', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
+    { src: 'https://i.imgur.com/yO89y08.png', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
+    { src: 'https://i.imgur.com/iR32aM3.png', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
+    { src: 'https://i.imgur.com/2bQ2B6O.png', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
+    { src: 'https://i.imgur.com/7g5h4Q5.png', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
+    { src: 'https://i.imgur.com/yI5b1fP.png', alt: 'Atividade de Números', hint: 'numbers counting' },
+    { src: 'https://i.imgur.com/S8e9J2R.png', alt: 'Atividade de Cores', hint: 'colors activity' },
+    { src: 'https://i.imgur.com/8cZ1ePm.png', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
+    { src: 'https://i.imgur.com/p5Qf7jT.png', alt: 'Atividade Sensorial', hint: 'sensory play' },
+    { src: 'https://i.imgur.com/3fX3Z5u.png', alt: 'Atividade de Leitura', hint: 'reading practice' },
+    { src: 'https://i.imgur.com/k6KjS7V.png', alt: 'Atividade de Escrita', hint: 'writing practice' },
+    { src: 'https://i.imgur.com/z0a7X9a.png', alt: 'Atividade de Emoções', hint: 'emotions chart' },
+    { src: 'https://i.imgur.com/D4J8h1A.png', alt: 'Quebra-cabeça', hint: 'puzzle game' },
+];
 
 export default function KitDescriptionSection() {
   const [api, setApi] = useState<CarouselApi>();
@@ -100,22 +114,28 @@ export default function KitDescriptionSection() {
                   align: "start",
                   loop: true,
                 }}
-                className="w-full max-w-xs mx-auto" 
+                className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg mx-auto"
               >
                 <CarouselContent>
-                   {carouselImages.length === 0 && (
-                    <CarouselItem>
+                  {carouselImages.map((image, index) => (
+                    <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/3">
                       <div className="p-1">
-                          <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
-                            <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
-                               <div className="flex items-center justify-center h-full w-full bg-slate-900/50 rounded-lg">
-                                <p className="text-gray-400 text-sm p-4">Imagens serão adicionadas em breve</p>
-                               </div>
-                            </CardContent>
-                          </Card>
-                        </div>
+                        <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
+                          <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
+                            <Image
+                              src={image.src}
+                              alt={image.alt}
+                              data-ai-hint={image.hint}
+                              fill
+                              className="object-cover rounded-lg"
+                              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                              loading="lazy"
+                            />
+                          </CardContent>
+                        </Card>
+                      </div>
                     </CarouselItem>
-                  )}
+                  ))}
                 </CarouselContent>
                 <CarouselPrevious aria-label="Slide anterior" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
                 <CarouselNext aria-label="Próximo slide" className="text-white bg-primary/50 hover:bg-primary/70 border-0 disabled:bg-slate-700/30 disabled:text-slate-400" />
@@ -127,8 +147,8 @@ export default function KitDescriptionSection() {
                       key={index}
                       onClick={() => handleDotClick(index)}
                       className={cn(
-                        "h-2.5 w-2.5 rounded-full transition-all duration-150 ease-in-out",
-                        current === index ? "bg-white scale-125" : "bg-white/40 hover:bg-white/70"
+                        "h-2 w-2 rounded-full transition-all duration-150 ease-in-out",
+                        current === index ? "bg-white scale-110" : "bg-white/40 hover:bg-white/70"
                       )}
                       aria-label={`Ir para slide ${index + 1}`}
                     />
@@ -157,5 +177,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
-    
