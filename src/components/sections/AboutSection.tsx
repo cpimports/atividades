@@ -6,15 +6,15 @@ export default function AboutSection() {
   const challenges = [
     {
       text: "Passar horas buscando e adaptando atividades que nem sempre funcionam.",
-      icon: <Hourglass className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+      icon: <Hourglass className="h-6 w-6 text-destructive mr-3 mt-0.5 flex-shrink-0" />
     },
     {
       text: "A dificuldade de encontrar materiais que realmente prendam a atenção dos alunos.",
-      icon: <Focus className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+      icon: <Focus className="h-6 w-6 text-destructive mr-3 mt-0.5 flex-shrink-0" />
     },
     {
       text: "A sensação de que falta apoio e de que você precisa criar tudo do zero.",
-      icon: <PenSquare className="h-6 w-6 text-accent mr-3 mt-0.5 flex-shrink-0" />
+      icon: <PenSquare className="h-6 w-6 text-destructive mr-3 mt-0.5 flex-shrink-0" />
     }
   ];
 
