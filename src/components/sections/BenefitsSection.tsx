@@ -78,9 +78,13 @@ export default function BenefitsSection() {
         </div>
         
         <div className="text-center mt-16">
-           <p className="text-lg text-foreground/80 font-semibold italic animate-pulse">
-            E ainda tem mais...
-          </p>
+           <div className="flex items-center justify-center text-center">
+            <span className="flex-1 border-t-2 border-dashed border-foreground/20"></span>
+            <p className="text-lg text-foreground/80 font-semibold italic animate-pulse px-4">
+              E ainda tem mais...
+            </p>
+            <span className="flex-1 border-t-2 border-dashed border-foreground/20"></span>
+          </div>
         </div>
 
         <div className="text-center mt-8">
