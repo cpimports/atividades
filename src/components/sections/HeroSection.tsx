@@ -73,10 +73,10 @@ export default function HeroSection() {
           />
         </div>
         <h1 className="font-merriweather text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
-          Transforme o Dia a Dia da Sua Criança!
+          +1500 Atividades Lúdicas e Adaptadas para Crianças Autistas
         </h1>
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
-            <p className="font-semibold text-sky-200 text-base md:text-lg">Com Atividades Divertidas, Inclusivas e Criadas para Estimular o Desenvolvimento Infantil</p>
+            <p className="font-semibold text-sky-200 text-base md:text-lg">Comunicação, Comportamento, Habilidades Sociais, Regulação Emocional e muito mais!</p>
         </div>
 
         <div className="mt-8 max-w-4xl mx-auto animate-fade-in-slow">
