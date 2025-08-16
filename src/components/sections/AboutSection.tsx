@@ -10,7 +10,7 @@ export default function AboutSection() {
           <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
             Preparar atividades para alunos com TEA não precisa ser um desafio...
           </h2>
-          <p className="mt-4 text-lg text-foreground/80 font-semibold">Lembre-se: Seu tempo é precioso...</p>
+          <p className="mt-4 text-lg text-foreground/80 font-semibold max-w-4xl mx-auto">Muitos professores passam horas adaptando materiais, improvisando recursos visuais e buscando estratégias que mantenham o interesse do aluno. Mas isso não precisa ser assim.</p>
         </div>
 
         <div className="max-w-3xl mx-auto">
