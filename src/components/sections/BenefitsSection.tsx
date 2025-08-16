@@ -95,17 +95,17 @@ export default function BenefitsSection() {
             Além de todo o material citado acima, Você ganhará gratuitamente 12 Bônus Exclusivos.
           </p>
           
-          <div className="mt-12 flex flex-col items-center space-y-6">
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {bonusImages.map((image, index) => (
-                <div key={index} className="w-full max-w-lg mx-auto">
-                    <div className="relative aspect-[1080/1350] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                <div key={index} className="w-full">
+                    <div className="relative aspect-[1080/1350] rounded-lg overflow-hidden shadow-xl hover:shadow-2xl transition-shadow duration-300 max-w-sm mx-auto md:max-w-none">
                         <Image
                             src={image.src}
                             alt={image.alt}
                             data-ai-hint={image.hint}
                             fill
                             className="object-cover"
-                            sizes="(max-width: 768px) 100vw, 512px"
+                            sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 512px"
                             loading="lazy"
                         />
                     </div>
