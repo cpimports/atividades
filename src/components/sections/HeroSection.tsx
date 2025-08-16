@@ -73,7 +73,7 @@ export default function HeroSection() {
           />
         </div>
         <h1 className="font-merriweather text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
-          +1500 Atividades Lúdicas e Adaptadas para Crianças Autistas
+          <span className="text-yellow-400">+1500</span> Atividades Lúdicas e Adaptadas para <span className="text-yellow-400">Crianças Autistas</span>
         </h1>
         <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
             <p className="font-semibold text-sky-200 text-base md:text-lg">Comunicação, Comportamento, Habilidades Sociais, Regulação Emocional e muito mais!</p>
