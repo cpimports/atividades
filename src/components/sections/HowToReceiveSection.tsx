@@ -6,7 +6,7 @@ const steps = [
   {
     icon: <span className="text-4xl">📲</span>,
     title: 'ACESSE NOSSA PLATAFORMA EXCLUSIVA',
-    description: 'Receba Imediatamente em seu e-mail.',
+    description: 'Tenha todo o material em um só lugar: na nossa plataforma exclusiva, prática e organizada para você',
   },
   {
     icon: <Image src="/images/IMPRESSORA.webp" alt="Printer icon" data-ai-hint="printer document" width={40} height={40} className="text-accent-foreground" />,
