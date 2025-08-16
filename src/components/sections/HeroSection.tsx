@@ -90,7 +90,7 @@ export default function HeroSection() {
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
             <Link href="#kit-description">
-              BAIXAR MINHA CÓPIA
+              GARANTIR MEU KIT COM DESCONTO
             </Link>
           </Button>
           <p className="mt-2 text-xs text-gray-400 animate-fade-in-slow" style={{ animationDelay: '0.7s' }}>
