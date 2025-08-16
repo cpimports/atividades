@@ -90,8 +90,9 @@ export default function KitDescriptionSection() {
             data-ai-hint="activity sheets"
             width={180}
             height={180}
-            className="mx-auto mb-8"
+            className="mx-auto mb-8 w-32 h-32 sm:w-44 sm:h-44"
             loading="lazy"
+            sizes="(max-width: 640px) 128px, 176px"
           />
           <h2 className="font-headline text-4xl sm:text-5xl font-semibold text-white mb-8">
             Mais de 1000 atividades prontas para usar
