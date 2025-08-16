@@ -11,6 +11,9 @@ import AboutSection from '@/components/sections/AboutSection';
 const KitDescriptionSection = dynamic(() => import('@/components/sections/KitDescriptionSection'), {
   loading: () => <Skeleton className="h-[600px] w-full" />
 });
+const CommunicationJourneySection = dynamic(() => import('@/components/sections/CommunicationJourneySection'), {
+  loading: () => <Skeleton className="h-[400px] w-full" />
+});
 const HowToReceiveSection = dynamic(() => import('@/components/sections/HowToReceiveSection'), {
   loading: () => <Skeleton className="h-[300px] w-full" />
 });
@@ -39,6 +42,7 @@ export default function HomePage() {
         <HeroSection />
         <AboutSection />
         <KitDescriptionSection />
+        <CommunicationJourneySection />
         <HowToReceiveSection />
         <BenefitsSection />
         <TestimonialsSection />
