@@ -5,14 +5,9 @@ import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
 import HeroSection from '@/components/sections/HeroSection';
 import { Skeleton } from '@/components/ui/skeleton';
+import AboutSection from '@/components/sections/AboutSection';
 
 // Dynamically import sections that are below the fold
-const AboutSection = dynamic(() => import('@/components/sections/AboutSection'), { 
-  loading: () => <Skeleton className="h-[400px] w-full" />
-});
-const ComparisonSection = dynamic(() => import('@/components/sections/ComparisonSection'), {
-  loading: () => <Skeleton className="h-[400px] w-full" />
-});
 const KitDescriptionSection = dynamic(() => import('@/components/sections/KitDescriptionSection'), {
   loading: () => <Skeleton className="h-[600px] w-full" />
 });
@@ -31,6 +26,10 @@ const OfferSection = dynamic(() => import('@/components/sections/OfferSection'),
 const FaqSection = dynamic(() => import('@/components/sections/FaqSection'), {
   loading: () => <Skeleton className="h-[500px] w-full" />
 });
+const ComparisonSection = dynamic(() => import('@/components/sections/ComparisonSection'), {
+    loading: () => <Skeleton className="h-[400px] w-full" />,
+    ssr: false // Avoid server-side rendering for a removed component
+});
 
 
 export default function HomePage() {
@@ -39,7 +38,6 @@ export default function HomePage() {
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />
-        <ComparisonSection />
         <HowToReceiveSection />
         <KitDescriptionSection />
         <BenefitsSection />
