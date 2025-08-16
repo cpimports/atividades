@@ -22,33 +22,6 @@ export default function OfferSection() {
     "SUPER BÔNUS 4: Comunidade VIP de Suporte e Troca de Experiências"
   ];
 
-  const [timeLeft, setTimeLeft] = useState<{ days: string; hours: string; minutes: string; seconds: string } | null>(null);
-
-  useEffect(() => {
-    // Set targetTime to be 24 hours from when the component mounts on the client
-    const targetTime = new Date().getTime() + 24 * 60 * 60 * 1000;
-
-    const timer = setInterval(() => {
-      const now = new Date().getTime();
-      const difference = targetTime - now;
-
-      if (difference > 0) {
-        const days = String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(2, '0');
-        const hours = String(Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))).padStart(2, '0');
-        const minutes = String(Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))).padStart(2, '0');
-        const seconds = String(Math.floor((difference % (1000 * 60)) / 1000)).padStart(2, '0');
-        setTimeLeft({ days, hours, minutes, seconds });
-      } else {
-        setTimeLeft({ days: '00', hours: '00', minutes: '00', seconds: '00' });
-        clearInterval(timer);
-      }
-    }, 1000);
-
-    // Cleanup interval on component unmount
-    return () => clearInterval(timer);
-  }, []); // Empty dependency array ensures this runs only once on the client
-
-
   return (
     <section
       id="oferta-especial"
@@ -174,46 +147,20 @@ export default function OfferSection() {
                     <h3 className="text-lg font-bold text-white">ATENÇÃO: CONDIÇÃO EXCLUSIVA E LIMITADA!</h3>
                     <div className="mt-2">
                       <p className="text-sm font-semibold text-yellow-100/90">
-                        CORRA! ESSA É A SUA ÚLTIMA CHANCE! DESCONTO APLICADO SOMENTE PARA AS PRIMEIRAS 50 PESSOAS!
+                         ESSA É A SUA ÚLTIMA CHANCE! DESCONTO APLICADO SOMENTE PARA AS PRIMEIRAS 50 PESSOAS!
                       </p>
                     </div>
                   </div>
                 </div>
-              </div>
-          {timeLeft ? (
-            <div className="text-center mb-8">
-              <p className="text-md text-foreground/80 mb-3 font-semibold">Esta oferta exclusiva termina em:</p>
-              <div className="flex justify-center space-x-2 sm:space-x-3 md:space-x-4">
-                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
-                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.days}</span>
-                  <span className="block text-xs sm:text-sm text-primary/90">Dias</span>
-                </div>
-                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
-                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.hours}</span>
-                  <span className="block text-xs sm:text-sm text-primary/90">Horas</span>
-                </div>
-                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
-                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.minutes}</span>
-                  <span className="block text-xs sm:text-sm text-primary/90">Minutos</span>
-                </div>
-                <div className="bg-card/80 p-3 sm:p-4 rounded-lg shadow-lg w-20 sm:w-24 border border-border/20">
-                  <span className="block text-3xl sm:text-4xl font-bold text-primary">{timeLeft.seconds}</span>
-                  <span className="block text-xs sm:text-sm text-primary/90">Segundos</span>
-                </div>
-              </div>
             </div>
-          ) : (
-             <div className="text-center mb-8 h-[124px] flex items-center justify-center">
-               <p className="text-xl text-foreground/80 font-semibold">Carregando oferta...</p>
-            </div>
-          )}
+          
            <div className="mt-8 flex justify-center">
             <Button
               size="lg"
               asChild
               className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-500 hover:bg-yellow-600 text-black font-bold text-lg py-4 px-10 animate-pulse-yellow-cta transition-all transform hover:scale-105"
             >
-              <Link href="#oferta-especial">
+              <Link href="https://pay.cakto.com.br/wms7hjy_447695">
                 COMPRAR COM DESCONTO
               </Link>
             </Button>
