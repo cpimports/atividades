@@ -47,7 +47,7 @@ const commentsData = [
     avatarFallback: 'VG',
     name: 'Vanessa G.',
     time: '2h',
-    text: 'Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!',
+    text: 'Sou professora há 12 anos e nunca encontrei um material tão completo e adaptado para crianças autistas! A variedade das atividades lúdicas é incrível, consigo engajar meus alunos de uma forma que antes era muito difícil.',
     reactions: { like: 89, love: 5 },
   },
   {
@@ -297,5 +297,3 @@ export default function TestimonialsSection() {
     </section>
   );
 }
-
-    
