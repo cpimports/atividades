@@ -44,8 +44,8 @@ const commentsData = [
   {
     id: 2,
     avatarUrl: '/images/professora-otimizado.webp',
-    avatarFallback: 'VG',
-    name: 'Vanessa G.',
+    avatarFallback: 'VS',
+    name: 'Vanessa Santos',
     time: '2h',
     text: 'Sou professora há 12 anos e nunca encontrei um material tão completo e adaptado para crianças autistas! A variedade das atividades lúdicas é incrível, consigo engajar meus alunos de uma forma que antes era muito difícil.',
     reactions: { like: 89, love: 5 },
