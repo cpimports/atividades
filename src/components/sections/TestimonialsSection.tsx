@@ -230,7 +230,7 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <DynamicCounterBanner />
+        
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white mb-4 drop-shadow-md">
             O QUE OS PAIS E PROFESSORES ESTÃO FALANDO!
@@ -238,6 +238,9 @@ export default function TestimonialsSection() {
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Veja o que pais, professores e terapeutas estão dizendo sobre como o Kit Gêniozinho em Ação transformou suas rotinas e o aprendizado das crianças.
           </p>
+           <div className="mt-8">
+            <DynamicCounterBanner />
+          </div>
         </div>
         
         <div className="mb-16">
