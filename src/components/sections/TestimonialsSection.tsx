@@ -233,7 +233,7 @@ export default function TestimonialsSection() {
         
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white mb-4 drop-shadow-md">
-            O QUE OS PAIS E PROFESSORES ESTÃO FALANDO!
+            Professores e pais aprovam: o Gêniozinho em Ação faz a diferença!
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Veja o que pais, professores e terapeutas estão dizendo sobre como o Kit Gêniozinho em Ação transformou suas rotinas e o aprendizado das crianças.
