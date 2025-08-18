@@ -146,6 +146,10 @@ export default {
             boxShadow: '0 0 20px rgba(102, 178, 255, 0.6)',
           },
         },
+        'screen-glow': {
+          '0%, 100%': { filter: 'drop-shadow(0 0 8px rgba(173, 216, 230, 0.5))' },
+          '50%': { filter: 'drop-shadow(0 0 16px rgba(173, 216, 230, 0.8))' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -161,6 +165,7 @@ export default {
         sparkle: 'sparkle 1.5s infinite alternate',
         'fadeInOut': 'fadeInOut 10.5s forwards',
         'brilho-pulse': 'brilhoPulse 3s infinite ease-in-out',
+        'screen-glow': 'screen-glow 4s ease-in-out infinite',
       },
     },
   },
