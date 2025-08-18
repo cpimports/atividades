@@ -1,9 +1,10 @@
+
 'use client';
 
 import { useState, useEffect } from 'react';
 
 const DynamicCounterBanner = () => {
-  const [count, setCount] = useState(10247);
+  const [count, setCount] = useState(10563);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -15,10 +16,10 @@ const DynamicCounterBanner = () => {
   }, []);
 
   return (
-    <div className="bg-[#0D0D0D] border border-gray-700 rounded-xl py-6 px-4 sm:px-8 max-w-3xl mx-auto shadow-lg transform hover:scale-[1.02] transition-transform duration-300">
-      <p className="text-white text-xl md:text-2xl font-sans text-center">
+    <div className="bg-[#0D0D0D] border border-gray-700/50 rounded-lg py-4 px-4 sm:px-6 max-w-3xl mx-auto shadow-md transform hover:scale-[1.01] transition-transform duration-300">
+      <p className="text-white text-lg md:text-xl font-sans text-center">
         Mais de{' '}
-        <span className="text-yellow-400 font-bold text-2xl md:text-3xl tracking-wide mx-1">
+        <span className="text-yellow-400 font-bold text-xl md:text-2xl tracking-wide mx-1">
           {new Intl.NumberFormat('pt-BR').format(count)}
         </span>{' '}
         professores já adquiriram o Gêniozinho em Ação!
@@ -28,3 +29,5 @@ const DynamicCounterBanner = () => {
 };
 
 export default DynamicCounterBanner;
+
+    
