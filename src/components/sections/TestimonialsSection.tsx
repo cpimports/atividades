@@ -30,7 +30,7 @@ const commentsData = [
     id: 1,
     avatarUrl: '/images/mãe-otimizado.webp',
     avatarFallback: 'CM',
-    name: 'Carla M.',
+    name: 'Carla Monteiro',
     time: '5h',
     text: 'Sempre perdi horas preparando atividades inclusivas, mas agora tudo já está pronto e organizado. Essa plataforma simplesmente mudou minha rotina em sala de aula e facilitou demais meu planejamento, amei 🥰',
     reactions: { like: 122, love: 15, haha: 2 },
