@@ -101,9 +101,9 @@ export default function OfferSection() {
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-sky-400 to-blue-500 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-400 to-blue-700 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
-            <div className="bg-gradient-to-br from-sky-400/80 to-blue-500/80 rounded-t-xl p-6 text-center">
+            <div className="bg-gradient-to-br from-blue-400/80 to-blue-700/80 rounded-t-xl p-6 text-center">
                 <div className="mb-4">
                   <Image
                     src="https://i.imgur.com/z1brNWZ.png"
