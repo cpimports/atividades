@@ -69,23 +69,6 @@ export default function OfferSection() {
         </div>
         
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900 relative">
-          <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-              <span className="absolute top-[10%] right-[8%] text-6xl opacity-20 transform rotate-20">🧩</span>
-              <span className="absolute top-[15%] left-[20%] text-3xl opacity-20 transform rotate-10">🧩</span>
-              <span className="absolute top-[35%] left-[10%] text-5xl opacity-20 transform rotate-5">🧩</span>
-              <span className="absolute top-[55%] left-[25%] text-6xl opacity-20 transform -rotate-5">🧩</span>
-              <span className="absolute top-[75%] left-[15%] text-3xl opacity-20 transform rotate-15">🧩</span>
-              <span className="absolute bottom-[10%] left-[8%] text-6xl opacity-20 transform -rotate-20">🧩</span>
-              <span className="absolute bottom-[25%] left-[22%] text-5xl opacity-20 transform rotate-15">🧩</span>
-              <span className="absolute bottom-[45%] left-[12%] text-3xl opacity-20 transform -rotate-12">🧩</span>
-              <span className="absolute top-[10%] right-[8%] text-4xl opacity-20 transform -rotate-20">🧩</span>
-              <span className="absolute top-[25%] right-[22%] text-3xl opacity-20 transform rotate-15">🧩</span>
-              <span className="absolute top-[45%] right-[12%] text-2xl opacity-20 transform -rotate-12">🧩</span>
-              <span className="absolute top-[65%] right-[2%] text-3xl opacity-20 transform -rotate-20 scale-y-[-1]">🧩</span>
-              <span className="absolute top-[85%] right-[18%] text-4xl opacity-20 transform rotate-10">🧩</span>
-              <span className="absolute bottom-[15%] right-[20%] text-2xl opacity-20 transform rotate-10">🧩</span>
-              <span className="absolute bottom-[35%] right-[10%] text-4xl opacity-20 transform rotate-5">🧩</span>
-          </div>
 
           <div className="p-1 md:p-2 relative z-10">
             <div className="text-center pt-8">
