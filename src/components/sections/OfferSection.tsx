@@ -27,6 +27,16 @@ export default function OfferSection() {
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#6A0DAD] to-pink-900 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
             <div className="bg-gradient-to-br from-purple-800 to-purple-900/80 rounded-t-xl p-6 text-center">
+                <div className="mb-4">
+                  <Image
+                    src="https://i.imgur.com/z1brNWZ.png"
+                    alt="Ícone de Oferta Especial"
+                    data-ai-hint="special offer icon"
+                    width={100}
+                    height={100}
+                    className="mx-auto"
+                  />
+                </div>
                 <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider" style={{ textShadow: '0 2px 10px rgba(0, 0, 0, 0.5)' }}>
                     SUPER OFERTA
                 </h2>
