@@ -233,10 +233,10 @@ export default function TestimonialsSection() {
         
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white mb-4 drop-shadow-md">
-            Professores e pais aprovam: o Gêniozinho em Ação faz a diferença!
+            Veja o que professores e pais estão dizendo sobre o Gêniozinho em Ação
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Veja o que professores e pais estão dizendo sobre o Gêniozinho em Ação
+            O Gêniozinho em Ação já transformou a rotina de milhares de famílias e salas de aula.
           </p>
            <div className="mt-8">
             <DynamicCounterBanner />
@@ -301,3 +301,5 @@ export default function TestimonialsSection() {
     </section>
   );
 }
+
+    
