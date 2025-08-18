@@ -53,8 +53,8 @@ const commentsData = [
   {
     id: 3,
     avatarUrl: '/images/terapeuta-otimizado.webp',
-    avatarFallback: 'AP',
-    name: 'André P.',
+    avatarFallback: 'AF',
+    name: 'André Ferreira',
     time: '1d',
     text: 'Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.',
     reactions: { like: 256, love: 30, haha: 1 },
