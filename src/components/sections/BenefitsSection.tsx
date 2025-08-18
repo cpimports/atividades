@@ -153,21 +153,6 @@ export default function BenefitsSection() {
                 </div>
               </div>
 
-              <div className="bg-yellow-100/70 p-8">
-                <p className="font-bold text-gray-800 text-lg md:text-xl mb-4">
-                  TODOS OS 12 BÔNUS, QUE CUSTARIAM
-                  <span className="text-red-600 line-through ml-2 text-base md:text-xl">R$297,00</span>
-                </p>
-                <p className="font-extrabold text-2xl md:text-3xl mt-2 drop-shadow-sm">
-                  <span className="text-green-800 font-bold">HOJE</span> SAEM TOTALMENTE{' '}
-                  <span
-                    className="text-green-600"
-                    style={{ textShadow: '0 0 8px rgba(107, 226, 107, 0.8)' }}
-                  >
-                    GRÁTIS!
-                  </span>
-                </p>
-              </div>
             </div>
           </div>
         </div>
