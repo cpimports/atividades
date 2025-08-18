@@ -27,13 +27,13 @@ export default function OfferSection() {
   return (
     <section
       id="oferta-especial"
-      className="py-16 md:py-24 bg-background relative"
+      className="py-16 md:py-24 bg-gradient-to-b from-blue-800 to-gray-900 relative"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="max-w-4xl mx-auto mb-12">
-            <div className="shadow-xl bg-card/80 backdrop-blur-md border border-primary/20 rounded-lg">
-                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6">
+            <div className="shadow-xl bg-card/10 backdrop-blur-md border border-white/10 rounded-lg">
+                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6 text-white">
                     <div className="flex-shrink-0">
                         <Image
                             src="https://i.imgur.com/lbSS21Q.png"
@@ -47,19 +47,19 @@ export default function OfferSection() {
                         />
                     </div>
                     <div className="flex-grow">
-                        <h3 className="font-merriweather text-2xl font-bold text-yellow-500 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
-                        <p className="text-foreground/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
-                         <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-muted-foreground font-semibold">
+                        <h3 className="font-merriweather text-2xl font-bold text-yellow-400 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
+                        <p className="text-white/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
+                         <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-white/70 font-semibold">
                             <div className="flex items-center gap-1.5">
-                                <ShieldCheck className="h-4 w-4 text-green-600" />
+                                <ShieldCheck className="h-4 w-4 text-green-400" />
                                 <span>Compra Segura</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <Lock className="h-4 w-4 text-green-600" />
+                                <Lock className="h-4 w-4 text-green-400" />
                                 <span>Privacidade</span>
                             </div>
                              <div className="flex items-center gap-1.5">
-                                <CreditCard className="h-4 w-4 text-green-600" />
+                                <CreditCard className="h-4 w-4 text-green-400" />
                                 <span>Qualidade</span>
                             </div>
                         </div>
@@ -69,12 +69,12 @@ export default function OfferSection() {
         </div>
 
         <div className="text-center mb-12">
-            <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
+            <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-white">
                 Transforme o Aprendizado das Crianças Autistas com um Só Clique!
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-900/50 to-gray-900/50 rounded-2xl shadow-2xl overflow-hidden border border-white/10">
           <div className="p-1 md:p-2">
             <div className="text-center pt-6">
                 <div className="mb-4">
@@ -87,11 +87,11 @@ export default function OfferSection() {
                     className="mx-auto"
                   />
                 </div>
-                <div className="inline-block bg-gradient-to-br from-blue-500/80 to-blue-800/80 rounded-xl shadow-xl py-3 px-6">
-                  <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
-                      SUPER OFERTA
-                  </h2>
-                  <p className="text-2xl md:text-3xl font-bold text-yellow-300 mt-1 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider mb-2" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
+                    SUPER OFERTA
+                </h2>
+                <div className="inline-block bg-gradient-to-br from-blue-500/80 to-blue-800/80 rounded-xl shadow-xl py-2 px-6">
+                  <p className="text-2xl md:text-3xl font-bold text-yellow-300 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
                       SOMENTE HOJE
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function OfferSection() {
         </div>
 
         <div className="mt-16 max-w-2xl mx-auto text-center">
-            <p className="font-bold text-foreground mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
+            <p className="font-bold text-white mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
           <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 shadow-md">
             <p className="font-semibold text-yellow-900 mb-2">
                 ⏳ {progress}% dos kits promocionais já foram vendidos!
