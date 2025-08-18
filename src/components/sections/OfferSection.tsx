@@ -71,14 +71,14 @@ export default function OfferSection() {
   return (
     <section
       id="oferta-especial"
-      className="py-16 md:py-24 bg-background relative overflow-hidden"
+      className="py-16 md:py-24 bg-gradient-to-br from-[#6A0DAD] to-[#4B0082] relative overflow-hidden rounded-xl shadow-2xl my-8 mx-auto max-w-7xl"
     >
       <div className="absolute -top-20 -left-20 w-72 h-72 md:w-96 md:h-96 bg-primary/5 rounded-full filter blur-3xl opacity-50 -z-0"></div>
       <div className="absolute -bottom-20 -right-10 w-72 h-72 md:w-96 md:h-96 bg-accent/10 rounded-full filter blur-3xl opacity-60 -z-0"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-8 md:mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary mb-3">
+          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-white mb-3">
             Transforme o Aprendizado das Crianças com um Só Clique!
           </h2>
         </div>
@@ -130,21 +130,21 @@ export default function OfferSection() {
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
-                <div className="mt-6 flex justify-center items-center gap-4 text-xs text-muted-foreground font-semibold">
+                <div className="mt-6 flex justify-center items-center gap-4 text-xs text-white/70 font-semibold">
                     <div className="flex items-center gap-1.5">
-                        <ShieldCheck className="h-4 w-4 text-green-600" />
+                        <ShieldCheck className="h-4 w-4 text-green-400" />
                         <span>Compra Segura</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                        <Lock className="h-4 w-4 text-green-600" />
+                        <Lock className="h-4 w-4 text-green-400" />
                         <span>Privacidade</span>
                     </div>
                      <div className="flex items-center gap-1.5">
-                        <Award className="h-4 w-4 text-green-600" />
+                        <Award className="h-4 w-4 text-green-400" />
                         <span>Qualidade</span>
                     </div>
                 </div>
-                 <p className="mt-2 text-sm text-muted-foreground">
+                 <p className="mt-2 text-sm text-white/70">
                   Compra 100% segura e satisfação que transforma.
                 </p>
               </div>
@@ -209,5 +209,3 @@ export default function OfferSection() {
     </section>
   );
 }
-
-    
