@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -15,6 +14,7 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 import { cn } from '@/lib/utils';
+import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
 const youtubeShorts = [
   { id: "5Jppp049f8c", title: "Depoimento em Vídeo 1" },
@@ -230,6 +230,7 @@ export default function TestimonialsSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <DynamicCounterBanner />
         <div className="text-center mb-12">
           <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-white mb-4 drop-shadow-md">
             O QUE OS PAIS E PROFESSORES ESTÃO FALANDO!
