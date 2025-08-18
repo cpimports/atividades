@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
+import { useProgress } from '@/hooks/useProgress';
 
 const deliverables = [
   {
@@ -43,29 +44,7 @@ const bonusImages = [
 ]
 
 export default function BenefitsSection() {
-    const [progress, setProgress] = React.useState(0);
-    const initialProgress = 40;
-
-    React.useEffect(() => {
-        // Animate from 0 to initialProgress
-        const animationTimeout = setTimeout(() => setProgress(initialProgress), 500);
-
-        // Slowly increase progress over time
-        const interval = setInterval(() => {
-        setProgress((prev) => {
-            if (prev < 95) {
-            return prev + 1;
-            }
-            clearInterval(interval);
-            return prev;
-        });
-        }, 25000); // Increases every 25 seconds
-
-        return () => {
-        clearTimeout(animationTimeout);
-        clearInterval(interval);
-        };
-    }, []);
+    const progress = useProgress();
 
   return (
     <section id="oque-voce-recebe" className="py-16 md:py-24 relative bg-gradient-to-br from-background to-muted/30">
@@ -153,7 +132,7 @@ export default function BenefitsSection() {
         </div>
 
         <div className="mt-12 max-w-2xl mx-auto text-center">
-            <p className="font-bold text-black mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
+            <p className="font-bold text-foreground mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
           <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 shadow-md">
             <p className="font-semibold text-yellow-900 mb-2">
                 ⏳ {progress}% dos kits promocionais já foram vendidos!
