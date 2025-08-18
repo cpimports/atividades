@@ -96,8 +96,8 @@ export default function KitDescriptionSection() {
               src="https://i.imgur.com/hwMc8SF.png"
               alt="Crianças estudando felizes"
               data-ai-hint="children studying happy"
-              width={200}
-              height={200}
+              width={250}
+              height={250}
               className="mx-auto"
             />
           </div>
