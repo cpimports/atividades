@@ -38,7 +38,7 @@ const commentsData = [
       avatarUrl: 'https://i.imgur.com/sb4rEa0.png',
       name: 'Gêniozinho em Ação',
       time: '4h',
-      text: 'Que notícia maravilhosa, Carla! Ficamos emocionados em saber que estamos fazendo a diferença na vida do seu filho. Conte sempre com a gente! 💙',
+      text: 'Que incrível ler isso Carla! 💙 Nosso propósito é exatamente facilitar a rotina dos professores e tornar o aprendizado mais inclusivo e leve.',
     },
   },
   {
