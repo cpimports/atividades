@@ -28,7 +28,7 @@ const youtubeShorts = [
 const commentsData = [
   {
     id: 1,
-    avatarUrl: '/images/mãe-otimizado.webp',
+    avatarUrl: 'https://i.imgur.com/nqm8CGq.jpeg',
     avatarFallback: 'CM',
     name: 'Carla Monteiro',
     time: '5h',
