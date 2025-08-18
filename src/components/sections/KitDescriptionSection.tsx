@@ -128,7 +128,7 @@ export default function KitDescriptionSection() {
               >
                 <CarouselContent>
                   {carouselImages.map((image, index) => (
-                    <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/3">
+                    <CarouselItem key={index} className="basis-1/1 sm:basis-1/2">
                       <div className="p-1">
                         <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
                           <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
@@ -138,7 +138,7 @@ export default function KitDescriptionSection() {
                               data-ai-hint={image.hint}
                               fill
                               className="object-cover rounded-lg"
-                              sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                              sizes="(max-width: 640px) 100vw, 50vw"
                               loading="lazy"
                             />
                           </CardContent>
