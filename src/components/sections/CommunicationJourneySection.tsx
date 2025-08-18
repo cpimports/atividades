@@ -1,4 +1,3 @@
-
 'use client';
 
 import { BrainCircuit, Users, Award, PersonStanding } from 'lucide-react';
@@ -32,7 +31,7 @@ export default function CommunicationJourneySection() {
     <section id="communication-journey" className="py-16 md:py-24 bg-muted/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-bold text-primary">
+          <h2 className="font-merriweather text-3xl sm:text-4xl font-bold text-primary">
             Veja como nosso kit pode transformar a jornada de comunicação do seu aluno autista
           </h2>
         </div>

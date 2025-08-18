@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -51,7 +50,7 @@ export default function BenefitsSection() {
       <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/light-paper-fibers.png')] opacity-[0.03] mix-blend-overlay pointer-events-none -z-10"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-0">
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
+          <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
             O Que Você Recebe ao Adquirir o Kit?
           </h2>
           <p className="mt-4 max-w-2xl mx-auto text-lg text-foreground/70">
@@ -92,7 +91,7 @@ export default function BenefitsSection() {
         </div>
 
         <div className="text-center mt-8">
-          <h3 className="font-headline text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
+          <h3 className="font-merriweather text-3xl sm:text-4xl font-semibold text-yellow-500 drop-shadow-md">
             + BÔNUS EXCLUSIVOS
           </h3>
           <p className="mt-3 text-lg text-foreground/80 max-w-2xl mx-auto font-semibold">

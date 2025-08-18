@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import Image from 'next/image';
 
@@ -27,7 +26,7 @@ export default function HowToReceiveSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8"> {/* Removed relative z-0 */}
         <div className="text-center mb-12">
-          <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
+          <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
             VEJA COMO RECEBER SEU MATERIAL
           </h2>
         </div>
