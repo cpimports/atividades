@@ -124,8 +124,8 @@ export default function OfferSection() {
                     src="https://i.imgur.com/gihdLU5.png"
                     alt="Kit Gêniozinho em Ação"
                     data-ai-hint="product bundle mockup"
-                    width={200}
-                    height={150}
+                    width={150}
+                    height={113}
                     className="mx-auto mb-4 relative z-10"
                 />
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold uppercase text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(253, 224, 71, 0.4)' }}>
