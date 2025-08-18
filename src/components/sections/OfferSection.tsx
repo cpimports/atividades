@@ -74,7 +74,7 @@ export default function OfferSection() {
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-600 to-blue-800 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
             <div className="text-center pt-6">
                 <div className="mb-4">
@@ -87,7 +87,7 @@ export default function OfferSection() {
                     className="mx-auto"
                   />
                 </div>
-                <div className="inline-block bg-gradient-to-br from-blue-400/80 to-blue-700/80 rounded-xl shadow-xl py-3 px-6">
+                <div className="inline-block bg-gradient-to-br from-blue-500/80 to-blue-800/80 rounded-xl shadow-xl py-3 px-6">
                   <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
                       SUPER OFERTA
                   </h2>
