@@ -71,7 +71,7 @@ const commentsData = [
     avatarFallback: 'RT',
     name: 'Rafael T.',
     time: '3d',
-    text: 'Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis. Valeu cada centavo!',
+    text: 'Sou mãe da Manoela, ela é autista nível 2 e sei o quanto é difícil ver outras crianças avançando enquanto minha filha enfrenta mais obstáculo. O Gêniozinho em Ação trouxe leveza para nossa rotina, fazemos uma atividade por dia e já sentimos diferença. É incrível!',
     reactions: { like: 412, love: 55 },
   },
 ];
