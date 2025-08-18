@@ -140,7 +140,7 @@ export default function BenefitsSection() {
 
           <div className="my-12 text-center">
             <div className="inline-block p-4 rounded-lg animate-pulse-yellow-cta">
-              <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-400 uppercase tracking-wide drop-shadow-lg">
+              <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-500 uppercase tracking-wide drop-shadow-lg">
                 + 8 Bônus Surpresa
               </h4>
               <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
