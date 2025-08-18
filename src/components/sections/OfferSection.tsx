@@ -87,7 +87,7 @@ export default function OfferSection() {
                     className="mx-auto"
                   />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider mb-2" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider mb-2" style={{ textShadow: '0 0 15px rgba(250, 204, 21, 0.4)' }}>
                     SUPER OFERTA
                 </h2>
                 <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6">
