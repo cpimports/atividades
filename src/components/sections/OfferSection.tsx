@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -73,9 +74,9 @@ export default function OfferSection() {
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-700 to-blue-900 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-sky-400 to-blue-500 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
-            <div className="bg-gradient-to-br from-blue-800 to-blue-900/80 rounded-t-xl p-6 text-center">
+            <div className="bg-gradient-to-br from-sky-400/80 to-blue-500/80 rounded-t-xl p-6 text-center">
                 <div className="mb-4">
                   <Image
                     src="https://i.imgur.com/z1brNWZ.png"
@@ -89,7 +90,7 @@ export default function OfferSection() {
                 <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
                     SUPER OFERTA
                 </h2>
-                <p className="text-2xl md:text-3xl font-bold text-yellow-400 mt-2 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
+                <p className="text-2xl md:text-3xl font-bold text-yellow-300 mt-2 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
                     SOMENTE HOJE
                 </p>
             </div>
@@ -102,21 +103,21 @@ export default function OfferSection() {
                     <span className="text-base md:text-lg">{benefit}</span>
                   </li>
                 ))}
-                 <li className="flex items-start justify-center font-bold text-yellow-400">
+                 <li className="flex items-start justify-center font-bold text-yellow-300">
                     <span className="text-base md:text-lg">{lastBenefit}</span>
                   </li>
               </ul>
 
               <div className="text-center bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 shadow-inner space-y-4 my-8">
-                  <p className="text-lg uppercase tracking-wider font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
+                  <p className="text-lg uppercase tracking-wider font-semibold text-yellow-300">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                   <div className="mb-2">
-                    <span className="text-xl text-gray-300/80 line-through">De R$97,00</span>
+                    <span className="text-xl text-gray-200/80 line-through">De R$97,00</span>
                   </div>
                   <div className="my-2 flex items-baseline justify-center gap-2">
-                    <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400" style={{ textShadow: '0 3px 8px rgba(255, 215, 0, 0.4)' }}>R$19,90</span>
+                    <span className="text-6xl sm:text-7xl font-extrabold text-yellow-300" style={{ textShadow: '0 3px 8px rgba(255, 215, 0, 0.4)' }}>R$19,90</span>
                   </div>
                   <div className="text-lg text-white font-semibold">ou 4x de R$5,77</div>
-                  <p className="text-sm text-gray-200/80 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
+                  <p className="text-sm text-gray-100/80 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
               
               <div className="text-center mt-8">
