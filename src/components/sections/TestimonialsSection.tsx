@@ -32,7 +32,7 @@ const commentsData = [
     avatarFallback: 'CM',
     name: 'Carla M.',
     time: '5h',
-    text: 'Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!',
+    text: 'Sempre perdi horas preparando atividades inclusivas, mas agora tudo já está pronto e organizado. Essa plataforma simplesmente mudou minha rotina em sala de aula e facilitou demais meu planejamento, amei 🥰',
     reactions: { like: 122, love: 15, haha: 2 },
     reply: {
       avatarUrl: 'https://i.imgur.com/sb4rEa0.png',
