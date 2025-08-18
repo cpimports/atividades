@@ -106,7 +106,7 @@ export default function OfferSection() {
                     <span className="text-xl text-gray-400 line-through">De R$97,00</span>
                   </div>
                   <div className="my-2 flex items-baseline justify-center gap-2">
-                    <span className="text-6xl sm:text-7xl font-extrabold text-white" style={{ textShadow: '0 3px 8px rgba(255, 255, 255, 0.2)' }}>R$19,90</span>
+                    <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400" style={{ textShadow: '0 3px 8px rgba(253, 224, 71, 0.2)' }}>R$19,90</span>
                   </div>
                   <div className="text-lg text-gray-200 font-semibold">ou 4x de R$5,77</div>
                   <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
