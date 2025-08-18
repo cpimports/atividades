@@ -103,7 +103,7 @@ export default function OfferSection() {
 
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-500 to-blue-800 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
-            <div className="bg-gradient-to-br from-blue-500/80 to-blue-800/80 rounded-t-xl p-6 text-center">
+            <div className="text-center pt-6">
                 <div className="mb-4">
                   <Image
                     src="https://i.imgur.com/z1brNWZ.png"
@@ -114,12 +114,14 @@ export default function OfferSection() {
                     className="mx-auto"
                   />
                 </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
-                    SUPER OFERTA
-                </h2>
-                <p className="text-2xl md:text-3xl font-bold text-yellow-300 mt-2 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
-                    SOMENTE HOJE
-                </p>
+                <div className="inline-block bg-gradient-to-br from-blue-400/80 to-blue-700/80 rounded-xl shadow-xl py-3 px-6">
+                  <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
+                      SUPER OFERTA
+                  </h2>
+                  <p className="text-2xl md:text-3xl font-bold text-yellow-300 mt-1 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
+                      SOMENTE HOJE
+                  </p>
+                </div>
             </div>
             
             <div className="p-6 md:p-8 text-white">
