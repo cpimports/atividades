@@ -69,7 +69,7 @@ const commentsData = [
     id: 4,
     avatarUrl: '/images/pai-otimizado.webp',
     avatarFallback: 'RT',
-    name: 'Rafael T.',
+    name: 'Raquel Teodoro',
     time: '3d',
     text: 'Sou mãe da Manoela, ela é autista nível 2 e sei o quanto é difícil ver outras crianças avançando enquanto minha filha enfrenta mais obstáculo. O Gêniozinho em Ação trouxe leveza para nossa rotina, fazemos uma atividade por dia e já sentimos diferença. É incrível!',
     reactions: { like: 412, love: 55 },
