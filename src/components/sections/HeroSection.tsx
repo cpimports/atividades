@@ -93,8 +93,8 @@ export default function HeroSection() {
             src="https://i.imgur.com/vXvIBVh.png"
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo brain lightbulb"
-            width={150}
-            height={150}
+            width={120}
+            height={120}
             className="mx-auto"
             priority
           />
