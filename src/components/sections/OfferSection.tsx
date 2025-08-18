@@ -67,12 +67,6 @@ export default function OfferSection() {
                 </div>
             </div>
         </div>
-
-        <div className="text-center mb-12">
-            <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
-                Transforme o Aprendizado das Crianças Autistas com um Só Clique!
-            </h2>
-        </div>
         
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900 relative">
           <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
@@ -103,6 +97,14 @@ export default function OfferSection() {
 
           <div className="p-1 md:p-2 relative z-10">
             <div className="text-center pt-8">
+                <Image 
+                    src="https://i.imgur.com/gihdLU5.png"
+                    alt="Kit Gêniozinho em Ação"
+                    data-ai-hint="product bundle mockup"
+                    width={400}
+                    height={300}
+                    className="mx-auto mb-4 relative z-10"
+                />
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(253, 224, 71, 0.4)' }}>
                     SUPER OFERTA
                 </h2>
