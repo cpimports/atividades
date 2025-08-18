@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, AlertTriangle, ShieldCheck, Lock, Award } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Lock, Award } from 'lucide-react';
 
 export default function OfferSection() {
   const benefits = [
