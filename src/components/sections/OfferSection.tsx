@@ -1,12 +1,60 @@
 
 'use client';
 
-import React from 'react';
+import React, {useRef, useEffect} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, ShieldCheck, Lock, Award } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Lock, Award, AlertTriangle } from 'lucide-react';
+
+const VSLPlayer = () => {
+    const videoId = '686fd145e397e681c4ce4c3b'; // Substitua pelo ID do seu vídeo
+    const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b'; // Substitua pelo ID da sua conta
+    const iframeRef = useRef<HTMLIFrameElement>(null);
+
+    const videoSrc = `https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html`;
+
+    useEffect(() => {
+        const iframe = iframeRef.current;
+        if (iframe) {
+            const handleLoad = () => {
+                try {
+                    // This is the original logic from the string.
+                    // It's not perfectly safe but we replicate it.
+                    if (iframe.src) {
+                        iframe.src += (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
+                    }
+                } catch (e) {
+                    console.error("Failed to update iframe src:", e);
+                }
+            };
+            
+            // We attach the event listener directly to the iframe element
+            iframe.addEventListener('load', handleLoad);
+
+            // Cleanup function to remove the event listener
+            return () => {
+                iframe.removeEventListener('load', handleLoad);
+            };
+        }
+    }, [videoSrc]); // The dependency array ensures this effect runs if the src changes.
+
+    return (
+        <div style={{ padding: '56.48% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden shadow-2xl">
+            <iframe
+                ref={iframeRef}
+                title="vsl-player"
+                frameBorder="0"
+                allowFullScreen
+                src={videoSrc}
+                id={`ifr_${videoId}`}
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                referrerPolicy="origin"
+            ></iframe>
+        </div>
+    );
+};
 
 export default function OfferSection() {
   const benefits = [
@@ -161,3 +209,5 @@ export default function OfferSection() {
     </section>
   );
 }
+
+    

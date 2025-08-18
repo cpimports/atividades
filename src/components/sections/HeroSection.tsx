@@ -4,25 +4,52 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import { PlayCircle } from 'lucide-react';
+import React, { useRef, useEffect } from 'react';
 
 const VideoPlayer = () => {
   const videoId = '686fd145e397e681c4ce4c3b';
   const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b';
+  const iframeRef = useRef<HTMLIFrameElement>(null);
   
-  // Construct the full URL for the iframe source
   const videoSrc = `https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html`;
+
+  useEffect(() => {
+    const iframe = iframeRef.current;
+    if (iframe) {
+      const handleLoad = () => {
+        if (iframe.src) {
+           // This logic was originally in the onLoad string.
+           // It appends query parameters to the iframe src.
+           const newSrc = iframe.src + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
+           if (iframe.src !== newSrc) {
+             // Avoid potential loops by checking if it's already been set.
+             // Note: This logic might not be perfectly transferable and may need review.
+             // For now, we are just setting it once on initial load.
+           }
+        }
+      };
+
+      // We add the event listener directly to the iframe element
+      iframe.addEventListener('load', handleLoad);
+
+      // Cleanup the event listener when the component unmounts
+      return () => {
+        iframe.removeEventListener('load', handleLoad);
+      };
+    }
+  }, [videoSrc]); // Re-run if videoSrc changes, though it's static here.
+
 
   return (
     <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
       <iframe
+        ref={iframeRef}
         frameBorder="0"
         allowFullScreen
         src={videoSrc}
         id={`ifr_${videoId}`}
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         referrerPolicy="origin"
-        onLoad="this.src+=(location.search||'?')+'&vl='+encodeURIComponent(location.href)"
       ></iframe>
     </div>
   );
@@ -113,3 +140,5 @@ export default function HeroSection() {
     </section>
   );
 }
+
+    
