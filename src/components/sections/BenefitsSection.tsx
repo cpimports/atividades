@@ -142,7 +142,7 @@ export default function BenefitsSection() {
             <div className="bg-white rounded-xl shadow-2xl border border-yellow-400/50 overflow-hidden">
               <div className="p-6">
                 <div className="inline-block animate-pulse-yellow-cta">
-                  <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-500 uppercase tracking-wide drop-shadow-lg">
+                  <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-600 uppercase tracking-wide drop-shadow-lg">
                     + 8 Bônus Surpresa
                   </h4>
                   <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
@@ -158,7 +158,7 @@ export default function BenefitsSection() {
                   TODOS OS 12 BÔNUS, QUE CUSTARIAM
                   <span className="text-[#E63946] line-through ml-2 text-base md:text-xl">R$297,00</span>
                 </p>
-                <p className="font-extrabold text-green-800 text-3xl md:text-5xl mt-3 drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
+                <p className="font-extrabold text-green-800 text-3xl md:text-4xl mt-3 drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
                   HOJE SAEM TOTALMENTE GRÁTIS!
                 </p>
               </div>
