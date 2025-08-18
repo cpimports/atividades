@@ -73,9 +73,9 @@ export default function OfferSection() {
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#6A0DAD] to-pink-900 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-700 to-blue-900 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
-            <div className="bg-gradient-to-br from-purple-800 to-purple-900/80 rounded-t-xl p-6 text-center">
+            <div className="bg-gradient-to-br from-blue-800 to-blue-900/80 rounded-t-xl p-6 text-center">
                 <div className="mb-4">
                   <Image
                     src="https://i.imgur.com/z1brNWZ.png"
@@ -123,7 +123,7 @@ export default function OfferSection() {
                 <Button
                   size="lg"
                   asChild
-                  className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-purple-900 font-bold text-xl py-8 px-12 rounded-lg transition-all transform hover:scale-105"
+                  className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold text-xl py-8 px-12 rounded-lg transition-all transform hover:scale-105"
                 >
                   <Link id="btn-comprar" href="https://pay.cakto.com.br/wms7hjy_447695">
                     COMPRAR KIT COM DESCONTO!
