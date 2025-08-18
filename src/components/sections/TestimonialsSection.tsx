@@ -236,7 +236,7 @@ export default function TestimonialsSection() {
             Professores e pais aprovam: o Gêniozinho em Ação faz a diferença!
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            Veja o que pais, professores e terapeutas estão dizendo sobre como o Kit Gêniozinho em Ação transformou suas rotinas e o aprendizado das crianças.
+            Veja o que professores e pais estão dizendo sobre o Gêniozinho em Ação
           </p>
            <div className="mt-8">
             <DynamicCounterBanner />
