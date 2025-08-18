@@ -67,7 +67,7 @@ const commentsData = [
   },
   {
     id: 4,
-    avatarUrl: '/images/pai-otimizado.webp',
+    avatarUrl: 'https://i.imgur.com/vwSIeBW.png',
     avatarFallback: 'RT',
     name: 'Raquel Teodoro',
     time: '3d',
