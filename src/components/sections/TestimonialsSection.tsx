@@ -225,34 +225,6 @@ export default function TestimonialsSection() {
             </div>
           )}
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {testimonialsData.map((testimonial) => (
-            <Card 
-              key={testimonial.id} 
-              className="bg-card text-card-foreground flex flex-col overflow-hidden shadow-2xl shadow-sky-500/50"
-            >
-              <CardHeader className="p-6 flex flex-row items-center space-x-4">
-                <Avatar className="h-16 w-16">
-                  <AvatarImage src={testimonial.avatarUrl} alt={testimonial.name} data-ai-hint={testimonial.avatarHint} sizes="64px" loading="lazy"/>
-                  <AvatarFallback>{testimonial.avatarFallback}</AvatarFallback>
-                </Avatar>
-                <div className="flex-grow">
-                  <CardTitle className="font-headline text-xl text-primary mb-1">{testimonial.descriptor}</CardTitle>
-                  <p className="text-md font-semibold text-foreground/90">{testimonial.name}</p>
-                   <div className="flex items-center mt-2">
-                    {Array(5).fill(0).map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-yellow-400" />
-                    ))}
-                  </div>
-                </div>
-              </CardHeader>
-              <CardContent className="p-6 pt-0 text-left flex-grow">
-                <p className="text-foreground/80 italic leading-relaxed">"{testimonial.text}"</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
       </div>
     </section>
   );
