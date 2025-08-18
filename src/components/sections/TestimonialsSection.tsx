@@ -285,6 +285,11 @@ export default function TestimonialsSection() {
                 <FacebookComment key={comment.id} comment={comment} />
               ))}
             </div>
+            <div className="text-center text-gray-400 mt-8 pt-4 border-t border-slate-700">
+              <p className="text-sm font-semibold hover:text-white transition-colors cursor-pointer">
+                e mais 3.251 comentários...
+              </p>
+            </div>
           </div>
         </div>
 
