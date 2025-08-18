@@ -27,11 +27,50 @@ export default function OfferSection() {
       className="py-16 md:py-24 bg-background"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="max-w-4xl mx-auto mb-12">
+            <div className="shadow-xl bg-card/80 backdrop-blur-md border border-primary/20 rounded-lg">
+                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6">
+                    <div className="flex-shrink-0">
+                        <Image
+                            src="https://i.imgur.com/lbSS21Q.png"
+                            alt="Selo de Garantia de 7 dias"
+                            data-ai-hint="gold shield guarantee"
+                            width={150}
+                            height={150}
+                            className="mx-auto"
+                            loading="lazy"
+                            sizes="150px"
+                        />
+                    </div>
+                    <div className="flex-grow">
+                        <h3 className="text-2xl font-bold font-headline text-yellow-500 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
+                        <p className="text-foreground/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
+                         <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-muted-foreground font-semibold">
+                            <div className="flex items-center gap-1.5">
+                                <ShieldCheck className="h-4 w-4 text-green-600" />
+                                <span>Compra Segura</span>
+                            </div>
+                            <div className="flex items-center gap-1.5">
+                                <Lock className="h-4 w-4 text-green-600" />
+                                <span>Privacidade</span>
+                            </div>
+                             <div className="flex items-center gap-1.5">
+                                <CreditCard className="h-4 w-4 text-green-600" />
+                                <span>Qualidade</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div className="text-center mb-12">
             <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
                 Transforme o Aprendizado das Crianças Autistas com um Só Clique!
             </h2>
         </div>
+
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#6A0DAD] to-pink-900 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
             <div className="bg-gradient-to-br from-purple-800 to-purple-900/80 rounded-t-xl p-6 text-center">
@@ -111,42 +150,6 @@ export default function OfferSection() {
           </div>
         </div>
 
-        <div className="max-w-4xl mx-auto mt-12">
-            <div className="shadow-xl bg-card/80 backdrop-blur-md border border-primary/20 rounded-lg">
-                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6">
-                    <div className="flex-shrink-0">
-                        <Image
-                            src="https://i.imgur.com/lbSS21Q.png"
-                            alt="Selo de Garantia de 7 dias"
-                            data-ai-hint="gold shield guarantee"
-                            width={150}
-                            height={150}
-                            className="mx-auto"
-                            loading="lazy"
-                            sizes="150px"
-                        />
-                    </div>
-                    <div className="flex-grow">
-                        <h3 className="text-2xl font-bold font-headline text-yellow-500 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
-                        <p className="text-foreground/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
-                         <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-muted-foreground font-semibold">
-                            <div className="flex items-center gap-1.5">
-                                <ShieldCheck className="h-4 w-4 text-green-600" />
-                                <span>Compra Segura</span>
-                            </div>
-                            <div className="flex items-center gap-1.5">
-                                <Lock className="h-4 w-4 text-green-600" />
-                                <span>Privacidade</span>
-                            </div>
-                             <div className="flex items-center gap-1.5">
-                                <CreditCard className="h-4 w-4 text-green-600" />
-                                <span>Qualidade</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
       </div>
     </section>
   );
