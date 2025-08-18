@@ -3,9 +3,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Star, PlayCircle } from 'lucide-react';
+import { PlayCircle, ThumbsUp, Heart, Laugh } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -16,56 +16,6 @@ import {
 } from "@/components/ui/carousel";
 import { cn } from '@/lib/utils';
 
-
-interface Testimonial {
-  id: number;
-  descriptor: string;
-  name: string;
-  text: string;
-  avatarUrl: string;
-  avatarFallback: string;
-  avatarHint: string;
-}
-
-const testimonialsData: Testimonial[] = [
-  {
-    id: 1,
-    descriptor: 'Mãe',
-    name: 'Carla M.',
-    text: "Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!",
-    avatarUrl: '/images/mãe-otimizado.webp',
-    avatarFallback: 'CM',
-    avatarHint: 'woman portrait',
-  },
-  {
-    id: 2,
-    descriptor: 'Professora',
-    name: 'Vanessa G. – Professora do 2º ano',
-    text: "Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!",
-    avatarUrl: '/images/professora-otimizado.webp',
-    avatarFallback: 'VG',
-    avatarHint: 'teacher portrait',
-  },
-  {
-    id: 3,
-    descriptor: 'Terapeuta',
-    name: 'André P. – Psicopedagogo',
-    text: "Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.",
-    avatarUrl: '/images/terapeuta-otimizado.webp',
-    avatarFallback: 'AP',
-    avatarHint: 'therapist portrait',
-  },
-  {
-    id: 4,
-    descriptor: 'Pai',
-    name: 'Rafael T.',
-    text: "Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis.",
-    avatarUrl: '/images/pai-otimizado.webp',
-    avatarFallback: 'RT',
-    avatarHint: 'man portrait',
-  },
-];
-
 const youtubeShorts = [
   { id: "5Jppp049f8c", title: "Depoimento em Vídeo 1" },
   { id: "Z1Y3fXl7gvU", title: "Depoimento em Vídeo 2" },
@@ -74,6 +24,58 @@ const youtubeShorts = [
   { id: "r5wiEzRQDUI", title: "Depoimento em Vídeo 5" },
   { id: "4fLlRxscoOI", title: "Depoimento em Vídeo 6" },
 ];
+
+const commentsData = [
+  {
+    id: 1,
+    avatarUrl: '/images/mãe-otimizado.webp',
+    avatarFallback: 'CM',
+    name: 'Carla M.',
+    time: '5h',
+    text: 'Meu filho nunca conseguia se concentrar nas tarefas da escola. Quando começamos a usar o Gêniozinho em Ação, ele se envolveu de verdade! Agora ele até pede pra fazer as atividades. Foi um alívio pra nossa rotina!',
+    reactions: { like: 122, love: 15, haha: 2 },
+    reply: {
+      avatarUrl: 'https://i.imgur.com/sb4rEa0.png',
+      name: 'Gêniozinho em Ação',
+      time: '4h',
+      text: 'Que notícia maravilhosa, Carla! Ficamos emocionados em saber que estamos fazendo a diferença na vida do seu filho. Conte sempre com a gente! 💙',
+    },
+  },
+  {
+    id: 2,
+    avatarUrl: '/images/professora-otimizado.webp',
+    avatarFallback: 'VG',
+    name: 'Vanessa G.',
+    time: '2h',
+    text: 'Uso esse material em sala com meus alunos e tem feito toda a diferença. As atividades são simples de aplicar e muito eficientes pra manter a turma engajada. Indico pra todo educador!',
+    reactions: { like: 89, love: 5 },
+  },
+  {
+    id: 3,
+    avatarUrl: '/images/terapeuta-otimizado.webp',
+    avatarFallback: 'AP',
+    name: 'André P.',
+    time: '1d',
+    text: 'Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.',
+    reactions: { like: 256, love: 30, haha: 1 },
+    reply: {
+      avatarUrl: 'https://i.imgur.com/sb4rEa0.png',
+      name: 'Gêniozinho em Ação',
+      time: '23h',
+      text: 'André, seu feedback é muito importante para nós! Saber que o material está sendo validado por profissionais como você nos dá a certeza de que estamos no caminho certo. Obrigado!',
+    },
+  },
+  {
+    id: 4,
+    avatarUrl: '/images/pai-otimizado.webp',
+    avatarFallback: 'RT',
+    name: 'Rafael T.',
+    time: '3d',
+    text: 'Eu me sentia perdido tentando ajudar minha filha. Esse kit foi um divisor de águas. Agora temos momentos de aprendizado e conexão que antes pareciam impossíveis. Valeu cada centavo!',
+    reactions: { like: 412, love: 55 },
+  },
+];
+
 
 const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => {
   const [showVideo, setShowVideo] = useState(false);
@@ -120,6 +122,58 @@ const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => 
 };
 
 
+const FacebookComment = ({ comment }: { comment: typeof commentsData[0] }) => {
+  const totalReactions = Object.values(comment.reactions).reduce((a, b) => a + b, 0);
+
+  return (
+    <div className="flex space-x-3 w-full">
+      <Avatar className="h-10 w-10 flex-shrink-0">
+        <AvatarImage src={comment.avatarUrl} alt={comment.name} data-ai-hint="person portrait"/>
+        <AvatarFallback>{comment.avatarFallback}</AvatarFallback>
+      </Avatar>
+      <div className="flex-grow">
+        <div className="bg-gray-700/50 rounded-xl p-3 relative">
+          <p className="font-semibold text-white text-sm">{comment.name}</p>
+          <p className="text-gray-200 text-sm">{comment.text}</p>
+          {totalReactions > 0 && (
+            <div className="absolute -bottom-4 right-2 flex items-center bg-gray-800 rounded-full px-2 py-0.5 shadow-md border border-gray-700">
+              <ThumbsUp className="h-3 w-3 text-blue-500" fill="currentColor"/>
+              <Heart className="h-3 w-3 text-red-500 ml-0.5" fill="currentColor"/>
+              <span className="text-xs text-gray-300 ml-1.5 font-medium">{totalReactions}</span>
+            </div>
+          )}
+        </div>
+        <div className="flex items-center space-x-3 text-xs text-gray-400 mt-1 px-3">
+          <button className="font-semibold hover:underline">Curtir</button>
+          <button className="font-semibold hover:underline">Responder</button>
+          <span>{comment.time}</span>
+        </div>
+        
+        {comment.reply && (
+          <div className="flex space-x-3 mt-3">
+            <Avatar className="h-8 w-8 flex-shrink-0">
+                <AvatarImage src={comment.reply.avatarUrl} alt={comment.reply.name} data-ai-hint="company logo"/>
+                <AvatarFallback>GA</AvatarFallback>
+            </Avatar>
+             <div className="flex-grow">
+              <div className="bg-gray-700/50 rounded-xl p-3">
+                <p className="font-semibold text-white text-sm">{comment.reply.name}</p>
+                <p className="text-gray-200 text-sm">{comment.reply.text}</p>
+              </div>
+              <div className="flex items-center space-x-3 text-xs text-gray-400 mt-1 px-3">
+                <button className="font-semibold hover:underline">Curtir</button>
+                <button className="font-semibold hover:underline">Responder</button>
+                <span>{comment.reply.time}</span>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
 export default function TestimonialsSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
@@ -150,15 +204,13 @@ export default function TestimonialsSection() {
 
   return (
     <section id="depoimentos" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
-      {/* Diffuse cloud-like elements */}
+      {/* Background elements */}
       <div className="absolute inset-0 opacity-10 filter blur-3xl pointer-events-none">
         <div className="absolute top-[-15%] left-[-20%] w-[500px] h-[300px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_70%)] rounded-full animate-cloud-drift-slow"></div>
         <div className="absolute top-[10%] right-[-25%] w-[600px] h-[350px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_75%)] rounded-full animate-cloud-drift-medium opacity-80"></div>
         <div className="absolute bottom-[-10%] left-[5%] w-[450px] h-[250px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_65%)] rounded-full animate-cloud-drift-slow opacity-90"></div>
         <div className="absolute bottom-[5%] right-[0%] w-[300px] h-[200px] bg-[radial-gradient(ellipse_at_center,theme(colors.sky.400)_0%,transparent_70%)] rounded-full animate-cloud-drift-medium"></div>
       </div>
-
-      {/* Shiny star-like elements */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-[10%] left-[20%] w-1 h-1 bg-white rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '0s' }}></div>
         <div className="absolute top-[25%] left-[85%] w-1.5 h-1.5 bg-sky-200 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '0.5s' }}></div>
@@ -168,7 +220,6 @@ export default function TestimonialsSection() {
         <div className="absolute top-[5%] left-[60%] w-1 h-1 bg-sky-200 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '2.5s' }}></div>
         <div className="absolute top-[40%] left-[5%] w-1.5 h-1.5 bg-white rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '0.2s' }}></div>
         <div className="absolute bottom-[10%] left-[70%] w-1 h-1 bg-sky-300 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '3s' }}></div>
-        {/* Additional stars */}
         <div className="absolute top-[15%] left-[5%] w-0.5 h-0.5 bg-sky-100 rounded-full filter blur-[0.5px] animate-twinkle" style={{ animationDelay: '0.3s' }}></div>
         <div className="absolute top-[30%] left-[70%] w-1 h-1 bg-white rounded-full filter blur-[0.8px] animate-twinkle" style={{ animationDelay: '0.8s' }}></div>
         <div className="absolute top-[60%] left-[10%] w-1.5 h-1.5 bg-sky-200 rounded-full filter blur-[1px] animate-twinkle" style={{ animationDelay: '1.2s' }}></div>
@@ -225,7 +276,21 @@ export default function TestimonialsSection() {
             </div>
           )}
         </div>
+        
+        <div className="max-w-2xl mx-auto mt-16">
+          <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-4 md:p-6 border border-slate-700">
+            <h3 className="text-xl font-bold text-white text-center mb-6">Comentários de Clientes Satisfeitos</h3>
+            <div className="space-y-6">
+              {commentsData.map((comment) => (
+                <FacebookComment key={comment.id} comment={comment} />
+              ))}
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
 }
+
+    
