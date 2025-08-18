@@ -84,6 +84,14 @@ export default function OfferSection() {
               <span className="absolute top-[70%] right-[30%] text-4xl opacity-10 transform rotate-10">🧩</span>
               <span className="absolute bottom-[30%] right-[45%] text-5xl opacity-10 transform rotate-15">🧩</span>
               <span className="absolute top-[40%] left-[40%] text-2xl opacity-10 transform -rotate-10">🧩</span>
+              <span className="absolute top-[85%] left-[10%] text-4xl opacity-10 transform -rotate-12">🧩</span>
+              <span className="absolute top-[5%] right-[35%] text-6xl opacity-10 transform rotate-20">🧩</span>
+              <span className="absolute bottom-[5%] left-[30%] text-3xl opacity-10 transform rotate-12">🧩</span>
+              <span className="absolute bottom-[45%] right-[5%] text-5xl opacity-10 transform -rotate-45">🧩</span>
+              <span className="absolute top-[30%] left-[5%] text-4xl opacity-10 transform rotate-45">🧩</span>
+              <span className="absolute top-[90%] right-[40%] text-6xl opacity-10 transform rotate-10">🧩</span>
+              <span className="absolute bottom-[10%] right-[35%] text-2xl opacity-10 transform rotate-15">🧩</span>
+              <span className="absolute top-[50%] left-[50%] text-7xl opacity-10 transform -rotate-10">🧩</span>
           </div>
 
           <div className="p-1 md:p-2 relative z-10">
