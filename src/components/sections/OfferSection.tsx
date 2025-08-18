@@ -73,16 +73,13 @@ export default function OfferSection() {
                 Transforme o Aprendizado das Crianças Autistas com um Só Clique!
             </h2>
         </div>
-
-        <div className="max-w-4xl mx-auto text-center mb-4">
-          <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider mb-2 drop-shadow-lg" style={{ textShadow: '0 3px 6px rgba(253, 224, 71, 0.3)' }}>
-              SUPER OFERTA
-          </h2>
-        </div>
         
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900">
           <div className="p-1 md:p-2">
-            <div className="text-center pt-6">
+            <div className="text-center pt-8">
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider mb-4 drop-shadow-lg" style={{ textShadow: '0 3px 6px rgba(253, 224, 71, 0.3)' }}>
+                    SUPER OFERTA
+                </h2>
                 <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6">
                   <p className="text-2xl md:text-3xl font-bold text-white tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
                       SOMENTE HOJE
