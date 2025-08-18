@@ -27,7 +27,7 @@ export default function OfferSection() {
   return (
     <section
       id="oferta-especial"
-      className="py-16 md:py-24 bg-background relative overflow-hidden"
+      className="py-16 md:py-24 bg-background relative"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -74,7 +74,7 @@ export default function OfferSection() {
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-b from-sky-500 to-blue-700 rounded-2xl shadow-2xl overflow-hidden">
+        <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-600 to-blue-800 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
             <div className="text-center pt-6">
                 <div className="mb-4">
