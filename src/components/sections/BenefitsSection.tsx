@@ -138,29 +138,32 @@ export default function BenefitsSection() {
             ))}
           </div>
 
-          <div className="my-12 text-center">
-            <div className="inline-block p-4 rounded-lg animate-pulse-yellow-cta">
-              <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-500 uppercase tracking-wide drop-shadow-lg">
-                + 8 Bônus Surpresa
-              </h4>
-              <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
-                <p className="text-base md:text-lg font-bold">
-                  LIBERADOS SOMENTE APÓS A COMPRA 🎁🔥
+          <div className="my-12 text-center max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-2xl border border-yellow-400/50 overflow-hidden">
+              <div className="p-6">
+                <div className="inline-block animate-pulse-yellow-cta">
+                  <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-500 uppercase tracking-wide drop-shadow-lg">
+                    + 8 Bônus Surpresa
+                  </h4>
+                  <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
+                    <p className="text-base md:text-lg font-bold">
+                      LIBERADOS SOMENTE APÓS A COMPRA 🎁🔥
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-200 via-yellow-100 to-yellow-200 p-8">
+                <p className="font-bold text-gray-800 text-lg md:text-xl">
+                  TODOS OS 12 BÔNUS, QUE CUSTARIAM
+                  <span className="text-[#E63946] line-through ml-2 text-base md:text-xl">R$297,00</span>
+                </p>
+                <p className="font-extrabold text-green-800 text-3xl md:text-5xl mt-3 drop-shadow-[0_2px_2px_rgba(0,0,0,0.2)]">
+                  HOJE SAEM TOTALMENTE GRÁTIS!
                 </p>
               </div>
             </div>
           </div>
-
-          <div className="mt-12 bg-[#DFF6DD] p-8 rounded-lg shadow-lg text-center max-w-4xl mx-auto border border-green-800/20">
-            <p className="font-bold text-gray-800 text-lg md:text-xl">
-              TODOS OS 12 BÔNUS, QUE CUSTARIAM
-              <span className="text-[#E63946] line-through ml-2 text-base md:text-xl">R$297,00</span>
-            </p>
-            <p className="font-bold text-[#1B4332] text-2xl md:text-4xl mt-3 drop-shadow-[0_1px_1px_rgba(255,255,255,0.7)]">
-              HOJE SAEM TOTALMENTE GRÁTIS!
-            </p>
-          </div>
-
         </div>
 
         <div className="mt-12 max-w-2xl mx-auto text-center">
