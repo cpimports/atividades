@@ -1,14 +1,25 @@
 
 'use client';
 
-import React, {useRef, useEffect} from 'react';
+import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, ShieldCheck, Lock, Award, CreditCard } from 'lucide-react';
+import { CheckCircle, ShieldCheck, Lock, CreditCard } from 'lucide-react';
 
 export default function OfferSection() {
+
+  const benefits = [
+    "+1500 Atividades Lúdicas e Adaptadas para Autistas",
+    "Acesso Imediato e Vitalício à Plataforma com todo Material",
+    "Tranquilidade e Suporte para Você",
+    "SUPER BÔNUS 1: Mega Pacote de +1000 Moldes de EVA",
+    "SUPER BÔNUS 2: Kit de Medalhas de Reconhecimento",
+    "SUPER BÔNUS 3: +10 Jogos Inclusivos e Testados",
+    "SUPER BÔNUS 4: Guia de Adaptação de Atividades para Autistas"
+  ];
+
+  const lastBenefit = "+ 8 SUPER BÔNUS";
 
   return (
     <section
@@ -37,17 +48,18 @@ export default function OfferSection() {
                 </p>
             </div>
             
-            <div className="p-6 md:p-8">
-              <div className="mb-8">
-                <Image
-                  src="https://i.imgur.com/ak914uz.png"
-                  alt="Lista de benefícios do kit"
-                  data-ai-hint="benefits list graphic"
-                  width={800}
-                  height={600}
-                  className="mx-auto rounded-lg"
-                />
-              </div>
+            <div className="p-6 md:p-8 text-white">
+              <ul className="space-y-4 mb-8">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <span className="text-base md:text-lg">{benefit}</span>
+                  </li>
+                ))}
+                 <li className="flex items-start justify-center font-bold text-yellow-400">
+                    <span className="text-base md:text-lg">{lastBenefit}</span>
+                  </li>
+              </ul>
 
               <div className="text-center bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 shadow-inner space-y-4 my-8">
                   <p className="text-lg uppercase tracking-wider font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
@@ -95,8 +107,8 @@ export default function OfferSection() {
         </div>
 
         <div className="max-w-4xl mx-auto mt-12">
-            <Card className="shadow-xl bg-card/80 backdrop-blur-md border border-primary/20">
-                <CardContent className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6">
+            <div className="shadow-xl bg-card/80 backdrop-blur-md border border-primary/20 rounded-lg">
+                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6">
                     <div className="flex-shrink-0">
                         <Image
                             src="https://i.imgur.com/lbSS21Q.png"
@@ -127,8 +139,8 @@ export default function OfferSection() {
                             </div>
                         </div>
                     </div>
-                </CardContent>
-            </Card>
+                </div>
+            </div>
         </div>
       </div>
     </section>
