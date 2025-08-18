@@ -128,7 +128,7 @@ const FacebookComment = ({ comment }: { comment: typeof commentsData[0] }) => {
   return (
     <div className="flex space-x-3 w-full">
       <Avatar className="h-10 w-10 flex-shrink-0">
-        <AvatarImage src={comment.avatarUrl} alt={comment.name} data-ai-hint="person portrait"/>
+        <AvatarImage src={comment.avatarUrl} alt={comment.name} data-ai-hint="person portrait" className="object-cover"/>
         <AvatarFallback>{comment.avatarFallback}</AvatarFallback>
       </Avatar>
       <div className="flex-grow">
@@ -152,7 +152,7 @@ const FacebookComment = ({ comment }: { comment: typeof commentsData[0] }) => {
         {comment.reply && (
           <div className="flex space-x-3 mt-3">
             <Avatar className="h-8 w-8 flex-shrink-0">
-                <AvatarImage src={comment.reply.avatarUrl} alt={comment.reply.name} data-ai-hint="company logo"/>
+                <AvatarImage src={comment.reply.avatarUrl} alt={comment.reply.name} data-ai-hint="company logo" className="object-cover"/>
                 <AvatarFallback>GA</AvatarFallback>
             </Avatar>
              <div className="flex-grow">
