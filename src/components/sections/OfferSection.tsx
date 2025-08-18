@@ -27,13 +27,13 @@ export default function OfferSection() {
   return (
     <section
       id="oferta-especial"
-      className="py-16 md:py-24 bg-gradient-to-b from-blue-800 to-gray-900 relative"
+      className="py-16 md:py-24 bg-white relative"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="max-w-4xl mx-auto mb-12">
-            <div className="shadow-xl bg-card/10 backdrop-blur-md border border-white/10 rounded-lg">
-                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6 text-white">
+            <div className="shadow-xl bg-card/10 backdrop-blur-md border border-gray-200 rounded-lg">
+                <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6 text-gray-800">
                     <div className="flex-shrink-0">
                         <Image
                             src="https://i.imgur.com/lbSS21Q.png"
@@ -47,19 +47,19 @@ export default function OfferSection() {
                         />
                     </div>
                     <div className="flex-grow">
-                        <h3 className="font-merriweather text-2xl font-bold text-yellow-400 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
-                        <p className="text-white/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
-                         <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-white/70 font-semibold">
+                        <h3 className="font-merriweather text-2xl font-bold text-primary drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
+                        <p className="text-gray-600 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
+                         <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-500 font-semibold">
                             <div className="flex items-center gap-1.5">
-                                <ShieldCheck className="h-4 w-4 text-green-400" />
+                                <ShieldCheck className="h-4 w-4 text-green-600" />
                                 <span>Compra Segura</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <Lock className="h-4 w-4 text-green-400" />
+                                <Lock className="h-4 w-4 text-green-600" />
                                 <span>Privacidade</span>
                             </div>
                              <div className="flex items-center gap-1.5">
-                                <CreditCard className="h-4 w-4 text-green-400" />
+                                <CreditCard className="h-4 w-4 text-green-600" />
                                 <span>Qualidade</span>
                             </div>
                         </div>
@@ -69,25 +69,15 @@ export default function OfferSection() {
         </div>
 
         <div className="text-center mb-12">
-            <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-white">
+            <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
                 Transforme o Aprendizado das Crianças Autistas com um Só Clique!
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gradient-to-b from-blue-900/50 to-gray-900/50 rounded-2xl shadow-2xl overflow-hidden border border-white/10">
+        <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
           <div className="p-1 md:p-2">
             <div className="text-center pt-6">
-                <div className="mb-4">
-                  <Image
-                    src="https://i.imgur.com/z1brNWZ.png"
-                    alt="Ícone de Oferta Especial"
-                    data-ai-hint="special offer icon"
-                    width={100}
-                    height={100}
-                    className="mx-auto"
-                  />
-                </div>
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider mb-2" style={{ textShadow: '0 0 15px rgba(250, 204, 21, 0.4)' }}>
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-500 tracking-wider mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
                     SUPER OFERTA
                 </h2>
                 <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6">
@@ -97,7 +87,7 @@ export default function OfferSection() {
                 </div>
             </div>
             
-            <div className="p-6 md:p-8 text-white">
+            <div className="p-6 md:p-8 text-gray-800">
               <ul className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
@@ -105,21 +95,21 @@ export default function OfferSection() {
                     <span className="text-base md:text-lg">{benefit}</span>
                   </li>
                 ))}
-                 <li className="flex items-start justify-center font-bold text-yellow-300">
+                 <li className="flex items-start justify-center font-bold text-primary">
                     <span className="text-base md:text-lg">{lastBenefit}</span>
                   </li>
               </ul>
 
-              <div className="text-center bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 shadow-inner space-y-4 my-8">
-                  <p className="text-lg uppercase tracking-wider font-semibold text-yellow-300">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
+              <div className="text-center bg-white/50 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-inner space-y-4 my-8">
+                  <p className="text-lg uppercase tracking-wider font-semibold text-primary">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                   <div className="mb-2">
-                    <span className="text-xl text-gray-200/80 line-through">De R$97,00</span>
+                    <span className="text-xl text-gray-500 line-through">De R$97,00</span>
                   </div>
                   <div className="my-2 flex items-baseline justify-center gap-2">
-                    <span className="text-6xl sm:text-7xl font-extrabold text-yellow-300" style={{ textShadow: '0 3px 8px rgba(255, 215, 0, 0.4)' }}>R$19,90</span>
+                    <span className="text-6xl sm:text-7xl font-extrabold text-primary" style={{ textShadow: '0 3px 8px rgba(59, 130, 246, 0.2)' }}>R$19,90</span>
                   </div>
-                  <div className="text-lg text-white font-semibold">ou 4x de R$5,77</div>
-                  <p className="text-sm text-gray-100/80 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
+                  <div className="text-lg text-gray-800 font-semibold">ou 4x de R$5,77</div>
+                  <p className="text-sm text-gray-600 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
               
               <div className="text-center mt-8">
@@ -133,19 +123,19 @@ export default function OfferSection() {
                   </Link>
                 </Button>
                 
-                <div className="mt-8 text-center text-xs text-white/70">
+                <div className="mt-8 text-center text-xs text-gray-600">
                     <p className='mb-3'>Compra 100% segura e satisfação que transforma. Métodos de pagamento aceitos:</p>
                     <div className="flex justify-center items-center gap-4 text-sm font-semibold">
                         <div className="flex items-center gap-1.5">
-                            <ShieldCheck className="h-5 w-5 text-green-400" />
+                            <ShieldCheck className="h-5 w-5 text-green-600" />
                             <span>Compra Segura</span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                            <Lock className="h-5 w-5 text-green-400" />
+                            <Lock className="h-5 w-5 text-green-600" />
                             <span>Privacidade</span>
                         </div>
                          <div className="flex items-center gap-1.5">
-                            <CreditCard className="h-5 w-5 text-green-400" />
+                            <CreditCard className="h-5 w-5 text-green-600" />
                             <span>Pagamento</span>
                         </div>
                     </div>
@@ -156,7 +146,7 @@ export default function OfferSection() {
         </div>
 
         <div className="mt-16 max-w-2xl mx-auto text-center">
-            <p className="font-bold text-white mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
+            <p className="font-bold text-gray-800 mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
           <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 shadow-md">
             <p className="font-semibold text-yellow-900 mb-2">
                 ⏳ {progress}% dos kits promocionais já foram vendidos!
