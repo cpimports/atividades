@@ -29,23 +29,16 @@ export default function OfferSection() {
       id="oferta-especial"
       className="py-16 md:py-24 bg-white relative overflow-hidden"
     >
-        {/* Colorful Puzzle Pieces Background */}
+        {/* Puzzle Pieces Background */}
         <div className="absolute inset-0 pointer-events-none opacity-20">
-            {/* Red pieces */}
-            <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12" style={{ color: '#E53935' }}>🧩</span>
-            <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45" style={{ color: '#E53935' }}>🧩</span>
-            
-            {/* Yellow pieces */}
-            <span className="absolute top-[15%] right-[10%] text-5xl rotate-6" style={{ color: '#FFEB3B' }}>🧩</span>
-            <span className="absolute bottom-[20%] left-[12%] text-3xl -rotate-45" style={{ color: '#FFEB3B' }}>🧩</span>
-
-            {/* Green pieces */}
-            <span className="absolute top-[50%] left-[2%] text-6xl rotate-20" style={{ color: '#43A047' }}>🧩</span>
-            <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12" style={{ color: '#43A047' }}>🧩</span>
-
-            {/* Blue pieces */}
-            <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12" style={{ color: '#1E88E5' }}>🧩</span>
-            <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20" style={{ color: '#1E88E5' }}>🧩</span>
+            <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12">🧩</span>
+            <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45">🧩</span>
+            <span className="absolute top-[15%] right-[10%] text-5xl rotate-6">🧩</span>
+            <span className="absolute bottom-[20%] left-[12%] text-3xl -rotate-45">🧩</span>
+            <span className="absolute top-[50%] left-[2%] text-6xl rotate-20">🧩</span>
+            <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12">🧩</span>
+            <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12">🧩</span>
+            <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20">🧩</span>
         </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
