@@ -129,10 +129,10 @@
   }
   @keyframes brilhoPulse {
     0%, 100% {
-      box-shadow: 0 0 0px rgba(255, 255, 255, 0.4);
+      box-shadow: 0 0 5px rgba(102, 178, 255, 0.2);
     }
     50% {
-      box-shadow: 0 0 12px rgba(255, 255, 255, 0.9);
+      box-shadow: 0 0 20px rgba(102, 178, 255, 0.6);
     }
   }
 }

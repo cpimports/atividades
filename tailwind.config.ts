@@ -138,6 +138,14 @@ export default {
           '10%, 90%': { opacity: '1', transform: 'translateY(0)' },
           '100%': { opacity: '0', transform: 'translateY(20px)' },
         },
+        brilhoPulse: {
+          '0%, 100%': {
+            boxShadow: '0 0 5px rgba(102, 178, 255, 0.2)',
+          },
+          '50%': {
+            boxShadow: '0 0 20px rgba(102, 178, 255, 0.6)',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -152,6 +160,7 @@ export default {
         'pulse-yellow-cta': 'pulse-yellow-cta 2s infinite',
         sparkle: 'sparkle 1.5s infinite alternate',
         'fadeInOut': 'fadeInOut 10.5s forwards',
+        'brilho-pulse': 'brilhoPulse 3s infinite ease-in-out',
       },
     },
   },
