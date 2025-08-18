@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -95,8 +96,8 @@ export default function KitDescriptionSection() {
               src="https://i.imgur.com/hwMc8SF.png"
               alt="Crianças estudando felizes"
               data-ai-hint="children studying happy"
-              width={150}
-              height={150}
+              width={180}
+              height={180}
               className="mx-auto"
             />
           </div>
