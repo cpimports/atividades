@@ -9,6 +9,17 @@ import { ShieldCheck, Lock, CreditCard } from 'lucide-react';
 import { useProgress } from '@/hooks/useProgress';
 import { Progress } from '@/components/ui/progress';
 
+const PuzzlePiece = ({ className, d, fill }: { className: string; d: string; fill: string }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className={`absolute ${className}`}
+      viewBox="0 0 100 100"
+      fill={fill}
+    >
+      <path d={d} />
+    </svg>
+  );
+
 export default function OfferSection() {
 
   const benefits = [
@@ -27,8 +38,16 @@ export default function OfferSection() {
   return (
     <section
       id="oferta-especial"
-      className="py-16 md:py-24 bg-white relative"
+      className="py-16 md:py-24 bg-white relative overflow-hidden"
     >
+        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none">
+            <PuzzlePiece className="top-[5%] left-[10%] w-24 h-24 transform -rotate-12" d="M20,50 C0,50 0,30 20,30 S40,10 50,10 S70,30 70,30 L70,50 C90,50 90,70 70,70 S50,90 50,90 S30,70 30,70 L30,50 C10,50 10,50 20,50z" fill="#E53935" />
+            <PuzzlePiece className="top-[15%] right-[5%] w-32 h-32 transform rotate-20" d="M30,70 C30,90 10,90 10,70 S-10,50 10,50 L30,50 C30,30 50,30 50,30 S70,10 70,10 S90,30 90,50 S70,70 70,70z" fill="#43A047" />
+            <PuzzlePiece className="bottom-[20%] left-[2%] w-28 h-28 transform rotate-12" d="M50,20 C30,20 30,0 50,0 S70,20 70,20 L70,50 C70,70 90,70 90,50 S70,30 70,30 S50,10 50,20z M50,80 C70,80 70,100 50,100 S30,80 30,80 L30,50 C30,30 10,30 10,50 S30,70 30,70z" fill="#1E88E5" />
+            <PuzzlePiece className="bottom-[5%] right-[15%] w-20 h-20 transform -rotate-45" d="M70,30 C90,30 90,50 70,50 S50,70 50,70 S30,50 30,50 L30,30 C10,30 10,10 30,10 S50,-10 50,10 S70,30 70,30z" fill="#FFEB3B" />
+            <PuzzlePiece className="top-[60%] left-[25%] w-16 h-16 transform rotate-45" d="M50,10 C70,10 70,30 70,30 L70,50 C90,50 90,70 70,70 S50,90 50,90 S30,70 30,70 L30,50 C10,50 10,30 30,30 S50,10 50,10z" fill="#43A047" />
+             <PuzzlePiece className="top-[70%] right-[30%] w-20 h-20 transform rotate-10" d="M20,50 C0,50 0,30 20,30 S40,10 50,10 S70,30 70,30 L70,50 C90,50 90,70 70,70 S50,90 50,90 S30,70 30,70 L30,50 C10,50 10,50 20,50z" fill="#1E88E5" />
+        </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="max-w-4xl mx-auto mb-12">
@@ -77,10 +96,10 @@ export default function OfferSection() {
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900">
           <div className="p-1 md:p-2">
             <div className="text-center pt-8">
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider mb-4 drop-shadow-lg" style={{ textShadow: '0 3px 6px rgba(253, 224, 71, 0.3)' }}>
+                <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(253, 224, 71, 0.4)' }}>
                     SUPER OFERTA
                 </h2>
-                <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6">
+                <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6 mt-4">
                   <p className="text-2xl md:text-3xl font-bold text-white tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
                       SOMENTE HOJE
                   </p>
