@@ -90,8 +90,8 @@ export default function OfferSection() {
                 <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-white tracking-wider mb-2" style={{ textShadow: '0 0 15px rgba(255, 255, 255, 0.4)' }}>
                     SUPER OFERTA
                 </h2>
-                <div className="inline-block bg-gradient-to-br from-blue-500/80 to-blue-800/80 rounded-xl shadow-xl py-2 px-6">
-                  <p className="text-2xl md:text-3xl font-bold text-yellow-300 tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
+                <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6">
+                  <p className="text-2xl md:text-3xl font-bold text-white tracking-wide" style={{ textShadow: '0 2px 5px rgba(0, 0, 0, 0.4)' }}>
                       SOMENTE HOJE
                   </p>
                 </div>
