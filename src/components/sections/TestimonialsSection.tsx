@@ -236,7 +236,7 @@ export default function TestimonialsSection() {
             Veja o que professores e pais estão dizendo sobre o Gêniozinho em Ação
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            O Gêniozinho em Ação já transformou a rotina de milhares de famílias e salas de aula.
+            Descubra como o Gêniozinho em Ação está facilitando o trabalho dos professores e acelerando o aprendizado das crianças autistas.
           </p>
            <div className="mt-8">
             <DynamicCounterBanner />
