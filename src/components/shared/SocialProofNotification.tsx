@@ -3,6 +3,7 @@
 
 import { useEffect, useState } from 'react';
 import { ShoppingCart } from 'lucide-react';
+import { incrementCount } from '@/hooks/useSharedCounter';
 
 const buyers = [
     { name: 'Nicole', location: 'São Paulo, SP' },
@@ -32,6 +33,7 @@ export default function SocialProofNotification() {
       const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
       setNotification({ ...randomBuyer, key: Date.now() });
       setIsVisible(true);
+      incrementCount(); // Incrementa o contador global
 
       // Fica visível por 10 segundos e depois some
       setTimeout(() => {
