@@ -9,14 +9,6 @@ import { Card, CardContent } from '@/components/ui/card';
 import { CheckCircle, ShieldCheck, Lock, Award, CreditCard } from 'lucide-react';
 
 export default function OfferSection() {
-  const benefits = [
-    "+1500 Atividades Lúdicas e Adaptadas para Autistas",
-    "Acesso Imediato e Vitalício à Plataforma com todo Material",
-    "Tranquilidade e Suporte para Você",
-    "SUPER BÔNUS 1: Pacote Extra de Atividades de Colorir (+300 páginas!)",
-    "SUPER BÔNUS 2: Atividades de Consciência Fonológica",
-    "SUPER BÔNUS 3: +10 Medalhas de Premiação",
-  ];
 
   return (
     <section
@@ -46,14 +38,16 @@ export default function OfferSection() {
             </div>
             
             <div className="p-6 md:p-8">
-              <ul className="space-y-4 mb-8">
-                {benefits.map((item, index) => (
-                  <li key={index} className="flex items-start text-white/90">
-                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
-                    <span className="font-medium text-base md:text-lg">{item}</span>
-                  </li>
-                ))}
-              </ul>
+              <div className="mb-8">
+                <Image
+                  src="https://i.imgur.com/ak914uz.png"
+                  alt="Lista de benefícios do kit"
+                  data-ai-hint="benefits list graphic"
+                  width={800}
+                  height={600}
+                  className="mx-auto rounded-lg"
+                />
+              </div>
 
               <div className="text-center bg-white/10 backdrop-blur-sm p-6 rounded-lg border border-white/20 shadow-inner space-y-4 my-8">
                   <p className="text-lg uppercase tracking-wider font-semibold text-yellow-400">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
