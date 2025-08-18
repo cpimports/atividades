@@ -74,10 +74,10 @@ export default function OfferSection() {
             </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto bg-gray-50 rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+        <div className="max-w-4xl mx-auto bg-gradient-to-br from-blue-800 to-gray-900 rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
           <div className="p-1 md:p-2">
             <div className="text-center pt-6">
-                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-500 tracking-wider mb-2" style={{ textShadow: '0 2px 4px rgba(0, 0, 0, 0.1)' }}>
+                <h2 className="text-4xl md:text-5xl font-extrabold uppercase text-yellow-400 tracking-wider mb-2" style={{ textShadow: '0 2px 4px rgba(253, 224, 71, 0.2)' }}>
                     SUPER OFERTA
                 </h2>
                 <div className="inline-block bg-red-700 rounded-xl shadow-xl py-2 px-6">
@@ -87,7 +87,7 @@ export default function OfferSection() {
                 </div>
             </div>
             
-            <div className="p-6 md:p-8 text-gray-800">
+            <div className="p-6 md:p-8 text-white">
               <ul className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
@@ -95,21 +95,21 @@ export default function OfferSection() {
                     <span className="text-base md:text-lg">{benefit}</span>
                   </li>
                 ))}
-                 <li className="flex items-start justify-center font-bold text-primary">
+                 <li className="flex items-start justify-center font-bold text-sky-300">
                     <span className="text-base md:text-lg">{lastBenefit}</span>
                   </li>
               </ul>
 
-              <div className="text-center bg-white/50 backdrop-blur-sm p-6 rounded-lg border border-gray-200 shadow-inner space-y-4 my-8">
-                  <p className="text-lg uppercase tracking-wider font-semibold text-primary">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
+              <div className="text-center bg-black/20 backdrop-blur-sm p-6 rounded-lg border border-gray-700 shadow-inner space-y-4 my-8">
+                  <p className="text-lg uppercase tracking-wider font-semibold text-white">OFERTA IRRESISTÍVEL - ACESSO COMPLETO POR:</p>
                   <div className="mb-2">
-                    <span className="text-xl text-gray-500 line-through">De R$97,00</span>
+                    <span className="text-xl text-gray-400 line-through">De R$97,00</span>
                   </div>
                   <div className="my-2 flex items-baseline justify-center gap-2">
-                    <span className="text-6xl sm:text-7xl font-extrabold text-primary" style={{ textShadow: '0 3px 8px rgba(59, 130, 246, 0.2)' }}>R$19,90</span>
+                    <span className="text-6xl sm:text-7xl font-extrabold text-white" style={{ textShadow: '0 3px 8px rgba(255, 255, 255, 0.2)' }}>R$19,90</span>
                   </div>
-                  <div className="text-lg text-gray-800 font-semibold">ou 4x de R$5,77</div>
-                  <p className="text-sm text-gray-600 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
+                  <div className="text-lg text-gray-200 font-semibold">ou 4x de R$5,77</div>
+                  <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
               
               <div className="text-center mt-8">
@@ -123,19 +123,19 @@ export default function OfferSection() {
                   </Link>
                 </Button>
                 
-                <div className="mt-8 text-center text-xs text-gray-600">
+                <div className="mt-8 text-center text-xs text-gray-300">
                     <p className='mb-3'>Compra 100% segura e satisfação que transforma. Métodos de pagamento aceitos:</p>
                     <div className="flex justify-center items-center gap-4 text-sm font-semibold">
                         <div className="flex items-center gap-1.5">
-                            <ShieldCheck className="h-5 w-5 text-green-600" />
+                            <ShieldCheck className="h-5 w-5 text-green-400" />
                             <span>Compra Segura</span>
                         </div>
                         <div className="flex items-center gap-1.5">
-                            <Lock className="h-5 w-5 text-green-600" />
+                            <Lock className="h-5 w-5 text-green-400" />
                             <span>Privacidade</span>
                         </div>
                          <div className="flex items-center gap-1.5">
-                            <CreditCard className="h-5 w-5 text-green-600" />
+                            <CreditCard className="h-5 w-5 text-green-400" />
                             <span>Pagamento</span>
                         </div>
                     </div>
