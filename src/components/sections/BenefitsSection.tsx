@@ -139,21 +139,16 @@ export default function BenefitsSection() {
           </div>
 
           <div className="my-12 text-center max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-2xl border border-yellow-400/50 overflow-hidden">
-              <div className="p-6">
-                <div className="inline-block animate-pulse-yellow-cta">
-                  <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-600 uppercase tracking-wide drop-shadow-lg">
-                    + 8 Bônus Surpresa
-                  </h4>
-                  <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
-                    <p className="text-base md:text-lg font-bold">
-                      LIBERADOS SOMENTE APÓS A COMPRA 🎁🔥
-                    </p>
-                  </div>
+              <div className="inline-block animate-pulse-yellow-cta">
+                <h4 className="text-2xl md:text-3xl font-extrabold text-yellow-500 uppercase tracking-wide drop-shadow-lg">
+                  + 8 Bônus Surpresa
+                </h4>
+                <div className="mt-2 inline-block bg-red-600 text-white px-4 py-1 rounded-md shadow-lg">
+                  <p className="text-base md:text-lg font-bold">
+                    LIBERADOS SOMENTE APÓS A COMPRA 🎁🔥
+                  </p>
                 </div>
               </div>
-
-            </div>
           </div>
         </div>
 
