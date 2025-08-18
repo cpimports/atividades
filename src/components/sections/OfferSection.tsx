@@ -5,7 +5,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { CheckCircle, ShieldCheck, Lock, CreditCard } from 'lucide-react';
+import { ShieldCheck, Lock, CreditCard } from 'lucide-react';
 
 export default function OfferSection() {
 
@@ -52,7 +52,7 @@ export default function OfferSection() {
               <ul className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
-                    <CheckCircle className="h-6 w-6 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
+                    <Image src="https://i.imgur.com/ak914uz.png" alt="Check icon" data-ai-hint="checkmark icon" width={24} height={24} className="mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-base md:text-lg">{benefit}</span>
                   </li>
                 ))}
@@ -126,15 +126,15 @@ export default function OfferSection() {
                         <p className="text-foreground/80 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
                          <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-muted-foreground font-semibold">
                             <div className="flex items-center gap-1.5">
-                                <CheckCircle className="h-4 w-4 text-green-600" />
+                                <ShieldCheck className="h-4 w-4 text-green-600" />
                                 <span>Compra Segura</span>
                             </div>
                             <div className="flex items-center gap-1.5">
-                                <CheckCircle className="h-4 w-4 text-green-600" />
+                                <Lock className="h-4 w-4 text-green-600" />
                                 <span>Privacidade</span>
                             </div>
                              <div className="flex items-center gap-1.5">
-                                <CheckCircle className="h-4 w-4 text-green-600" />
+                                <CreditCard className="h-4 w-4 text-green-600" />
                                 <span>Qualidade</span>
                             </div>
                         </div>
