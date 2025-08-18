@@ -27,6 +27,11 @@ export default function OfferSection() {
       className="py-16 md:py-24 bg-background"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+            <h2 className="font-headline text-3xl sm:text-4xl font-semibold text-primary">
+                Transforme o Aprendizado das Crianças Autistas com um Só Clique!
+            </h2>
+        </div>
         <div className="max-w-4xl mx-auto bg-gradient-to-br from-[#6A0DAD] to-pink-900 rounded-2xl shadow-2xl overflow-hidden">
           <div className="p-1 md:p-2">
             <div className="bg-gradient-to-br from-purple-800 to-purple-900/80 rounded-t-xl p-6 text-center">
