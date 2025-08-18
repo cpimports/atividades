@@ -18,11 +18,13 @@ const DynamicCounterBanner = () => {
   return (
     <div className="bg-[#0D0D0D] border border-gray-700/50 rounded-md py-0.5 px-3 max-w-max mx-auto shadow-sm transform hover:scale-[1.01] transition-transform duration-300">
       <p className="text-white text-xs font-sans text-center">
-        Mais de{' '}
+        <span className="sm:inline">Mais de{' '}</span>
         <span className="text-yellow-400 font-bold text-sm tracking-wide mx-0.5">
           {new Intl.NumberFormat('pt-BR').format(count)}
         </span>{' '}
-        professores já adquiriram o Gêniozinho em Ação!
+        <span className="sm:inline">professores já adquiriram</span>
+        <br className="sm:hidden" />
+        <span className="sm:inline"> o Gêniozinho em Ação!</span>
       </p>
     </div>
   );
