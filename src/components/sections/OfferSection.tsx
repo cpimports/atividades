@@ -31,14 +31,14 @@ export default function OfferSection() {
     >
         {/* Puzzle Pieces Background */}
         <div className="absolute inset-0 pointer-events-none opacity-20">
-            <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12">🧩</span>
-            <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45">🧩</span>
-            <span className="absolute top-[15%] right-[10%] text-5xl rotate-6">🧩</span>
-            <span className="absolute bottom-[20%] left-[12%] text-3xl -rotate-45">🧩</span>
-            <span className="absolute top-[50%] left-[2%] text-6xl rotate-20">🧩</span>
-            <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12">🧩</span>
-            <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12">🧩</span>
-            <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20">🧩</span>
+            <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12 text-blue-500">🧩</span>
+            <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45 text-red-500">🧩</span>
+            <span className="absolute top-[15%] right-[10%] text-5xl rotate-6 text-yellow-500">🧩</span>
+            <span className="absolute bottom-[20%] left-[12%] text-3xl -rotate-45 text-green-500">🧩</span>
+            <span className="absolute top-[50%] left-[2%] text-6xl rotate-20 text-yellow-500">🧩</span>
+            <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12 text-blue-500">🧩</span>
+            <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12 text-green-500">🧩</span>
+            <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20 text-red-500">🧩</span>
         </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -81,6 +81,19 @@ export default function OfferSection() {
         </div>
         
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900 relative">
+          
+          <div className="absolute inset-0 pointer-events-none opacity-20">
+            <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12">🧩</span>
+            <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45">🧩</span>
+            <span className="absolute top-[15%] right-[10%] text-5xl rotate-6">🧩</span>
+            <span className="absolute bottom-[20%] left-[12%] text-3xl -rotate-45">🧩</span>
+            <span className="absolute top-[50%] left-[2%] text-6xl rotate-20">🧩</span>
+            <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12">🧩</span>
+            <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12">🧩</span>
+            <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20">🧩</span>
+            <span className="absolute top-[5%] left-[25%] text-3xl rotate-12">🧩</span>
+            <span className="absolute bottom-[15%] right-[20%] text-4xl -rotate-12">🧩</span>
+          </div>
 
           <div className="p-1 md:p-2 relative z-10">
             <div className="text-center pt-8">
@@ -131,7 +144,7 @@ export default function OfferSection() {
                 <Button
                   size="lg"
                   asChild
-                  className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-blue-900 font-bold text-xl py-8 px-12 rounded-lg transition-all transform hover:scale-105"
+                  className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-xl py-8 px-12 rounded-lg transition-all transform hover:scale-105"
                 >
                   <Link id="btn-comprar" href="https://pay.cakto.com.br/wms7hjy_447695">
                     COMPRAR KIT COM DESCONTO!
