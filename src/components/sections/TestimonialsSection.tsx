@@ -79,37 +79,12 @@ const commentsData = [
 
 
 const VideoFacade = ({ src, title }: { src: string; title: string }) => {
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  const handlePlay = () => {
-    if (videoRef.current) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    }
-  };
-
-  const handleClick = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
   return (
     <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
       <video
-        ref={videoRef}
         className="w-full h-full object-cover"
         playsInline
-        controls={isPlaying}
-        onClick={handleClick}
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
+        controls
       >
         <source src={src} type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
