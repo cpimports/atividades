@@ -70,7 +70,7 @@ export default function OfferSection() {
         
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900 relative">
           
-          <div className="absolute inset-0 pointer-events-none opacity-20">
+          <div className="absolute inset-0 pointer-events-none opacity-10">
             <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12">🧩</span>
             <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45">🧩</span>
             <span className="absolute top-[15%] right-[10%] text-5xl rotate-6">🧩</span>
@@ -79,8 +79,6 @@ export default function OfferSection() {
             <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12">🧩</span>
             <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12">🧩</span>
             <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20">🧩</span>
-            <span className="absolute top-[5%] left-[25%] text-3xl rotate-12">🧩</span>
-            <span className="absolute bottom-[15%] right-[20%] text-4xl -rotate-12">🧩</span>
           </div>
 
           <div className="p-1 md:p-2 relative z-10">
