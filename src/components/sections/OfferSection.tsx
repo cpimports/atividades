@@ -47,7 +47,7 @@ export default function OfferSection() {
                         />
                     </div>
                     <div className="flex-grow">
-                        <h3 className="font-merriweather text-2xl font-bold text-yellow-500 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
+                        <h3 className="font-merriweather text-2xl font-bold text-yellow-400 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
                         <p className="text-gray-600 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
                          <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-500 font-semibold">
                             <div className="flex items-center gap-1.5">
@@ -66,6 +66,12 @@ export default function OfferSection() {
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className="text-center mb-12">
+          <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">
+            Transforme o Aprendizado das Crianças Autistas com um Só Clique!
+          </h2>
         </div>
         
         <div className="max-w-4xl mx-auto bg-blue-800 rounded-2xl shadow-2xl overflow-hidden border-2 border-blue-900 relative">
