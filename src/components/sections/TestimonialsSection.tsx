@@ -89,29 +89,31 @@ const VideoFacade = ({ src, title }: { src: string; title: string }) => {
     }
   };
 
+  const handleClick = () => {
+    if (videoRef.current) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
   return (
-    <div 
-      className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20 cursor-pointer"
-      onClick={!isPlaying ? handlePlay : undefined}
-    >
+    <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
       <video
         ref={videoRef}
         className="w-full h-full object-cover"
-        preload="metadata"
         playsInline
-        poster="https://i.imgur.com/2Y5zB8X.png" 
         controls={isPlaying}
-        onPause={() => setIsPlaying(false)}
+        onClick={handleClick}
         onPlay={() => setIsPlaying(true)}
+        onPause={() => setIsPlaying(false)}
       >
         <source src={src} type="video/mp4" />
         Seu navegador não suporta a tag de vídeo.
       </video>
-      {!isPlaying && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black/30 pointer-events-none">
-          <PlayCircle className="h-16 w-16 text-white/70 drop-shadow-lg" />
-        </div>
-      )}
     </div>
   );
 };
@@ -295,3 +297,5 @@ export default function TestimonialsSection() {
       </div>
     </section>
   );
+
+    
