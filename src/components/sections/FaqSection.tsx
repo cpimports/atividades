@@ -20,7 +20,7 @@ const faqData = [
   },
   {
     question: "São quantas atividades?",
-    answer: "São +1000 atividades, pensadas especialmente no aprendizado do seu pequeno, com +12 Bônus Exclusivos irresistíveis com várias atividades."
+    answer: "São +1500 atividades, pensadas especialmente no aprendizado do seu pequeno, com +12 Bônus Exclusivos irresistíveis com várias atividades."
   },
   {
     question: "Posso usar o Kit em Sala de Aula e para Reforço em Casa?",
