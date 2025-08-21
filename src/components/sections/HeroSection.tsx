@@ -15,30 +15,8 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     const iframe = iframeRef.current;
-    if (iframe) {
-        // The src is set to about:blank initially, and the onload attribute handles the final src.
-        // This is a direct implementation of the user's provided script.
-        const handleLoad = () => {
-            if (iframe.src === 'about:blank') {
-                iframe.src = videoSrc + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
-            }
-        };
-
-        iframe.addEventListener('load', handleLoad);
-
-        // Directly setting the onload attribute to match the user's snippet.
-        // Note: React typically warns against this, but it's what the user provided.
-        iframe.onload = () => {
-             if (iframe.src === 'about:blank') { // Prevents re-running on subsequent loads
-                iframe.src = videoSrc + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
-             }
-             iframe.onload = null; // Prevents the handler from running again
-        };
-
-        // Cleanup
-        return () => {
-            iframe.removeEventListener('load', handleLoad);
-        };
+    if (iframe && iframe.src === 'about:blank') {
+      iframe.src = videoSrc + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
     }
   }, [videoSrc]);
 
