@@ -7,7 +7,7 @@ import Link from 'next/link';
 import React, { useRef, useEffect } from 'react';
 
 const VideoPlayer = () => {
-  const videoId = '686fd145e397e681c4ce4c3b';
+  const videoId = '68a677e85a4844a26844462d';
   const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b';
   const iframeRef = useRef<HTMLIFrameElement>(null);
   
@@ -16,39 +16,42 @@ const VideoPlayer = () => {
   useEffect(() => {
     const iframe = iframeRef.current;
     if (iframe) {
-      const handleLoad = () => {
-        if (iframe.src) {
-           // This logic was originally in the onLoad string.
-           // It appends query parameters to the iframe src.
-           const newSrc = iframe.src + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
-           if (iframe.src !== newSrc) {
-             // Avoid potential loops by checking if it's already been set.
-             // Note: This logic might not be perfectly transferable and may need review.
-             // For now, we are just setting it once on initial load.
-           }
-        }
-      };
+        // The src is set to about:blank initially, and the onload attribute handles the final src.
+        // This is a direct implementation of the user's provided script.
+        const handleLoad = () => {
+            if (iframe.src === 'about:blank') {
+                iframe.src = videoSrc + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
+            }
+        };
 
-      // We add the event listener directly to the iframe element
-      iframe.addEventListener('load', handleLoad);
+        iframe.addEventListener('load', handleLoad);
 
-      // Cleanup the event listener when the component unmounts
-      return () => {
-        iframe.removeEventListener('load', handleLoad);
-      };
+        // Directly setting the onload attribute to match the user's snippet.
+        // Note: React typically warns against this, but it's what the user provided.
+        iframe.onload = () => {
+             if (iframe.src === 'about:blank') { // Prevents re-running on subsequent loads
+                iframe.src = videoSrc + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
+             }
+             iframe.onload = null; // Prevents the handler from running again
+        };
+
+        // Cleanup
+        return () => {
+            iframe.removeEventListener('load', handleLoad);
+        };
     }
-  }, [videoSrc]); // Re-run if videoSrc changes, though it's static here.
+  }, [videoSrc]);
 
 
   return (
     <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
       <iframe
         ref={iframeRef}
+        id={`ifr_${videoId}`}
+        src="about:blank"
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         frameBorder="0"
         allowFullScreen
-        src={videoSrc}
-        id={`ifr_${videoId}`}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         referrerPolicy="origin"
       ></iframe>
     </div>
