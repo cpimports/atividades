@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -79,17 +79,39 @@ const commentsData = [
 
 
 const VideoFacade = ({ src, title }: { src: string; title: string }) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlay = () => {
+    if (videoRef.current) {
+      videoRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
   return (
-    <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
+    <div 
+      className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20 cursor-pointer"
+      onClick={!isPlaying ? handlePlay : undefined}
+    >
       <video
-        className="w-full h-full"
-        controls
+        ref={videoRef}
+        className="w-full h-full object-cover"
         preload="metadata"
-        poster="/images/video-poster.png" // Optional: a placeholder image
+        playsInline
+        poster="https://i.imgur.com/2Y5zB8X.png" 
+        controls={isPlaying}
+        onPause={() => setIsPlaying(false)}
+        onPlay={() => setIsPlaying(true)}
       >
         <source src={src} type="video/mp4" />
-        Your browser does not support the video tag.
+        Seu navegador não suporta a tag de vídeo.
       </video>
+      {!isPlaying && (
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30 pointer-events-none">
+          <PlayCircle className="h-16 w-16 text-white/70 drop-shadow-lg" />
+        </div>
+      )}
     </div>
   );
 };
@@ -273,5 +295,3 @@ export default function TestimonialsSection() {
       </div>
     </section>
   );
-
-    
