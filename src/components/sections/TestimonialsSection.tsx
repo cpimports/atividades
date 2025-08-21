@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback } from 'react';
@@ -16,13 +17,13 @@ import {
 import { cn } from '@/lib/utils';
 import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
-const youtubeShorts = [
-  { id: "5Jppp049f8c", title: "Depoimento em Vídeo 1" },
-  { id: "Z1Y3fXl7gvU", title: "Depoimento em Vídeo 2" },
-  { id: "o_jx6412bbY", title: "Depoimento em Vídeo 3" },
-  { id: "YCKgms_HOzA", title: "Depoimento em Vídeo 4" },
-  { id: "r5wiEzRQDUI", title: "Depoimento em Vídeo 5" },
-  { id: "4fLlRxscoOI", title: "Depoimento em Vídeo 6" },
+const hostedVideos = [
+  { src: "/videos/DEPOIMENTO-ELIANE.mp4", title: "Depoimento Eliane" },
+  { src: "/videos/DEPOIMENTO-THIAGO.mp4", title: "Depoimento Thiago" },
+  { src: "/videos/DEPOIMENTO-CAMILA.mp4", title: "Depoimento Camila" },
+  { src: "/videos/DEPOIMENTO-SILVANA.mp4", title: "Depoimento Silvana" },
+  { src: "/videos/DEPOIMENTO-GABRIELE.mp4", title: "Depoimento Gabriele" },
+  { src: "/videos/DEPOIMENTO-MARIA.mp4", title: "Depoimento Maria" },
 ];
 
 const commentsData = [
@@ -77,46 +78,18 @@ const commentsData = [
 ];
 
 
-const VideoFacade = ({ videoId, title }: { videoId: string; title: string }) => {
-  const [showVideo, setShowVideo] = useState(false);
-  const thumbnailUrl = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`;
-
-  const handlePlay = () => {
-    setShowVideo(true);
-  };
-
-  if (showVideo) {
-    return (
-      <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
-        <iframe
-          className="w-full h-full"
-          src={`https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`}
-          title={title}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowFullScreen
-        ></iframe>
-      </div>
-    );
-  }
-
+const VideoFacade = ({ src, title }: { src: string; title: string }) => {
   return (
-    <div
-      onClick={handlePlay}
-      className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20 relative cursor-pointer group"
-    >
-      <Image
-        src={thumbnailUrl}
-        alt={`Thumbnail para ${title}`}
-        data-ai-hint="video thumbnail"
-        fill
-        sizes="280px"
-        loading="lazy"
-        className="object-cover transition-transform duration-300 group-hover:scale-105"
-      />
-      <div className="absolute inset-0 bg-black/30 flex items-center justify-center">
-        <PlayCircle className="h-16 w-16 text-white/80 transition-all duration-300 group-hover:text-white group-hover:scale-110" />
-      </div>
+    <div className="aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
+      <video
+        className="w-full h-full"
+        controls
+        preload="metadata"
+        poster="/images/video-poster.png" // Optional: a placeholder image
+      >
+        <source src={src} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     </div>
   );
 };
@@ -253,10 +226,10 @@ export default function TestimonialsSection() {
             className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
           >
             <CarouselContent>
-              {youtubeShorts.map((video) => (
-                <CarouselItem key={video.id} className="sm:basis-1/2 md:basis-1/3">
+              {hostedVideos.map((video) => (
+                <CarouselItem key={video.src} className="sm:basis-1/2 md:basis-1/3">
                   <div className="p-1">
-                    <VideoFacade videoId={video.id} title={video.title} />
+                    <VideoFacade src={video.src} title={video.title} />
                   </div>
                 </CarouselItem>
               ))}
@@ -300,6 +273,5 @@ export default function TestimonialsSection() {
       </div>
     </section>
   );
-}
 
     
