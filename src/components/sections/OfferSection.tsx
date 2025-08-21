@@ -29,18 +29,6 @@ export default function OfferSection() {
       id="oferta-especial"
       className="py-16 md:py-24 bg-white relative overflow-hidden"
     >
-        {/* Puzzle Pieces Background */}
-        <div className="absolute inset-0 pointer-events-none opacity-20">
-            <span className="absolute top-[10%] left-[5%] text-4xl -rotate-12 text-blue-500">🧩</span>
-            <span className="absolute bottom-[5%] right-[8%] text-6xl rotate-45 text-red-500">🧩</span>
-            <span className="absolute top-[15%] right-[10%] text-5xl rotate-6 text-yellow-500">🧩</span>
-            <span className="absolute bottom-[20%] left-[12%] text-3xl -rotate-45 text-green-500">🧩</span>
-            <span className="absolute top-[50%] left-[2%] text-6xl rotate-20 text-yellow-500">🧩</span>
-            <span className="absolute top-[40%] right-[5%] text-4xl -rotate-12 text-blue-500">🧩</span>
-            <span className="absolute bottom-[10%] left-[25%] text-5xl rotate-12 text-green-500">🧩</span>
-            <span className="absolute top-[80%] right-[15%] text-3xl -rotate-20 text-red-500">🧩</span>
-        </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         <div className="max-w-4xl mx-auto mb-12">
