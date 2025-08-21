@@ -27,7 +27,7 @@ export default function OfferSection() {
   return (
     <section
       id="oferta-especial"
-      className="py-16 md:py-24 bg-white relative overflow-hidden"
+      className="py-16 md:py-24 bg-white relative"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
@@ -47,7 +47,7 @@ export default function OfferSection() {
                         />
                     </div>
                     <div className="flex-grow">
-                        <h3 className="font-merriweather text-2xl font-bold text-primary drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
+                        <h3 className="font-merriweather text-2xl font-bold text-yellow-500 drop-shadow-md mb-2">Sua Satisfação Garantida ou Seu Dinheiro de Volta!</h3>
                         <p className="text-gray-600 mb-4">Aproveite a compra sem risco. Se em até 7 dias você sentir que o kit não é para você, devolvemos seu dinheiro sem perguntas.</p>
                          <div className="flex items-center justify-center md:justify-start gap-4 text-xs text-gray-500 font-semibold">
                             <div className="flex items-center gap-1.5">
