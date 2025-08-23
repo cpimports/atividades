@@ -17,19 +17,19 @@ const deliverables = [
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://i.imgur.com/JNBiwQN.jpeg" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
+    icon: <Image src="https://i.postimg.cc/7ZMfRRnc/JNBiwQN.jpg" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
     title: 'Atividades Lúdicas e Adaptadas',
     description: 'Exercícios de fácil compreensão, com estímulos visuais e linguagem simples para promover mais engajamento.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.imgur.com/CgFJ1gS.png" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
+    icon: <Image src="https://i.postimg.cc/vmYcwvPm/CgFJ1gS.png" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
     title: 'Acesso Vitalício e Organizado',
     description: 'Material digital pronto para imprimir, com acesso vitalício e organização por categorias.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.imgur.com/Lwg6HKn.png" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
+    icon: <Image src="https://i.postimg.cc/8zV7tGMM/Lwg6HKn.png" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
     title: 'Comunidade Exclusiva de Professores',
     description: 'Participe de um grupo fechado para trocar experiências e compartilhar atividades adaptadas.',
     titleClassName: 'font-headline text-2xl text-primary',
