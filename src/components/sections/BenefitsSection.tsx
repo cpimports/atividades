@@ -1,3 +1,4 @@
+
 'use client';
 
 import React from 'react';
@@ -10,7 +11,7 @@ import { useProgress } from '@/hooks/useProgress';
 
 const deliverables = [
   {
-    icon: <Image src="https://i.imgur.com/YvI4vpP.jpeg" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
+    icon: <Image src="https://i.postimg.cc/SN9X6R2m/YvI4vpP.jpg" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
     title: 'Mais de 1.500 Atividades Adaptadas para Crianças Autistas',
     description: 'Acervo completo de atividades para estimular habilidades cognitivas, motoras e comportamentais, pronto para uso no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
