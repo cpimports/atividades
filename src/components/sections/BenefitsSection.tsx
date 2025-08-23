@@ -37,10 +37,10 @@ const deliverables = [
 ];
 
 const bonusImages = [
-    { src: 'https://i.imgur.com/kAN1TAq.png', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
-    { src: 'https://i.imgur.com/NQGTwqs.png', alt: 'Bônus 2', hint: 'educational game' },
-    { src: 'https://i.imgur.com/M1r76xK.png', alt: 'Bônus 3', hint: 'coloring page' },
-    { src: 'https://i.imgur.com/djV5iNg.png', alt: 'Bônus 4', hint: 'learning chart' },
+    { src: 'https://i.postimg.cc/7hZvnmnp/kAN1TAq.png', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
+    { src: 'https://i.postimg.cc/Kjq6qB94/NQGTwqs.png', alt: 'Bônus 2', hint: 'educational game' },
+    { src: 'https://i.postimg.cc/wxwYjY6H/M1r76xK.png', alt: 'Bônus 3', hint: 'coloring page' },
+    { src: 'https://i.postimg.cc/TYhMyNwb/djV5iNg.png', alt: 'Bônus 4', hint: 'learning chart' },
 ]
 
 export default function BenefitsSection() {
