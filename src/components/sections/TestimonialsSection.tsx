@@ -18,12 +18,12 @@ import { cn } from '@/lib/utils';
 import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
 const hostedVideos = [
-  { src: "/videos/DEPOIMENTO-ELIANE.mp4", title: "Depoimento Eliane" },
-  { src: "/videos/DEPOIMENTO-THIAGO.mp4", title: "Depoimento Thiago" },
-  { src: "/videos/DEPOIMENTO-CAMILA.mp4", title: "Depoimento Camila" },
-  { src: "/videos/DEPOIMENTO-SILVANA.mp4", title: "Depoimento Silvana" },
-  { src: "/videos/DEPOIMENTO-GABRIELE.mp4", title: "Depoimento Gabriele" },
-  { src: "/videos/DEPOIMENTO-MARIA.mp4", title: "Depoimento Maria" },
+    { src: "https://i.postimg.cc/tRKwTqLK/vwSIeBW.png", title: "Depoimento Eliane" },
+    { src: "https://i.postimg.cc/G2NNvd9s/nqm8CGq.jpg", title: "Depoimento Thiago" },
+    { src: "https://i.postimg.cc/C5MkKgMW/logo.png", title: "Depoimento Camila" },
+    { src: "https://i.postimg.cc/y6j36xgd/gihdLU5.png", title: "Depoimento Silvana" },
+    { src: "https://i.postimg.cc/mr17t4xn/lbSS21Q.png", title: "Depoimento Gabriele" },
+    { src: "https://i.postimg.cc/c4SwCfCQ/xCuyx6F.png", title: "Depoimento Maria" },
 ];
 
 const commentsData = [
@@ -44,7 +44,7 @@ const commentsData = [
   },
   {
     id: 2,
-    avatarUrl: '/images/professora-otimizado.webp',
+    avatarUrl: 'https://placehold.co/100x100.png',
     avatarFallback: 'VS',
     name: 'Vanessa Santos',
     time: '2h',
@@ -53,7 +53,7 @@ const commentsData = [
   },
   {
     id: 3,
-    avatarUrl: '/images/terapeuta-otimizado.webp',
+    avatarUrl: 'https://placehold.co/100x100.png',
     avatarFallback: 'AF',
     name: 'André Ferreira',
     time: '1d',
@@ -81,14 +81,16 @@ const commentsData = [
 const VideoFacade = ({ src, title }: { src: string; title: string }) => {
   return (
     <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
-      <video
-        className="w-full h-full object-cover"
-        playsInline
-        controls
-      >
-        <source src={src} type="video/mp4" />
-        Seu navegador não suporta a tag de vídeo.
-      </video>
+       <Image
+            src={src}
+            alt={title}
+            fill
+            className="object-cover"
+            data-ai-hint="testimonial video"
+        />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <PlayCircle className="w-16 h-16 text-white/70" />
+        </div>
     </div>
   );
 };
