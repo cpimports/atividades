@@ -36,7 +36,7 @@ export default function OfferSection() {
                 <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6 text-gray-800">
                     <div className="flex-shrink-0">
                         <Image
-                            src="https://i.imgur.com/lbSS21Q.png"
+                            src="https://i.postimg.cc/mr17t4xn/lbSS21Q.png"
                             alt="Selo de Garantia de 7 dias"
                             data-ai-hint="gold shield guarantee"
                             width={150}
