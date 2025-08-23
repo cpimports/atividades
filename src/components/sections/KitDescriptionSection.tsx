@@ -93,7 +93,7 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-10">
           <div className="mb-8 inline-block animate-screen-glow">
             <Image
-              src="https://i.imgur.com/hwMc8SF.png"
+              src="https://i.postimg.cc/66m61KJT/hwMc8SF.png"
               alt="Crianças estudando felizes"
               data-ai-hint="children studying happy"
               width={250}
