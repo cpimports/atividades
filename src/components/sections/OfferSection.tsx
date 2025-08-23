@@ -90,7 +90,7 @@ export default function OfferSection() {
           <div className="p-1 md:p-2 relative z-10">
             <div className="text-center pt-8">
                 <Image 
-                    src="https://i.imgur.com/gihdLU5.png"
+                    src="https://i.postimg.cc/y6j36xgd/gihdLU5.png"
                     alt="Kit Gêniozinho em Ação"
                     data-ai-hint="product bundle mockup"
                     width={150}
