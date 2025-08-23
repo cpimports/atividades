@@ -15,8 +15,12 @@ const VideoPlayer = () => {
 
   useEffect(() => {
     const iframe = iframeRef.current;
-    if (iframe && iframe.src === 'about:blank') {
-      iframe.src = videoSrc + (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
+    if (iframe) {
+        let finalSrc = videoSrc;
+        if (typeof window !== 'undefined') {
+            finalSrc += (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
+        }
+        iframe.src = finalSrc;
     }
   }, [videoSrc]);
 
@@ -26,7 +30,6 @@ const VideoPlayer = () => {
       <iframe
         ref={iframeRef}
         id={`ifr_${videoId}`}
-        src="about:blank"
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         frameBorder="0"
         allowFullScreen
@@ -71,7 +74,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-8 animate-fade-in-medium">
           <Image
-            src="https://i.imgur.com/vXvIBVh.png"
+            src="https://i.postimg.cc/Njbhy8xS/LOGO1.png"
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo brain lightbulb"
             width={120}
