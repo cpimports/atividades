@@ -29,10 +29,6 @@ const OfferSection = dynamic(() => import('@/components/sections/OfferSection'),
 const FaqSection = dynamic(() => import('@/components/sections/FaqSection'), {
   loading: () => <Skeleton className="h-[500px] w-full" />
 });
-const ComparisonSection = dynamic(() => import('@/components/sections/ComparisonSection'), {
-    loading: () => <Skeleton className="h-[400px] w-full" />,
-    ssr: false // Avoid server-side rendering for a removed component
-});
 
 
 export default function HomePage() {
