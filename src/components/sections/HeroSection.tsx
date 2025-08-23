@@ -109,7 +109,7 @@ export default function HeroSection() {
           </p>
           <div className="mt-2 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
             <Image
-                src="https://i.imgur.com/xCuyx6F.png"
+                src="https://i.postimg.cc/c4SwCfCQ/xCuyx6F.png"
                 alt="Métodos de pagamento aceitos"
                 data-ai-hint="payment methods"
                 width={250}
