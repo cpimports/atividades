@@ -17,8 +17,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
 const carouselImages: { src: string; alt: string; hint: string }[] = [
-    { src: 'https://i.imgur.com/SciijaD.jpeg', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
-    { src: 'https://i.imgur.com/KSkNNlg.png', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
+    { src: 'https://i.postimg.cc/jj1K36mm/SciijaD.jpg', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
+    { src: 'https://i.postimg.cc/prbvRW2B/KSkNNlg.png', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
     { src: 'https://i.imgur.com/B9r3Mjk.png', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
     { src: 'https://i.imgur.com/9D41EJs.png', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
     { src: 'https://i.imgur.com/vV3dwBm.png', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
@@ -187,3 +187,5 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
+
+    
