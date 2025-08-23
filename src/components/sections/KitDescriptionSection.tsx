@@ -27,9 +27,9 @@ const carouselImages: { src: string; alt: string; hint: string }[] = [
     { src: 'https://i.postimg.cc/nzq5KvJv/8.png', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
     { src: 'https://i.postimg.cc/XvRmysTj/9.jpg', alt: 'Atividade Sensorial', hint: 'sensory play' },
     { src: 'https://i.postimg.cc/zv5QxVz4/10.png', alt: 'Atividade de Leitura', hint: 'reading practice' },
-    { src: 'https://i.imgur.com/SuPfmQ8.png', alt: 'Atividade de Escrita', hint: 'writing practice' },
-    { src: 'https://i.imgur.com/OG9XCJR.png', alt: 'Atividade de Emoções', hint: 'emotions chart' },
-    { src: 'https://i.imgur.com/2btcAKk.png', alt: 'Quebra-cabeça', hint: 'puzzle game' },
+    { src: 'https://i.postimg.cc/cCmb206C/11.png', alt: 'Atividade de Escrita', hint: 'writing practice' },
+    { src: 'https://i.postimg.cc/CMHXzHJ0/12.png', alt: 'Atividade de Emoções', hint: 'emotions chart' },
+    { src: 'https://i.postimg.cc/GhXfjLZS/13.png', alt: 'Quebra-cabeça', hint: 'puzzle game' },
 ];
 
 export default function KitDescriptionSection() {
