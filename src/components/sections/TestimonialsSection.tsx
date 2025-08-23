@@ -29,7 +29,7 @@ const hostedVideos = [
 const commentsData = [
   {
     id: 1,
-    avatarUrl: 'https://i.imgur.com/nqm8CGq.jpeg',
+    avatarUrl: 'https://i.postimg.cc/G2NNvd9s/nqm8CGq.jpg',
     avatarFallback: 'CM',
     name: 'Carla Monteiro',
     time: '5h',
@@ -68,7 +68,7 @@ const commentsData = [
   },
   {
     id: 4,
-    avatarUrl: 'https://i.imgur.com/vwSIeBW.png',
+    avatarUrl: 'https://i.postimg.cc/tRKwTqLK/vwSIeBW.png',
     avatarFallback: 'RT',
     name: 'Raquel Teodoro',
     time: '3d',
