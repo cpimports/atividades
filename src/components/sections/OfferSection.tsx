@@ -36,7 +36,7 @@ export default function OfferSection() {
                 <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6 text-gray-800">
                     <div className="flex-shrink-0">
                         <Image
-                            src="https://i.postimg.cc/mr17t4xn/lbSS21Q.png"
+                            src="https://i.postimg.cc/mr17t4xn/lbSS21Q.webp"
                             alt="Selo de Garantia de 7 dias"
                             data-ai-hint="gold shield guarantee"
                             width={150}
@@ -90,7 +90,7 @@ export default function OfferSection() {
           <div className="p-1 md:p-2 relative z-10">
             <div className="text-center pt-8">
                 <Image 
-                    src="https://i.postimg.cc/y6j36xgd/gihdLU5.png"
+                    src="https://i.postimg.cc/y6j36xgd/gihdLU5.webp"
                     alt="Kit Gêniozinho em Ação"
                     data-ai-hint="product bundle mockup"
                     width={150}

@@ -11,25 +11,25 @@ import { useProgress } from '@/hooks/useProgress';
 
 const deliverables = [
   {
-    icon: <Image src="https://i.postimg.cc/SN9X6R2m/YvI4vpP.jpg" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
+    icon: <Image src="https://i.postimg.cc/SN9X6R2m/YvI4vpP.webp" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
     title: 'Mais de 1.500 Atividades Adaptadas para Crianças Autistas',
     description: 'Acervo completo de atividades para estimular habilidades cognitivas, motoras e comportamentais, pronto para uso no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://i.postimg.cc/7ZMfRRnc/JNBiwQN.jpg" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
+    icon: <Image src="https://i.postimg.cc/7ZMfRRnc/JNBiwQN.webp" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
     title: 'Atividades Lúdicas e Adaptadas',
     description: 'Exercícios de fácil compreensão, com estímulos visuais e linguagem simples para promover mais engajamento.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.postimg.cc/vmYcwvPm/CgFJ1gS.png" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
+    icon: <Image src="https://i.postimg.cc/vmYcwvPm/CgFJ1gS.webp" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
     title: 'Acesso Vitalício e Organizado',
     description: 'Material digital pronto para imprimir, com acesso vitalício e organização por categorias.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.postimg.cc/8zV7tGMM/Lwg6HKn.png" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
+    icon: <Image src="https://i.postimg.cc/8zV7tGMM/Lwg6HKn.webp" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
     title: 'Comunidade Exclusiva de Professores',
     description: 'Participe de um grupo fechado para trocar experiências e compartilhar atividades adaptadas.',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -37,10 +37,10 @@ const deliverables = [
 ];
 
 const bonusImages = [
-    { src: 'https://i.postimg.cc/7hZvnmnp/kAN1TAq.png', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
-    { src: 'https://i.postimg.cc/Kjq6qB94/NQGTwqs.png', alt: 'Bônus 2', hint: 'educational game' },
-    { src: 'https://i.postimg.cc/wxwYjY6H/M1r76xK.png', alt: 'Bônus 3', hint: 'coloring page' },
-    { src: 'https://i.postimg.cc/TYhMyNwb/djV5iNg.png', alt: 'Bônus 4', hint: 'learning chart' },
+    { src: 'https://i.postimg.cc/7hZvnmnp/kAN1TAq.webp', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
+    { src: 'https://i.postimg.cc/Kjq6qB94/NQGTwqs.webp', alt: 'Bônus 2', hint: 'educational game' },
+    { src: 'https://i.postimg.cc/wxwYjY6H/M1r76xK.webp', alt: 'Bônus 3', hint: 'coloring page' },
+    { src: 'https://i.postimg.cc/TYhMyNwb/djV5iNg.webp', alt: 'Bônus 4', hint: 'learning chart' },
 ]
 
 export default function BenefitsSection() {

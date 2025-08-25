@@ -17,19 +17,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
 const carouselImages: { src: string; alt: string; hint: string }[] = [
-    { src: 'https://i.postimg.cc/jj1K36mm/SciijaD.jpg', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
-    { src: 'https://i.postimg.cc/prbvRW2B/KSkNNlg.png', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
-    { src: 'https://i.postimg.cc/fTM4Kgkk/3.png', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
-    { src: 'https://i.postimg.cc/sDmk09Zm/4.png', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
-    { src: 'https://i.postimg.cc/QdnRj8mW/5.png', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
-    { src: 'https://i.postimg.cc/x1dwrJv2/6.jpg', alt: 'Atividade de Números', hint: 'numbers counting' },
-    { src: 'https://i.postimg.cc/MGMgTC33/7.png', alt: 'Atividade de Cores', hint: 'colors activity' },
-    { src: 'https://i.postimg.cc/nzq5KvJv/8.png', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
-    { src: 'https://i.postimg.cc/XvRmysTj/9.jpg', alt: 'Atividade Sensorial', hint: 'sensory play' },
-    { src: 'https://i.postimg.cc/zv5QxVz4/10.png', alt: 'Atividade de Leitura', hint: 'reading practice' },
-    { src: 'https://i.postimg.cc/cCmb206C/11.png', alt: 'Atividade de Escrita', hint: 'writing practice' },
-    { src: 'https://i.postimg.cc/CMHXzHJ0/12.png', alt: 'Atividade de Emoções', hint: 'emotions chart' },
-    { src: 'https://i.postimg.cc/GhXfjLZS/13.png', alt: 'Quebra-cabeça', hint: 'puzzle game' },
+    { src: 'https://i.postimg.cc/jj1K36mm/SciijaD.webp', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
+    { src: 'https://i.postimg.cc/prbvRW2B/KSkNNlg.webp', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
+    { src: 'https://i.postimg.cc/fTM4Kgkk/3.webp', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
+    { src: 'https://i.postimg.cc/sDmk09Zm/4.webp', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
+    { src: 'https://i.postimg.cc/QdnRj8mW/5.webp', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
+    { src: 'https://i.postimg.cc/x1dwrJv2/6.webp', alt: 'Atividade de Números', hint: 'numbers counting' },
+    { src: 'https://i.postimg.cc/MGMgTC33/7.webp', alt: 'Atividade de Cores', hint: 'colors activity' },
+    { src: 'https://i.postimg.cc/nzq5KvJv/8.webp', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
+    { src: 'https://i.postimg.cc/XvRmysTj/9.webp', alt: 'Atividade Sensorial', hint: 'sensory play' },
+    { src: 'https://i.postimg.cc/zv5QxVz4/10.webp', alt: 'Atividade de Leitura', hint: 'reading practice' },
+    { src: 'https://i.postimg.cc/cCmb206C/11.webp', alt: 'Atividade de Escrita', hint: 'writing practice' },
+    { src: 'https://i.postimg.cc/CMHXzHJ0/12.webp', alt: 'Atividade de Emoções', hint: 'emotions chart' },
+    { src: 'https://i.postimg.cc/GhXfjLZS/13.webp', alt: 'Quebra-cabeça', hint: 'puzzle game' },
 ];
 
 export default function KitDescriptionSection() {
@@ -93,7 +93,7 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-10">
           <div className="mb-8 inline-block animate-screen-glow">
             <Image
-              src="https://i.postimg.cc/66m61KJT/hwMc8SF.png"
+              src="https://i.postimg.cc/66m61KJT/hwMc8SF.webp"
               alt="Crianças estudando felizes"
               data-ai-hint="children studying happy"
               width={250}
@@ -187,7 +187,3 @@ export default function KitDescriptionSection() {
     </section>
   );
 }
-
-    
-
-    

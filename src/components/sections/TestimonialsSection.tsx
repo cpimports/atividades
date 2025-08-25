@@ -18,25 +18,25 @@ import { cn } from '@/lib/utils';
 import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
 const hostedVideos = [
-    { src: "https://i.postimg.cc/tRKwTqLK/vwSIeBW.png", title: "Depoimento Eliane" },
-    { src: "https://i.postimg.cc/G2NNvd9s/nqm8CGq.jpg", title: "Depoimento Thiago" },
-    { src: "https://i.postimg.cc/C5MkKgMW/logo.png", title: "Depoimento Camila" },
-    { src: "https://i.postimg.cc/y6j36xgd/gihdLU5.png", title: "Depoimento Silvana" },
-    { src: "https://i.postimg.cc/mr17t4xn/lbSS21Q.png", title: "Depoimento Gabriele" },
-    { src: "https://i.postimg.cc/c4SwCfCQ/xCuyx6F.png", title: "Depoimento Maria" },
+    { src: "https://i.postimg.cc/tRKwTqLK/vwSIeBW.webp", title: "Depoimento Eliane" },
+    { src: "https://i.postimg.cc/G2NNvd9s/nqm8CGq.webp", title: "Depoimento Thiago" },
+    { src: "https://i.postimg.cc/C5MkKgMW/logo.webp", title: "Depoimento Camila" },
+    { src: "https://i.postimg.cc/y6j36xgd/gihdLU5.webp", title: "Depoimento Silvana" },
+    { src: "https://i.postimg.cc/mr17t4xn/lbSS21Q.webp", title: "Depoimento Gabriele" },
+    { src: "https://i.postimg.cc/c4SwCfCQ/xCuyx6F.webp", title: "Depoimento Maria" },
 ];
 
 const commentsData = [
   {
     id: 1,
-    avatarUrl: 'https://i.postimg.cc/G2NNvd9s/nqm8CGq.jpg',
+    avatarUrl: 'https://i.postimg.cc/G2NNvd9s/nqm8CGq.webp',
     avatarFallback: 'CM',
     name: 'Carla Monteiro',
     time: '5h',
     text: 'Sempre perdi horas preparando atividades inclusivas, mas agora tudo já está pronto e organizado. Essa plataforma simplesmente mudou minha rotina em sala de aula e facilitou demais meu planejamento, amei 🥰',
     reactions: { like: 122, love: 15, haha: 2 },
     reply: {
-      avatarUrl: 'https://i.postimg.cc/C5MkKgMW/logo.png',
+      avatarUrl: 'https://i.postimg.cc/C5MkKgMW/logo.webp',
       name: 'Gêniozinho em Ação',
       time: '4h',
       text: 'Que incrível ler isso Carla! 💙 Nosso propósito é exatamente facilitar a rotina dos professores e tornar o aprendizado mais inclusivo e leve.',
@@ -60,7 +60,7 @@ const commentsData = [
     text: 'Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.',
     reactions: { like: 256, love: 30, haha: 1 },
     reply: {
-      avatarUrl: 'https://i.postimg.cc/C5MkKgMW/logo.png',
+      avatarUrl: 'https://i.postimg.cc/C5MkKgMW/logo.webp',
       name: 'Gêniozinho em Ação',
       time: '23h',
       text: 'André, seu feedback é muito importante para nós! Saber que o material está sendo validado por profissionais como você nos dá a certeza de que estamos no caminho certo. Obrigado!',
@@ -68,7 +68,7 @@ const commentsData = [
   },
   {
     id: 4,
-    avatarUrl: 'https://i.postimg.cc/tRKwTqLK/vwSIeBW.png',
+    avatarUrl: 'https://i.postimg.cc/tRKwTqLK/vwSIeBW.webp',
     avatarFallback: 'RT',
     name: 'Raquel Teodoro',
     time: '3d',
