@@ -44,7 +44,7 @@ const commentsData = [
   },
   {
     id: 2,
-    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarUrl: 'https://i.postimg.cc/RFmhGzQt/feedback2.webp',
     avatarFallback: 'VS',
     name: 'Vanessa Santos',
     time: '2h',
