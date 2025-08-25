@@ -5,7 +5,7 @@ export default function AnnouncementBar() {
   return (
     <>
       <div
-        className="text-center font-semibold fixed top-0 left-0 right-0 z-50 flex items-center justify-center shadow-md text-sm"
+        className="text-center font-semibold fixed top-0 left-0 right-0 z-50 flex items-center justify-center shadow-md text-sm animate-brilho-pulse"
         style={{
           backgroundColor: '#B3D4FC', // Soft blue background
           color: '#1F1F60',
