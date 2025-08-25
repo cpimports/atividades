@@ -3,48 +3,29 @@
 
 import { useState, useEffect } from 'react';
 
-// Single store for the progress state
-let progressState = 0;
-const listeners = new Set<(progress: number) => void>();
-
-const setProgress = (updater: (prev: number) => number) => {
-  progressState = updater(progressState);
-  listeners.forEach((listener) => listener(progressState));
-};
-
-// Initialize the progress logic once
-const initialProgress = 40;
-setTimeout(() => {
-  setProgress(() => initialProgress);
-}, 500);
-
-const interval = setInterval(() => {
-  setProgress((prev) => {
-    if (prev < 95) {
-      return prev + 1;
-    }
-    clearInterval(interval);
-    return prev;
-  });
-}, 25000); // Increases every 25 seconds
-
-
+// This hook is now self-contained and manages its own state and interval,
+// which is safer for static exports as it avoids module-level side effects.
 export function useProgress() {
-  const [progress, setLocalProgress] = useState(progressState);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
-    const listener = (newProgress: number) => {
-      setLocalProgress(newProgress);
-    };
-    
-    listeners.add(listener);
-    // Sync with the current state on mount
-    setLocalProgress(progressState); 
+    // Start with an initial value to avoid layout shifts
+    const initialProgress = 40;
+    setProgress(initialProgress);
 
-    return () => {
-      listeners.delete(listener);
-    };
-  }, []);
+    const interval = setInterval(() => {
+      setProgress((prev) => {
+        if (prev < 95) {
+          return prev + 1;
+        }
+        clearInterval(interval);
+        return prev;
+      });
+    }, 25000); // Increases every 25 seconds
+
+    // Cleanup interval on component unmount
+    return () => clearInterval(interval);
+  }, []); // Empty dependency array ensures this runs only once on mount
 
   return progress;
 }

@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -6,10 +5,11 @@ import Link from 'next/link';
 import Image from 'next/image'; // Using Image for the logo
 
 export default function Footer() {
-  const [currentYear, setYear] = useState<number | null>(null);
+  const [currentYear, setYear] = useState(new Date().getFullYear());
 
   useEffect(() => {
-    setYear(new Date().getFullYear());
+    // This effect can be used for other client-side logic if needed,
+    // but initializing the year in useState is sufficient and safer for SSR/SSG.
   }, []);
 
   return (
@@ -27,8 +27,7 @@ export default function Footer() {
             />
             <span className="font-headline text-lg font-semibold text-primary">Gêniozinho em Ação</span>
           </Link>
-          {/* Conditional rendering to avoid server/client mismatch */}
-          {currentYear && <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>}
+          <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>
           <p>Transformando o aprendizado com atividades lúdicas e eficazes.</p>
         </div>
       </div>

@@ -1,7 +1,7 @@
 
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { ShoppingCart } from 'lucide-react';
 import { incrementCount } from '@/hooks/useSharedCounter';
 
@@ -28,30 +28,29 @@ export default function SocialProofNotification() {
   const [notification, setNotification] = useState<CurrentNotification | null>(null);
   const [isVisible, setIsVisible] = useState(false);
 
+  const showRandomNotification = useCallback(() => {
+    // This logic now runs only on the client, preventing hydration mismatches
+    const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
+    setNotification({ ...randomBuyer, key: Date.now() });
+    setIsVisible(true);
+    incrementCount(); // Incrementa o contador global
+
+    // Fica visível por 10 segundos e depois some
+    setTimeout(() => {
+      setIsVisible(false);
+    }, 10000);
+  }, []);
+
   useEffect(() => {
-    const showRandomNotification = () => {
-      const randomBuyer = buyers[Math.floor(Math.random() * buyers.length)];
-      setNotification({ ...randomBuyer, key: Date.now() });
-      setIsVisible(true);
-      incrementCount(); // Incrementa o contador global
-
-      // Fica visível por 10 segundos e depois some
-      setTimeout(() => {
-        setIsVisible(false);
-      }, 10000);
-    };
-
-    // Mostra a primeira notificação após um pequeno atraso
+    // Moved the entire timer logic into useEffect to ensure it only runs on the client.
     const initialTimeout = setTimeout(showRandomNotification, 5000);
-
-    // Mostra uma nova notificação a cada 15 segundos
     const interval = setInterval(showRandomNotification, 15000);
 
     return () => {
       clearTimeout(initialTimeout);
       clearInterval(interval);
     };
-  }, []);
+  }, [showRandomNotification]);
 
   if (!notification) {
     return null;
@@ -60,8 +59,8 @@ export default function SocialProofNotification() {
   return (
     <div
       key={notification.key}
-      className={`fixed bottom-5 left-5 z-50 flex items-center gap-3 rounded-lg bg-green-500 px-4 py-3 text-white shadow-lg ${
-        isVisible ? 'animate-fadeInOut' : 'opacity-0'
+      className={`fixed bottom-5 left-5 z-50 flex items-center gap-3 rounded-lg bg-green-500 px-4 py-3 text-white shadow-lg transition-all duration-500 ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-5'
       }`}
     >
       <ShoppingCart className="h-6 w-6" />
