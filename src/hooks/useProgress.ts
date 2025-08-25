@@ -6,13 +6,10 @@ import { useState, useEffect } from 'react';
 // This hook is now self-contained and manages its own state and interval,
 // which is safer for static exports as it avoids module-level side effects.
 export function useProgress() {
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState(40); // Start with an initial value
 
   useEffect(() => {
-    // Start with an initial value to avoid layout shifts
-    const initialProgress = 40;
-    setProgress(initialProgress);
-
+    // The effect will only run on the client, after hydration
     const interval = setInterval(() => {
       setProgress((prev) => {
         if (prev < 95) {
