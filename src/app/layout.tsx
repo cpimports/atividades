@@ -44,6 +44,15 @@ export default function RootLayout({
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://i.postimg.cc" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
+        <link rel="preconnect" href="https://scripts.converteai.net" />
+
+        {/* VSL Script */}
+        <Script id="vsl-script" strategy="afterInteractive">
+          {`
+            var s=document.createElement("script"); 
+            s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s);
+          `}
+        </Script>
 
         {/* UTMify Pixel Loader */}
         <Script id="utmify-pixel-loader" strategy="afterInteractive">
