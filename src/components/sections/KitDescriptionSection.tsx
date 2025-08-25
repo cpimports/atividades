@@ -91,7 +91,7 @@ export default function KitDescriptionSection() {
       
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-10">
-          <div className="mb-8 inline-block animate-screen-glow">
+          <div className="mb-8 inline-block">
             <Image
               src="https://i.postimg.cc/66m61KJT/hwMc8SF.webp"
               alt="Crianças estudando felizes"
