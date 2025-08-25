@@ -4,41 +4,7 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useRef, useEffect } from 'react';
-
-const VideoPlayer = () => {
-  const videoId = '68a677e85a4844a26844462d';
-  const accountId = 'f304b502-422a-4d15-8f6c-5e42de7baf1b';
-  const iframeRef = useRef<HTMLIFrameElement>(null);
-  
-  const videoSrc = `https://scripts.converteai.net/${accountId}/players/${videoId}/v4/embed.html`;
-
-  useEffect(() => {
-    const iframe = iframeRef.current;
-    if (iframe) {
-        let finalSrc = videoSrc;
-        if (typeof window !== 'undefined') {
-            finalSrc += (window.location.search || '?') + '&vl=' + encodeURIComponent(window.location.href);
-        }
-        iframe.src = finalSrc;
-    }
-  }, [videoSrc]);
-
-
-  return (
-    <div style={{ padding: '56.48535564853556% 0 0 0', position: 'relative' }} className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
-      <iframe
-        ref={iframeRef}
-        id={`ifr_${videoId}`}
-        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-        frameBorder="0"
-        allowFullScreen
-        referrerPolicy="origin"
-      ></iframe>
-    </div>
-  );
-};
-
+import React from 'react';
 
 export default function HeroSection() {
 
@@ -90,8 +56,17 @@ export default function HeroSection() {
             <p className="font-semibold text-sky-200 text-base md:text-lg">Economize horas de preparo com atividades prontas, validadas por pedagogos e psicólogos, que estimulam o foco, a linguagem, a socialização e o desenvolvimento cognitivo dos seus alunos com TEA.</p>
         </div>
 
-        <div className="mt-8 max-w-4xl mx-auto animate-fade-in-slow">
-            <VideoPlayer />
+        <div className="mt-8 max-w-3xl mx-auto animate-fade-in-slow">
+            <div className="aspect-video relative rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
+                 <Image
+                    src="https://i.postimg.cc/SN9X6R2m/YvI4vpP.webp"
+                    alt="Crianças brincando com atividades do kit"
+                    data-ai-hint="children playing educational game"
+                    fill
+                    className="object-cover"
+                    priority
+                />
+            </div>
         </div>
         
         <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>

@@ -42,25 +42,8 @@ export default function RootLayout({
       <head>
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://i.imgur.com" />
-        <link rel="preconnect" href="https://scripts.converteai.net" />
-        <link rel="preconnect" href="https://cdn.converteai.net" />
-        <link rel="preconnect" href="https://images.converteai.net" />
-        <link rel="preconnect" href="https://api.vturb.com.br" />
+        <link rel="preconnect" href="https://i.postimg.cc" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
-
-        {/* VSL Optimizations (ConverteAi) */}
-        <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/embed.html" as="fetch" crossOrigin="anonymous" />
-        <Script id="vsl-timing-optimization" strategy="beforeInteractive">
-          {`!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);`}
-        </Script>
-        <Script id="vsl-sdk" src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js" strategy="afterInteractive" async />
-        <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js" as="script" />
-        <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
-        <link rel="preload" href="https://cdn.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/686fd13fd5ca67ae2917e1a0/main.m3u8" as="fetch" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://cdn.converteai.net" />
-        <link rel="dns-prefetch" href="https://scripts.converteai.net" />
-        <link rel="dns-prefetch" href="https://images.converteai.net" />
-        <link rel="dns-prefetch" href="https://api.vturb.com.br" />
 
         {/* UTMify Pixel Loader */}
         <Script id="utmify-pixel-loader" strategy="afterInteractive">
