@@ -17,12 +17,12 @@ import { cn } from '@/lib/utils';
 import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
 const hostedVideos = [
-    { src: "https://i.postimg.cc/tRKwTqLK/vwSIeBW.webp", title: "Depoimento Eliane", videoUrl: "https://videos.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/video.mp4" },
-    { src: "https://i.postimg.cc/G2NNvd9s/nqm8CGq.webp", title: "Depoimento Thiago", videoUrl: "https://videos.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/video.mp4" },
-    { src: "https://i.postimg.cc/C5MkKgMW/logo.webp", title: "Depoimento Camila", videoUrl: "https://videos.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/video.mp4" },
-    { src: "https://i.postimg.cc/y6j36xgd/gihdLU5.webp", title: "Depoimento Silvana", videoUrl: "https://videos.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/video.mp4" },
-    { src: "https://i.postimg.cc/mr17t4xn/lbSS21Q.webp", title: "Depoimento Gabriele", videoUrl: "https://videos.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/video.mp4" },
-    { src: "https://i.postimg.cc/c4SwCfCQ/xCuyx6F.webp", title: "Depoimento Maria", videoUrl: "https://videos.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/video.mp4" },
+    { videoUrl: "/videos/DEPOIMENTO-ELIANE.mp4", title: "Depoimento Eliane" },
+    { videoUrl: "/videos/DEPOIMENTO-THIAGO.mp4", title: "Depoimento Thiago" },
+    { videoUrl: "/videos/DEPOIMENTO-CAMILA.mp4", title: "Depoimento Camila" },
+    { videoUrl: "/videos/DEPOIMENTO-SILVANA.mp4", title: "Depoimento Silvana" },
+    { videoUrl: "/videos/DEPOIMENTO-GABRIELE.mp4", title: "Depoimento Gabriele" },
+    { videoUrl: "/videos/DEPOIMENTO-MARIA.mp4", title: "Depoimento Maria" },
 ];
 
 const commentsData = [
@@ -77,15 +77,15 @@ const commentsData = [
 ];
 
 
-const VideoFacade = ({ src, title, videoUrl }: { src: string; title: string, videoUrl: string }) => {
+const VideoFacade = ({ title, videoUrl }: { title: string, videoUrl: string }) => {
   return (
     <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
        <video
             controls
             className="w-full h-full object-cover"
             preload="metadata"
+            src={videoUrl}
         >
-            <source src={videoUrl} type="video/mp4" />
             Seu navegador não suporta a tag de vídeo.
         </video>
     </div>
@@ -224,10 +224,10 @@ export default function TestimonialsSection() {
             className="w-full max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-4xl mx-auto"
           >
             <CarouselContent>
-              {hostedVideos.map((video) => (
-                <CarouselItem key={video.src} className="sm:basis-1/2 md:basis-1/3">
+              {hostedVideos.map((video, index) => (
+                <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/3">
                   <div className="p-1">
-                    <VideoFacade src={video.src} title={video.title} videoUrl={video.videoUrl} />
+                    <VideoFacade title={video.title} videoUrl={video.videoUrl} />
                   </div>
                 </CarouselItem>
               ))}
