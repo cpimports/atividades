@@ -82,7 +82,6 @@ const VideoFacade = ({ src, title, videoUrl }: { src: string; title: string, vid
     <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
        <video
             controls
-            poster={src}
             className="w-full h-full object-cover"
             preload="metadata"
         >
