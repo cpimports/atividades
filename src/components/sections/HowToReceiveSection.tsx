@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { PlayCircle } from 'lucide-react';
 
 const steps = [
   {
@@ -13,7 +12,7 @@ const steps = [
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
   {
-    icon: <PlayCircle className="h-10 w-10 text-primary" />,
+    icon: <span className="text-4xl">▶️</span>,
     title: 'APLIQUE SEU KIT AGORA MESMO',
     description: 'Coloque em prática com seus alunos ou filhos e veja os resultados.',
   },
