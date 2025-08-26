@@ -1,9 +1,9 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Printer, PlayCircle, Smartphone } from 'lucide-react';
+import { Printer, PlayCircle } from 'lucide-react';
 
 const steps = [
   {
-    icon: <Smartphone className="h-10 w-10 text-primary" />,
+    icon: <span className="text-4xl">📲</span>,
     title: 'ACESSE NOSSA PLATAFORMA EXCLUSIVA',
     description: 'Tenha todo o material em um só lugar: na nossa plataforma exclusiva, prática e organizada para você',
   },
