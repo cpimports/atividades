@@ -18,12 +18,12 @@ import { cn } from '@/lib/utils';
 import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
 const hostedVideos = [
-    { videoUrl: "/videos/DEPOIMENTO-ELIANE.mp4", title: "Depoimento Eliane", posterUrl: "/videos/DEPOIMENTO-ELIANE.mp4.jpg" },
-    { videoUrl: "/videos/DEPOIMENTO-THIAGO.mp4", title: "Depoimento Thiago", posterUrl: "/videos/DEPOIMENTO-THIAGO.mp4.jpg" },
-    { videoUrl: "/videos/DEPOIMENTO-CAMILA.mp4", title: "Depoimento Camila", posterUrl: "/videos/DEPOIMENTO-CAMILA.mp4.jpg" },
-    { videoUrl: "/videos/DEPOIMENTO-SILVANA.mp4", title: "Depoimento Silvana", posterUrl: "/videos/DEPOIMENTO-SILVANA.mp4.jpg" },
-    { videoUrl: "/videos/DEPOIMENTO-GABRIELE.mp4", title: "Depoimento Gabriele", posterUrl: "/videos/DEPOIMENTO-GABRIELE.mp4.jpg" },
-    { videoUrl: "/videos/DEPOIMENTO-MARIA.mp4", title: "Depoimento Maria", posterUrl: "/videos/DEPOIMENTO-MARIA.mp4.jpg" },
+    { videoUrl: "/videos/DEPOIMENTO-ELIANE.mp4", title: "Depoimento Eliane" },
+    { videoUrl: "/videos/DEPOIMENTO-THIAGO.mp4", title: "Depoimento Thiago" },
+    { videoUrl: "/videos/DEPOIMENTO-CAMILA.mp4", title: "Depoimento Camila" },
+    { videoUrl: "/videos/DEPOIMENTO-SILVANA.mp4", title: "Depoimento Silvana" },
+    { videoUrl: "/videos/DEPOIMENTO-GABRIELE.mp4", title: "Depoimento Gabriele" },
+    { videoUrl: "/videos/DEPOIMENTO-MARIA.mp4", title: "Depoimento Maria" },
 ];
 
 const commentsData = [
@@ -78,18 +78,17 @@ const commentsData = [
 ];
 
 
-const VideoFacade = ({ title, videoUrl, posterUrl }: { title: string, videoUrl: string, posterUrl: string }) => {
+const VideoFacade = ({ title, videoUrl }: { title: string, videoUrl: string }) => {
   return (
     <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
        <video
             controls
             className="w-full h-full object-cover"
             preload="metadata"
-            src={videoUrl}
+            src={`${videoUrl}#t=0.1`}
             loading="lazy"
             playsInline
             muted
-            poster={posterUrl}
         >
             Seu navegador não suporta a tag de vídeo.
         </video>
@@ -232,7 +231,7 @@ export default function TestimonialsSection() {
               {hostedVideos.map((video, index) => (
                 <CarouselItem key={index} className="sm:basis-1/2 md:basis-1/3">
                   <div className="p-1">
-                    <VideoFacade title={video.title} videoUrl={video.videoUrl} posterUrl={video.posterUrl} />
+                    <VideoFacade title={video.title} videoUrl={video.videoUrl} />
                   </div>
                 </CarouselItem>
               ))}
