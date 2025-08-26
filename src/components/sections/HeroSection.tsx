@@ -4,28 +4,26 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React from 'react';
 
-// This is a workaround for the VSL since it uses inline styles and properties not directly supported by JSX.
-const VslPlayer = () => {
-  useEffect(() => {
-    const script = document.createElement("script");
-    script.src = "https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js";
-    script.async = true;
-    document.head.appendChild(script);
-
-    return () => {
-      // Optional: cleanup the script when the component unmounts
-      document.head.removeChild(script);
-    }
-  }, []);
-
+const NewVslPlayer = () => {
   return (
     <div
       dangerouslySetInnerHTML={{
         __html: `
-          <div style="margin: 0 auto; width: 100%; position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
-            <vturb-smartplayer id="vid-68a677e85a4844a26844462d" style="display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></vturb-smartplayer>
+          <script type="text/javascript">
+              var s=document.createElement("script");
+              s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+              s.async=true;
+              document.head.appendChild(s);
+          </script>
+          <div id="ifr_68a677e85a4844a26844462d_wrapper" style="margin: 0 auto; width: 100%; ">
+              <div style="position: relative; padding: 56.48535564853556% 0 0 0;" id="ifr_68a677e85a4844a26844462d_aspect">
+                  <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68a677e85a4844a26844462d"
+                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin"
+                      onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/embed.html'+(location.search||'?')+'&vl='+encodeURIComponent(location.href)">
+                  </iframe>
+              </div>
           </div>
         `,
       }}
@@ -85,7 +83,7 @@ export default function HeroSection() {
 
         <div className="mt-8 max-w-3xl mx-auto animate-fade-in-slow">
             <div className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
-                 <VslPlayer />
+                 <NewVslPlayer />
             </div>
         </div>
         
