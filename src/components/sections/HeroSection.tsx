@@ -4,16 +4,28 @@
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // This is a workaround for the VSL since it uses inline styles and properties not directly supported by JSX.
 const VslPlayer = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js";
+    script.async = true;
+    document.head.appendChild(script);
+
+    return () => {
+      // Optional: cleanup the script when the component unmounts
+      document.head.removeChild(script);
+    }
+  }, []);
+
   return (
     <div
       dangerouslySetInnerHTML={{
         __html: `
-          <div id="ifr_68a677e85a4844a26844462d_wrapper" style="margin: 0 auto; width: 100%; position: relative; padding-bottom: 56.25%; height: 0; background: #000;"> 
-            <iframe loading="eager" frameborder="0" allowfullscreen src="about:blank" id="ifr_68a677e85a4844a26844462d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload="this.onload=null, this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> 
+          <div style="margin: 0 auto; width: 100%; position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
+            <vturb-smartplayer id="vid-68a677e85a4844a26844462d" style="display: block; position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></vturb-smartplayer>
           </div>
         `,
       }}

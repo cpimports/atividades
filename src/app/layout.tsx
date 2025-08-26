@@ -40,19 +40,20 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${inter.variable} ${alegreya.variable} ${merriweather.variable}`} suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: `!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);` }} />
+        <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js" as="script" />
+        <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
+        <link rel="preload" href="https://cdn.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/68a677ca758079d62739838e/main.m3u8" as="fetch" />
+        <link rel="dns-prefetch" href="https://cdn.converteai.net" />
+        <link rel="dns-prefetch" href="https://scripts.converteai.net" />
+        <link rel="dns-prefetch" href="https://images.converteai.net" />
+        <link rel="dns-prefetch" href="https://api.vturb.com.br" />
+        
         {/* Preconnect to critical third-party origins */}
         <link rel="preconnect" href="https://i.imgur.com" />
         <link rel="preconnect" href="https://i.postimg.cc" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="preconnect" href="https://scripts.converteai.net" />
-
-        {/* VSL Script - Load early to reduce flicker */}
-        <Script id="vsl-script" strategy="beforeInteractive">
-          {`
-            var s=document.createElement("script"); 
-            s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s);
-          `}
-        </Script>
 
         {/* UTMify Pixel Loader */}
         <Script id="utmify-pixel-loader" strategy="lazyOnload">
