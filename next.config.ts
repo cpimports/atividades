@@ -41,9 +41,19 @@ const nextConfig: NextConfig = {
   },
   experimental: {
   },
-  allowedDevOrigins: [
-    'https://6000-firebase-pagina-atv-autistas-1755351984826.cluster-ve345ymguzcd6qqzuko2qbxtfe.cloudworkstations.dev',
-  ],
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Origin', value: 'https://6000-firebase-pagina-atv-autistas-1755351984826.cluster-ve345ymguzcd6qqzuko2qbxtfe.cloudworkstations.dev' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
+          { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;
