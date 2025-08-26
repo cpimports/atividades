@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -71,16 +70,10 @@ export default function KitDescriptionSection() {
           observer.disconnect();
 
           setTimeout(() => {
-            let i = 0;
-            const scrollInterval = setInterval(() => {
-              if (i < count -1) {
-                api.scrollNext();
-                i++;
-              } else {
-                clearInterval(scrollInterval);
-              }
-            }, 800); 
-          }, 2000);
+            if (api.canScrollNext()) {
+              api.scrollNext();
+            }
+          }, 2000); 
         }
       },
       { threshold: 0.5 } // Trigger when 50% of the element is visible
@@ -92,11 +85,12 @@ export default function KitDescriptionSection() {
 
     return () => {
       if (carouselRef.current) {
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         observer.unobserve(carouselRef.current);
       }
       observer.disconnect();
     };
-  }, [api, count]);
+  }, [api]);
 
 
   return (
