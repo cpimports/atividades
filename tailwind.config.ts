@@ -133,6 +133,14 @@ export default {
             boxShadow: '0 0 0 8px hsla(48, 96%, 57%, 0)', 
           },
         },
+        'screen-glow': {
+          '0%, 100%': {
+            filter: 'drop-shadow(0 0 8px rgba(135, 206, 235, 0.4)) drop-shadow(0 0 12px rgba(135, 206, 235, 0.3))',
+          },
+          '50%': {
+            filter: 'drop-shadow(0 0 16px rgba(135, 206, 235, 0.6)) drop-shadow(0 0 24px rgba(135, 206, 235, 0.4))',
+          },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
