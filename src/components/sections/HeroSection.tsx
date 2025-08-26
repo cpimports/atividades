@@ -12,10 +12,8 @@ const VslPlayer = () => {
     <div
       dangerouslySetInnerHTML={{
         __html: `
-          <div id="ifr_68a677e85a4844a26844462d_wrapper" style="margin: 0 auto; width: 100%; "> 
-            <div style="position: relative; padding: 56.48535564853556% 0 0 0;" id="ifr_68a677e85a4844a26844462d_aspect"> 
-              <iframe loading="lazy" frameborder="0" allowfullscreen src="about:blank" id="ifr_68a677e85a4844a26844462d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload="this.onload=null, this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> 
-            </div> 
+          <div id="ifr_68a677e85a4844a26844462d_wrapper" style="margin: 0 auto; width: 100%; position: relative; padding-bottom: 56.25%; height: 0; background: #000;"> 
+            <iframe loading="eager" frameborder="0" allowfullscreen src="about:blank" id="ifr_68a677e85a4844a26844462d" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload="this.onload=null, this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe> 
           </div>
         `,
       }}
@@ -74,7 +72,7 @@ export default function HeroSection() {
         </div>
 
         <div className="mt-8 max-w-3xl mx-auto animate-fade-in-slow">
-            <div className="aspect-video relative rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
+            <div className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
                  <VslPlayer />
             </div>
         </div>

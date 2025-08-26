@@ -46,8 +46,8 @@ export default function RootLayout({
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="preconnect" href="https://scripts.converteai.net" />
 
-        {/* VSL Script */}
-        <Script id="vsl-script" strategy="lazyOnload">
+        {/* VSL Script - Load early to reduce flicker */}
+        <Script id="vsl-script" strategy="beforeInteractive">
           {`
             var s=document.createElement("script"); 
             s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s);
