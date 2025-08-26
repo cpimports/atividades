@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -53,7 +52,7 @@ const commentsData = [
   },
   {
     id: 3,
-    avatarUrl: 'https://placehold.co/100x100.png',
+    avatarUrl: 'https://i.postimg.cc/C141Q6mQ/feedback3.webp',
     avatarFallback: 'AF',
     name: 'André Ferreira',
     time: '1d',
