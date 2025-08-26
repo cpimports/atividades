@@ -1,7 +1,7 @@
 
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
@@ -22,7 +22,8 @@ export default function OfferSection() {
   ];
 
   const lastBenefit = "+ 8 SUPER BÔNUS";
-  const progress = useProgress();
+  const progressRef = useRef<HTMLDivElement>(null);
+  const progress = useProgress(progressRef);
 
   return (
     <section
@@ -165,11 +166,11 @@ export default function OfferSection() {
           </div>
         </div>
 
-        <div className="mt-16 max-w-2xl mx-auto text-center">
+        <div ref={progressRef} className="mt-16 max-w-2xl mx-auto text-center">
             <p className="font-bold text-gray-800 mb-2">Atenção! Essa oferta exclusiva vai acabar em instantes. Não perca a chance de garantir tudo agora!</p>
           <div className="bg-yellow-100/70 border-2 border-yellow-300 rounded-lg p-4 shadow-md">
             <p className="font-semibold text-yellow-900 mb-2">
-                ⏳ {progress}% dos kits promocionais já foram vendidos!
+                ⏳ {Math.floor(progress)}% dos kits promocionais já foram vendidos!
             </p>
             <Progress value={progress} className="w-full h-3 bg-gray-200 [&>div]:bg-yellow-400" />
             <p className="text-sm text-yellow-800 mt-2 font-medium">

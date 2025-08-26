@@ -1,28 +1,58 @@
 
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, RefObject } from 'react';
 
-// This hook is now self-contained and manages its own state and interval,
-// which is safer for static exports as it avoids module-level side effects.
-export function useProgress() {
-  const [progress, setProgress] = useState(40); // Start with an initial value
+// This hook animates the progress bar to 40% when it becomes visible,
+// and then continues to increment slowly.
+export function useProgress(ref: RefObject<Element>) {
+  const [progress, setProgress] = useState(0);
+  const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
-    // The effect will only run on the client, after hydration
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        if (prev < 95) {
-          return prev + 1;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIntersecting(true);
+          observer.unobserve(entry.target); // Stop observing once it's visible
         }
-        clearInterval(interval);
-        return prev;
-      });
-    }, 25000); // Increases every 25 seconds
+      },
+      {
+        threshold: 0.1, // Trigger when 10% of the element is visible
+      }
+    );
 
-    // Cleanup interval on component unmount
-    return () => clearInterval(interval);
-  }, []); // Empty dependency array ensures this runs only once on mount
+    const currentRef = ref.current;
+    if (currentRef) {
+      observer.observe(currentRef);
+    }
+
+    return () => {
+      if (currentRef) {
+        observer.unobserve(currentRef);
+      }
+    };
+  }, [ref]);
+
+  useEffect(() => {
+    if (isIntersecting) {
+      // Animate to 40%
+      setProgress(40);
+
+      // After the initial animation, start the slow increment
+      const interval = setInterval(() => {
+        setProgress((prev) => {
+          if (prev < 95) {
+            return prev + 1;
+          }
+          clearInterval(interval);
+          return prev;
+        });
+      }, 25000); // Increases every 25 seconds
+
+      return () => clearInterval(interval);
+    }
+  }, [isIntersecting]);
 
   return progress;
 }

@@ -22,7 +22,8 @@ const Progress = React.forwardRef<
       className="h-full w-full flex-1 bg-primary transition-transform"
       style={{ 
         transform: `translateX(-${100 - (value || 0)}%)`,
-        transitionDuration: '1000ms' // Use a consistent, shorter duration
+        transitionDuration: '2000ms', // Use a consistent, shorter duration
+        transitionTimingFunction: 'ease-out',
       }}
     />
   </ProgressPrimitive.Root>
