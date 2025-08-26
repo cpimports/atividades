@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Printer, PlayCircle } from 'lucide-react';
+import { PlayCircle } from 'lucide-react';
 
 const steps = [
   {
@@ -8,7 +8,7 @@ const steps = [
     description: 'Tenha todo o material em um só lugar: na nossa plataforma exclusiva, prática e organizada para você',
   },
   {
-    icon: <Printer className="h-10 w-10 text-accent-foreground" />,
+    icon: <span className="text-4xl">🖨️</span>,
     title: 'ACESSE E IMPRIMA QUANDO QUISER',
     description: 'Acesse e imprima quando e quantas vezes preferir.',
   },
