@@ -128,7 +128,7 @@ export default function KitDescriptionSection() {
               >
                 <CarouselContent>
                   {carouselImages.map((image, index) => (
-                    <CarouselItem key={index} className="basis-1/1 sm:basis-1/2">
+                    <CarouselItem key={index} className="basis-full sm:basis-1/2">
                       <div className="p-1">
                         <Card className="overflow-hidden border-0 shadow-xl bg-transparent">
                           <CardContent className="relative flex items-center justify-center p-0 aspect-[4/5]">
