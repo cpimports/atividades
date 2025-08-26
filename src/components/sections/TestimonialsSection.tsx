@@ -208,7 +208,7 @@ export default function TestimonialsSection() {
         
         <div className="text-center mb-12">
           <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-white mb-4 drop-shadow-md">
-            Veja o que professores e pais estão dizendo sobre o Gêniozinho em Ação
+            Depoimentos reais sobre o Gêniozinho em Ação!
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             Descubra como o Gêniozinho em Ação está facilitando o trabalho dos professores e acelerando o aprendizado das crianças autistas.
