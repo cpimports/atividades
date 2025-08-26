@@ -99,6 +99,7 @@ export default function KitDescriptionSection() {
               width={250}
               height={250}
               className="mx-auto"
+              loading="lazy"
             />
           </div>
           <h2 className="font-merriweather text-2xl sm:text-3xl font-bold text-white mb-8">

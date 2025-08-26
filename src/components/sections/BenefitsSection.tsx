@@ -71,6 +71,7 @@ export default function BenefitsSection() {
                       fill
                       className="object-cover rounded-t-lg"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                      loading="lazy"
                     />
                   </div>
               </CardHeader>

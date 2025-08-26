@@ -97,6 +97,7 @@ export default function OfferSection() {
                     width={150}
                     height={113}
                     className="mx-auto mb-4 relative z-10"
+                    loading="lazy"
                 />
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold uppercase text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(253, 224, 71, 0.4)' }}>
                     SUPER OFERTA
@@ -112,7 +113,7 @@ export default function OfferSection() {
               <ul className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
-                    <Image src="https://i.imgur.com/ak914uz.png" alt="Check icon" data-ai-hint="checkmark icon" width={24} height={24} className="mr-3 mt-0.5 flex-shrink-0" />
+                    <Image src="https://i.imgur.com/ak914uz.png" alt="Check icon" data-ai-hint="checkmark icon" width={24} height={24} className="mr-3 mt-0.5 flex-shrink-0" loading="lazy"/>
                     <span className="text-base md:text-lg">{benefit}</span>
                   </li>
                 ))}

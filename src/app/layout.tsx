@@ -47,7 +47,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://scripts.converteai.net" />
 
         {/* VSL Script */}
-        <Script id="vsl-script" strategy="afterInteractive">
+        <Script id="vsl-script" strategy="lazyOnload">
           {`
             var s=document.createElement("script"); 
             s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js", s.async=!0,document.head.appendChild(s);
@@ -55,7 +55,7 @@ export default function RootLayout({
         </Script>
 
         {/* UTMify Pixel Loader */}
-        <Script id="utmify-pixel-loader" strategy="afterInteractive">
+        <Script id="utmify-pixel-loader" strategy="lazyOnload">
           {`
             window.pixelId = "689374be46b9142a86a43379";
             var a = document.createElement("script");
@@ -91,7 +91,7 @@ export default function RootLayout({
         <Script 
           id="utmify-utm-script"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           data-utmify-prevent-xcod-sck
           data-utmify-prevent-subids
           async 
