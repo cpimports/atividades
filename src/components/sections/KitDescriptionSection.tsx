@@ -1,7 +1,7 @@
 
 'use client';
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -36,6 +36,8 @@ export default function KitDescriptionSection() {
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
+  const carouselRef = useRef<HTMLDivElement>(null);
+  const hasAnimated = useRef(false);
 
   useEffect(() => {
     if (!api) {
@@ -59,6 +61,43 @@ export default function KitDescriptionSection() {
   const handleDotClick = useCallback((index: number) => {
     api?.scrollTo(index);
   }, [api]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting && !hasAnimated.current && api) {
+          hasAnimated.current = true;
+          observer.disconnect();
+
+          setTimeout(() => {
+            let i = 0;
+            const scrollInterval = setInterval(() => {
+              if (i < count -1) {
+                api.scrollNext();
+                i++;
+              } else {
+                clearInterval(scrollInterval);
+              }
+            }, 800); 
+          }, 2000);
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is visible
+    );
+
+    if (carouselRef.current) {
+      observer.observe(carouselRef.current);
+    }
+
+    return () => {
+      if (carouselRef.current) {
+        observer.unobserve(carouselRef.current);
+      }
+      observer.disconnect();
+    };
+  }, [api, count]);
+
 
   return (
     <section id="kit-description" className="py-16 md:py-24 bg-gradient-to-br from-indigo-800 to-slate-900 relative overflow-hidden">
@@ -114,7 +153,7 @@ export default function KitDescriptionSection() {
             O material é 100% digital, disponível na nossa plataforma em PDF pronto para imprimir, para você usar imediatamente em casa, na escola ou no consultório.
           </p>
           
-          <div className="mt-8 md:mt-12 text-center">
+          <div ref={carouselRef} className="mt-8 md:mt-12 text-center">
             <div className="inline-block bg-slate-800/30 p-4 rounded-2xl shadow-2xl shadow-sky-400/10">
               <p className="text-center text-md text-gray-200 mt-2 mb-4">
                 🧩 Veja Algumas das Atividades Que Estão no Kit
