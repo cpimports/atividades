@@ -20,7 +20,7 @@ const carouselImages: { src: string; alt: string; hint: string }[] = [
     { src: 'https://i.postimg.cc/yxxhzzSj/1.webp', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
     { src: 'https://i.postimg.cc/cHng74YV/2.webp', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
     { src: 'https://i.postimg.cc/ZKc9xQBK/3.webp', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
-    { src: 'https://i.postimg.cc/sDmk09Zm/4.webp', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
+    { src: 'https://i.postimg.cc/pXxh8vd6/4.webp', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
     { src: 'https://i.postimg.cc/QdnRj8mW/5.webp', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
     { src: 'https://i.postimg.cc/x1dwrJv2/6.webp', alt: 'Atividade de Números', hint: 'numbers counting' },
     { src: 'https://i.postimg.cc/MGMgTC33/7.webp', alt: 'Atividade de Cores', hint: 'colors activity' },
