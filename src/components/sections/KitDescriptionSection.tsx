@@ -17,7 +17,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
 const carouselImages: { src: string; alt: string; hint: string }[] = [
-    { src: 'https://i.postimg.cc/jj1K36mm/SciijaD.webp', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
+    { src: 'https://i.postimg.cc/yxxhzzSj/1.webp', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
     { src: 'https://i.postimg.cc/prbvRW2B/KSkNNlg.webp', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
     { src: 'https://i.postimg.cc/fTM4Kgkk/3.webp', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
     { src: 'https://i.postimg.cc/sDmk09Zm/4.webp', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
