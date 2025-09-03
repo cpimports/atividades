@@ -91,14 +91,30 @@ export default function RootLayout({
 
         {/* UTMify Script for appending UTMs to links */}
         <Script 
-          id="utmify-utm-script"
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          id="utm-handler"
           strategy="lazyOnload"
-          data-utmify-prevent-xcod-sck
-          data-utmify-prevent-subids
-          async 
-          defer
-        ></Script>
+        >
+          {`
+            (function() {
+              const checkoutUrl = 'https://pay.cakto.com.br/wms7hjy_447695';
+              const utmParams = window.location.search;
+
+              if (utmParams) {
+                const links = document.querySelectorAll('a');
+                links.forEach(link => {
+                  if (link.href && link.href.startsWith(checkoutUrl)) {
+                    // Prevents adding duplicate '?' if the base link already has params
+                    if (link.href.includes('?')) {
+                      link.href += utmParams.replace('?', '&');
+                    } else {
+                      link.href += utmParams;
+                    }
+                  }
+                });
+              }
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );
