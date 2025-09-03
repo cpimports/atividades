@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -130,7 +131,7 @@ export default function KitDescriptionSection() {
               alt="Crianças estudando felizes"
               data-ai-hint="children studying happy"
               width={250}
-              height={250}
+              height={167}
               className="mx-auto"
               loading="lazy"
             />
@@ -170,8 +171,9 @@ export default function KitDescriptionSection() {
                               src={image.src}
                               alt={image.alt}
                               data-ai-hint={image.hint}
-                              fill
-                              className="object-cover rounded-lg"
+                              width={312}
+                              height={390}
+                              className="object-cover rounded-lg h-auto w-full"
                               sizes="(max-width: 640px) 100vw, 50vw"
                               loading="lazy"
                             />

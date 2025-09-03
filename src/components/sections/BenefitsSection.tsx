@@ -68,8 +68,9 @@ export default function BenefitsSection() {
                       src={(item.icon as React.ReactElement).props.src}
                       alt={(item.icon as React.ReactElement).props.alt}
                       data-ai-hint={(item.icon as React.ReactElement).props['data-ai-hint']}
-                      fill
-                      className="object-cover rounded-t-lg"
+                      width={600}
+                      height={338}
+                      className="object-cover rounded-t-lg w-full h-auto"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       loading="lazy"
                     />
@@ -109,8 +110,9 @@ export default function BenefitsSection() {
                             src={image.src}
                             alt={image.alt}
                             data-ai-hint={image.hint}
-                            fill
-                            className="object-cover"
+                            width={512}
+                            height={640}
+                            className="object-cover w-full h-auto"
                             sizes="(max-width: 768px) 90vw, (max-width: 1024px) 45vw, 512px"
                             loading="lazy"
                         />

@@ -69,7 +69,7 @@ export default function HeroSection() {
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo brain lightbulb"
             width={120}
-            height={120}
+            height={101}
             className="mx-auto"
             priority
           />
