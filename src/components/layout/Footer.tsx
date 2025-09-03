@@ -18,7 +18,7 @@ export default function Footer() {
         <div className="flex flex-col items-center justify-center space-y-4">
           <Link href="/" className="flex flex-col items-center space-y-2">
             <Image
-              src="https://i.postimg.cc/C5MkKgMW/logo.webp" 
+              src="https://i.postimg.cc/DzPF9Ssr/logo.webp" 
               alt="Logo Gêniozinho em Ação"
               data-ai-hint="logo abstract playful"
               width={64} 
