@@ -57,7 +57,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://scripts.converteai.net" />
 
         {/* UTMify Pixel Loader */}
-        <Script id="utmify-pixel-loader-inline" strategy="afterInteractive">
+        <Script id="utmify-pixel-loader" strategy="lazyOnload">
         {`
           window.pixelId = "689374be46b9142a86a43379";
           var a = document.createElement("script");
@@ -74,7 +74,7 @@ export default function RootLayout({
           data-utmify-prevent-subids
           async
           defer
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         ></Script>
       </head>
       <body className="font-body antialiased">
@@ -107,7 +107,7 @@ export default function RootLayout({
             document.addEventListener('click', function(e) {
               const targetLink = e.target.closest('a');
               
-              if (targetLink && targetLink.href && (targetLink.href.startsWith('https://pay.cakto.com.br/wms7hjy_447695') || targetLink.href.startsWith('https://pay.cakto.com.br/zjrsj8d_447695'))) {
+              if (targetLink && targetLink.href && (targetLink.href.startsWith('https://pay.cakto.com.br/'))) {
                 e.preventDefault(); 
                 
                 const checkoutUrl = targetLink.href;
