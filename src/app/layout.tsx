@@ -57,22 +57,25 @@ export default function RootLayout({
         <link rel="preconnect" href="https://scripts.converteai.net" />
 
         {/* UTMify Pixel Loader */}
-        <script id="utmify-pixel-loader-inline" dangerouslySetInnerHTML={{ __html: `
+        <Script id="utmify-pixel-loader-inline" strategy="afterInteractive">
+        {`
           window.pixelId = "689374be46b9142a86a43379";
           var a = document.createElement("script");
           a.setAttribute("async", "");
           a.setAttribute("defer", "");
           a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
           document.head.appendChild(a);
-        `}} />
-        <script
+        `}
+        </Script>
+        <Script
           id="utmify-params-loader"
           src="https://cdn.utmify.com.br/scripts/utms/latest.js"
           data-utmify-prevent-xcod-sck
           data-utmify-prevent-subids
           async
           defer
-        ></script>
+          strategy="afterInteractive"
+        ></Script>
       </head>
       <body className="font-body antialiased">
         
@@ -102,19 +105,21 @@ export default function RootLayout({
         >
           {`
             (function() {
-              const checkoutUrl = 'https://pay.cakto.com.br/wms7hjy_447695';
+              const checkoutUrl = 'https://pay.cakto.com.br/zjrsj8d_447695';
               const utmParams = window.location.search;
 
               if (utmParams) {
                 const links = document.querySelectorAll('a');
                 links.forEach(link => {
-                  if (link.href && link.href.startsWith(checkoutUrl)) {
-                    // Prevents adding duplicate '?' if the base link already has params
-                    if (link.href.includes('?')) {
-                      link.href += utmParams.replace('?', '&');
-                    } else {
-                      link.href += utmParams;
-                    }
+                  if (link.href && (link.href.startsWith('https://pay.cakto.com.br/wms7hjy_447695') || link.href.startsWith('https://pay.cakto.com.br/zjrsj8d_447695'))) {
+                    const newUrl = new URL(link.href);
+                    const currentParams = new URLSearchParams(newUrl.search);
+                    const newUtmParams = new URLSearchParams(utmParams);
+                    newUtmParams.forEach((value, key) => {
+                        currentParams.set(key, value);
+                    });
+                    newUrl.search = currentParams.toString();
+                    link.href = newUrl.toString();
                   }
                 });
               }
