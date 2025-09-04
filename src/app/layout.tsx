@@ -57,16 +57,22 @@ export default function RootLayout({
         <link rel="preconnect" href="https://scripts.converteai.net" />
 
         {/* UTMify Pixel Loader */}
-        <Script id="utmify-pixel-loader" strategy="lazyOnload">
-          {`
-            window.pixelId = "689374be46b9142a86a43379";
-            var a = document.createElement("script");
-            a.setAttribute("async", "");
-            a.setAttribute("defer", "");
-            a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-            document.head.appendChild(a);
-          `}
-        </Script>
+        <script id="utmify-pixel-loader-inline" dangerouslySetInnerHTML={{ __html: `
+          window.pixelId = "689374be46b9142a86a43379";
+          var a = document.createElement("script");
+          a.setAttribute("async", "");
+          a.setAttribute("defer", "");
+          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+          document.head.appendChild(a);
+        `}} />
+        <script
+          id="utmify-params-loader"
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-xcod-sck
+          data-utmify-prevent-subids
+          async
+          defer
+        ></script>
       </head>
       <body className="font-body antialiased">
         
