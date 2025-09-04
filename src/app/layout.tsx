@@ -104,26 +104,31 @@ export default function RootLayout({
           strategy="lazyOnload"
         >
           {`
-            (function() {
-              const checkoutUrl = 'https://pay.cakto.com.br/zjrsj8d_447695';
-              const utmParams = window.location.search;
+            document.addEventListener('click', function(e) {
+              const targetLink = e.target.closest('a');
+              
+              if (targetLink && targetLink.href && (targetLink.href.startsWith('https://pay.cakto.com.br/wms7hjy_447695') || targetLink.href.startsWith('https://pay.cakto.com.br/zjrsj8d_447695'))) {
+                e.preventDefault(); 
+                
+                const checkoutUrl = targetLink.href;
+                const utmParams = window.location.search;
 
-              if (utmParams) {
-                const links = document.querySelectorAll('a');
-                links.forEach(link => {
-                  if (link.href && (link.href.startsWith('https://pay.cakto.com.br/wms7hjy_447695') || link.href.startsWith('https://pay.cakto.com.br/zjrsj8d_447695'))) {
-                    const newUrl = new URL(link.href);
+                if (utmParams) {
+                    const newUrl = new URL(checkoutUrl);
                     const currentParams = new URLSearchParams(newUrl.search);
                     const newUtmParams = new URLSearchParams(utmParams);
+                    
                     newUtmParams.forEach((value, key) => {
                         currentParams.set(key, value);
                     });
+                    
                     newUrl.search = currentParams.toString();
-                    link.href = newUrl.toString();
-                  }
-                });
+                    window.location.href = newUrl.toString();
+                } else {
+                    window.location.href = checkoutUrl;
+                }
               }
-            })();
+            });
           `}
         </Script>
       </body>
