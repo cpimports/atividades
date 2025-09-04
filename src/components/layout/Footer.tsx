@@ -28,7 +28,7 @@ export default function Footer() {
             <span className="font-headline text-lg font-semibold text-primary">Gêniozinho em Ação</span>
           </Link>
           <p>&copy; {currentYear} Gêniozinho em Ação. Todos os direitos reservados.</p>
-          <p>Transformando o aprendizado com atividades lúdicas e eficazes.</p>
+          <p>Transformando o aprendizado com atividades lúdicas e eficazes!</p>
         </div>
       </div>
     </footer>
