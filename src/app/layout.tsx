@@ -107,7 +107,7 @@ export default function RootLayout({
             document.addEventListener('click', function(e) {
               const targetLink = e.target.closest('a');
               
-              if (targetLink && targetLink.href && (targetLink.href.startsWith('https://pay.cakto.com.br/'))) {
+              if (targetLink && targetLink.href && (targetLink.href.startsWith('https://pay.cakto.com.br/') || targetLink.href.startsWith('https://cakto.app/'))) {
                 e.preventDefault(); 
                 
                 const checkoutUrl = targetLink.href;

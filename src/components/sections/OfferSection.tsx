@@ -140,7 +140,7 @@ export default function OfferSection() {
                   asChild
                   className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-xl py-8 px-12 rounded-lg transition-all transform hover:scale-105 animate-pulse-yellow-cta"
                 >
-                  <Link id="btn-comprar" href="https://pay.cakto.com.br/3bbibtq">
+                  <Link id="btn-comprar" href="https://cakto.app/9QiePNE/">
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
