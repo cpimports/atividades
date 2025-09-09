@@ -97,40 +97,6 @@ export default function RootLayout({
             }, true);
           `}
         </Script>
-
-        {/* UTMify Script for appending UTMs to links */}
-        <Script 
-          id="utm-handler"
-          strategy="lazyOnload"
-        >
-          {`
-            document.addEventListener('click', function(e) {
-              const targetLink = e.target.closest('a');
-              
-              if (targetLink && targetLink.href && (targetLink.href.startsWith('https://pay.cakto.com.br/') || targetLink.href.startsWith('https://cakto.app/'))) {
-                e.preventDefault(); 
-                
-                const checkoutUrl = targetLink.href;
-                const utmParams = window.location.search;
-
-                if (utmParams) {
-                    const newUrl = new URL(checkoutUrl);
-                    const currentParams = new URLSearchParams(newUrl.search);
-                    const newUtmParams = new URLSearchParams(utmParams);
-                    
-                    newUtmParams.forEach((value, key) => {
-                        currentParams.set(key, value);
-                    });
-                    
-                    newUrl.search = currentParams.toString();
-                    window.location.href = newUrl.toString();
-                } else {
-                    window.location.href = checkoutUrl;
-                }
-              }
-            });
-          `}
-        </Script>
       </body>
     </html>
   );
