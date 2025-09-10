@@ -67,14 +67,6 @@ export default function RootLayout({
           document.head.appendChild(a);
         `}
         </Script>
-        {/* UTMify Params Loader */}
-        <script
-          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
-          data-utmify-prevent-xcod-sck
-          data-utmify-prevent-subids
-          async
-          defer
-        ></script>
       </head>
       <body className="font-body antialiased">
         
