@@ -6,6 +6,7 @@ import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import SocialProofNotification from '@/components/shared/SocialProofNotification';
+import UTMHandler from '@/components/shared/UTMHandler';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -74,6 +75,7 @@ export default function RootLayout({
         {children}
         <Toaster />
         <SocialProofNotification />
+        <UTMHandler checkoutDomain="pay.cakto.com.br" />
         
         {/* InitiateCheckout Event Script for UTMify */}
         <Script id="initiate-checkout-tracker" strategy="lazyOnload">
