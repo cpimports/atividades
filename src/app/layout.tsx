@@ -81,11 +81,21 @@ export default function RootLayout({
         <Script id="initiate-checkout-tracker" strategy="lazyOnload">
           {`
             document.addEventListener('click', function(e) {
-              if (e.target && e.target.closest('#btn-comprar')) {
-                // UTMify Pixel
+              const checkoutButton = e.target && e.target.closest('#btn-comprar');
+              if (checkoutButton) {
+                e.preventDefault(); // Stop the default link navigation
+
+                // Track the event with UTMify
                 if (window.utmify_pixel && typeof window.utmify_pixel.track === 'function') {
                   window.utmify_pixel.track('InitiateCheckout');
                 }
+
+                const finalUrl = checkoutButton.href;
+
+                // Redirect manually after a short delay to ensure the tracking event is sent
+                setTimeout(() => {
+                  window.location.href = finalUrl;
+                }, 500); // 500ms delay
               }
             }, true);
           `}
