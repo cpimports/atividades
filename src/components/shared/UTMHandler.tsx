@@ -25,15 +25,21 @@ export default function UTMHandler({ checkoutDomain }: UTMHandlerProps) {
 
       // 4. Append stored UTMs to each checkout link.
       checkoutLinks.forEach(link => {
-        // We cast to HTMLAnchorElement to access the 'href' property directly
         const anchor = link as HTMLAnchorElement;
         try {
-          // Use a URL object to safely manipulate the href
+          // Use a URL object to safely manipulate the href and avoid duplicates
           const url = new URL(anchor.href);
+          const existingParams = new URLSearchParams(url.search);
+          const newParams = new URLSearchParams(storedUtms);
           
-          // Only modify if the hostname matches and it hasn't been modified already
-          if (url.hostname.includes(checkoutDomain) && !url.search.includes(storedUtms)) {
-              // Append using '?' or '&' correctly
+          let hasBeenModified = false;
+          newParams.forEach((value, key) => {
+              if (existingParams.get(key) === value) {
+                  hasBeenModified = true;
+              }
+          });
+
+          if (url.hostname.includes(checkoutDomain) && !hasBeenModified) {
               anchor.href += (anchor.href.includes('?') ? '&' : '?') + storedUtms;
           }
         } catch (error) {
