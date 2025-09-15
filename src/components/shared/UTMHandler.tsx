@@ -8,34 +8,40 @@ interface UTMHandlerProps {
 
 export default function UTMHandler({ checkoutDomain }: UTMHandlerProps) {
   useEffect(() => {
-    // This code runs only on the client-side after the component mounts
-    const currentUrlParams = window.location.search;
+    // This logic runs only on the client side.
 
-    if (currentUrlParams) {
-      const allLinks = document.querySelectorAll('a');
-      
-      allLinks.forEach(link => {
+    // 1. Capture and store UTMs from the current URL on page load.
+    const currentParams = new URLSearchParams(window.location.search);
+    if (currentParams.toString()) {
+      localStorage.setItem('utms', currentParams.toString());
+    }
+
+    // 2. Retrieve stored UTMs.
+    const storedUtms = localStorage.getItem('utms');
+
+    if (storedUtms) {
+      // 3. Find all links pointing to the checkout domain.
+      const checkoutLinks = document.querySelectorAll(`a[href*='${checkoutDomain}']`);
+
+      // 4. Append stored UTMs to each checkout link.
+      checkoutLinks.forEach(link => {
+        // We cast to HTMLAnchorElement to access the 'href' property directly
+        const anchor = link as HTMLAnchorElement;
         try {
-          const linkUrl = new URL(link.href, window.location.origin);
+          // Use a URL object to safely manipulate the href
+          const url = new URL(anchor.href);
           
-          // Check if the link's hostname is the checkout domain
-          if (linkUrl.hostname.includes(checkoutDomain)) {
-            // Append the current page's search parameters to the checkout link
-            // This is a more direct way to ensure all params are passed.
-            if (link.href.includes('?')) {
-                // If the link already has params, append with '&'
-                link.href = `${link.href}${currentUrlParams.replace('?', '&')}`;
-            } else {
-                // Otherwise, append with '?'
-                link.href = `${link.href}${currentUrlParams}`;
-            }
+          // Only modify if the hostname matches and it hasn't been modified already
+          if (url.hostname.includes(checkoutDomain) && !url.search.includes(storedUtms)) {
+              // Append using '?' or '&' correctly
+              anchor.href += (anchor.href.includes('?') ? '&' : '?') + storedUtms;
           }
         } catch (error) {
-          // Ignore invalid URLs, which can happen with hrefs like "tel:..."
+          // Ignore invalid URLs
         }
       });
     }
   }, [checkoutDomain]);
 
-  return null; // This component doesn't render anything visible
+  return null; // This component does not render anything.
 }
