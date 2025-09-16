@@ -10,75 +10,80 @@ interface UTMHandlerProps {
  * Traduz os parâmetros de UTM que contêm '|' para parâmetros separados,
  * conforme o padrão esperado pelo Facebook/Cakto.
  * Ex: utm_campaign=nome|id -> campaign_name=nome&campaign_id=id
+ * 
+ * ATUALIZAÇÃO: A plataforma não estava reconhecendo os parâmetros traduzidos.
+ * A nova lógica passa os parâmetros UTM originais, apenas garantindo que
+ * o localStorage seja usado para persistência durante a navegação.
  */
-function translateUtmParams(params: URLSearchParams): URLSearchParams {
-  const newParams = new URLSearchParams();
+function translateAndStoreUtms() {
+  try {
+    const currentParams = new URLSearchParams(window.location.search);
 
-  for (const [key, value] of params.entries()) {
-    if (key === 'utm_campaign' && value.includes('|')) {
-      const [name, id] = value.split('|');
-      if (name) newParams.set('campaign_name', name);
-      if (id) newParams.set('campaign_id', id);
-    } else if (key === 'utm_medium' && value.includes('|')) {
-      const [name, id] = value.split('|');
-      if (name) newParams.set('adset_name', name);
-      if (id) newParams.set('adset_id', id);
-    } else if (key === 'utm_content' && value.includes('|')) {
-      const [name, id] = value.split('|');
-      if (name) newParams.set('ad_name', name);
-      if (id) newParams.set('ad_id', id);
-    } else {
-      // Passa os outros parâmetros (como utm_source e utm_term) normalmente
-      newParams.set(key, value);
+    // Se a URL atual tiver parâmetros, atualiza o localStorage.
+    // Isso evita que o localStorage seja limpo em navegações internas.
+    if (currentParams.toString()) {
+      localStorage.setItem('utms', currentParams.toString());
     }
+  } catch (error) {
+    console.error("Erro ao capturar ou salvar UTMs:", error);
   }
+}
 
-  return newParams;
+/**
+ * Anexa os UTMs armazenados a todos os links de checkout na página.
+ */
+function attachUtmsToCheckoutLinks(checkoutDomain: string) {
+  try {
+    const storedUtms = localStorage.getItem('utms');
+
+    if (storedUtms) {
+      const checkoutLinks = document.querySelectorAll<HTMLAnchorElement>(`a[href*='${checkoutDomain}']`);
+
+      checkoutLinks.forEach(link => {
+        // Evita adicionar parâmetros duplicados em re-renderizações
+        if (link.href.includes('utm_source')) {
+          return;
+        }
+
+        const separator = link.href.includes("?") ? "&" : "?";
+        link.href = `${link.href}${separator}${storedUtms}`;
+      });
+    }
+  } catch (error) {
+    console.error("Erro ao anexar UTMs aos links:", error);
+  }
 }
 
 
 export default function UTMHandler({ checkoutDomain }: UTMHandlerProps) {
   useEffect(() => {
-    // Este efeito é executado apenas no cliente, após a montagem do componente.
-    try {
-      // 1. Captura os parâmetros da URL atual na primeira visita.
-      const currentParams = new URLSearchParams(window.location.search);
-      
-      // Apenas atualiza o localStorage se houver parâmetros na URL,
-      // para não apagar os UTMs salvos durante a navegação interna.
-      if (currentParams.toString()) { // Verifica se existe qualquer parâmetro
-        const translatedParams = translateUtmParams(currentParams);
-        localStorage.setItem('utms', translatedParams.toString());
-      }
+    // Este efeito é executado apenas no cliente.
 
-      // 2. Recupera os UTMs salvos (sejam da visita atual ou anterior).
-      const storedUtms = localStorage.getItem('utms');
+    // 1. Captura e armazena os UTMs na primeira carga ou quando eles mudam.
+    translateAndStoreUtms();
 
-      if (storedUtms) {
-        // 3. Encontra todos os links que apontam para o domínio de checkout.
-        const checkoutLinks = document.querySelectorAll<HTMLAnchorElement>(`a[href*='${checkoutDomain}']`);
+    // 2. Anexa os UTMs salvos aos links.
+    // Usamos um MutationObserver para garantir que os links sejam atualizados
+    // mesmo que eles sejam adicionados à página dinamicamente depois do carregamento inicial.
+    const observer = new MutationObserver(() => {
+      attachUtmsToCheckoutLinks(checkoutDomain);
+    });
 
-        // 4. Anexa os UTMs salvos e traduzidos a cada link de checkout.
-        checkoutLinks.forEach(link => {
-          // Limpa parâmetros antigos para evitar duplicação em navegações SPA
-          const originalHref = link.href.split('?')[0];
-          
-          const url = new URL(originalHref);
-          const finalParams = new URLSearchParams(storedUtms);
-          
-          finalParams.forEach((value, key) => {
-              url.searchParams.append(key, value);
-          });
+    // Anexa imediatamente na montagem do componente.
+    attachUtmsToCheckoutLinks(checkoutDomain);
 
-          if (link.href !== url.toString()) {
-            link.href = url.toString();
-          }
-        });
-      }
-    } catch (error) {
-      console.error("Erro no UTMHandler:", error);
-    }
-  }, [checkoutDomain]); // A dependência garante que o hook não execute desnecessariamente.
+    // Começa a observar o corpo do documento por mudanças.
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true,
+    });
+
+    // Limpa o observador quando o componente é desmontado.
+    return () => {
+      observer.disconnect();
+    };
+
+  }, [checkoutDomain]); // A dependência garante que o hook se adapte se o domínio mudar.
 
   return null; // Este componente não renderiza nada na tela.
 }
