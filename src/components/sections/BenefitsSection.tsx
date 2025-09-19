@@ -61,16 +61,15 @@ export default function BenefitsSection() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {deliverables.map((item, index) => (
-            <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col">
+            <Card key={index} className="text-center shadow-lg hover:shadow-xl transition-shadow duration-300 bg-card/90 backdrop-blur-sm flex flex-col overflow-hidden">
               <CardHeader className="p-0">
-                 <div className="aspect-video relative">
+                 <div className="aspect-video relative overflow-hidden">
                     <Image
                       src={(item.icon as React.ReactElement).props.src}
                       alt={(item.icon as React.ReactElement).props.alt}
                       data-ai-hint={(item.icon as React.ReactElement).props['data-ai-hint']}
-                      width={600}
-                      height={338}
-                      className="object-cover rounded-t-lg w-full h-auto"
+                      fill
+                      className="object-cover"
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
                       loading="lazy"
                     />
