@@ -138,7 +138,7 @@ export default function OfferSection() {
                 <Button
                   size="lg"
                   asChild
-                  className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-black font-bold text-xl py-8 px-12 rounded-lg transition-all transform hover:scale-105 animate-pulse-yellow-cta"
+                  className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-lg transition-all transform hover:scale-105 animate-pulse-yellow-cta text-base sm:text-lg md:text-xl py-4 px-6 md:py-6 md:px-10 text-center"
                 >
                   <Link id="btn-comprar" href="https://pay.cakto.com.br/3bbibtq">
                     COMPRAR KIT COM DESCONTO!
