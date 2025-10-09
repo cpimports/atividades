@@ -18,6 +18,8 @@ import { cn } from '@/lib/utils';
 import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
 
 const hostedVideos = [
+    { videoUrl: "/videos/DEPOIMENTO-PROFESSORA.mp4", title: "Depoimento Professora" },
+    { videoUrl: "/videos/PROFESSORA2.mp4", title: "Depoimento Professora 2" },
     { videoUrl: "/videos/DEPOIMENTO-ELIANE.mp4", title: "Depoimento Eliane" },
     { videoUrl: "/videos/DEPOIMENTO-THIAGO.mp4", title: "Depoimento Thiago" },
     { videoUrl: "/videos/DEPOIMENTO-CAMILA.mp4", title: "Depoimento Camila" },
