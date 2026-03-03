@@ -41,7 +41,11 @@ export default function OfertaPage() {
         <HowToReceiveSection />
         <BenefitsSection />
         <TestimonialsSection />
-        <OfferSection /> 
+        <OfferSection 
+          price="19,75" 
+          installmentText="ou 4x de R$5,73" 
+          checkoutUrl="https://loja.geniozinhoemacao.com.br/checkout/v4/WbE0rP04SZDO0RPFaY8D" 
+        /> 
         <FaqSection />
       </main>
       <Footer />

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useRef } from 'react';
@@ -9,7 +8,17 @@ import { ShieldCheck, Lock, CreditCard } from 'lucide-react';
 import { useProgress } from '@/hooks/useProgress';
 import { Progress } from '@/components/ui/progress';
 
-export default function OfferSection() {
+interface OfferSectionProps {
+  price?: string;
+  installmentText?: string;
+  checkoutUrl?: string;
+}
+
+export default function OfferSection({ 
+  price = "19,90", 
+  installmentText = "ou 4x de R$5,77",
+  checkoutUrl = "https://pay.cakto.com.br/3bbibtq"
+}: OfferSectionProps) {
 
   const benefits = [
     "+1500 Atividades Lúdicas e Adaptadas para Autistas",
@@ -128,9 +137,9 @@ export default function OfferSection() {
                     <span className="text-xl text-gray-400 line-through">De R$97,00</span>
                   </div>
                   <div className="my-2 flex items-baseline justify-center gap-2">
-                    <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400" style={{ textShadow: '0 3px 8px rgba(253, 224, 71, 0.2)' }}>R$19,90</span>
+                    <span className="text-6xl sm:text-7xl font-extrabold text-yellow-400" style={{ textShadow: '0 3px 8px rgba(253, 224, 71, 0.2)' }}>R${price}</span>
                   </div>
-                  <div className="text-lg text-gray-200 font-semibold">ou 4x de R$5,77</div>
+                  {installmentText && <div className="text-lg text-gray-200 font-semibold">{installmentText}</div>}
                   <p className="text-sm text-gray-300 font-medium">(Pagamento Único. Acesso IMEDIATO e VITALÍCIO!)</p>
               </div>
               
@@ -140,7 +149,7 @@ export default function OfferSection() {
                   asChild
                   className="w-full sm:w-auto shadow-xl hover:shadow-2xl bg-yellow-400 hover:bg-yellow-500 text-black font-bold rounded-lg transition-all transform hover:scale-105 animate-pulse-yellow-cta text-base sm:text-lg md:text-xl py-4 px-6 md:py-6 md:px-10 text-center"
                 >
-                  <Link id="btn-comprar" href="https://pay.cakto.com.br/3bbibtq">
+                  <Link id="btn-comprar" href={checkoutUrl}>
                     COMPRAR KIT COM DESCONTO!
                   </Link>
                 </Button>
