@@ -1,4 +1,3 @@
-
 import type {Metadata} from 'next';
 import { Inter, Alegreya, Merriweather } from 'next/font/google';
 import Script from 'next/script';
@@ -75,7 +74,8 @@ export default function RootLayout({
         {children}
         <Toaster />
         <SocialProofNotification />
-        <UTMHandler checkoutDomain="pay.cakto.com.br" />
+        {/* Configurado para capturar UTMs tanto da página principal quanto da página de oferta */}
+        <UTMHandler checkoutDomains={["pay.cakto.com.br", "loja.geniozinhoemacao.com.br"]} />
         
         {/* InitiateCheckout Event Script for UTMify */}
         <Script id="initiate-checkout-tracker" strategy="lazyOnload">
