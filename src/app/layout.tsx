@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import AnnouncementBar from '@/components/layout/AnnouncementBar';
 import SocialProofNotification from '@/components/shared/SocialProofNotification';
 import UTMHandler from '@/components/shared/UTMHandler';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -76,6 +77,7 @@ export default function RootLayout({
         <SocialProofNotification />
         {/* Configurado para capturar UTMs tanto da página principal quanto da página de oferta */}
         <UTMHandler checkoutDomains={["pay.cakto.com.br", "loja.geniozinhoemacao.com.br"]} />
+        <SpeedInsights />
         
         {/* InitiateCheckout Event Script for UTMify */}
         <Script id="initiate-checkout-tracker" strategy="lazyOnload">
