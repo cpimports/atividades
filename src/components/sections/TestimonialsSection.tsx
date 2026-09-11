@@ -1,11 +1,11 @@
 
 'use client';
 
-import React, { useState, useEffect, useCallback, useRef } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { Card, CardContent } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { PlayCircle, ThumbsUp, Heart, Laugh } from 'lucide-react';
+import { ThumbsUp, Heart } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -31,14 +31,14 @@ const hostedVideos = [
 const commentsData = [
   {
     id: 1,
-    avatarUrl: 'https://i.postimg.cc/G2NNvd9s/nqm8CGq.webp',
+    avatarUrl: '/images/avatar-carla.webp',
     avatarFallback: 'CM',
     name: 'Carla Monteiro',
     time: '5h',
     text: 'Sempre perdi horas preparando atividades inclusivas, mas agora tudo já está pronto e organizado. Essa plataforma simplesmente mudou minha rotina em sala de aula e facilitou demais meu planejamento, amei 🥰',
     reactions: { like: 122, love: 15, haha: 2 },
     reply: {
-      avatarUrl: 'https://i.postimg.cc/DzPF9Ssr/logo.webp',
+      avatarUrl: '/images/logo.webp',
       name: 'Gêniozinho em Ação',
       time: '4h',
       text: 'Que incrível ler isso Carla! 💙 Nosso propósito é exatamente facilitar a rotina dos professores e tornar o aprendizado mais inclusivo e leve.',
@@ -46,7 +46,7 @@ const commentsData = [
   },
   {
     id: 2,
-    avatarUrl: 'https://i.postimg.cc/RFmhGzQt/feedback2.webp',
+    avatarUrl: '/images/avatar-vanessa.webp',
     avatarFallback: 'VS',
     name: 'Vanessa Santos',
     time: '2h',
@@ -55,14 +55,14 @@ const commentsData = [
   },
   {
     id: 3,
-    avatarUrl: 'https://i.postimg.cc/C141Q6mQ/feedback3.webp',
+    avatarUrl: '/images/avatar-andre.webp',
     avatarFallback: 'AF',
     name: 'André Ferreira',
     time: '1d',
     text: 'Como terapeuta, sempre procuro materiais que unam didática com acessibilidade. O Gêniozinho em Ação entrega isso com excelência. Os pais dos meus pacientes amaram poder aplicar em casa também.',
     reactions: { like: 256, love: 30, haha: 1 },
     reply: {
-      avatarUrl: 'https://i.postimg.cc/DzPF9Ssr/logo.webp',
+      avatarUrl: '/images/logo.webp',
       name: 'Gêniozinho em Ação',
       time: '23h',
       text: 'André, seu feedback é muito importante para nós! Saber que o material está sendo validado por profissionais como você nos dá a certeza de que estamos no caminho certo. Obrigado!',
@@ -70,7 +70,7 @@ const commentsData = [
   },
   {
     id: 4,
-    avatarUrl: 'https://i.postimg.cc/tRKwTqLK/vwSIeBW.webp',
+    avatarUrl: '/images/avatar-raquel.webp',
     avatarFallback: 'RT',
     name: 'Raquel Teodoro',
     time: '3d',
@@ -80,7 +80,8 @@ const commentsData = [
 ];
 
 
-const VideoFacade = ({ title, videoUrl }: { title: string, videoUrl: string }) => {
+// Video player simples com preload="metadata"
+const VideoFacade = ({ title, videoUrl }: { title: string; videoUrl: string }) => {
   return (
     <div className="relative aspect-[9/16] w-full max-w-[280px] mx-auto bg-slate-900/50 rounded-xl overflow-hidden shadow-2xl shadow-sky-400/20">
        <video
@@ -88,7 +89,6 @@ const VideoFacade = ({ title, videoUrl }: { title: string, videoUrl: string }) =
             className="w-full h-full object-cover"
             preload="metadata"
             src={`${videoUrl}#t=0.1`}
-            loading="lazy"
             playsInline
             muted
         >
@@ -105,7 +105,7 @@ const FacebookComment = ({ comment }: { comment: typeof commentsData[0] }) => {
   return (
     <div className="flex space-x-3 w-full">
       <Avatar className="h-10 w-10 flex-shrink-0">
-        <Image src={comment.avatarUrl} alt={comment.name} data-ai-hint="person portrait" width={67} height={40} className="object-cover" loading="lazy" sizes="40px" />
+        <Image src={comment.avatarUrl} alt={comment.name} data-ai-hint="person portrait" width={40} height={40} className="object-cover" loading="lazy" sizes="40px" />
         <AvatarFallback>{comment.avatarFallback}</AvatarFallback>
       </Avatar>
       <div className="flex-grow">
@@ -129,7 +129,7 @@ const FacebookComment = ({ comment }: { comment: typeof commentsData[0] }) => {
         {comment.reply && (
           <div className="flex space-x-3 mt-3">
             <Avatar className="h-8 w-8 flex-shrink-0">
-                <Image src={comment.reply.avatarUrl} alt={comment.reply.name} data-ai-hint="company logo" width={64} height={64} className="object-cover" loading="lazy" sizes="32px"/>
+                <Image src={comment.reply.avatarUrl} alt={comment.reply.name} data-ai-hint="company logo" width={32} height={32} className="object-cover" loading="lazy" sizes="32px"/>
                 <AvatarFallback>GA</AvatarFallback>
             </Avatar>
              <div className="flex-grow">

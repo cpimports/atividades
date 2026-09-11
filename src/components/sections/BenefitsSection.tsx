@@ -11,25 +11,25 @@ import { useProgress } from '@/hooks/useProgress';
 
 const deliverables = [
   {
-    icon: <Image src="https://i.postimg.cc/SN9X6R2m/YvI4vpP.webp" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
+    icon: <Image src="/images/deliverable-bundle.webp" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
     title: 'Mais de 1.500 Atividades Adaptadas para Crianças Autistas',
     description: 'Acervo completo de atividades para estimular habilidades cognitivas, motoras e comportamentais, pronto para uso no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },
   {
-    icon: <Image src="https://i.postimg.cc/7ZMfRRnc/JNBiwQN.webp" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
+    icon: <Image src="/images/deliverable-adapted.webp" alt="Atividades adaptadas para autismo" data-ai-hint="playful adapted activities" width={64} height={64} loading="lazy" />,
     title: 'Atividades Lúdicas e Adaptadas',
     description: 'Exercícios de fácil compreensão, com estímulos visuais e linguagem simples para promover mais engajamento.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.postimg.cc/vmYcwvPm/CgFJ1gS.webp" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
+    icon: <Image src="/images/deliverable-pdf.webp" alt="PDF Organizado" data-ai-hint="organized pdf" width={64} height={64} loading="lazy" />,
     title: 'Acesso Vitalício e Organizado',
     description: 'Material digital pronto para imprimir, com acesso vitalício e organização por categorias.',
     titleClassName: 'font-headline text-2xl text-primary',
   },
   {
-    icon: <Image src="https://i.postimg.cc/8zV7tGMM/Lwg6HKn.webp" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
+    icon: <Image src="/images/deliverable-community.webp" alt="Comunidade de professores" data-ai-hint="teachers community" width={64} height={64} loading="lazy"/>,
     title: 'Comunidade Exclusiva de Professores',
     description: 'Participe de um grupo fechado para trocar experiências e compartilhar atividades adaptadas.',
     titleClassName: 'font-headline text-2xl text-primary',
@@ -37,11 +37,11 @@ const deliverables = [
 ];
 
 const bonusImages = [
-    { src: 'https://i.postimg.cc/7hZvnmnp/kAN1TAq.webp', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
-    { src: 'https://i.postimg.cc/Kjq6qB94/NQGTwqs.webp', alt: 'Bônus 2', hint: 'educational game' },
-    { src: 'https://i.postimg.cc/wxwYjY6H/M1r76xK.webp', alt: 'Bônus 3', hint: 'coloring page' },
-    { src: 'https://i.postimg.cc/TYhMyNwb/djV5iNg.webp', alt: 'Bônus 4', hint: 'learning chart' },
-]
+    { src: '/images/bonus-1.webp', alt: 'Bônus 1', hint: 'bonus activity worksheet' },
+    { src: '/images/bonus-2.webp', alt: 'Bônus 2', hint: 'educational game' },
+    { src: '/images/bonus-3.webp', alt: 'Bônus 3', hint: 'coloring page' },
+    { src: '/images/bonus-4.webp', alt: 'Bônus 4', hint: 'learning chart' },
+];
 
 export default function BenefitsSection() {
     const progressRef = useRef<HTMLDivElement>(null);
@@ -49,7 +49,10 @@ export default function BenefitsSection() {
 
   return (
     <section id="oque-voce-recebe" className="py-16 md:py-24 relative bg-gradient-to-br from-background to-muted/30">
-      <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/light-paper-fibers.png')] opacity-[0.03] mix-blend-overlay pointer-events-none -z-10"></div>
+      {/* CSS-only subtle texture pattern instead of external texture URL */}
+      <div className="absolute inset-0 opacity-[0.03] mix-blend-overlay pointer-events-none -z-10"
+        style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px)' }}
+      ></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-0">
         <div className="text-center mb-12">
           <h2 className="font-merriweather text-3xl sm:text-4xl font-semibold text-primary">

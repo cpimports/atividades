@@ -4,7 +4,7 @@ import React, { useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { ShieldCheck, Lock, CreditCard } from 'lucide-react';
+import { ShieldCheck, Lock, CreditCard, CheckCircle2 } from 'lucide-react';
 import { useProgress } from '@/hooks/useProgress';
 import { Progress } from '@/components/ui/progress';
 
@@ -46,7 +46,7 @@ export default function OfferSection({
                 <div className="p-6 md:p-8 flex flex-col md:flex-row items-center text-center md:text-left gap-6 text-gray-800">
                     <div className="flex-shrink-0">
                         <Image
-                            src="https://i.postimg.cc/mr17t4xn/lbSS21Q.webp"
+                            src="/images/guarantee-seal.webp"
                             alt="Selo de Garantia de 7 dias"
                             data-ai-hint="gold shield guarantee"
                             width={150}
@@ -100,13 +100,14 @@ export default function OfferSection({
           <div className="p-1 md:p-2 relative z-10">
             <div className="text-center pt-8">
                 <Image 
-                    src="https://i.postimg.cc/y6j36xgd/gihdLU5.webp"
+                    src="/images/offer-mockup.webp"
                     alt="Kit Gêniozinho em Ação"
                     data-ai-hint="product bundle mockup"
                     width={150}
                     height={113}
                     className="mx-auto mb-4 relative z-10"
                     loading="lazy"
+                    sizes="150px"
                 />
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-extrabold uppercase text-white tracking-wider drop-shadow-lg" style={{ textShadow: '0 4px 8px rgba(253, 224, 71, 0.4)' }}>
                     SUPER OFERTA
@@ -122,7 +123,8 @@ export default function OfferSection({
               <ul className="space-y-4 mb-8">
                 {benefits.map((benefit, index) => (
                   <li key={index} className="flex items-start">
-                    <Image src="https://i.imgur.com/ak914uz.png" alt="Check icon" data-ai-hint="checkmark icon" width={24} height={24} className="mr-3 mt-0.5 flex-shrink-0" loading="lazy"/>
+                    {/* SVG check icon instead of 355KB external PNG */}
+                    <CheckCircle2 className="h-6 w-6 text-green-400 mr-3 mt-0.5 flex-shrink-0" />
                     <span className="text-base md:text-lg">{benefit}</span>
                   </li>
                 ))}

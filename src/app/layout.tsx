@@ -51,8 +51,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://api.vturb.com.br" />
         
         {/* Preconnect to critical third-party origins */}
-        <link rel="preconnect" href="https://i.imgur.com" />
-        <link rel="preconnect" href="https://i.postimg.cc" />
+        <link rel="preload" href="/images/logo.webp" as="image" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
         <link rel="preconnect" href="https://scripts.converteai.net" />
 

@@ -65,7 +65,7 @@ export default function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-8 animate-fade-in-medium">
           <Image
-            src="https://i.postimg.cc/DzPF9Ssr/logo.webp"
+            src="/images/logo.webp"
             alt="Logo Gêniozinho em Ação"
             data-ai-hint="logo brain lightbulb"
             width={120}
@@ -102,7 +102,7 @@ export default function HeroSection() {
           </p>
           <div className="mt-2 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
             <Image
-                src="https://i.postimg.cc/c4SwCfCQ/xCuyx6F.webp"
+                src="/images/payment-methods.webp"
                 alt="Métodos de pagamento aceitos"
                 data-ai-hint="payment methods"
                 width={250}

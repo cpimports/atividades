@@ -17,19 +17,19 @@ import { Card, CardContent } from "@/components/ui/card";
 import { cn } from '@/lib/utils';
 
 const carouselImages: { src: string; alt: string; hint: string }[] = [
-    { src: 'https://i.postimg.cc/vBxg77CY/6.webp', alt: 'Atividade de Números', hint: 'numbers counting' },
-    { src: 'https://i.postimg.cc/yxxhzzSj/1.webp', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
-    { src: 'https://i.postimg.cc/cHng74YV/2.webp', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
-    { src: 'https://i.postimg.cc/ZKc9xQBK/3.webp', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
-    { src: 'https://i.postimg.cc/pXxh8vd6/4.webp', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
-    { src: 'https://i.postimg.cc/mZcNVC7F/5.webp', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
-    { src: 'https://i.postimg.cc/MGMgTC33/7.webp', alt: 'Atividade de Cores', hint: 'colors activity' },
-    { src: 'https://i.postimg.cc/nzq5KvJv/8.webp', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
-    { src: 'https://i.postimg.cc/XvRmysTj/9.webp', alt: 'Atividade Sensorial', hint: 'sensory play' },
-    { src: 'https://i.postimg.cc/zv5QxVz4/10.webp', alt: 'Atividade de Leitura', hint: 'reading practice' },
-    { src: 'https://i.postimg.cc/cCmb206C/11.webp', alt: 'Atividade de Escrita', hint: 'writing practice' },
-    { src: 'https://i.postimg.cc/CMHXzHJ0/12.webp', alt: 'Atividade de Emoções', hint: 'emotions chart' },
-    { src: 'https://i.postimg.cc/GhXfjLZS/13.webp', alt: 'Quebra-cabeça', hint: 'puzzle game' },
+    { src: '/images/activity-6.webp', alt: 'Atividade de Números', hint: 'numbers counting' },
+    { src: '/images/activity-1.webp', alt: 'Atividade de Alfabetização', hint: 'alphabet learning' },
+    { src: '/images/activity-2.webp', alt: 'Atividade de Coordenação Motora', hint: 'motor skills' },
+    { src: '/images/activity-3.webp', alt: 'Atividade de Raciocínio Lógico', hint: 'logic puzzle' },
+    { src: '/images/activity-4.webp', alt: 'Atividade de Vogais', hint: 'vowels worksheet' },
+    { src: '/images/activity-5.webp', alt: 'Atividade de Formas Geométricas', hint: 'geometric shapes' },
+    { src: '/images/activity-7.webp', alt: 'Atividade de Cores', hint: 'colors activity' },
+    { src: '/images/activity-8.webp', alt: 'Atividade de Recorte e Colagem', hint: 'cut and paste' },
+    { src: '/images/activity-9.webp', alt: 'Atividade Sensorial', hint: 'sensory play' },
+    { src: '/images/activity-10.webp', alt: 'Atividade de Leitura', hint: 'reading practice' },
+    { src: '/images/activity-11.webp', alt: 'Atividade de Escrita', hint: 'writing practice' },
+    { src: '/images/activity-12.webp', alt: 'Atividade de Emoções', hint: 'emotions chart' },
+    { src: '/images/activity-13.webp', alt: 'Quebra-cabeça', hint: 'puzzle game' },
 ];
 
 export default function KitDescriptionSection() {
@@ -127,13 +127,14 @@ export default function KitDescriptionSection() {
         <div className="text-center mb-10">
           <div className="mb-8 inline-block animate-screen-glow">
             <Image
-              src="https://i.postimg.cc/66m61KJT/hwMc8SF.webp"
+              src="/images/children-studying.webp"
               alt="Crianças estudando felizes"
               data-ai-hint="children studying happy"
               width={250}
               height={167}
               className="mx-auto"
               loading="lazy"
+              sizes="250px"
             />
           </div>
           <h2 className="font-merriweather text-2xl sm:text-3xl font-bold text-white mb-8">
@@ -174,8 +175,8 @@ export default function KitDescriptionSection() {
                               width={312}
                               height={390}
                               className="object-cover rounded-lg h-auto w-full"
-                              sizes="(max-width: 640px) 100vw, 50vw"
-                              loading="lazy"
+                              sizes="(max-width: 640px) 90vw, 45vw"
+                              loading={index === 0 ? 'eager' : 'lazy'}
                             />
                           </CardContent>
                         </Card>
