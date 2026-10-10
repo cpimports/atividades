@@ -12,7 +12,7 @@ import { useProgress } from '@/hooks/useProgress';
 const deliverables = [
   {
     icon: <Image src="/images/deliverable-bundle.webp" alt="Pacote de atividades" data-ai-hint="activity bundle" width={64} height={64} loading="lazy"/>,
-    title: 'Mais de 1.500 Atividades Adaptadas para Crianças Autistas',
+    title: 'Mais de 1.700 Atividades Adaptadas para Crianças Autistas',
     description: 'Acervo completo de atividades para estimular habilidades cognitivas, motoras e comportamentais, pronto para uso no dia a dia.',
     titleClassName: 'font-headline text-2xl text-primary', 
   },

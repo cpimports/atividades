@@ -21,7 +21,7 @@ export default function OfferSection({
 }: OfferSectionProps) {
 
   const benefits = [
-    "+1500 Atividades Lúdicas e Adaptadas para Autistas",
+    "+1700 Atividades Lúdicas e Adaptadas para Autistas",
     "Acesso Imediato e Vitalício à Plataforma com todo Material",
     "Tranquilidade e Suporte para Você",
     "SUPER BÔNUS 1: Mega Pacote de +1000 Moldes de EVA",
