@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import dynamic from 'next/dynamic';
 import Footer from '@/components/layout/Footer';
@@ -41,8 +41,8 @@ export default function Oferta2Page() {
         <BenefitsSection />
         <TestimonialsSection />
         <OfferSection 
-          price="19,75" 
-          installmentText="ou 4x de R$5,73" 
+          price="19,76" 
+          installmentText="ou 4x de R$5,66" 
           checkoutUrl="https://loja.geniozinhoemacao.com.br/checkout/v4/WbE0rP04SZDO0RPFaY8D" 
         /> 
         <FaqSection />

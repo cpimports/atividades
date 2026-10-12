@@ -12,7 +12,7 @@ import {
   type CarouselApi,
 } from '@/components/ui/carousel';
 import { cn } from '@/lib/utils';
-import DynamicCounterBanner from '@/components/shared/DynamicCounterBanner';
+import DynamicCounterBanner from './DynamicCounterBanner';
 import { SectionHeading, BottomCurveDivider } from '@/components/landing/ui';
 
 const hostedVideos = [

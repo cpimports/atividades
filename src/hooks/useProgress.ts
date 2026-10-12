@@ -5,7 +5,7 @@ import { useState, useEffect, RefObject } from 'react';
 
 // This hook animates the progress bar to 40% when it becomes visible,
 // and then continues to increment slowly.
-export function useProgress(ref: RefObject<Element>) {
+export function useProgress(ref: RefObject<Element>, targetProgress?: number) {
   const [progress, setProgress] = useState(0);
   const [isIntersecting, setIntersecting] = useState(false);
 
@@ -36,8 +36,8 @@ export function useProgress(ref: RefObject<Element>) {
 
   useEffect(() => {
     if (isIntersecting) {
-      // Animate to 40%
-      setProgress(40);
+      // Animate to targetProgress or 40%
+      setProgress(targetProgress ?? 40);
 
       // After the initial animation, start the slow increment
       const interval = setInterval(() => {
