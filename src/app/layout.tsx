@@ -49,6 +49,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://scripts.converteai.net" />
         <link rel="dns-prefetch" href="https://images.converteai.net" />
         <link rel="dns-prefetch" href="https://api.vturb.com.br" />
+        <link rel="dns-prefetch" href="https://license.vturb.com" />
         
         {/* Preconnect to critical third-party origins */}
         <link rel="preload" href="/images/logo.webp" as="image" />
