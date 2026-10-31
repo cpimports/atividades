@@ -43,8 +43,40 @@ const NewVslPlayer = () => {
                 loading="eager"
                 fetchpriority="high"
               />
+              <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2; pointer-events: none;">
+                <div style="background-color: rgba(25, 148, 0, 0.93); border: 3px solid #ffffff; border-radius: 14px; padding: 12px 24px; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.5); max-width: 90%;">
+                  <p style="color: #ffffff; font-weight: 800; font-size: 16px; margin: 0; line-height: 1.2; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">ENSINE DE FORMA LÚDICA</p>
+                  <div style="margin: 8px auto; width: 44px; height: 32px;">
+                    <svg viewBox="0 0 47 33" fill="#ffffff" style="width: 100%; height: 100%;">
+                      <path d="M20.921,20.366h-6.423c-0.553,0-1,0.508-1,1.135v8.229c0,0.627,0.447,1.135,1,1.135h7.375l6.25,5.875V24.96L20.921,20.366z"></path>
+                      <path d="M28.124,20.215l-3.489-2.225V14.991l3.489,5.224z"></path>
+                    </svg>
+                  </div>
+                  <p style="color: #ffffff; font-weight: 800; font-size: 15px; margin: 0; line-height: 1.2; text-shadow: 0 1px 3px rgba(0,0,0,0.5);">CLIQUE PARA ASSISTIR...</p>
+                </div>
+              </div>
             </div>
           </vturb-smartplayer>
+          <script>
+            (function() {
+              var p = document.getElementById("vid-68a677e85a4844a26844462d");
+              if (p) {
+                var desc = Object.getOwnPropertyDescriptor(Element.prototype, 'innerHTML');
+                Object.defineProperty(p, 'innerHTML', {
+                  set: function(val) {
+                    if (typeof val === 'string' && val.indexOf('preload--netflix') !== -1) {
+                      return;
+                    }
+                    return desc.set.call(this, val);
+                  },
+                  get: function() {
+                    return desc.get.call(this);
+                  },
+                  configurable: true
+                });
+              }
+            })();
+          </script>
         `,
       }}
     />
@@ -101,7 +133,7 @@ export default function HeroSection() {
             <p className="font-semibold text-sky-200 text-base md:text-lg">Economize horas de preparo com atividades prontas, validadas por pedagogos e psicólogos, que estimulam o foco, a linguagem, a socialização e o desenvolvimento cognitivo dos seus alunos com TEA.</p>
         </div>
 
-        {/* Bloco da VSL sem animação de atraso - renderização imediata */}
+        {/* Bloco da VSL sem atraso - renderização instantânea no quadro 0 */}
         <div className="mt-8 max-w-3xl mx-auto">
             <div className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
                  <NewVslPlayer />
