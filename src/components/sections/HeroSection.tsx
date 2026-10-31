@@ -21,8 +21,29 @@ const NewVslPlayer = () => {
     <div
       dangerouslySetInnerHTML={{
         __html: `
+          <style>
+            vturb-smartplayer [slot="preload"],
+            vturb-smartplayer .preload,
+            vturb-smartplayer .preload--netflix,
+            vturb-smartplayer .vt-loading-wrapper,
+            .vt-loading-wrapper,
+            .preload--netflix {
+              display: none !important;
+              opacity: 0 !important;
+              visibility: hidden !important;
+              pointer-events: none !important;
+            }
+          </style>
           <vturb-smartplayer id="vid-68a677e85a4844a26844462d" style="display: block; margin: 0 auto; width: 100%;">
-            <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.48535564853556% 0 0 0; z-index: 0; background-color: #0b1120;"></div>
+            <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.48535564853556% 0 0; z-index: 0; background: url('https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/thumbnail.jpg') center center / cover no-repeat;">
+              <img 
+                src="https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/thumbnail.jpg" 
+                alt="Vídeo de apresentação" 
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" 
+                loading="eager"
+                fetchpriority="high"
+              />
+            </div>
           </vturb-smartplayer>
         `,
       }}

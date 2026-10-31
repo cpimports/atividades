@@ -111,7 +111,6 @@
   }
   body {
     @apply bg-background text-foreground;
-    /* Removed font-family: Arial from here, will be handled by tailwind.config.ts and layout.tsx */
   }
   /* Add a subtle fade-in for page load */
   .fade-in-load {
@@ -190,4 +189,17 @@
       animation: none !important;
     }
   }
+}
+
+/* Suprimir a tela preta e o spinner fake com contagem de porcentagem da VTurb */
+vturb-smartplayer [slot="preload"],
+vturb-smartplayer .preload,
+vturb-smartplayer .preload--netflix,
+vturb-smartplayer .vt-loading-wrapper,
+.vt-loading-wrapper,
+.preload--netflix {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
