@@ -22,14 +22,8 @@ const VslPlayer = () => {
       dangerouslySetInnerHTML={{
         __html: `
           <vturb-smartplayer id="vid-6ad56b45d97f2ee214dc944d" style="display: block; margin: 0 auto; width: 100%; max-width: 400px;">
-            <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: black;"></div>
+            <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 177.77777777777777% 0 0; z-index: 0; background-color: #0b1120;"></div>
           </vturb-smartplayer>
-          <script type="text/javascript">
-            var s = document.createElement("script");
-            s.src = "https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/6ad56b45d97f2ee214dc944d/v4/player.js";
-            s.async = !0;
-            document.head.appendChild(s);
-          </script>
         `,
       }}
     />
@@ -97,9 +91,9 @@ export default function HeroSectionVsl() {
             asChild 
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#kit-description">
+            <a href="#kit-description">
               GARANTIR MEU KIT COM DESCONTO
-            </Link>
+            </a>
           </Button>
           <p className="mt-2 text-xs text-gray-400 animate-fade-in-slow" style={{ animationDelay: '0.7s' }}>
             REVISADO POR PEDAGOGOS E PSICÓLOGOS

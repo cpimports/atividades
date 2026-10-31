@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect, useCallback, useRef } from 'react';
@@ -215,9 +214,9 @@ export default function KitDescriptionSection() {
             asChild
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#oferta-especial">
+            <a href="#oferta-especial">
               ACESSAR MATERIAL AGORA!
-            </Link>
+            </a>
           </Button>
         </div>
       </div>

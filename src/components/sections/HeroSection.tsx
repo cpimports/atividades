@@ -1,30 +1,29 @@
-
 'use client';
 
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 const NewVslPlayer = () => {
+  useEffect(() => {
+    const scriptId = 'vturb-player-script-68a677e85a4844a26844462d';
+    if (!document.getElementById(scriptId)) {
+      const s = document.createElement('script');
+      s.id = scriptId;
+      s.src = 'https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js';
+      s.async = true;
+      document.head.appendChild(s);
+    }
+  }, []);
+
   return (
     <div
       dangerouslySetInnerHTML={{
         __html: `
-          <script type="text/javascript">
-              var s=document.createElement("script");
-              s.src="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
-              s.async=true;
-              document.head.appendChild(s);
-          </script>
-          <div id="ifr_68a677e85a4844a26844462d_wrapper" style="margin: 0 auto; width: 100%; ">
-              <div style="position: relative; padding: 56.48535564853556% 0 0 0;" id="ifr_68a677e85a4844a26844462d_aspect">
-                  <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_68a677e85a4844a26844462d"
-                      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin"
-                      onload="this.onload=null; this.src='https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/embed.html'+(location.search||'?')+'&vl='+encodeURIComponent(location.href)">
-                  </iframe>
-              </div>
-          </div>
+          <vturb-smartplayer id="vid-68a677e85a4844a26844462d" style="display: block; margin: 0 auto; width: 100%;">
+            <div class="vturb-player-placeholder" style="position: relative; width: 100%; padding: 56.48535564853556% 0 0 0; z-index: 0; background-color: #0b1120;"></div>
+          </vturb-smartplayer>
         `,
       }}
     />
@@ -93,9 +92,9 @@ export default function HeroSection() {
             asChild 
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#kit-description">
+            <a href="#kit-description">
               GARANTIR MEU KIT COM DESCONTO
-            </Link>
+            </a>
           </Button>
           <p className="mt-2 text-xs text-gray-400 animate-fade-in-slow" style={{ animationDelay: '0.7s' }}>
             REVISADO POR PEDAGOGOS E PSICÓLOGOS

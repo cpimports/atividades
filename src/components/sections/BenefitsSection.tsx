@@ -1,10 +1,8 @@
-
 'use client';
 
 import React, { useRef } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import Link from 'next/link';
 import Image from 'next/image';
 import { Progress } from '@/components/ui/progress';
 import { useProgress } from '@/hooks/useProgress';
@@ -156,9 +154,9 @@ export default function BenefitsSection() {
             asChild 
             className="shadow-lg hover:shadow-xl bg-yellow-400 hover:bg-yellow-500 text-black font-semibold animate-pulse-yellow-cta transition-shadow"
           >
-            <Link href="#oferta-especial">
+            <a href="#oferta-especial">
               EU QUERO AS ATIVIDADES AGORA + BÔNUS
-            </Link>
+            </a>
           </Button>
         </div>
       </div>
