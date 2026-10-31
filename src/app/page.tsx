@@ -1,4 +1,3 @@
-
 'use client';
 
 import dynamic from 'next/dynamic';
@@ -30,10 +29,9 @@ const FaqSection = dynamic(() => import('@/components/sections/FaqSection'), {
   loading: () => <Skeleton className="h-[500px] w-full" />
 });
 
-
 export default function HomePage() {
   return (
-    <div className="flex flex-col min-h-screen bg-background fade-in-load">
+    <div className="flex flex-col min-h-screen bg-background">
       <main className="flex-grow">
         <HeroSection />
         <AboutSection />

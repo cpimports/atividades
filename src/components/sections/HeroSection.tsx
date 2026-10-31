@@ -83,7 +83,7 @@ export default function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <div className="mb-8 animate-fade-in-medium">
+        <div className="mb-8">
           <Image
             src="/images/logo.webp"
             alt="Logo Gêniozinho em Ação"
@@ -94,20 +94,21 @@ export default function HeroSection() {
             priority
           />
         </div>
-        <h1 className="font-merriweather text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white animate-fade-in-medium">
+        <h1 className="font-merriweather text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-white">
           <span className="text-yellow-400">+1700</span> Atividades Lúdicas e Adaptadas para <span className="text-yellow-400">Crianças Autistas</span>
         </h1>
-        <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 animate-fade-in-slow px-4 sm:px-0 text-center">
+        <div className="mt-6 max-w-3xl mx-auto text-sm md:text-base text-gray-300 px-4 sm:px-0 text-center">
             <p className="font-semibold text-sky-200 text-base md:text-lg">Economize horas de preparo com atividades prontas, validadas por pedagogos e psicólogos, que estimulam o foco, a linguagem, a socialização e o desenvolvimento cognitivo dos seus alunos com TEA.</p>
         </div>
 
-        <div className="mt-8 max-w-3xl mx-auto animate-fade-in-slow">
+        {/* Bloco da VSL sem animação de atraso - renderização imediata */}
+        <div className="mt-8 max-w-3xl mx-auto">
             <div className="rounded-lg overflow-hidden shadow-2xl shadow-sky-400/20">
                  <NewVslPlayer />
             </div>
         </div>
         
-        <div className="mt-10 flex flex-col items-center justify-center gap-4 animate-fade-in-slow" style={{ animationDelay: '0.6s' }}>
+        <div className="mt-10 flex flex-col items-center justify-center gap-4">
           <Button 
             size="lg" 
             asChild 
@@ -117,10 +118,10 @@ export default function HeroSection() {
               GARANTIR MEU KIT COM DESCONTO
             </a>
           </Button>
-          <p className="mt-2 text-xs text-gray-400 animate-fade-in-slow" style={{ animationDelay: '0.7s' }}>
+          <p className="mt-2 text-xs text-gray-400">
             REVISADO POR PEDAGOGOS E PSICÓLOGOS
           </p>
-          <div className="mt-2 animate-fade-in-slow" style={{ animationDelay: '0.8s' }}>
+          <div className="mt-2">
             <Image
                 src="/images/payment-methods.webp"
                 alt="Métodos de pagamento aceitos"

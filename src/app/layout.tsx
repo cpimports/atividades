@@ -41,8 +41,8 @@ export default function RootLayout({
     <html lang="pt-BR" className={`${inter.variable} ${alegreya.variable} ${merriweather.variable}`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: `!function(i,n){i._plt=i._plt||(n&&n.timeOrigin?n.timeOrigin+n.now():Date.now())}(window,performance);` }} />
-        <link rel="preload" href="https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/thumbnail.jpg" as="image" />
-        <link rel="preload" href="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js" as="script" />
+        {/* Preload e conexões prioritárias para a VSL abrir imediatamente */}
+        <link rel="preload" href="https://images.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/thumbnail.jpg" as="image" fetchPriority="high" />
         <link rel="preload" href="https://scripts.converteai.net/lib/js/smartplayer-wc/v4/smartplayer.js" as="script" />
         <link rel="preload" href="https://cdn.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/68a677ca758079d62739838e/main.m3u8" as="fetch" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://cdn.converteai.net" crossOrigin="anonymous" />
@@ -54,6 +54,9 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://api.vturb.com.br" />
         <link rel="dns-prefetch" href="https://license.vturb.com" />
         
+        {/* Script oficial da VTurb carregado direto no head para execução imediata antes do React */}
+        <script async id="vturb-player-script-68a677e85a4844a26844462d" src="https://scripts.converteai.net/f304b502-422a-4d15-8f6c-5e42de7baf1b/players/68a677e85a4844a26844462d/v4/player.js"></script>
+
         {/* Preconnect to critical third-party origins */}
         <link rel="preload" href="/images/logo.webp" as="image" />
         <link rel="preconnect" href="https://cdn.utmify.com.br" />
