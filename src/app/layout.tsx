@@ -61,19 +61,30 @@ export default function RootLayout({
 
         {/* Preconnect to critical third-party origins */}
         <link rel="preload" href="/images/logo.webp" as="image" />
-        <link rel="preconnect" href="https://cdn.utmify.com.br" />
+        <link rel="preconnect" href="https://cdn.utmify.com.br" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://cdn.utmify.com.br" />
 
-        {/* UTMify Pixel Loader */}
-        <Script id="utmify-pixel-loader" strategy="lazyOnload">
-        {`
-          window.pixelId = "689374be46b9142a86a43379";
-          var a = document.createElement("script");
-          a.setAttribute("async", "");
-          a.setAttribute("defer", "");
-          a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
-          document.head.appendChild(a);
-        `}
-        </Script>
+        {/* Utmify Script 1: Pixel Loader Oficial */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.pixelId = "689374be46b9142a86a43379";
+              var a = document.createElement("script");
+              a.setAttribute("async", "");
+              a.setAttribute("defer", "");
+              a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+              document.head.appendChild(a);
+            `,
+          }}
+        />
+
+        {/* Utmify Script 2: Captura Oficial de UTMs dos Anúncios e Repasse para o Checkout */}
+        <script
+          src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+          data-utmify-prevent-subids
+          async
+          defer
+        ></script>
       </head>
       <body className="font-body antialiased">
         
@@ -81,20 +92,38 @@ export default function RootLayout({
         {children}
         <Toaster />
         <SocialProofNotification />
-        {/* Configurado para capturar UTMs tanto da página principal quanto da página de oferta */}
+        {/* Configurado para capturar e persistir UTMs e anexar nos links dos domínios de checkout */}
         <UTMHandler checkoutDomains={["pay.cakto.com.br", "loja.geniozinhoemacao.com.br"]} />
         
-        {/* InitiateCheckout Event Script for UTMify - Instantâneo sem delay */}
-        <Script id="initiate-checkout-tracker" strategy="lazyOnload">
+        {/* InitiateCheckout Event Script for UTMify - Rastreamento garantido com repasse de UTMs para checkout */}
+        <Script id="initiate-checkout-tracker" strategy="afterInteractive">
           {`
             document.addEventListener('click', function(e) {
-              const checkoutButton = e.target && e.target.closest('#btn-comprar');
+              const checkoutButton = e.target && e.target.closest('#btn-comprar, a[href*="pay.cakto.com.br"], a[href*="loja.geniozinhoemacao.com.br"]');
               if (checkoutButton) {
+                e.preventDefault();
+
+                // 1. Rastrear evento InitiateCheckout no Pixel da Utmify
                 try {
                   if (window.utmify_pixel && typeof window.utmify_pixel.track === 'function') {
                     window.utmify_pixel.track('InitiateCheckout');
                   }
                 } catch (err) {}
+
+                // 2. Garantir que o link do checkout leve 100% dos parâmetros UTM capturados
+                var targetHref = checkoutButton.href;
+                try {
+                  var storedUtms = localStorage.getItem('utms');
+                  if (storedUtms && !targetHref.includes('utm_source=')) {
+                    var sep = targetHref.includes('?') ? '&' : '?';
+                    targetHref = targetHref + sep + storedUtms;
+                  }
+                } catch (err) {}
+
+                // 3. Pequeno intervalo para o navegador enviar o pixel com sucesso antes do redirecionamento
+                setTimeout(function() {
+                  window.location.href = targetHref;
+                }, 350);
               }
             }, true);
           `}
